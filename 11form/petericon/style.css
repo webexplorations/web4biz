@@ -1,0 +1,120 @@
+@font-face {
+	font-family: 'petericon';
+	src:url('fonts/petericon.eot');
+	src:url('fonts/petericon.eot?#iefix') format('embedded-opentype'),
+		url('fonts/petericon.ttf') format('truetype'),
+		url('fonts/petericon.woff') format('woff'),
+		url('fonts/petericon.svg#petericon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'petericon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	
+	/* Enable Ligatures ================ */
+	-webkit-font-feature-settings: "liga";
+	-moz-font-feature-settings: "liga=1";
+	-moz-font-feature-settings: "liga";
+	-ms-font-feature-settings: "liga" 1;
+	-o-font-feature-settings: "liga";
+	font-feature-settings: "liga";
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-zoom-out:before {
+	content: "\e600";
+}
+.icon-zoom-in:before {
+	content: "\e601";
+}
+.icon-world:before {
+	content: "\e602";
+}
+.icon-warning-outline:before {
+	content: "\e603";
+}
+.icon-user:before {
+	content: "\e604";
+}
+.icon-tick-outline:before {
+	content: "\e605";
+}
+.icon-thumbs-up:before {
+	content: "\e606";
+}
+.icon-th-list-outline:before {
+	content: "\e607";
+}
+.icon-star-outline:before {
+	content: "\e608";
+}
+.icon-printer:before {
+	content: "\e609";
+}
+.icon-pin:before {
+	content: "\e60a";
+}
+.icon-pin-outline:before {
+	content: "\e60b";
+}
+.icon-info-outline:before {
+	content: "\e60c";
+}
+.icon-group:before {
+	content: "\e60d";
+}
+.icon-home-outline:before {
+	content: "\e60e";
+}
+.icon-image-outline:before {
+	content: "\e60f";
+}
+.icon-folder:before {
+	content: "\e610";
+}
+.icon-edit:before {
+	content: "\e611";
+}
+.icon-document:before {
+	content: "\e612";
+}
+.icon-device-tablet:before {
+	content: "\e613";
+}
+.icon-device-desktop:before {
+	content: "\e614";
+}
+.icon-device-phone:before {
+	content: "\e615";
+}
+.icon-chart-pie:before {
+	content: "\e616";
+}
+.icon-chart-bar-outline:before {
+	content: "\e617";
+}
+.icon-calculator:before {
+	content: "\e618";
+}
+.icon-at:before {
+	content: "\e619";
+}
+.icon-arrow-repeat-outline:before {
+	content: "\e61a";
+}
+.icon-arrow-sync-outline:before {
+	content: "\e61b";
+}
+.icon-arrow-forward-outline:before {
+	content: "\e61c";
+}

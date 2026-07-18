@@ -1,0 +1,146 @@
+1. Choose the organization listed below that takes a proactive role in developing recommendations and prototype technologies related to the Web.
+a. ARPA
+b. CERN
+c. ICANN
+*d. W3C
+
+2. A ________ consists of two or more computer connected for the purpose of communicating and sharing resources
+a. server
+*b. network
+c. client
+d. MIME
+
+3. The first widely used graphical web browser was developed at:
+a. CERN
+*b. NCSA
+c. W3C
+d. ARPA
+
+4. A domain name is a unique text-based Internet address corresponding to a unique ____________.
+*a. IP address
+b. domain name
+c. URL
+d. user name
+
+5. New Top Level Domains (TLDs) are coordinated by 
+*a. ICANN
+b. no one, because anyone can add a TLD to the Domain Name System
+c. W3C
+d. TCP
+
+8. The purpose of the ___________ protocol is to ensure the integrity of the communication.
+a. HTTP
+b. IP
+*c. TCP
+d. FTP
+
+9. The ____ protocol is a set of rules that controls how data is sent between computers on the Internet. 
+a. HTTP
+*b. IP
+c. TCP
+d. FTP
+
+10. Select the item below that lists the top level domain name for the URL http://www.yahoo.com.
+a. http
+b. www
+c. yahoo
+*d. com 
+
+11. Select the main reason for the initial development of the World Wide Web from the list below:
+a. To allow companies to advertise over the Internet.
+b. To allow companies to conduct commerce over the Internet
+*c. To allow communication between researchers and links between research papers
+d. none of the above
+
+12. Select the true statement from the list below.
+a. When a domain name ends in .com it indicates that it is a computer company.
+b. A country code domain name can only be owned by someone who resides in that country.
+c. Only non-profit organizations can purchase a .org domain name
+d. Anyone can purchase a .edu domain name
+*e. None of the statements listed are true
+
+13. Select protocols that are used for e-mail processing.
+a. ETP, FTP
+b. SMTP, POP3
+*c. SMTP, POP3, IMAP
+d. ETP, FTP, SMTP
+
+14. ______ is a set of rules for exchanging files such as text, graphic images, sound, video, and other multimedia files on the Web.
+a. IP
+b. TCP
+c. FTP
+*d. HTTP
+
+15.  A(n) _______ website provides accommodations to individuals with visual, auditory, physical, and neurological disabilities.
+a. popular
+*b. accessible
+c. reliable
+d. none of these
+
+16. The meta element is coded in the ___________ section of a web page document.
+a. body
+*b. head
+c. footer
+d. DOCTYPE
+
+17. The text contained between title tags is:
+a. Not displayed by browsers.
+*b. Displayed in the title bar of the browser window, as well as on the browser tabs.
+c. Not used by search engines.
+d. Never seen by your web page visitor.
+
+18. Choose the TRUE statement below.
+a. The content that displays in the browser is contained in the head section.
+b. Information about the web page is contained in the body section.
+c. The content that displays in the browser is contained in the body section.
+*d. All three statements are true.
+
+19. An ________________ modifies or further describes the function of an
+element.
+a. tag
+b. doctype
+*c. attribute
+d. none of these are valid
+
+20. A web page document is contained between opening and closing ________tags.
+*a. html
+b. doctype
+c. head
+d. body
+
+21. What port is normally used for email?
+a. 80
+b. 21
+*c. 25
+d. 120
+e. 240
+
+22. What port is normally used for FTP (File Transfer Protocol)?
+a. 80
+*b. 21
+c. 25
+d. 120
+e. 240
+
+23. What port is used normally used for HTTP:// (web pages)?
+*a. 80
+b. 21
+c. 25
+d. 120
+e. 240
+
+24. A port is like an electronic version of __________________.
+a. a dock where a boat is parked
+*b. a doorway
+c. a house number
+d. a serial number
+e. a driver's license number
+@A port is like a doorway into a computer system. Each port has a number such as port 80. This allows the system to check for incoming requests from the network. Almost all ports are kept closed so the system only has to monitor a few specific ones for security purposes.
+
+25. True or False: In the USA we are trained from an early age to think visually as well as with words.
+False
+TF@@Children are very visual and draw freely, but as we get older the emphasize of our education in the USA has been focused on words, both written and spoken. Being able to sketch out ideas gives a whole new dimension to problem solving and communications.
+
+26. True or False: You can use the Web to portray your own personality to the world.
+True
+TF@@What you put on the Web determines how people may respond to you in the future. You can control what type of image you want to portray by what you publish out on the Web.

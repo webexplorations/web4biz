@@ -1,0 +1,259 @@
+/* scc.ccs - Style sheet for computer careers pages
+Originally set up for course activity pages
+
+Peter K. Johnson
+Revised: 07-13-06 - added liquid layout id objects
+         08-10-06 - simplified layout with fewer id objects
+         08-17-08 - make header more elegant lining up graphic with h1, h3
+         09-25-08 - remove width set to 900px. Wouldn't resize in smaller windows (like when projected in classroom
+                  - added margin around images in Content boxes
+				 11-07-08 - added width, height to header img
+				 03-11-12 - alphabetize
+*/
+
+/* Start at ground-zero */
+*  {
+margin:             0;
+padding:            0;
+}
+
+body {
+background:   #ffffff url(graphic/gradient/horizontalWhiteBlue.jpg) repeat-y 300px 30px;
+font-family:        "Lucinda Grande", Arial, sans-serif;
+font-size:          medium;
+margin:             30px auto;
+max-width:          960px;
+}
+/* set up font sizes relative to body element */
+h1 {
+   font-size:          170%;
+   font-family:        Georgia, serif;
+   color:              #000066;
+}
+
+h2 {
+   font-size:          130%;
+   font-family:        Georgia, serif;
+   color:              #000066;
+   padding:            8px;
+   text-align:         center;
+   border-bottom:      1px solid #000066;
+   border-top:         1px solid #000066;
+   max-width:          95% auto;
+   background-color:   #fff;
+   background-image:   url(graphic/gradient/gradientBlue.gif);
+ }
+
+h3 {
+   font-size:          110%;
+   font-family:        Georgia, serif;
+   color:              #000066;
+   margin-left:        0px;
+   margin-top:         0;
+ }
+
+
+iframe {
+margin:                0px 20px 0px 5px;
+text-align:            left;
+}
+
+/* Put border around the table
+   border-collapse: collapse the border so no spaces show between cells
+*/
+table {
+   margin-top:          -5px;
+   width:               100%;
+   background:          #FFFFFF;
+  /*   border-collapse: collapse; */
+   align:               center;
+}
+
+/* style the cells */
+table td, 
+table th {
+   margin: 0;
+   padding: 0px 20px 10px 20px;
+   text-align: left;
+   border-bottom: 2px solid #B5B5B5;
+}
+
+table caption {
+   background: url(graphic/gradient/gradientDarkBlue.gif) top repeat-x;
+   color: #000000;
+   font-size: 150%;
+   font-weight: bold;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   margin: 0;
+   background-color: #FFFFFF;
+}
+
+table th {
+   text-align: center;
+   background: #eeeeee url(graphic/gradient/gradientBlue.gif) top left;
+   color: #000066;
+}
+
+table tr {
+   background: #FFFFFF;
+}
+
+#closing {
+   color:            #333;
+   background-color: #eee;
+   border-color:       #000066;
+   border-style:       solid;
+   border-bottom-width:3px;
+   border-right-width: 3px;
+   border-top-width:   2px;
+   border-left-width:  1px;
+   margin:             10px 125px 10px 125px;
+   line-height:        150%;      /* increase readability for all panels */
+   clear:              both;
+}
+
+#closing li {
+   margin    :        5px;
+}
+#closing p {
+   padding:              10px;
+}
+
+#closing ul, ol {
+   margin:            5px 15px 5px 30px;
+}
+
+#contact {
+margin:             5px 5px 5px 20px;
+padding:            .25em;
+background-color:   #ddd;
+border-top:         2px solid #000066;
+border-bottom:      3px solid #000066;
+text-align:         center;
+clear:              both;
+}
+
+#container {
+ margin:             5px 5px 0px 20px;
+   background-color:   #F7F7FA;
+   border:             1px solid #000099;
+   line-height:        150%;      /* increase readability for all panels */
+}
+
+#header {
+   background:         #FFFFFF url(graphic/gradient/gradientBlue.gif) repeat-x top left;
+   padding:            0px 0px 0px 0px;
+   margin:             5px 5px 5px 20px;
+   color:              #000066;
+   border:             3px solid #000099;
+   height:             100px;   /* to match graphic */
+}
+
+#header h1 {
+padding:             20px 0px 0px 120px; /* offset from graphic */
+margin:              0px;
+}
+
+#header h3 {
+padding:             0px 0px 0px 120px;  /* offset from graphic */
+}
+
+#header img {
+float:               left;               /* position graphic on left end */
+width:               100px;
+height:              100px;
+}
+
+/* Use paragraphs instead of tables when multiple columns are not necessary */
+.activity {
+   margin:                  5px 5px 5px 20px;
+   background-color:        #FFFFFF;
+   clear:                   both;
+   align:                   left;
+   line-height:             120%;      /* increase readability for all panels */
+ border:                  1px solid #000066;
+}
+
+.activity p {
+   margin:                  -1px 0px 0px 0px auto;
+   border:                  1px solid #AAAAAA;
+   padding:                 10px;
+}
+
+.activity h2 {
+line-height:           1.5em;
+}
+
+.alert {
+font-weight:     800;
+color:           #AA0000;  /* bright red */
+}
+
+.codeStyle {
+font-family:  'courier new', courier, mono;
+font-weight:   bold;
+font-size:    medium;
+}
+
+.content {
+   padding:            10px;
+}
+
+.contentBlock {
+   margin:             0px 5px 5px 20px;
+   background-color:   #FFFFFF;
+   clear:              both;
+   border:             1px solid #000066;
+   align:              left;
+   line-height:        120%;      /* increase readability for all panels */
+}
+
+.contentBlock h2 {
+line-height:         1.5em;
+}
+
+.contentBlock h3 {
+padding-left:        10px;
+}
+.contentBlock img,
+.contentBlock h3{
+margin:            0px 15px 15px 5px;
+}
+
+.contentBlock img,
+iframe,
+.activity img {
+margin:  3px 15px;
+}
+
+.contentBlock li {
+padding-left:        5px;
+}
+
+.contentBlock p,
+.contentBlock pre{
+padding:             0px 10px 10px 10px;
+margin:              0px;
+}
+.contentBlock ul,ol {
+padding-left:        30px;     /* bring bullets inside contentBlock box */
+}
+
+/* used to float images */
+.floatLeft {
+   float:             left;
+   margin:            3px;
+   border:            1px solid #000066;
+   background-color:  #ddd;
+   padding:           7px;
+   z-index:           5;
+}
+.note { font-size: 85%; }
+
+.optional {
+font-weight:      800;
+color:           #006000;  /* dark green */
+}
+
+

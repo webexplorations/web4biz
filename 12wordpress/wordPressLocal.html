@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+<!-- wordPressLocal.html - Checklist for setting up WordPress on localhost
+  Peter Johnson - peterk@webExplorations.com
+  Written:   08-08-13 
+  Revised:   
+  -->
+ <title>WordPress Local</title>
+
+ <script type="text/javascript">
+
+ </script>
+ <style type="text/css">
+  body {
+  background:  #EEE;
+  font-size:   16px;
+  font-family: helvetica, arial, sans-serif;
+  }
+  
+  h1 {
+  border:  1px #000080 solid;
+  padding: 10px;
+  background:  #AAA;
+  color:    white;
+  }
+  
+  h2 {
+  background: #DDD;
+  color:      #000080;
+  padding:    10px;
+  border:     1px #000080 solid;
+  }
+  
+  li {
+  margin:     1.5em 0 0 0;
+  }
+  
+  #frame {
+  max-width:   800px;
+  margin:      auto;
+  border:      1px solid #000080;
+  padding:     20px;
+  }
+ </style>
+</head>
+<body>
+<div id="frame">
+<h1>Install WordPress on your localhost</h1>
+
+<p>
+Use WAMP (Windows-Apache-mySQL-PHP) or MAMP (Macintosh-Apache-mySQL-PHP) to set up a local web server stack on your computer.
+</p>
+<p>
+<strong>WAMP</strong> (Windows)
+</p>
+<ul>
+   <li>Put it in the root of C: drive.</li>
+   <li>Put all your web files in the wamp/www/ folder.  (just like public_html on the t.server)
+</li>
+   <li><strong>Set up a database named:</strong>  wordpress</li>
+   <li><strong>DBF User name:</strong> root</li>
+   <li><strong>DBF Password:</strong> nothing/empty/no text</li>
+</ul>
+<p>
+<strong>MAMP</strong> (Macintosh)
+</p>
+<ul>
+   <li>Put it in your Application folder</li>
+   <li>Put all your web files in the mamp/www/ folder.  (just like public_html on the t.server)
+</li>
+   <li><strong>Set up a database named:</strong>  wordpress</li>
+   <li><strong>DBF User name:</strong> root</li>
+   <li><strong>DBF Password:</strong>root</li>
+</ul>
+
+<p>
+<strong>Installing WordPress</strong>
+</p>
+<ol>
+   <li>Download latest version of Wordpress <a href="http://WordPress.org" target="_blank">WordPress.org</a><br /><br />
+      Save this file to your flash drive in case you do a re-install in the future.</li>
+   <li>Unzip the file.</li>
+   <li>Select and copy all of the inner files (will contain folders: wp-admin, wp-content, wp-includes)</li>
+   <li>Copy these into the www folder for WAMP/MAMP.</li>
+   <li>View the page in browser:   WAMP (Windows:  localhost/     MAMP (Mac): localhost:8888/<br />
+   This will start the install process.</li>
+   <li>Use the userID and password for the database (listed above).</li>
+   <li>To access the administration forms use localhost/wp-admin   localhost:8888/wp-admin</li>
+   <li>In another browser open up the user side of Wordpress:   localhost  or localhost:8888</li>
+</ol>
+</frame>
+</body>
+</html>

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+<!-- indexWebComm.html - main activity page for WEB COMMUNICATION module - Web4Biz course
+     Peter K. Johnson - peterk@webExplorations.com
+     Written:  5-17-11 Build template using jQuery
+
+      MAINTENANCE CHECKLIST:
+      (1) Make sure checkmark.png and detailPage.png are in the root graphic directory
+      (2) Make sure jQuery is in the root folder.
+      (3) Update title
+      (4) Update total activity time for the module (around line #235)
+    
+     REVISED:  11-12-11 modified code originally from actForm.html
+               06-27-13 PKJ modified from 02FileManagement/index.html
+               08-18-14 PKJ Checked all links.
+
+Accessibility:
+(1) Add noscript element and hide if JavaScript is enabled.
+(2) Use CSS to make visibility: hidden; the .toDo elements in case JavaScript is disabled.
+(3) Use jQuery to change this CSS to visibility: visible;
+(4) Use jQuery to create a hyperlink that toggles between the detailed learning activities and the abbreviated toDo lists.
+    This will be added after the p#toggleToDo (at the top of the Learning Activities)
+
+Classes and IDs:
+Paragraph used to position hyperlink: #toggleTodo
+Hyperlink:                            #displayToggle
+Verbose Activity item:                .activity
+Short Todo item:                      .todo
+Name of icon/activity image:          #iconImg
+Name of icon/activity link:           #iconLink
+
+DEBUG CHECKLIST:
+(1) If #iconImg and #iconLink are not displaying, make certain you have the jQuery library in the root folder.
+-->
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <title>Web Communications</title><!--
+******************************************************
+* * * * * * * * * jQuery Stuff * * * * * * * * * * * *
+****************************************************** -->
+
+  <script type="text/javascript" src="../jquery-1.6.2.js">
+</script>
+  <script type="text/javascript">
+$("document").ready( function( )
+  {
+     // Change the CSS so .todo items display when toggled
+     $('.todo').css("visibility", "visible");
+     $('#iconImg').css("visibility", "visible");
+     $('#iconLink').css("visibility", "visible");
+     // Hide all the todo items
+     $('.todo').hide( );
+     $('#tipOfWeek').hide();
+
+     //When user clicks on todo link or the iconLink,
+     // toggle the screen between details/summary to-do list
+     $('#displayToggle').click(togglePage);
+     $('#iconLink').click(togglePage);
+     $('#iconImg').click(togglePage);
+     $('#tipImg').click( function()
+     {
+        $('#tipOfWeek').toggle();
+     }); // end of #tipImg.click( )
+  }); // end of .ready( )
+
+   // Toggle the screen between detailed and summary views
+   function togglePage( )
+   {
+      $('.activity').toggle();
+      $('.todo').toggle();
+
+      // Show the detailed Learning Activities
+      if($('.activity').is(':visible'))
+      {
+        $("#displayToggle").text('See Checklist View');
+        // Display the todoIcon
+        $("#iconImg").attr("src","../graphic/checkmark.png");
+        // Change the hyperlink
+        $("#iconLink").text("See Checklist View");
+        // Hide the objective section
+        $("#objective").show();
+        $("#wiifm").show( );
+        $("#nextModule").show( );
+        $(".assessment").show( );
+        $("#tip").show( );
+      }
+      else // show the summary to-do list
+      {
+        $("#displayToggle").text("See Detailed View");
+        // Display the Learning Activity Icon
+        $("#iconImg").attr("src", "../graphic/detailPage.png");
+        $("#iconLink").text("See Detailed View");
+        // Show the objectives
+        $("#objective").hide( );
+        $("#wiifm").hide( );
+        $("#nextModule").hide( );
+        $(".assessment").hide( );
+        $("#tip").hide( );
+      }
+   }// end of togglePage( )
+
+  </script><!-- Make page IE backwards compatible using CSS3 and HTML5 -->
+
+  <script type="text/javascript" src="../modernizr.js">
+</script><!--[if (gte IE 6)&(lte IE 8)]>
+  <script type="text/javascript" src="../selectivizr-min.js"></script>
+  <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
+<![endif]-->
+  <!-- *************************************************   
+* * * * * * * * * CSS Stuff * * * * * * * * * * * *
+****************************************************** -->
+  <!-- Font Loading -->
+  <link href='http://fonts.googleapis.com/css?family=Permanent+Marker&v2' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+@import url(../activity.css);
+  </style>
+  <style type="text/css">
+ /* Initially hide the toDo list items in case JavaScript is disabled.
+      Use jQuery to show them if JavaScript is available. */
+   .todo,
+   #iconImg,
+   #iconLink {
+   visibility:      hidden;
+   }
+
+   .todo p {
+   /* Add checkbox as background image to control position */
+   background:      transparent url("../graphic/checkbox.png") no-repeat 0px 2px ;
+   padding:         5px 10px 7px 40px;  /* make room for checkbox */
+   margin:          0px 0px 0px 20px;
+   }
+
+   #tipImg {
+  /* Round all corners */
+  -webkit-border-radius:  130px;
+  -moz-border-radius:     130px;
+  border-radius:          130px;
+  border:                 1px green solid;
+  margin:                 10px 20px 5px 5px;
+  }
+  </style><!-- Fix IE Anamolies so IE recognizes HTML5 elements -->
+  <!--[if lt IE 9]>
+<script>
+// Set up new elements so old browsers will recognize for CSS
+var e = ("abbr,article,aside,audio,canvas,datalist,details,"
+   + "figure,footer,header,hgroup,mark,menu,meter,nav,output,"
+   + "progress,section,time,video").split(',');
+   for (var i = 0; i < e.length; i++)
+   {
+      document.createElement(e[i]);
+   }
+</script>
+<![endif]-->
+</head>
+
+<body>
+  <div id="frame">
+    <header>
+      <div class="identity">
+        <table summary="Page heading and module icon">
+          <tr>
+            <td rowspan="2"><img src="../graphic/user.png" width="100" alt="file folder icon"></td>
+
+            <td>
+              <h1>Web Communications</h1>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <h5>Around the world five times at the drop of a hat.</h5>
+            </td>
+          </tr>
+        </table>
+      </div><!-- end of .identity -->
+      <!-- ****** NAVIGATION (To-Do List/Detailed List Graphics) ******* -->
+
+      <div class="navigation">
+        <table summary="navigation links to course map and todo list" border="1">
+          <tr>
+            <td><img id="iconImg" src="../graphic/checkmark.png" alt="to-do list icon" width="50"></td>
+          </tr>
+
+          <tr>
+            <!-- This link is handled null. It triggers a click event handled by jQuery -->
+
+            <td>
+              <a id="iconLink" href="#">See Checklist View</a>
+            </td>
+          </tr>
+        </table>
+      </div><!-- end of .navigation -->
+    </header>
+<!-- ************************************************
+* * * * O B J E C T I V E S    S E C T I O N  * * * *
+***************************************************** -->
+
+    <section id="objective">
+      <!-- Objectives -->
+      <iframe width="299" height="152" src="http://www.youtube.com/embed/QFLP7HD1s7k?hd=1" align="right" frameborder="0" allowfullscreen></iframe>
+      <h4>In this module you will learn:</h4>
+
+      <ol>
+        <li>How to think and communicate visually.</li>
+        <li>Who created the Web.</li>
+        <li>How the Web works.</li>
+      </ol>
+    </section>
+<!-- ************************************************
+WII-FM
+***************************************************** -->
+
+    <section id="wiifm">
+      <!-- WII-FM -->
+
+      <h4>WII-FM (What's In It - For Me)</h4>
+
+      <p><strong>We all know that the world is changing.</strong> The Web was created in 1990 and it has been a major influence on how we process information as well as how the people of the world communicate. Understanding how this process works will give you clearer view on how you can use the Web to your own advantage.
+      </p>
+
+    </section>
+<!-- ***************************************************
+* * * * L E A R N I N G    A C T I V I T I E S   * * * *
+******************************************************** -->
+
+    <section class="activityGroup">
+      <h4 id="toggleTodo">Complete these Learning Activities:</h4>
+
+      <p><strong>Total estimated time for this module:</strong> 3 hours.</p>
+      <!-- jQuery will insert a link here for toggling between detailed and summary to-do list
+       based on the id="toggleTodo" set in the object above this comment. -->
+      <noscript>
+      <p><strong>You have JavaScript turned off.</strong> Enable it to view a short list of all the To-Do items.</p></noscript>
+      <hr>
+
+
+<!-- ************************
+Take the Quiz
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+  <p>
+  <strong>Take the Self-Quiz: WebComm</strong>. You can take the self-quizzes as many times as you like. 
+  </p>
+  <p>
+  <strong>Be smart and take the self-quiz once each day to learn the material.</strong> 
+  </p>
+   
+  <p><strong>Estimated Time:</strong> 10 minutes (probably a lot less) each time you take a self-quiz.</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+    Take the Self-Quiz: WebComm. 
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+
+<!-- ************************
+Read the Book
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+  <p>
+  <strong>Read chapter 1 of Basics of Web Design HTML5 and CSS3</strong> - Internet and Web Basics
+  </p>
+<img src="../graphic/textbookCover.jpg" alt="cover of the textbook" style="margin: 10px 25px 0 30px; width: 80px; float: left;" />  <ul>
+  <li>How did the Web evolve? Who is this Tim Berners-Lee person?</li>
+  <li>What are web standards and why do I care?</li>
+  <li>I know what a browser is but what does a server look like?</li>
+  <li>Protocols? What's that?</li>
+  <li>Make your first web page. Cool beans!</li>
+  </ul>
+  <p>
+  <strong>Estimated Time:</strong> 1 hour
+  </p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+<p>
+  Read chapter 1 of Basics of Web Design HTML5 and CSS3 - Internet and Web Basics
+</p>
+</div><!-- end of .todo -->
+<hr>
+
+<!-- ************************
+Warriors of the Web
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+  <p>
+<p>
+<strong>
+<iframe width="298" height="202" src="http://www.youtube.com/embed/Ve7_4ot-Dzs" frameborder="0" allowfullscreen align="left"></iframe>
+<br />View the movie:  Warriors of the Net</strong>- <span class="BodyCopy">Choose your favorite Internet action hero!
+<br /><br />
+<a href="http://www.youtube.com/watch?v=Ve7_4ot-Dzs" target="_blank">Click here to view on YouTube</a>
+<br /><br />
+<br />Notice how 80% of the movie is happening inside the organization's walls, long before the request gets out on the Internet.
+<br /><br />
+<strong>Listen for:</strong> "Around the world three times in the drop of hat."
+  </p>
+  <p>
+  <strong>Estimated Time:</strong> 15 minutes.
+  </p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+<p>
+  Watch this video <a href="http://www.youtube.com/watch?v=Ve7_4ot-Dzs" target="_blank">Warriors of the Web</a>.
+</p>
+</div><!-- end of .todo -->
+<hr>
+
+<!-- ************************
+Create InfoGraphics
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+  <p>
+  <iframe width="300" height="169" src="http://www.youtube.com/embed/ZUis4syBihA" frameborder="0" allowfullscreen align="left"></iframe>
+  
+  <strong>Think and Communicate Visually! </strong>
+  </p>
+  <p>
+  Info-graphics (mind maps) are a great way to see how information fits together. Being able to draw out an idea or concept is an
+  important communication tool. 
+  </p>
+  
+  <p>
+  You don't have to be an artist to get an important idea across. Also, when you draw something it utilizes several parts of your brain. Your motor center coordinating your hand and eye movement and your cortex analyzing the best way to show what you mean.
+  </p>
+  
+  <p>
+  Watch this video <a href="http://www.youtube.com/watch?v=ZUis4syBihA" target="_blank">How to Be Double Minded</a> to see why this skill is so valuable.
+  </p>
+  
+  <p>
+  <strong><img src="graphic/gameOfThrone.png" alt="Game of Thrones mind map" width="300" align="left" /></font></strong>Here is an <a href="graphic/gameOfThrone.png" target="_blank"> info-graphic</a> I created to help me keep track of the characters while I read the novel Game of Thrones. I used a program called <a href="http://cmap.ihmc.us/conceptmap.html" target="_blank"><img src="graphic/cmapLogo.png" alt="Cmap logo" width="169" height="91" align="right" /><strong>Cmap</strong></a>. (Click on the Game of Thrones info-graphic for a larger view.)
+  </p>
+  <br /><br />
+  <p>
+  <strong>You can use many types of programs to create an info-graphic. For example: Use PowerPoint, Word</strong> or any graphic program such as Gimp, InkScape, PhotoShop, Fireworks, or Microsoft Paint. The Tip-Of-The-Week also has a link to 5 online tools for generating info-graphics.
+  </p>
+  <p>
+  <strong>Estimated Time:</strong> 30 minutes.
+  </p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+<p>
+  Watch this video <a href="http://www.youtube.com/watch?v=ZUis4syBihA" target="_blank">How to Be Double Minded</a> to see why thinking visually is so important.
+</p>
+</div><!-- end of .todo -->
+<hr>
+
+<!-- ************************
+How the Web Works
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+  <p> 
+  <iframe width="298" height="202" src="http://www.youtube.com/embed/7P2lWcRAnqs?hd=1" frameborder="0" align="left" allowfullscreen></iframe>   
+  <strong>Work through the <a href="www/index.htm" target="_blank">Tutorial: How the WWW Works</a>.</strong>
+  </p>
+  <p>
+  <strong>Watch the Video</strong> - Here is an 8-minute video from my classroom showing how all the pieces of the Web work together</a>.
+   Here is a transcript from the video: <a href="webDevWWWTranscript.html" target="_blank">transcript of the audio</a>.
+   </p>
+  <strong>Learning Tip:</strong> Utilize different areas of your brain by turning on the closed captioning on the video while you watch.
+  </p>
+  <p>
+  <strong>Start drawing an info-graphic on a piece of paper as you watch.</strong> This will re-enforce the concepts. You will be submitting an info-graphic on how the Web works as part of your first project.
+  </p>
+  
+  <p>
+  <strong>Estimated Time:</strong> 15 minutes.
+  </p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+  Work through the <a href="tutor/www/index.htm" target="_blank">Tutorial: How the WWW Works</a>.
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+Tim Berners-Lee and Vannevar Bush
+***************************** -->
+<!-- DETAIL -->
+<div class="activity">
+  <p>
+  <strong>Being able to find information fast on the Web is a critical skill.</strong>
+  </p>
+  <p>
+  <img src="graphic/vannevarBush.jpg" alt="Vannevar Bush" width="81" height="103" align="left" />
+  <img src="graphic/timBernersLee.jpg" alt="Tim Berners-Lee" width="81" height="103" align="right" />
+  <strong>Use Google to find out information about Tim Berners-Lee or Vannevar Bush.</strong>
+  </p>
+  <p>
+  Some example questions you might look for could are included in this <a href="timBLChatQuestion.html" target="_blank">
+  Tim Berners-Lee handout.</a> (Just choose one or find out something about Tim Berners-Lee that isn't even on
+  this list.)
+  </p>
+  <p>
+  You will be posting the link and an executive summary of what you found out on the discussion group as part of your project work.
+  </p>
+  <p>
+  <strong>Estimated Time:</strong> 30 minutes (Stay focused.)
+  </p>
+</div><!-- end of .activity -->
+
+<!-- SUMMARY -->
+<div class="todo">
+  <p>
+  Use Google to find out information about Tim Berners-Lee or Vannevar Bush.
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+</section>
+    
+<!-- ************************************************
+* * * * A S S E S S M E N T    S E C T I O N  * * * *
+***************************************************** -->
+<section class="assessment">
+  <h4>Your Graded Assignments For This Module</h4>
+  <p>
+  <img src="../graphic/stopSign.png" alt="stop sign" style="margin: 0 10px 0 0; width: 60px; float: left;" /><strong>Stop! </strong><br />
+  Don't frustrate yourself. Do the Learning Activities BEFORE starting these graded activities. <br />
+  Ask yourself, "Am I here to learn something I can use... or to just finish the course and get a grade?"
+  </p>
+  <hr />
+
+  <!-- ************************
+  Discussion Posting - Tim Berners-Lee and Vannevar Bush
+  ***************************** -->
+    <p>
+    <strong>Post what you found about Tim Berners-Lee or Vannavar Bush in the Discussion area of D2L.</strong>
+    Post your message under the topic:<strong>Tim Berners-Lee. <br />
+    Please, no duplicates! </strong>
+    </p>
+    <p>
+    For each item, include a short executive summary of what you discovered as well as the URL so others can go out and read all the details.
+    </p>
+    <p>
+    Feel free to respond to other people's postings.
+    </p>
+    <p>
+    <strong>Tip:</strong> Don't type a URL, simply copy and paste it.
+    </p>
+    <ol>
+    <li>View the web page you want in a browser.</li>
+    <li>Highlight the address in the field at the top (it will start with http:// or https://).</li>
+    <li>Use CTRL-C to copy it</li>
+    <li>Open up the document where you want to save the URL or web address</li>
+    <li>Use CTRL-V
+    to paste the link into your discussion message.</li>
+    </ol>
+    <p>
+    <strong>Estimated Time:</strong> 30 minutes 
+    </p> 
+    <p>
+    Look on the Course Map for the due date for this graded activity.
+    </p>
+  <hr />
+
+  <!-- ************************
+  Graded Quiz: File Management
+  ***************************** -->
+    <p>
+    <strong>Take the Graded Quiz: fileManagement</strong>
+    </p>
+
+    <ol>
+    <li>There will be 10 true/false and multiple choice questions.</li>
+    <li>10 questions - 10 minutes - 10 points</li>
+    <li>Feel free to use your book or look stuff up on the Web or try things out on your computer.</li>
+    <li>You will have one chance to take the quiz.</li>
+    <li>The questions will be from the same database that the self-quiz uses.</li>
+    <li>The quiz will be scored automatically and your points shown in your D2L grade book.</li>
+    </ol>
+    
+    <p>
+    <strong>Estimated Time:</strong> 10 minutes 
+    </p> 
+    <p>
+    Look on the Course Map for the due date for this graded activity.
+    </p>
+  <hr />
+  
+  <!-- ************************
+  Assignment: Info-Graphic
+  ***************************** -->
+    <p>
+    <strong>Create an info-graphic showing how the Web works.</strong> Have your  info-graphic ready to use as part of the Project: Web Page assignment.
+    </p>
+    <p>
+    <strong>This will be submitted as part of your first project that will be due after you finish the module on HTML. Do it now so your info-graphic is all ready to go.</strong>
+    </p>
+    <p>
+    This info-graphic is for you to show your understanding of how files travel across the Web as well as how the Client/Server
+concept works based on the Learning Activities in this module. It will also demonstrate that you know how to think visually and not just with writing.
+</p>
+
+    <ol>
+    <li>The file should be named: infoGraphic.png</li>
+    <li>Make certain the image is type .png so it can be viewed in any browser. MS Word files are not acceptable.</li>
+    <li>If you use a specialized info-graphic program, look for an "file/export" or a "file/save as" menu item. Make sure you select the file type before you export the image. You can also take a screen shot of your drawing.</li>
+    <li>The image should be at least 480x640 pixels in size and no larger than 600x800 pixels</li>
+    <li>Show the 8 steps that a file travels through on its trip to the server and back to the browser.</li>
+    <li>Use different colored arrows to show the request and then the response</li>
+    <li>Your info-graphic will be worth 10 points as part of Project: Web Page
+    </ol>
+    
+    <p>
+    <strong>Estimated Time:</strong> 30-60 minutes 
+    </p> 
+    <p>
+    Look on the Course Map for the due date for this graded activity.
+    </p>
+  <hr />
+</section>
+    
+<!-- ************************************************
+Tip of the Week
+***************************************************** -->
+    <section>
+      <img src="../graphic/lightBulb.png" alt="hand holding lightbulb all lit up" align="left" width="90" id="tipImg">
+
+      <h4>Your Tip-Of-The-Week</h4>
+
+      <p>(Click on the lightbulb to reveal the tip.)<br>
+      <br></p>
+
+      <div id="tipOfWeek">
+        <h3>5 Online Info-Graphic Tools You Can Use</h3>
+
+        <p>
+        Here is a list of info-graphic tools that you can use: <a href="http://www.educatorstechnology.com/2012/09/5-great-infographic-creation-tools-for.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+educatorstechnology%2FpDkK+%28Educational+Technology+and+Mobile+Learning%29" target="_blank">5 Great Info-graphic tools</a>.</p>
+      <br />
+      <hr />
+
+      </div><!-- end of #tipOfWeek -->
+    </section>
+    
+<!-- ************************************************
+What's Next?
+***************************************************** -->
+<section id="nextModule">
+  <h4>What's Next?</h4>
+  <img src="../graphic/html.png" alt="people" style="margin: -20px 15px 0px 5px; width: 90px; float: left;">
+  <p>Create your first web page.<strong> Move on to Module: HTML.</strong>
+  </p>
+</section>
+
+    <footer>
+      <p>Strong start... Successful finish.</p>
+    </footer>
+  </div><!-- end of #frame -->
+</body>
+</html>

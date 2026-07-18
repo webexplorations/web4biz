@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- form.html - demo all the form elements
+     Peter Johnson
+     Written:  01-01-01
+     Revised:  04-09-09
+-->
+<head>
+  <title>Demonstrating Forms</title>
+</head>
+<body>
+  <h1>Demonstrating Forms</h1>
+  <form name="demo" 
+        action="mailto:myClient@gmail.com?subject=Comments from myTest website" 
+        enctype="text/plain"
+        method="post">
+
+  
+     Your <u>N</u>ame:
+     <input type="text"
+            name="txtFname"
+            size="20"
+            maxlength="25"
+            accesskey="n"
+            value="Sally" />
+     <br />
+     Your <u>P</u>assword: 
+     <input type="password"
+            name="pwdPass"
+            size="5"
+            maxlength="15"
+            accesskey="p"
+            value="myPass" />
+     <br /> 
+     
+     What type of pet do you have?
+     <select name="lstPet" 
+             size="5"
+             multiple="multiple">
+        <option>Dog</option>
+        <option>Cat</option>
+        <option>Hamster</option>
+        <option>Boa Constrictor</option>
+        <option selected="selected">No Pets</option>
+      </select> 
+      <br />  
+      <br />
+      
+      What is your pet's favorite <u>f</u>ood?
+      <br />
+      <input type="radio" name="optPetFood" value="fish" />
+            Salmon<br />
+      <input type="radio" name="optPetFood" value="liver" checked="checked" />
+            Liver and Onions<br />
+      <input type="radio" name="optPetFood" value="children" />
+            The neighbor's children (Ymmm!)<br /> 
+      <br /> 
+      
+      Check all the places your pet sleeps<br />
+      <input type="checkbox" name="chkItem" value="outside" checked="checked" />
+          Outside<br />
+      <input type="checkbox" name="chkItem" value="inside" />
+          Inside<br />
+      <input type="checkbox" name="chkItem" value="noSleep" />
+          Never sleeps<br />
+      <br />
+      
+      Tell us your favorite story about your pet:<br />
+      <textarea name="txtaComment" rows="5" cols="40"></textarea>
+      
+      <!-- Hidden field -->
+      <input type="hidden" name="hdnInfoSource" value="From CC Server" />
+      <br /><br />
+
+      <!-- Add the submit button -->
+      <input type="submit" 
+             name="btnSubmit"
+             value="Submit" />
+
+  </form>
+</body>
+</html> 
+

@@ -1,0 +1,487 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="gen/cg_content.xsl"?>
+
+<courseGenie>
+
+<metadata>
+	<lom>
+		<general>
+			<title>
+				<string>Web Development - Build a Web Page</string>
+				<language>en</language>
+			</title>
+			<keyword>
+				<string>Web Development</string>
+				<language>en</language>
+			</keyword>
+			<keyword>
+				<string>Web Explorations</string>
+				<language>en</language>
+			</keyword>
+			<keyword>
+				<string>XHTML</string>
+				<language>en</language>
+			</keyword>
+			<keyword>
+				<string>CSS</string>
+				<language>en</language>
+			</keyword>
+			<description>
+				<string>Using the essential XHTML elements to build and display a web page.</string>
+				<language>en</language>
+			</description>
+		</general>
+		<lifeCycle>
+			<version>
+				<string>July 2010</string>
+				<language>en</language>
+			</version>
+		</lifeCycle>
+		<rights>
+			<description>
+				<string>Creative Commons</string>
+				<language>en</language>
+			</description>
+		</rights>
+	</lom>
+	<misc>
+		<item>
+			<key>Objectives</key>
+			<value>To use the XHTML table elements correctly on a web page.</value>
+		</item>
+		<item>
+			<key>Author</key>
+			<value>Peter K. Johnson</value>
+		</item>
+		<item>
+			<key>Organisation</key>
+			<value>South Central College</value>
+		</item>
+		<item>
+			<key>Date</key>
+			<value>July 2010</value>
+		</item>
+		<item>
+			<key>creator</key>
+			<value>Wimba Create</value>
+		</item>
+	</misc>
+</metadata>
+<settings>
+	<pageroot>page</pageroot>
+	<sectionmode>both</sectionmode>
+	<exportmode>normal</exportmode>
+	<assessmentmode>none</assessmentmode>
+	<generateindex>True</generateindex>
+	<showtoc>False</showtoc>
+	<tocwidth>200</tocwidth>
+	<shownavigation>True</shownavigation>
+	<footer>Web Explorations</footer>
+	<singlepage>False</singlepage>
+	<hyperlinksmain>True</hyperlinksmain>
+	<popupsmain>True</popupsmain>
+	<idstring>CG2010730111928</idstring>
+	<scorm-questionmode>selftest</scorm-questionmode>
+	<scorm-masteryscore>0</scorm-masteryscore>
+	<cgbuild>2.5.0 Build 20090318</cgbuild>
+	<schemefolder>c:/program files/wimbacreate/resources/en.lproj/schemes/Standard</schemefolder>
+</settings>
+
+<newpage>
+<pagetitle>Build A Web Page</pagetitle>
+<section/>
+<para/>
+
+<para  align="left"><b><image alt="" width="133" height="133" class="leftalign">pic001.jpg</image>Build a Web Page - Using the secret codes of the Web.</b></para>
+<para/>
+
+<para  align="left">This tutorial will show you how to build and view a web page using a simple text editor and a browser.</para>
+<para/>
+
+<para  align="left">You will learn some of the secret codes that browsers use to display the text on a page as well as how a web page is organized.</para>
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>What Tools?</pagetitle>
+<para/>
+
+<para  align="left"><b>You need two tools to create web pages:</b></para>
+<para  align="left"><b>A color-coded Text Editor </b></para>
+<para  align="left"><hyperlink><name>Notepad++</name><url>http://portableapps.com/apps/development/notepadpp_portable</url></hyperlink> (Windows) - You can run this from your flash drive.</para>
+<para  align="left"><hyperlink><name>TextWrangler</name><url>http://www.barebones.com/products/textwrangler/</url></hyperlink> (Macintosh)</para>
+<para/>
+
+<para/>
+
+<para  align="left"><b>A Browser </b></para>
+<para  align="left">   -   <hyperlink><name>FireFox</name><url>http://www.ie7.com/</url></hyperlink> is recommended the highest. FireFox is very compatible with current standards and has many great development tools.</para>
+<para  align="left">   -   <hyperlink><name>Google Chrome</name><url>http://www.google.com/chrome</url></hyperlink> is also good and has many tools built in.</para>
+<para  align="left">   -  Microsoft Internet Explorer (IE) is worst. It is not compatible with current standards.</para>
+<para/>
+
+<para  align="left">Run both programs (the text editor and the browser) side-by-side so you can easily switch back and forth between the two. </para>
+<para  align="left"><image alt="" width="575" height="533" class="normal">pic002.gif</image></para>
+<para/>
+
+<para  align="left"><b>Windows Tip: </b>Right-mouse click on the Start bar and choose the horizontal display option. </para>
+<para/>
+
+<para  align="left">Don't use a word processor like Word or WordPad. They add in hidden characters that will show up as weird text in the browser.</para>
+</newpage>
+
+<newpage>
+<pagetitle>Closing Your Cache</pagetitle>
+<para/>
+
+<para  align="left"><b>Cache (pronounced "cash") is a holding area in the computer's memory. </b>The browser displays the web page located in cache instead of going back out to the web server that takes more time.</para>
+<para/>
+
+<para  align="left"><image alt="" width="576" height="269" class="leftalign">pic003.jpg</image>For a developer this is not a good thing because the browser will keep looking at the old version of a page in the cache instead of going to the file system and getting the most recent copy with your changes.</para>
+<para/>
+
+<para  align="left">To fix this problem set the cache to zero on all the browsers you use.</para>
+<para/>
+
+<para  align="left"><b>In FireFox </b>Tools/Options/Advanced/Network tab</para>
+<para  align="left">Use up to 0 MB of space for the cache.</para>
+<para  align="left">Click on the "Clear Now" button to empty the current cache.</para>
+<para  align="left">Short cut to clear the cache: Tools/Clear Recent History/Details uncheck everything except "Cache"</para>
+<para/>
+
+<para  align="left"><b>In Internet Explorer (IE)</b> - Tools/Internet Options/General Tab</para>
+<para  align="left">In the "Browsing history" area click on the "Settings" button</para>
+<para  align="left">Select the option: "Every time I visit the webpage"</para>
+<para  align="left">Set the "Disk space to use" to 8.</para>
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>The Essential Elements</pagetitle>
+<para/>
+
+<para  align="left"><b>Here are the essential XHTML elements. </b></para>
+<para/>
+
+<para  align="left">Notice that the markup tags come in pairs.</para>
+<para  align="left">&#60;html> and &#60;/html></para>
+<para  align="left">&#60;body> and &#60;/body></para>
+<para  align="left">&#60;p> and &#60;/p></para>
+<para/>
+
+<para  align="left">The first tag is called the start tag: &#60;body></para>
+<para  align="left">The second tag is called the stop tag: &#60;/body></para>
+<para/>
+
+<para  align="left"><b>Type this text into your editor.</b></para>
+<para  align="left">Name the file:<b> test.html </b></para>
+<para/>
+
+<para  align="left"><image alt="" width="456" height="203" class="normal">pic004.jpg</image></para>
+<para/>
+
+<para  align="left">&#60;html> </para>
+<para  align="left">&#60;head> </para>
+<para  align="left">&#60;title>This is a test page&#60;/title> </para>
+<para  align="left">&#60;/head> </para>
+<para  align="left">&#60;body> </para>
+<para  align="left">&#60;h1>Test Page&#60;/h1> </para>
+<para  align="left">&#60;p>This is a test paragraph.&#60;/> </para>
+<para  align="left">&#60;.body. </para>
+<para  align="left">&#60;/html></para>
+<para/>
+
+<para  align="left"><b>To view the file in the browser use:</b></para>
+<para  align="left">File/Open File/ locate the file test.html</para>
+<para/>
+
+<para  align="left"><b>Notice that you don't have to be connected to the Web. </b>The browser is simply translating your text using the markup tags.</para>
+<para/>
+
+<para  align="left">Here is a screen shot showing how the various "secret" codes appear in the browser:</para>
+<para/>
+
+<para  align="left"><image alt="" width="575" height="533" class="normal">pic005.gif</image></para>
+<para/>
+
+<para  align="left">The &#60;title> element displays in the bar along the top of the browser as well as in the tab for that page. In Windows the &#60;title> information also displays along the bottom in the Start menu bar.</para>
+<para/>
+
+<para  align="left"><b>Important: </b>All of the information that appears on the browser page must be inside the &#60;body> and &#60;/body> tags.</para>
+<para/>
+
+<para  align="left">The &#60;h1> is a header and displays as a heading in the page itself.</para>
+<para/>
+
+<para  align="left">The text inside of the &#60;p> element appears as a paragraph. The words will automatically wrap if the user changes the size of the browser window.</para>
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>How XHTML Works</pagetitle>
+<para/>
+
+<para  align="left"><b>The browser is always looking for the Less Than character "&#60;".</b></para>
+<para/>
+
+<para  align="left">When it sees one it knows that is the start of a markup command. After the &#60; it reads each character until it gets to the Greater Than ">" and then it looks up the command in its dictionary to see what to do.</para>
+<para/>
+
+<para  align="left"><image alt="" width="507" height="316" class="normal">pic006.gif</image></para>
+<para/>
+
+<para  align="left"><b>For example: </b></para>
+<para  align="left"><b>&#60;h1></b> tells the browser to start displaying the text that follows as a main heading. It will continue to do this until it comes to the stop h1: <b>&#60;/h1></b></para>
+<para/>
+
+<para  align="left">If you forget to include a &#60;/h1> the entire page will be displayed as a main heading.</para>
+<para/>
+
+<para  align="left"><b>After the browser has read a tag it discards it. </b>Notice that none of the tags show up on the browser page.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Elements and Tags</pagetitle>
+<para  align="left"><image alt="" width="576" height="156" class="normal">pic007.jpg</image></para>
+<para  align="left"><b>Elements </b>include the start and stop tags and everything inside of them.</para>
+<para/>
+
+<para  align="left">An element can contain other elements.</para>
+<para/>
+
+<para  align="left">For example a &#60;p> element may contain a &#60;strong> element.</para>
+<para/>
+
+<para  align="left"><b>Tags </b>are the markers at the beginning and end of each element. They tell the browser how to display a section of text.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Attributes</pagetitle>
+<para  align="left"><image alt="" width="513" height="219" class="normal">pic008.jpg</image></para>
+<para/>
+
+<para/>
+
+<para  align="left"><b>Attributes are used to fine-tune elements. </b></para>
+<para/>
+
+<para  align="left">For example, the &#60;img /> element has two required attributes: src=" " and alt=" ".</para>
+<para/>
+
+<para  align="left">Each attribute has a name, the equal sign "=" and a value inside of quotation marks.</para>
+<para/>
+
+<para  align="left"><b>The attributes have to be inside of the &#60; and > of the tag. </b></para>
+<para/>
+
+<para  align="left">Think of a tag as a sentence. Attributes are adjectives describing the subject (or tag name) of the sentence.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>The Four XHTML Rules</pagetitle>
+<para  align="left"><image alt="" width="576" height="269" class="normal">pic009.jpg</image></para>
+<para/>
+
+<para  align="left"><b>There are four XHTML rules:</b></para>
+<para  align="left">(1) There can be only one root element. The &#60;html> &#60;/html> is always the root</para>
+<para  align="left">element of a web page.)<br/></para>
+<para  align="left">(2) Every start tag needs a stop tag.  <br/>For example:  &#60;strong> and &#60;/strong><br/>or for the single elements:  &#60;br /><br/></para>
+<para  align="left">(3) UPPER/lower case matter. Make every tag lower case.<br/></para>
+<para  align="left">(4) All attribute values must be inside of quotation marks.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Different Level Headings</pagetitle>
+<para/>
+
+<para  align="left"><b>You can set up six different levels of headings for sub-heads, sub-sub-heads, etc.</b></para>
+<para/>
+
+<para  align="left"><b>Add this to your code:</b></para>
+<para/>
+
+<para  align="left">&#60;h2> A sub head&#60;/h2></para>
+<para/>
+
+<para  align="left">&#60;h3> A sub-sub head&#60;/h3></para>
+<para/>
+
+<para  align="left">&#60;h4> A sub-sub-sub head&#60;/h4></para>
+<para/>
+
+<para  align="left">&#60;h6>Hardly a heading anymore&#60;/h6></para>
+<para/>
+
+<para  align="left">Save the file using CTRL s</para>
+<para  align="left">Refresh your browser using CTRL r</para>
+<para/>
+
+<para  align="left">Your browser should show a screen similar to this (without the green labels):</para>
+<para  align="left"><image alt="" width="400" height="404" class="normal">pic010.jpg</image></para>
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Paragraphs and Line Breaks</pagetitle>
+<para/>
+
+<para  align="left"><b>Two things the browser ignores are line-returns and more than one space.</b></para>
+<para/>
+
+<para  align="left"><b>In your code break up the lines so there is only a few words on each line.</b></para>
+<para/>
+
+<para  align="left"><image alt="" width="576" height="429" class="normal">pic011.gif</image></para>
+<para  align="left">Save the file (CTRL s) and view it in your browser (CTRL r).</para>
+<para/>
+
+<para  align="left"><b>None of the changes show up in the browser! </b></para>
+<para  align="left">All the browsers are programmed to ignore multiple spaces and new lines.  This lets the programmer format code for readability without changing the look of the finished web page.</para>
+<para/>
+
+<para  align="left">On the next page you will see how to use the &#60;br /> to tell the browser to start a new line.</para>
+<para/>
+
+<para  align="left"><b>To add multiple spaces</b> use the non-breaking space special character: ~&#38;nbsp;</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Using a &#60;br /> - Line Break</pagetitle>
+<para/>
+
+<para  align="left"><image alt="" width="573" height="301" class="normal">pic012.jpg</image></para>
+<para/>
+
+<para/>
+
+<para  align="left">Add in some &#60;br /> elements in order to tell the browser to start a new line.</para>
+<para/>
+
+<para  align="left">Remember the XHTML rules? Every start tag needs a stop tag.</para>
+<para/>
+
+<para  align="left">The &#60;br /> element is a single-tag element. In order to meet the XHTML requirements we add a space slash " /" to act as a "stop" tag.</para>
+<para/>
+
+<para  align="left"><b>For double tag elements the slash is at the front:</b> &#60;p> and &#60;/p></para>
+<para/>
+
+<para  align="left"><b>For single tag elements the slash is tacked on at the end:</b>&#60;br /></para>
+<para/>
+
+<para  align="left">Add some &#60;br /> elements to the paragraph and view the results in the browser.</para>
+<para/>
+
+<para  align="left"><b>Notice how we used the special character ~&#38;lt; to display the &#60; character.</b> If you us the &#60; by itself the browser thinks it is a new markup command!</para>
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Strong and Horizontal Rule &#60;hr /></pagetitle>
+<para  align="left"><b>If you want some text to be bold, use the &#60;strong> element.</b></para>
+<para/>
+
+<para  align="left"><b>If you want to add a horizontal rule</b> to separate areas on the page use the single-element &#60;hr /> You can add use the width=" " attribute to set the width to be a percentage of the page.</para>
+<para/>
+
+<para  align="left"><b>Type in this code as part of the &#60;p> element:</b></para>
+<para  align="left">&#60;p></para>
+<para  align="left">This is a &#60;strong>test&#60;/strong> paragraph.&#60;br /></para>
+<para  align="left">With several lines.<hr width="50%" /></para>
+<para  align="left">This is more copy showing how the horizontal rule can be used to separate areas on the page.</para>
+<para  align="left">&#60;/p></para>
+<para/>
+
+<para  align="left"><image alt="" width="576" height="221" class="normal">pic013.jpg</image></para>
+<para/>
+
+<para  align="left"><b>Here is a copy of the final</b><hyperlink><name> test.html</name><file>media/test.html</file></hyperlink><b> file.</b></para>
+<para  align="left">To save it to your computer right-click on the link and select "save target as" from the list of options.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Summary</pagetitle>
+<para  align="left"><b>You should be able to answer these questions as well as write a basic web page and display it in a browser.</b></para>
+<para/>
+
+
+<list type="3" level="1" start="1">
+	<item level="1">What is the "magic" character that the browser uses to determine the beginning of a markup tag? What is the character that is used to determine the end of a markup tag?<br/><br/></item>
+	<item level="1">What are some of the single tag elements mentioned in this tutorial?<br/><br/></item>
+	<item level="1">What are attributes?<br/><br/></item>
+	<item level="1">What are the two software programs that you need to create web pages?<br/><br/></item>
+	<item level="1">Do you need to be connected to the Web to write or display web pages?</item>
+</list>
+
+<para/>
+
+<para/>
+
+<para/>
+
+<para  align="center"><b>*** *** ***</b></para>
+<para  align="center"><b>This completes the tutorial: Web Development - Build a Web Page</b></para>
+<para  align="center">July 2010</para>
+<para  align="left">Written by Peter K. Johnson, Instructor</para>
+<para  align="left">South Central College</para>
+<para  align="left">North Mankato, MN 56003</para>
+<para  align="left">peterk@WebExplorations.com</para>
+<para/>
+
+<para  align="left"><b>Read my blog at:  </b> <hyperlink><name>http://webexplorations.com/blog</name><url>http://webexplorations.com/blog</url></hyperlink></para>
+<para/>
+
+<para/>
+
+<htmlinclude>
+<center> <!--Creative Commons License--><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/"><img alt="Creative Commons License" border="0" src="http://creativecommons.org/images/public/somerights20.png"/></a><br/>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/">Creative Commons Attribution-NonCommercial-ShareAlike 2.5  License</a>.<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<Work rdf:about="">
+		<license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/" />
+	<dc:type rdf:resource="http://purl.org/dc/dcmitype/InteractiveResource" />
+	</Work>
+	<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/><requires rdf:resource="http://web.resource.org/cc/ShareAlike"/></License></rdf:RDF> -->
+</center>
+</htmlinclude>
+<para/>
+
+<para/>
+
+<para/>
+
+
+
+
+
+
+</newpage>
+
+
+</courseGenie>
+

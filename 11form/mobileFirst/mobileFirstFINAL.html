@@ -1,0 +1,275 @@
+<!doctype html>
+    <html>
+      <head>
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <!-- mobileFirst2.html - Demo showing how to create mobile first
+              Peter K. Johnson - peterk@WebExplorations.com
+              Based on https://developers.google.com/web/fundamentals/getting-started/your-first-multi-screen-site/responsive
+              Written: 11-25-14
+              Revised: 
+         -->
+         <title>Mobile First</title>
+        <!-- IMPORTANT POINTS:
+             = Always use a viewport (See line #5 above)
+             = Start narrow and scale out
+             = Breakpoints adapt to content (Content is King)
+         --> 
+      <style>
+      /* Color Scheme:
+         #000060 Navy Blue
+         #FFFFFF White
+         #F5F5F5 Light Gray
+         #E9E9E9 Medium Gray
+         #888888 Dark Gray
+      */
+      body {
+      margin:              0px;
+      padding:             0px;
+      }
+      
+      
+      footer {
+      font-weight:     500;
+      padding:         20px 0;
+      }
+      
+      iframe {
+      width:           150px;
+      height:          86px;
+      }
+      
+      /* Set background image for "above the fold" */
+      #headline {
+      padding:          20px 5%; 
+      color:            white;
+      font-family:      optima, helvetica, arial, sans-serif;
+      background-image: url(graphic/background.jpg);
+      background-size:  cover;
+      }
+      
+      #headline h1 {
+      font-weight:       200;
+      font-size:         36px;
+      line-height:       1em;
+      margin-bottom:     0;
+      }
+      
+      #headline h2 {
+      font-weight:       200;
+      font-size:         16px;
+      }
+
+      #headline #blurb {
+      font-weight:      200;
+      font-size:        12px;
+      box-sizing:       border-box;
+      padding:          1%;
+      }
+                  
+      #section1,
+      #section2,
+      #section3 {
+      box-sizing:        border-box;
+      padding:           .25em;
+      }
+      
+      #blurb {
+      background:        white;
+      color:             black;
+      opacity:           0.8;
+      filter:            alpha(opacity=80); /* For IE8 and earlier */ 
+      padding:           1%;   
+      border-radius:     25px;  
+      margin:            0 2% 0 0;     
+      }
+            
+      #section1 {       
+      background:       rgba(7, 7, 132, 0.15);  /* light blue */      
+      color:            #000060;  /* Dark blue */
+      clear:            both;
+      }
+      
+      #section2 {
+      background:       #F5F5F5;  /* Light Gray */
+      }
+
+      #section2 .container img {
+      width:            20%;
+      margin:           1%;
+      box-sizing:       border-box;
+      border-radius:    50% 50%;
+      box-shadow:       black 0px 0px 5px;
+      }
+
+      #section2 br {
+      clear:            both;
+      }
+      
+      #section3 {
+      background:       #E9E9E9;  /* Medium Gray */
+      }
+      
+      footer {
+      background:       #888888;  /* Dark Gray */
+      color:            white;
+      }
+      
+      
+      
+      /* ****************************************
+         MIN-WIDTH  600px  WIDE SCREENS
+         **************************************** */
+      @media screen and (min-width:  600px) {
+         .container {
+         margin: auto;
+         max-width:        800px;
+         } 
+         
+         iframe {
+         width:            600px;
+         height:           340px;
+         }
+         
+         #headline {
+         padding:          20px 5%; 
+         color:            white;
+         font-family:      optima, helvetica, arial, sans-serif;
+         background:       green url(graphic/background.jpg) repeat-y;
+         /* background-size:  cover; */
+         }
+         
+         #headline header h1 {
+         font-weight:       200;
+         font-size:         60px;
+         line-height:       1em;
+         margin-bottom:     0;
+         }
+ 
+         #headline header h2 {
+         font-weight:       400;
+         font-size:         30px;
+         }
+         
+         #headline #blurb {
+         box-sizing:       border-box;
+         width:            47%;
+         float:            left;  /* move up form next to list  */ 
+         }
+         
+         #headline #register {
+         width:           45%;
+         float:           right;
+         }
+         
+         #headline br {
+         clear:           both;
+         }
+                
+         #section1,
+         #section2,
+         #section3 {
+         box-sizing:       border-box;
+         padding:          10px 20% 80px 20%;
+         }
+         
+         #section1 ul {
+         box-sizing:       border-box;
+         float:            left;
+         width:            50%;
+         padding-right:    1em;
+         }
+         
+         #section2 .container img {
+         width:            33%;
+         margin:           1%;
+         box-sizing:       border-box;
+         border-radius:    50% 50%;
+         box-shadow:       black 0px 0px 5px;
+         float:            left;
+         }
+         
+        
+      } /* end of @media 600px */
+      </style>
+      
+      </head>
+      <body>
+      <div id="headline">
+         <header>
+            <h1>Mobile First</h1>
+            <h2>Create a site that will automatically adjust to any device.</h2>
+         </header>
+         <div id="blurb">
+            <p>
+            Cream Silk pie satisfies. Dolor sit amet, consectetur adipiscing elit. Sed vulputate justo sit amet arcu volutpat sed laoreet nulla luctus. Sed viverra diam vitae quam sollicitudin rhoncus vitae at eros. Donec gravida quam sem. Maecenas id magna nec libero faucibus consectetur.
+            </p>
+            <ul>
+               <li>Cream Silk Pie</li>
+               <li>German Chocolate Truffles</li>
+               <li>Divinity</li>
+            </ul>
+         </div> <!-- end of #blurb -->
+       
+         <form method="post" id="register">
+             <h2>Register for the lunch</h2>
+             <label for="name">Name</label>
+             <input type="text" name="name" id="name"
+                placeholder="Thomas A Anderson" required>
+             <label for="email">Email address</label>
+             <input type="email" name="email" id="email"
+                placeholder="neo@example.com" required>
+             <label for="tel">Telephone</label>
+             <input type="tel" name="tel" id="tel"
+                placeholder="(555) 555 5555" required>
+             <input type="submit" value="Sign up">
+         </form>
+         <br />
+      </div> <!-- end of #headline -->
+           
+        <div id="section1">
+         <div class="container">
+          <h2>What's for Dessert? Section 1</h2>
+          <p>
+             Lots of good things. Sved vulputate justo sit amet arcu volutpat sed laoreet nulla luctus. Sed viverra diam vitae quam sollicitudin rhoncus vitae at eros. Donec gravida quam sem. Maecenas id magna nec libero faucibus consectetur.
+          </p>
+          <iframe width="300" height="169" src="http://www.youtube.com/embed/zANCn2v7Rbo?rel=0"  allowfullscreen>
+          </iframe>   
+         <p>
+            <a href="http://youtu.be/zANCn2v7Rbo?t=2s" target="_blank">Making Truffles</a>
+         </p> 
+         </div>
+         </div>
+        
+        <div id="section2">
+         <div class="container">
+          <h2>Images Make the Page</h2>
+          <h3>The box sells the cereal.</h3>
+            <img src="graphic/pie.jpg" alt="French Silk Pie" />
+            <img src="graphic/divinity.jpg" alt="Divinity confection" />
+            <img src="graphic/truffle.jpg" alt="Truffles" />
+         </div>
+         <br />
+         </div>
+        
+        <div id="section3">
+          <div class="container">
+         <h2>What's Next?</h2>
+          <p>
+             After dessert there isn't much else! Sved vulputate justo sit amet arcu volutpat sed laoreet nulla luctus. Sed viverra diam vitae quam sollicitudin rhoncus vitae at eros. Donec gravida quam sem. Maecenas id magna nec libero faucibus consectetur.
+          </p>
+         </div>
+        </div>
+        
+        <footer>
+           <p>
+              <strong>Credits:</strong>
+           </p>
+          <ul>
+          <li>Cream Silk Pie by http://www.onceuponachef.com/images/2011/06/chocolate-cream-pie.jpg</li>
+          <li>Truffles by http://upload.wikimedia.org/wikipedia/commons/7/7f/Truffles_with_nuts_and_chocolate_dusting_in_detail.jpg</li>
+          <li>Divinity from http://upload.wikimedia.org/wikipedia/commons/f/ff/Divinity_candy.jpg</li>
+          </ul>
+        </footer>
+          </body>
+    </html>

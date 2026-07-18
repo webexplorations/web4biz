@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>WordPress FAQ</title>
+
+<!-- use local css if available -->
+<style type="text/css">
+@import url("../scc.css");
+</style>
+<style type="text/css">
+/* multimedia and image map sections are color coded */
+.multimedia {
+background-color: #E7EAFF;  /* pale blue */
+color:            black;
+}
+.style1 {background-color: #E7EAFF; color: black; font-weight: bold; }
+
+h2 {
+font-size:    140%;
+font-weight:  700;
+background-color:   #999;
+color:        #EEEEEF;
+}
+</style>
+<script src="../Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="header">
+    <p><img src="../graphic/w.png"  alt="Wordpress Logo" width="62" height="62" />
+       <br />
+    </p>
+   <h1>WordPress FAQ<br />
+   </h1>
+   <h3>&nbsp;</h3>
+<!-- end header --></div>
+<br />
+<div class="contentBlock">
+   <h2><strong>Summary of Questions</strong></h2>
+   <ol>
+      <li><a href="#summary" class="multimedia">Can you give me a checklist to follow to install WordPress?</a><br />
+         <br />
+      </li>
+      <li><a href="#secure" class="multimedia">I'm watching the video and following the steps for getting to the c panel but when I use the address https://myfirstnameLastInitial.t.southcentral.edu:2083, I get an error message saying that address uses an invalid security certificate. Any ideas how to fix this?</a><br />
+         <br />
+      </li>
+      <li><a href="#reinstall" class="multimedia">How do I re-install WordPress? When I type in my web site name&nbsp; t.southcentral.edu/blog
+         I get the index screen and have to click on the wp to get to the blog. How do I
+         fix this?</a><br />
+      </li>
+   </ol>
+</div><div class="contentBlock">
+   <h2 id="summary"><strong>Summary Steps to Installing WordPress</strong></h2>
+      <p>Can you just give me a checklist to follow to install WordPress?</p>
+   <p>&nbsp;      </p>
+      <p><strong>1. Set up a database using the cPanel out on the t.server</strong></p>
+      <p>Here are some suggestions for the names:</p>
+      <p>Database name: wordpress (Your username will be automatically added as a prefix:&nbsp; pedroj_wordPress)</p>
+      <p>Database userName: wordpress (Your username will be automatically added as a prefix:&nbsp; pedro_wordpress). It doesn't matter that the database and username are the same.<br />
+      </p>
+      <p>Database password: Please99! (No prefix is added.)</p>
+      <p>Don't forget to &quot;Add&quot; the database name and the database username together. This will bring you to a page showing Privileges. Check the &quot;All Privileges&quot; box.</p>
+   <p>You should see a box in the cPanel&nbsp;database screen that shows them both together. Something similar to this:</p>
+      <p><img src="graphic/wordPressCurrentDatabase.png" width="744" height="236" alt="Current Database list" /></p>
+      <p><strong>Write down this information</strong> and label it: &quot;WordPress Database Login Information&quot;<br />
+         <br />
+      </p>
+      <p><strong>2. Download the current version of WordPress from <a href="http://Wordpress.org" target="_blank">http://Wordpress.org</a></strong><a href="http://Wordpress.org" target="_blank"></a></p>
+      <p><strong>3. Unzip the file (right-mouse click on the zip file and select &quot;unzip/uncompress here&quot;</strong></p>
+      <p><strong>4. Change the name of the folder that was unzipped to &quot;blog&quot;</strong></p>
+      <p><strong>5. FTP this blog folder (of unzipped files) up to the t.server. Make certain the folder is inside of public_html.</strong></p>
+      <p><strong>6. Set the permissions so WordPress can make changes during the installation.</strong><br />
+      On the t.server, using FileZilla, right-mouse click on the &quot;blog&quot; folder and choose &quot;set permissions&quot;.<br />
+      Type in &quot;777&quot;. This should cause all of the boxes to be checked.<br />
+      Make certain the box &quot;Recursive through the folders&quot; so all the inside files and folders get set to 777 as well.
+      </p>
+      <p><strong>7. Run the installation by going to your web page:&nbsp; </strong>&nbsp;http://yourUserName.t.southcentral.edu/blog</p>
+      <p><strong>8. If WordPress says there isn't a configuration file</strong>, click on the link or button so WordPress will create one for you. (This is why we set the permissions so anyone could read/write/or run the programs in the folder.) </p>
+      <p><strong>9. Use the &quot;WordPress Database Login Information&quot; (that you wrote down) to complete the installation.</strong></p>
+      <p><strong>10. Write down the user name and password you decide to use for Admin.</strong> (It will look weird. Write it down&nbsp;carefully so you can read it later when you need it.)</p>
+      <p><strong>11. Once you are inside of WordPress, in the Administration pages, create at least one new WordPress user.</strong></p>
+      <p>UserName:&nbsp;your first name. last name&nbsp; Example:&nbsp; pedro.johnson</p>
+      <p>Password:&nbsp; Please88!&nbsp; or something that is simple to remember.&nbsp; (Your first address, name of your first pet, and a !)</p>
+      <p>Make certain you set this user to be of type Admin (not editor or anything else. You want this special user to have all editing rights.)</p>
+      <p>Write this down&nbsp;(so you can read it later.) Label it: &quot;WordPress Admin user&quot;&nbsp; UPPER/lower case matter.</p>
+      <p><strong>12. Anytime you need to access the WordPress Administration panel put wp-admin on the end of the URL.</strong><br />
+      For example:  http://youruserName.t.southcentral.edu/blog/<strong>wp-admin</strong></p>
+</div>
+</br />
+   
+    <div class="contentBlock">
+      <h2 id="secure"><strong>Secure Connection Failed Error Screen</strong></h2>
+      <p>I'm watching the video and following the steps for getting to the c panel but when I use the address https://myfirstnameLastInitial.t.southcentral.edu:2083, I get an error message saying that address uses an invalid security certificate. Any ideas how to fix this?
+      </p>
+      <p><img src="graphic/secureConnectionFailed.png" alt="Secure Connection" width="649" height="356" /></p>
+      <p>Click on the link at the bottom of the page &quot;Or you can add an
+         exception&quot; and agree with each item that displays. You don't have to view the certificate,
+         just okay everything so that a certificate is saved on your computer telling the browser
+         that the files on your t.server are safe to view.</p>
+      <p>&nbsp;</p>
+</div><!-- end of .contentBlock -->
+
+<p>&nbsp;</p>
+   
+<div class="contentBlock">
+   <h2 id="reinstall">How do I re-install WordPress?</h2>
+      <p>When I type in my web site name&nbsp; t.southcentral.edu/blog
+            I get the index screen and have to click on the wp to get to the blog. How do I
+            fix this?
+            </p>
+<br /><img src="graphic/wrongBlogFolder.jpg" alt="Wrong folder on server" width="688" height="376" /></p>
+      <p>You&#8217;ve made things too complicated by setting up extra folders.
+         To get to your blog the user has to type: .t.southcentral.edu/wp/blog<br />
+      The wp folder is just an extra layer that gets in the way.</p>
+      <p><br />
+The best thing to do is start from scratch. It may seem like a
+         lot but it is much faster than trying to find all the references to the folder structure
+         in the database and trying to fix the WordPress framework.    </p>
+      <p><strong>(1) Create a &quot;blog&quot; folder from the zip file you downloaded from
+      WordPress</strong></p>
+      <p>When you download the files from WordPress they are zipped up.<br />
+         When you unzip that folder is named WordPress with a version number.<br />
+         You want to change that folder name to &#8220;blog&#8221; and that is what you FTP out to your
+server.<br />
+</p>
+      <p class="style1">(2) Delete the tables that were created when you first installed
+      WordPress on your server</p>
+      <p>Here is a movie showing how to do this. <U><a href="http://blip.tv/file/2052777/">http://blip.tv/file/2052777</a></U><br /> 
+         (It only takes a few minutes
+         using cPanel and PHPMyAdmin)<br />
+   </p>
+      <p><strong>(3) Upload the blog folder you created in
+      step 1 up to the t.server using FileZilla.</strong>      </p>
+      <p>Put it in the root directory (public_html) Here is a screen shot
+         showing you how the files should look:</p>
+   <p><img src="graphic/wordPressFileZilla.png" alt="WordPress in FileZilla" width="1051" height="295" /><br />
+   (4) Re-install WordPress by going out to the blog and in <U><a href="http://lancek.t.southcentral.edu/blog">http://firstnameLastInitial.t.southcentral.edu/blog</a></U>.<br />      
+</div>
+    <p>&nbsp;</p>
+<div id="contact">
+      <p><img src="graphic/webExplorationsLogoTrans.png" alt="Web Explorations logo" height="150" /><br />
+      </p>
+<p>&nbsp;</p>
+      <p>
+         <strong> <a href="http://WebExplorations.com" target="_blank">WebExplorations.com</a></strong>
+</p>
+      <p>&nbsp;
+      </p>
+   </div>
+</body>
+</html>

@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- indexTable.html - main activity page for Module: Table - Web4Biz course
+     Peter K. Johnson - peterk@webExplorations.com
+     Written:  5-17-11 Build template using jQuery
+               10-26-13 Rebuild for Web4Biz
+     Revised:  PKJ 08-18-14 Checked all links. Fixed Project link
+
+      MAINTENANCE CHECKLIST:
+      (1) Make sure checkmark.png and detailPage.png are in the root graphic directory
+      (2) Make sure jQuery is in the root folder.
+      (3) Update title
+      (4) Update total activity time for the module (around line #235)
+    
+     REVISED:  11-12-11 modified code originally from actForm.html
+               10-06-13 PKJ modified from 09hyperlink/index.html
+
+Accessibility:
+(1) Add noscript element and hide if JavaScript is enabled.
+(2) Use CSS to make visibility: hidden; the .toDo elements in case JavaScript is disabled.
+(3) Use jQuery to change this CSS to visibility: visible;
+(4) Use jQuery to create a hyperlink that toggles between the detailed learning activities and the abbreviated toDo lists.
+    This will be added after the p#toggleToDo (at the top of the Learning Activities)
+
+Classes and IDs:
+Paragraph used to position hyperlink: #toggleTodo
+Hyperlink:                            #displayToggle
+Verbose Activity item:                .activity
+Short Todo item:                      .todo
+Name of icon/activity image:          #iconImg
+Name of icon/activity link:           #iconLink
+
+DEBUG CHECKLIST:
+(1) If #iconImg and #iconLink are not displaying, make certain you have the jQuery library in the root folder.
+-->
+
+  <title>Tables</title><!--
+******************************************************
+* * * * * * * * * jQuery Stuff * * * * * * * * * * * *
+****************************************************** -->
+
+  <script type="text/javascript" src="../jquery-1.6.2.js">
+</script>
+  <script type="text/javascript">
+$("document").ready( function( )
+  {
+     // Change the CSS so .todo items display when toggled
+     $('.todo').css("visibility", "visible");
+     $('#iconImg').css("visibility", "visible");
+     $('#iconLink').css("visibility", "visible");
+     // Hide all the todo items
+     $('.todo').hide( );
+     $('#tipOfWeek').hide();
+
+     //When user clicks on todo link or the iconLink,
+     // toggle the screen between details/summary to-do list
+     $('#displayToggle').click(togglePage);
+     $('#iconLink').click(togglePage);
+     $('#iconImg').click(togglePage);
+     $('#tipImg').click( function()
+     {
+        $('#tipOfWeek').toggle();
+     }); // end of #tipImg.click( )
+  }); // end of .ready( )
+
+   // Toggle the screen between detailed and summary views
+   function togglePage( )
+   {
+      $('.activity').toggle();
+      $('.todo').toggle();
+
+      // Show the detailed Learning Activities
+      if($('.activity').is(':visible'))
+      {
+        $("#displayToggle").text('See Checklist View');
+        // Display the todoIcon
+        $("#iconImg").attr("src","../graphic/checkmark.png");
+        // Change the hyperlink
+        $("#iconLink").text("See Checklist View");
+        // Hide the objective section
+        $("#objective").show();
+        $("#wiifm").show( );
+        $("#nextModule").show( );
+        $(".assessment").show( );
+        $("#tip").show( );
+      }
+      else // show the summary to-do list
+      {
+        $("#displayToggle").text("See Detailed View");
+        // Display the Learning Activity Icon
+        $("#iconImg").attr("src", "../graphic/detailPage.png");
+        $("#iconLink").text("See Detailed View");
+        // Show the objectives
+        $("#objective").hide( );
+        $("#wiifm").hide( );
+        $("#nextModule").hide( );
+        $(".assessment").hide( );
+        $("#tip").hide( );
+      }
+   }// end of togglePage( )
+
+  </script><!-- Make page IE backwards compatible using CSS3 and HTML5 -->
+
+  <script type="text/javascript" src="../modernizr.js">
+</script><!--[if (gte IE 6)&(lte IE 8)]>
+  <script type="text/javascript" src="../selectivizr-min.js"></script>
+  <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
+<![endif]-->
+  <!-- *************************************************   
+* * * * * * * * * CSS Stuff * * * * * * * * * * * *
+****************************************************** -->
+  <!-- Font Loading -->
+  <link href='http://fonts.googleapis.com/css?family=Permanent+Marker&v2' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+@import url(../activity.css);
+  </style>
+  <style type="text/css">
+ /* Initially hide the toDo list items in case JavaScript is disabled.
+      Use jQuery to show them if JavaScript is available. */
+   .todo,
+   #iconImg,
+   #iconLink {
+   visibility:      hidden;
+   }
+
+   .todo p {
+   /* Add checkbox as background image to control position */
+   background:      transparent url("../graphic/checkbox.png") no-repeat 0px 2px ;
+   padding:         5px 10px 7px 40px;  /* make room for checkbox */
+   margin:          0px 0px 0px 20px;
+   }
+
+   #tipImg {
+  /* Round all corners */
+  -webkit-border-radius:  130px;
+  -moz-border-radius:     130px;
+  border-radius:          130px;
+  border:                 1px green solid;
+  margin:                 10px 20px 5px 5px;
+  }
+  </style><!-- Fix IE Anamolies so IE recognizes HTML5 elements -->
+  <!--[if lt IE 9]>
+<script>
+// Set up new elements so old browsers will recognize for CSS
+var e = ("abbr,article,aside,audio,canvas,datalist,details,"
+   + "figure,footer,header,hgroup,mark,menu,meter,nav,output,"
+   + "progress,section,time,video").split(',');
+   for (var i = 0; i < e.length; i++)
+   {
+      document.createElement(e[i]);
+   }
+</script>
+<![endif]-->
+</head>
+
+<body>
+  <div id="frame">
+    <header>
+      <div class="identity">
+        <table summary="Page heading and module icon">
+          <tr>
+            <td rowspan="2"><img src="../graphic/table.png" width="100" alt="file folder icon"></td>
+
+            <td>
+              <h1>Tables</h1>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <h5>Organize that information!</h5>
+            </td>
+          </tr>
+        </table>
+      </div><!-- end of .identity -->
+      <!-- ****** NAVIGATION (To-Do List/Detailed List Graphics) ******* -->
+
+      <div class="navigation">
+        <table summary="navigation links to course map and todo list" border="1">
+          <tr>
+            <td><img id="iconImg" src="../graphic/checkmark.png" alt="to-do list icon" width="50"></td>
+          </tr>
+
+          <tr>
+            <!-- This link is handled null. It triggers a click event handled by jQuery -->
+
+            <td>
+              <a id="iconLink" href="#">See Checklist View</a>
+            </td>
+          </tr>
+        </table>
+      </div><!-- end of .navigation -->
+    </header>
+<!-- ************************************************
+* * * * O B J E C T I V E S    S E C T I O N  * * * *
+***************************************************** -->
+
+    <section id="objective">
+      <!-- Objectives -->
+            <h4>In this module you will learn:</h4>
+
+<h3>Demonstrate how to use the &lt;table> element.</h3>
+<ul>
+  <li>Create a simple web page containing a table with multiple rows and columns.</li>
+  <li>Incorporate a table with comments in the web template to speed development time and simplify
+    maintenance.
+  </li>
+  <li>Use CSS to style table components.</li>
+  <li>Create a table that does not have borders.</li>
+  <li>Create a table with cells that span several columns or rows.</li>
+  <li>Create a table inside a table, or nested tables.<br />
+  </li>
+</ul>
+    </section>
+<!-- ************************************************
+WII-FM
+***************************************************** -->
+
+    <section id="wiifm">
+      <!-- WII-FM -->
+
+      <h4>WII-FM (What's In It - For Me)</h4>
+
+  <p>
+    <strong>Not all information looks good as a paragraph. </strong>When you want to
+    display rows and columns of information you'll want to reach into your web tool box and bring out your set of table building tools. <br />
+  </p>
+
+    </section>
+<!-- ***************************************************
+* * * * L E A R N I N G    A C T I V I T I E S   * * * *
+******************************************************** -->
+
+    <section class="activityGroup">
+      <h4 id="toggleTodo">Complete these Learning Activities:</h4>
+
+      <p><strong>Total estimated time for this module:</strong> 6 hours.</p>
+      <!-- jQuery will insert a link here for toggling between detailed and summary to-do list
+       based on the id="toggleTodo" set in the object above this comment. -->
+      <noscript>
+      <p><strong>You have JavaScript turned off.</strong> Enable it to view a short list of all the To-Do items.</p></noscript>
+      <hr>
+
+
+<!-- ************************
+Take the Quiz
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+<p>
+  <strong>Take the SelfQuiz:Table.</strong> This is your LEARNING experience.<br>
+  You can take this self-quiz as many times as you like. Keep in mind that it will close Sunday night before the graded quiz opens.
+</p>
+  <p>
+  <strong>Be smart and take the self-quiz once each day to learn the material.</strong> 
+  </p>
+   
+  <p><strong>Estimated Time:</strong> 10 minutes (probably a lot less) each time you take a self-quiz.</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+    Take the Self-Quiz: Table. 
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+
+<!-- ************************
+Read the Book
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+  <p>
+  <strong>Read Chapter 9</strong> of Basics of Web Design HTML5 and CSS3 - HTML Basics.  
+  </p>
+<img src="../graphic/textbookCover.jpg" alt="cover of the textbook" style="margin: 10px 25px 0 30px; width: 80px; float: left;" />  <ul>
+  <li>Create table rows, cells, and headers.</li>
+  <li>Span rows and columns.</li>
+  <li>Configure an accessible table.</li>
+  <li>Style a table using CSS.</li>
+  <li>Configure table sections.</li>
+  </ul>
+  <p>
+  <strong>Estimated Time:</strong> 2 hours
+  </p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+<p>
+  Read Chapter 9 of Basics of Web Design HTML5 and CSS3 - HTML Basics.
+</p>
+</div><!-- end of .todo -->
+<hr>
+
+<!-- ************************
+Tutorial: Table with Images and CSS
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+  <p>
+<a href="table.pdf" target="_blank">
+<img src="graphic/coverTable.png" alt="cover of the Lab: Table" style="margin: 0 15px; width: 100px; float: left;border:#000080 solid 1px;" /> 
+</a>
+ <strong>Learn how to include images and use CSS to style your tables. <a href="table.pdf"
+  target="_blank">Lab: Table with Images and CSS</a></strong>
+  </p>
+  <p>
+   You'll also learn how to span across several columns (and down several rows) which is useful when captioning and adding general headings.
+  </p>
+<br />
+  <p>
+  <strong>Estimated Time:</strong> 1 hour
+  </p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+<p>
+  Learn how to include images and use CSS to style your tables. <a href="table.pdf"
+  target="_blank">Lab: Table with Images and CSS</a>.
+</p>
+</div><!-- end of .todo -->
+<hr>
+
+<!-- ************************
+Tutorial: Table - Calendar
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+  <p>
+<a href="tableCalendar.pdf" target="_blank">
+<img src="graphic/coverTableCalendar.png" alt="cover of the Lab: Table" style="margin: 0 15px; width: 100px; float: left;border:#000080 solid 1px;" /> 
+</a>
+ <strong>Get more practice styling tables using the &lt;span> element and the class=" " attribute with this  <a href="tableCalendar.pdf"
+  target="_blank">Lab: Table - Calendar</a></strong>
+  </p>
+  <p>
+   You'll also learn how to add a background image to a table as well as how to add zebra-striping. 
+  </p>
+  <p>
+  You'll also learn a great trick adding transparency to an element using rgba( )  (red-green-blue-alpha)
+  </p>
+<br />
+  <p>
+  <strong>Estimated Time:</strong> 1 hour
+  </p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+<p>
+  Get more practice styling tables using the &lt;span> element and the class=" " attribute with this  <a href="tableCalendar.pdf"
+  target="_blank">Lab: Table - Calendar</a>.
+</p>
+</div><!-- end of .todo -->
+<hr>
+
+
+<!-- ************************
+Work with @media Queries
+***************************** -->
+<div class="activity">
+  <p>
+  <strong>Learn about Media Queries and Building Responsive Web pages using this code: <a href="mediaQueryDemo.zip" target="_blank">mediaQueryDemo.zip</a></strong>- Learn how to make your pages automatically adapt to mobile and tablet devices.
+  </p>
+  <p>
+     Here is a Smashing Magazine article with more information: <a href="http://www.smashingmagazine.com/2011/01/12/guidelines-for-responsive-web-design/" target="_blank">Responsive Web Design: What It Is and How To Use It</a>.
+  </p>
+  <p>
+  <strong>Estimated Time:</strong> 1 hour
+  </p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+<p>
+  Learn about Media Queries and Building Responsive Web pages using this code: <a href="mediaQueryDemo.zip" target="_blank">mediaQueryDemo.zip</a>- Learn how to make your pages automatically adapt to mobile and tablet devices.
+</p>
+</div><!-- end of .todo -->
+<hr>
+
+<!-- ************************
+Chris Coyier - Table Examples
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+  <p>
+<img src="graphic/chrisCoyier.jpg" alt="Chris Coyier - CSS-tricks.com" width="75" hspace="20"
+  vspace="20" align="right" />
+<strong>Check out <a href="http://css-tricks.com/complete-guide-table-element/"
+  target="_blank">A complete guide to CSS and Tables</a> by Chris Coyier.</strong> Pick out the table display you want to use. (CSS/JavaScript/HTML all shown). Do a ctrl F (find) for: blur  to see a really cool effect. 
+  </p>
+  <p>
+  Here is a live recording showing Chris at his zany best: <br />
+
+<iframe width="350" height="197" src="http://www.youtube.com/embed/vsTrAfJFLXI" frameborder="0" allowfullscreen align="left"></iframe>
+<br /><br /><br /><br />
+  </p>
+
+  <p>
+  Chris Coyier also has a page showing <a href="http://codepen.io/collection/nhowz/1" target="_blank">a collection of nice looking tables out on CodePen</a>.
+  </p>
+  <br /><br /><br /><br />
+  <p>
+  <strong>Estimated Time:</strong> 2 hours
+  </p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+<p>
+Watch <a href="http://www.youtube.com/embed/vsTrAfJFLXI" target="_blank">Chris Coyier and learn how he sets up his workflow when developing websites.  </a>   
+</p>
+</div><!-- end of .todo -->
+<hr>
+
+
+<!-- ************************
+Lab: Tables inside of Tables
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+  <p>
+<strong>Complete the <a href="labTableInTable/tableInTableSpec.html" target="_blank"> Table in a Table</a> Learning Lab</strong> to learn more about tables and to extend your web design powers.
+  </p>
+  <p>
+<strong>Resources:</strong> <a href="labTableInTable/tableInTableSTART.html" target="_blank">
+  TableInTableSTART.html</a> (To save the file: right-mouse click, &quot;save link as&quot; )
+  </p>
+  <p>
+<strong>Save these graphics</strong> on your computer using right-mouse click, &quot;save image as&quot;<br />
+<img src="labTableInTable/graphic/firework.gif" alt="couple watching fireworks" width="188"
+  height="140" border="2" /> <img src="graphic/handstand.jpg" alt="person doing handstands"
+  width="150" height="150" border="2" />
+  </p>
+  <p>
+<strong>Here is what the finished page should look like: </strong><br />
+<a href="labTableInTable/graphic/tableInTableFinalOutput.png"
+  target="_blank"><img src="labTableInTable/graphic/tableInTableFinalOutput.png"
+  alt="Final result of the table in a table learning lab" width="300" hspace="10" vspace="10"
+  border="2" /></a><br />
+  (Click on the graphic above to see a larger view)
+  </p>
+  <p>
+  <strong>Please note:</strong> This is<strong> not</strong> the project, this is to give you an opportunity to noodle around with tables to find out what works and what doesn't. What you learn here will directly apply to your project. (Please do not use this practice lab in your project and expect to get credit...)
+  </p>
+  <p>
+  <strong>Having Problems?</strong> Here is the trick: Make two separate tables. One to for the outer table (outlined here in blue) and a separate table for the inner table (outlined here in red). Validate the page to make certain there are no errors/warnings. Once the tables are correct, copy the inner table and paste it inside a &lt;td&gt; &lt;/td&gt; element of the outer table. Voila! A table inside a table.
+  </p>
+  <p>
+  Check your work with an HTML Validator - You may be missing something in your HTML markup<br />
+  Check to make certain you have matching start and stop tags for each element.
+  </p>
+  <p>
+  <strong>Estimated Time:</strong> 1 hour
+  </p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+<p>
+Complete the <a href="labTableInTable/tableInTableSpec.html" target="_blank"> Table in a Table</a> Learning Lab
+</p>
+</div><!-- end of .todo -->
+<hr>
+
+
+</section>
+    
+<!-- ************************************************
+* * * * A S S E S S M E N T    S E C T I O N  * * * *
+***************************************************** -->
+<section class="assessment">
+  <h4>Your Graded Assignments For This Module</h4>
+
+  <!-- ************************
+  Project: 
+  ***************************** -->
+     <p>
+    <a href="prjTableForm.pdf" target="_blank"> 
+    <img src="../13project/graphic/coverTable.png" alt="cover for Project: TableForm Specifications" style="margin: 0 15px; width: 100px; float: left;" />
+    </a>
+    Begin work on the <a href="../13project/prjTableForm.pdf" target="_blank">Project: TableForm</a>
+    </p>
+    <p>
+    This project covers tables and forms. Build your table page now and add the form information as you finish the next Module: Forms. 
+    </p>
+  <hr />
+</section>
+    
+<!-- ************************************************
+Tip of the Week
+***************************************************** -->
+    <section>
+      <img src="../graphic/lightBulb.png" alt="hand holding lightbulb all lit up" align="left" width="90" id="tipImg">
+
+      <h4>Your Tip-Of-The-Week</h4>
+
+      <p>(Click on the lightbulb to reveal the tip.)<br>
+      <br></p>
+
+      <div id="tipOfWeek">
+      <a href="http://css-tricks.com/responsive-data-table-roundup/" target="_blank"><img src="graphic/responsiveTable.jpg" alt="David Bushell's solution" style="margin: 0 15px; width: 200px; float: left;" /></a>
+      
+  <h3>Responsive Tables</h3>
+
+        <p>
+        Chris Coyier shows different ways you can create <a href="http://css-tricks.com/responsive-data-table-roundup/" target="_blank">Responsive Data Tables</a> that will display tables on the desktop as well as a mobile phone.
+        </p>
+      <br />
+      <hr />
+
+      </div><!-- end of #tipOfWeek -->
+    </section>
+    
+<!-- ************************************************
+What's Next?
+***************************************************** -->
+<section id="nextModule">
+  <h4>What's Next?</h4>
+  <img src="../graphic/form.png" alt="people" style="margin: -15px 15px -10px 5px; width: 90px; float: left;">
+  <p>
+  A critical piece of your website: getting information from the user! The next module will show you how by using forms.
+  </p>
+</section>
+
+    <footer>
+      <p>Strong start... Successful finish.</p>
+    </footer>
+  </div><!-- end of #frame -->
+</body>
+</html>

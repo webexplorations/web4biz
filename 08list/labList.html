@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- practiceLabList.html - Practice Lab for learning lists
+  Peter Johnson - peterk@webExplorations.com
+  Written:     10-19-13 
+  Revised: PKJ 10-19-13 Adapted from original lab   
+  -->
+<head>
+<meta charset="utf-8">
+<title>Lab: Lists</title>
+
+<script type="text/javascript">
+</script>
+<style type="text/css">
+  body {
+  background:  #EEE;
+  font-size:   16px;
+  font-family: helvetica, arial, sans-serif;
+  }
+  
+  h1 {
+  border:  1px #000080 solid;
+  padding: 10px;
+  background:  #AAA;
+  color:    white;
+  }
+  
+  h2 {
+  background: #DDD;
+  color:      #000080;
+  padding:    10px;
+  border:     1px #000080 solid;
+  }
+  
+  li {
+  margin:     1.5em 0 0 0;
+  }
+  
+  #frame {
+  max-width:   800px;
+  margin:      auto;
+  border:      1px solid #000080;
+  padding:     20px;
+  }
+  
+  .code {
+  font-family: "courier new", courier, monospace;
+  font-weight:  300;
+  }
+</style>
+</head>
+<body>
+<div id="frame">
+  <h1>Practice Lab: List</h1>
+  <h2>This lab will give you practice with the following HTML skills:</h2>
+  <ul>
+  <li>Display a bulleted list on a web page.</li>
+  <li>Display a lettered list on a web page.</li>
+  <li>Utilize at least three special characters on a web page.</li>
+  <li>Add a horizontal rules on a web page for increased readability.</li>
+  <li>Use the &lt;img /> element to display graphics on a web page.</li>
+  </ul>
+  <hr>
+  <h3>What to do:</h3>
+  <p>
+  <b>The board of directors for Money Plus</b> has hired you to create a web page for them. They want the page to list the requirements for their financial aid package. They have agreed to pay you $100.
+  </p>
+  <p>
+  <strong>Important:</strong> As you complete each step, save the page and view your changes in the browser checking for errors.
+  </p>
+
+  <p>
+  <strong>(1)</strong> Create a basic web page starting with a comment header block and using the essential html elements:
+  </p>
+  <div class="code">
+  &lt;!DOCTYPE html><br />
+  &lt;html><br>
+  &lt;!-- <br />
+  financial.html - Lab: List to explore my knowledge of HTML lists <br/>
+  Written by:   Add your name and email address here.<br />
+  Date:         <br />
+  --><br />
+  &nbsp;&nbsp; &lt;head><br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/title><br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="utf-8" /><br />
+  &nbsp;&nbsp;&nbsp;&lt;/head><br>
+  &nbsp;&nbsp;&nbsp;&lt;body><br>
+  &nbsp; &nbsp; &nbsp; &nbsp;All the display content for the page goes in the &lt;body> element.<br />
+  &nbsp;&nbsp;&nbsp;&lt;/body><br>
+  &lt;/html>
+  </div>
+  
+  <p>
+  <strong>(2)</strong> Name the file: <strong>financial.html</strong> -- Don't forget to set the file type to "HTML" or your text editor might save the file as a ".txt" file.
+  </p>
+  
+  <p>
+     <strong>Debugging tip:</strong> If the color coding does not show up and all the text in your text editor is black, than you probably have the file extension wrong. Look at the filename tab at the top of the editor to see the actual name of the file you are editing.
+  </p>
+  
+  <p>
+  <strong>(3)</strong> Add the title: "Money Plus Financial Aid Program" so these words display in the title bar of the browser and on the Start bar when customers are viewing the web page.<br>
+  Put this information in the <span class="code">&lt;title> &lt;/title></span> section of the web page.
+  </p>
+  
+  <p>
+  <strong>(4)</strong> Create level 1 heading at the top of the page that says "Money Plus"  <a href="http://www.w3schools.com/tags/tag_hn.asp" target="_blank">Need help? Click here.</a>
+  </p>
+  
+  <p>
+  <strong>(5)</strong>Add a level 3 heading underneath the title that says "Financial Aid Program Requirements"
+  </p>
+  
+  <p>
+  <strong>(6)</strong> Save this image to the same folder as your html document by right-mouse clicking and choosing "save image as". Name this image <strong>money.jpg</strong>. Remember to always follow the naming conventions. (Start with lower case letters, useCamelCase, no spaces or underscores, all file extensions are lower case.)
+  <br />
+  <br />
+  Or.... be super professional and save the image in a graphic sub-folder!
+  </p>
+  
+  <p>
+  <img src="graphic/money.jpg" alt="100 dollar bill" width="288" height="216">
+  </p>
+  
+  <p><strong>(7)</strong> Display the image on the web page under the level 3 subheading. For the alt="" attribute use: "photo of $100 dollar bill". <a href="http://www.w3schools.com/tags/tag_img.asp" target="_blank">Need help? Click here.</a> <strong>
+  <br />
+  Note: </strong> If you saved the money.jpg image in a subfolder you have to tell the browser the name of that subfolder. For example, if the subfolder is named graphic: <span class="code"> &lt;img src="<strong>graphic/</strong>money.jpg" alt="photo of $100 dollar bill" /></span>
+  </p>
+  
+  <p>
+  <strong>(8)</strong> Display a horizontal rule across the page. <a href="http://www.w3schools.com/tags/tag_hr.asp" target="_blank">Need help? Click here.</a>  
+  </p>
+  
+  <p>
+  <strong>(9)</strong> Add a level 2 heading that says "Financial Assistance Available"
+  </p>
+  
+  <p>
+  <strong>(10)</strong> Display the following paragraph in bold text: "To be eligible for this program, you must meet the following criteria:"
+  </p>
+  
+  <p>
+  <strong>(11)</strong> After the paragraph, display the following list using round bullets: <a href="http://www.w3schools.com/html/html_lists.asp" target="_blank">Need help? Click here.</a>  Keep in mind that the &lt;p> element and the &lt;ul> and &lt;ol> elements are all block elements. You can't put a block inside of a block. They have to be kept separate!
+  </p>
+  <div style="padding-left:6em"/>
+  Have three children or more children under the age of twelve.<br>
+  Have an income below the federal poverty line.<br>
+  Be gainfully employed.<br>
+  Not have any legal convictions.<br>
+  </div>
+  
+  <p>
+  <strong>(12)</strong> In a new paragraph, display the following in bold: "To apply, please do the following:"
+  </p>
+  
+  <p>
+  <strong>(13)</strong> After the paragraph display a numbered list with the following three items:
+  </p>
+  <div style="padding-left:6em"/>
+  Pick up an application for Money Plus.<br>
+  Assemble the following papers.<br>
+  Make an appointment to meet with a Money Plus volunteer.
+  </div>
+  
+  <p>
+  <strong>(14)</strong> Add a sublist after the second item in the numbered list (Step #13 - "Assemble the following papers.") start a new <strong>lettered list</strong> with lower case letters displaying the following items:
+  </p>
+  <div style="padding-left:6em"/>
+  Your completed application<br>
+  Doctor's record of your child's diagnosis.<br>
+  Tax records or a certificate of your income level.<br>
+  A letter from your employer.</p>
+  </div>
+  <p>
+  Make certain that this sublist is INSIDE of the &lt;li> and &lt;/li> element. If you put it after the second &lt;/li> the HTML validation program will give you lots of errors.
+  </p>
+  <p>
+  Need help? Look back in the Tutorial: Lists near the end to see how to create a sublist.
+  </p>
+  
+  <p>
+  <strong>(15)</strong> At the bottom of the page display the following information in a paragraph using the &lt;br /> element to force each item to display on a separate line:
+  </p>
+    <div style="padding-left:6em"/>
+    MoneyPlus<br>
+    1443 Riverfront Drive<br>
+    Mankato, MN 56001-6544<br>
+    (507) 389-7255
+    </div>
+    
+  <p>
+  <strong>(16)</strong> Using Find feature of your text editor (CTRL f), add a special character to display the registered trademark symbol &reg; after each MoneyPlus. <a href="http://www.w3schools.com/tags/ref_symbols.asp" target="_blank">Need help? Click here.</a>
+  </p>
+  
+  <p>
+  <strong>Noodle around to answer the following questions:</strong>
+  <ul>
+  <li>Does the special character work in the &lt;title> element?</li>
+  <li>What happens if a term such as MoneyPlus is not consistent? (For example: Money Plus using a space.)</li>
+  </ul>
+  
+  <p>
+  <strong>(17)</strong> Add a horizontal rule the width of the page..
+  </p>
+  <p>
+  <strong>(18)</strong> At the very bottom of the page use the &lt;cite> element to display the photo credit: "Photo from IStockPhoto.com"
+  </p>
+  <p>
+<a href="graphic/financialValidation.png" target="_blank"><img src="graphic/financialValidation.png" alt="Validation of the financial.html web page" style="margin: 0 15px; width: 200px; float: right;" /></a>
+  <strong>(19)</strong> Validate the page using a validator such as <a href="http://validator.w3.org/#validate_by_upload" target="_blank">the W3C Online validation tool</a>. Make sure you select the tab "Validate by File Upload" at the top of the page.
+  </p>
+  <p>
+  Click on the image for a larger view.
+  </p>
+<p>
+Here is a <a href="financial.html" target="_blank">copy of the finished code</a> if you want check your work. Open the file and then right-mouse click and select "View page source" to see the code.
+</p>
+</div> <!-- end of #frame -->
+</body>
+</html>

@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="gen/cg_content.xsl"?>
+
+<courseGenie>
+
+<metadata>
+	<lom>
+		<general>
+			<title>
+				<string>Web Development - Lists</string>
+				<language>en</language>
+			</title>
+			<keyword>
+				<string>Web XHTML list unordered ordered bullets</string>
+				<language>en</language>
+			</keyword>
+			<description>
+				<string>Display a list</string>
+				<language>en</language>
+			</description>
+		</general>
+		<lifeCycle>
+			<version>
+				<string>May 2009</string>
+				<language>en</language>
+			</version>
+		</lifeCycle>
+		<rights>
+			<description>
+				<string>Creative Commons</string>
+				<language>en</language>
+			</description>
+		</rights>
+	</lom>
+	<misc>
+		<item>
+			<key>Objectives</key>
+			<value>How to display a list of items on a web page</value>
+		</item>
+		<item>
+			<key>Author</key>
+			<value>Peter K. Johnson</value>
+		</item>
+		<item>
+			<key>Organisation</key>
+			<value>South Central College</value>
+		</item>
+		<item>
+			<key>Date</key>
+			<value>May 2009</value>
+		</item>
+		<item>
+			<key>creator</key>
+			<value>Created by Wimba Create, licenced to South Central College</value>
+		</item>
+	</misc>
+</metadata>
+<settings>
+	<pageroot>page</pageroot>
+	<sectionmode>both</sectionmode>
+	<exportmode>normal</exportmode>
+	<assessmentmode>none</assessmentmode>
+	<generateindex>True</generateindex>
+	<showtoc>False</showtoc>
+	<tocwidth>200</tocwidth>
+	<shownavigation>True</shownavigation>
+	<footer>Web Explorations</footer>
+	<singlepage>False</singlepage>
+	<hyperlinksmain>False</hyperlinksmain>
+	<popupsmain>True</popupsmain>
+	<idstring>CG2009518142128</idstring>
+	<scorm-questionmode>selftest</scorm-questionmode>
+	<scorm-masteryscore>0</scorm-masteryscore>
+	<cgbuild>2.4.1  Build 200800626</cgbuild>
+	<trialstatus>reg</trialstatus>
+	<schemefolder>c:/program files/coursegenie/resources/en.lproj/schemes/WebCT UTF-8</schemefolder>
+</settings>
+
+<newpage>
+<pagetitle>Display Lists</pagetitle>
+<section/>
+<para  align="left"><b><image alt="ordered list using Japanese characters" width="212" height="149" class="leftalign">pic001.jpg</image><image alt="Lists of bulleted items using custom images" width="285" height="203" class="leftalign">pic002.gif</image><longdesc></longdesc>People don't read web sites, they scan them.</b></para>
+<para/>
+
+<para/>
+
+<para  align="left"><image alt="List using roman numerals" width="215" height="129" class="leftalign">pic003.jpg</image>Using lists is an excellent way to display lots of information in a manner that can be easily scanned and understood.</para>
+<para/>
+
+<para  align="left">With a little CSS it is also easy to convert a list into an effective menu system.</para>
+<para/>
+
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Unordered List &#60;ul>  &#60;/ul></pagetitle>
+<para  align="left">Start with a standard XHTML file using your favorite text editor.</para>
+<para/>
+
+<para  align="left"><image alt="Code showing basic XHTML file. Full source code file included at end of the tutorial." width="561" height="405" class="normal">pic004.jpg</image></para>
+<para/>
+
+<para  align="left">The <b>&#60;ul> &#60;/ul> </b>element is used to frame the items to be listed.</para>
+<para  align="left">Each item is designated using the <b>&#60;li>  &#60;/li></b> element.</para>
+Normally the &#60;li> &#60;/li> element is kept on the same line as the text.
+<para/>
+
+<para  align="left"><b>Each &#60;li> element will display a bullet (solid round circle) next to the text of the item:</b></para>
+<para  align="left"><b><image alt="Output of an unordered list." width="195" height="156" class="normal">pic005.jpg</image></b></para>
+<para/>
+
+<para  align="left">Notice the comment on line #15 that describes the contents of the list.</para>
+<para  align="left"><image alt="Code showing basic XHTML file with an unordered list. Full source code file included at end of the tutorial." width="347" height="112" class="normal">pic006.jpg</image></para>
+<para/>
+
+<para  align="left">Also, for readability, indent the list of items using three spaces. (Don't use the TAB key because TABS change size on different computer systems.)</para>
+<para  align="left">If you are using NotePad++ you can set the preferences (settings/preferences/Edit Components tab) so all TABS will automatically be converted to three spaces.</para>
+<para/>
+
+<para  align="left"><b>Here is a screen shot of the preference screen in NotePad++:</b></para>
+<para  align="left"><image alt="Notepad++ showing settings/preferences/Edit Components screen for converting all TABS to three spaces." width="576" height="387" class="normal">pic007.jpg</image></para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Ordered List &#60;ol>  &#60;/ol></pagetitle>
+<para  align="left"><b>An ordered list uses similar elements except that the outer element is &#60;ol> for ordered list.</b></para>
+<para/>
+
+<para  align="left"><b>Type in this code below the unordered list:</b></para>
+<para/>
+
+<para  align="left"><image alt="Code for ordered list." width="364" height="108" class="normal">pic008.jpg</image><longdesc><br/>Full source code file included at end of the tutorial.</longdesc></para>
+<para/>
+
+<para  align="left"><b>Here's what the output should look like:</b></para>
+<para  align="left"><image alt="Output showing unordered (bulleted) list and ordered list (numbers)." width="197" height="212" class="normal">pic009.jpg</image><longdesc><br/>Full source code file included at end of the tutorial.</longdesc></para>
+<para/>
+
+<para  align="left"><b>Don't forget the stop tag for each start tag!</b></para>
+<para/>
+
+<heading>Debug Tip</heading>
+<para  align="left"><b>Changes not showing up in the browser?</b></para>
+
+<list type="3" level="1" start="1">
+	<item level="1">Make sure you are saving the file each time you make a change (CTRL S).</item>
+	<item level="1">Make sure you are viewing the same file you are editing.<br/>Add some weird but noticeable characters to the code such as XYZ.<br/>Save the code and view the file in the browser. <br/>If the XYZ does not show up than you are probably looking at a different file.</item>
+</list>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Using the type=" " attribute</pagetitle>
+<para  align="left"><b>You can easily change the display of the list by using the type=" " attribute. </b>This can be used for either element:  &#60;ul>, &#60;ol>, or &#60;li>.</para>
+<para/>
+
+<para  align="left"><b>For the &#60;ul></b> you can use type="<b>disc</b>", type="<b>square</b>", or type="<b>circle</b>".</para>
+<para  align="left"><b>For the &#60;ol></b> you can use type="<b>1</b>", type="<b>a</b>", type="<b>A</b>", type="<b>i</b>", or type="<b>I</b>"</para>
+<para  align="left"><b>For the &#60;li></b> you can use any of these.</para>
+<para/>
+
+<para  align="left"><b>Note that the value of every attribute must be enclosed inside of quotes.</b></para>
+<para/>
+
+<para  align="left"><b>Here are some examples.</b> Type them in to see how the list changes:</para>
+<para/>
+
+<para  align="left"><image alt="Using the type attribute to change the marker." width="440" height="469" class="normal">pic010.jpg</image><longdesc><br/>Full source code file included at end of the tutorial.</longdesc></para>
+<para/>
+
+<para  align="left">Here is the output from this XHTML code:</para>
+<para/>
+
+<para  align="left"><image alt="Output showing the results of different type attributes" width="356" height="509" class="normal">pic011.jpg</image></para>
+<para/>
+
+<heading>Debugging Tip</heading>
+<para  align="left"><b>Does upper/lower case matter for the attribute values?</b></para>
+<para  align="left">Try type="A" and type="a" to see.</para>
+<para/>
+
+<para  align="left"><b>Does spelling matter? </b></para>
+<para  align="left">Try type="disk"  or type="sq"</para>
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Lists Inside of Lists</pagetitle>
+Lists can be put inside of lists. Simply enclose the sublist inside one of the &#60;li> of the parent list. This is a great way to put the type=" " attribute to work.
+<para/>
+
+<para  align="left">Here is some code you can type in to try this out.</para>
+<para  align="left"><image alt="Sublists must be inside the li pair." width="395" height="300" class="normal">pic012.jpg</image></para>
+<para/>
+
+<para  align="left">And here is the output from this code:</para>
+<para  align="left"><image alt="Output showing a list inside of a list with no validation errors or warnings." width="563" height="435" class="normal">pic013.jpg</image></para>
+<para/>
+
+<heading>Debug Tip</heading>
+<para  align="left"><b>Use the HTML Validator FireFox addon. </b>This will show you any validation errors or warnings that you may have with your code. If you don't have any errors than you know your code will display in all standard browsers, from cell phones to desktop browsers.</para>
+<para/>
+
+<para  align="left"><b>Here is an example of the HTML Validator at work.</b></para>
+<para/>
+
+<para  align="left">If you don't put the sublist in the correct place you will get validation errors that display in the lower right corner of the screen.</para>
+<para  align="left"><image alt="HTML validator message in lower right corner of FireFox" width="195" height="24" class="normal">pic014.jpg</image></para>
+<para/>
+
+<para  align="left"><b>If you double click on the information that look like this:</b></para>
+<para/>
+
+<para  align="left"><image alt="HTML validator window showing errors and highlighted code that is causing the problem." width="575" height="331" class="normal">pic015.jpg</image></para>
+<para/>
+
+<para  align="left"><b>Notice how the sublist in the error code is outside of &#60;li> pair.</b> It will confuse most browsers causing the lists to possibly display incorrectly or not at all.</para>
+<para/>
+
+<para  align="left"><b>It is much more efficient to fix errors as they happen than later, after the web page is all finished.</b></para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Custom Bullet Images</pagetitle>
+<para  align="left"><b>With a little CSS (Cascading Style Sheet) magic you can add your own custom bullets.</b></para>
+<para/>
+
+<para  align="left"><b>(1) Save this bullet image </b>by right-mouse clicking on it and selecting "save image as" from the option list:  <image alt="bullet image" width="12" height="9" class="normal">pic016.gif</image></para>
+<para/>
+
+<para  align="left"><b>(2) Save the file in the same folder as your web page.</b></para>
+<para/>
+
+<para  align="left"><b>(3) Type in the following code in the &#60;head> section of the page:</b></para>
+<para  align="left"><b><image alt="The style code for a custom bullet" width="531" height="193" class="normal">pic017.jpg</image></b></para>
+<para/>
+
+<para  align="left"><b>When you display the page, all of the unordered lists (&#60;ul>) should look like this:</b></para>
+<para  align="left"><image alt="output showing the customized bullet for the unordered lists." width="299" height="441" class="normal">pic018.jpg</image></para>
+<para/>
+
+<heading>Here's how CSS works</heading>
+<para  align="left"><image alt="The selector, property, and value for each CSS rule." width="531" height="193" class="normal">pic019.jpg</image></para>
+<para/>
+
+<para  align="left">When the browser reads in a web page it stores the information in the information in the &#60;head> element in memory.</para>
+<para/>
+
+<para  align="left"><b>The &#60;style> element designates CSS, or how the page should be styled.</b></para>
+<para  align="left">Each rule has the three parts:</para>
+<para  align="left"><b>selector</b> tells the browser which element in the &#60;body> of the page to style.</para>
+<para  align="left"><b>property</b> describes what attribute of the element should be changed.</para>
+<para  align="left"><b>value</b> what should be used to change the appearance of the element.</para>
+<para/>
+
+<para  align="left">In this example the code is changing the <b>list-style-image</b> property of the <b>ul</b> element so that it displays the file named <b>bullet.png</b>.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>CSS Punctuation</pagetitle>
+<para  align="left"><image alt="CSS punctuation" width="531" height="193" class="normal">pic020.jpg</image></para>
+<para  align="left">Just like a sentence in English follows specific punctuation rules, each selector uses a set of curly braces <b>{  }</b> to "frame" the list of properties associated with it.</para>
+<para/>
+
+<para  align="left">Each property ends with a colon "<b>:</b>" separating it from the value.</para>
+<para/>
+
+<para  align="left">Each value ends with a semicolon "<b>;</b>" designating the end of the line.</para>
+<para/>
+
+<para  align="left">The <b>url( )</b> tells the browser to look in the file system for the file that is designated.</para>
+<para/>
+
+<para  align="left"><b>Commenting is different inside the &#60;style> element.</b> You have to start the comment using <b>/*</b>   and end it using   <b>*/</b></para>
+<para/>
+
+<para  align="left">Be generous with your comments, especially on special items (such as color names). The person you help in the future may be yourself!</para>
+<para/>
+
+<para/>
+
+<heading>Debugging Tip</heading>
+<para  align="left"><b>If the custom bullets do not appear in your browser go through this checklist:</b></para>
+
+<list type="3" level="1" start="1">
+	<item level="1">Did you spell everything correctly? (particularly the name of the bullet graphic).</item>
+	<item level="1">Do you have the colons after the property and the semicolons at the end of the line?</item>
+	<item level="1">Are the curly braces in the correct places: one after the selector and one at the end of the entire rule, boxing in the property and its value.</item>
+	<item level="1">Is the bullet graphic file in the same folder as the web page?</item>
+</list>
+
+<para/>
+
+<para/>
+
+<para  align="left"><b>Want to display your lists using Japanese? </b></para>
+<para/>
+
+<para  align="left">Try this CSS property for the ordered list:</para>
+<para  align="left"><image alt="list-style-type set to katakana-iroha" width="523" height="223" class="normal">pic021.jpg</image></para>
+<para/>
+
+<para  align="left"><b>Here is what is will look like:</b></para>
+<para  align="left"><image alt="output showing Japanese ordered list." width="285" height="139" class="normal">pic022.gif</image></para>
+</newpage>
+
+<newpage>
+<pagetitle>Complete Source Code</pagetitle>
+<para  align="left">Here is a copy of the complete source code so you can see the entire page and how each part relates to the others.</para>
+<para/>
+
+<para  align="left"><hyperlink><name>list.html</name><file>media/list.html</file></hyperlink>  - right-mouse click, select "save link as"</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle> Summary</pagetitle>
+<para/>
+
+<para  align="left"><b>At this point you should be able to do the following on any web page you write:</b></para>
+<para/>
+
+
+<list type="2" level="1" start="1">
+	<item level="1">Create a bulleted (unordered) list</item>
+	<item level="1">Create an ordered list that is numbered, lettered, or uses Roman Numerals</item>
+	<item level="1">Create a list inside of a list using valid XHTML coding.</item>
+	<item level="1">Use CSS  to use custom images for bullets</item>
+	<item level="1">Have a debugging checklist in your head that will help you correct some of the most common problems with lists and CSS.</item>
+	<item level="1">Have a basic understanding of the three parts and punctuation of a CSS selector.</item>
+</list>
+
+<para/>
+
+<para/>
+
+<para/>
+
+<para  align="center"><b>*** *** ***</b></para>
+<para  align="center"><b>This completes the tutorial: Web Development - Lists</b></para>
+<para  align="center">May 2009</para>
+<para  align="left">Written by Peter K. Johnson, Instructor</para>
+<para  align="left">South Central College</para>
+<para  align="left">North Mankato, MN 56003</para>
+<para  align="left">Peter.Johnson@southcentral.edu</para>
+<para/>
+
+<para  align="left"><b>Read my blog at:  </b> <hyperlink><name>http://webexplorations.com/blog</name><url>http://webexplorations.com/blog</url></hyperlink></para>
+<para/>
+
+<para/>
+
+<htmlinclude>
+<center> <!--Creative Commons License--><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/"><img alt="Creative Commons License" border="0" src="http://creativecommons.org/images/public/somerights20.png"/></a><br/>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/">Creative Commons Attribution-NonCommercial-ShareAlike 2.5  License</a>.<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<Work rdf:about="">
+		<license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/" />
+	<dc:type rdf:resource="http://purl.org/dc/dcmitype/InteractiveResource" />
+	</Work>
+	<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/><requires rdf:resource="http://web.resource.org/cc/ShareAlike"/></License></rdf:RDF> -->
+</center>
+</htmlinclude>
+<para/>
+
+<para/>
+
+<para/>
+
+
+
+
+
+
+</newpage>
+
+
+</courseGenie>
+

@@ -1,0 +1,709 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="gen/cg_content.xsl"?>
+
+<courseGenie>
+
+<metadata>
+	<lom>
+		<general>
+			<title>
+				<string>Web Forms - An Overview</string>
+				<language>en</language>
+			</title>
+			<keyword>
+				<string>XHTML form</string>
+				<language>en</language>
+			</keyword>
+			<description>
+				<string>Creating web-based forms</string>
+				<language>en</language>
+			</description>
+		</general>
+		<rights>
+			<description>
+				<string>Creative Commons</string>
+				<language>en</language>
+			</description>
+		</rights>
+	</lom>
+	<misc>
+		<item>
+			<key>Objectives</key>
+			<value>To build a web form that will collect information from the user</value>
+		</item>
+		<item>
+			<key>Author</key>
+			<value>Peter K. Johnson</value>
+		</item>
+		<item>
+			<key>Organisation</key>
+			<value>South Central College</value>
+		</item>
+		<item>
+			<key>Date</key>
+			<value>April 2009</value>
+		</item>
+		<item>
+			<key>creator</key>
+			<value>Created by Wimba Create, licenced to South Central College</value>
+		</item>
+	</misc>
+</metadata>
+<settings>
+	<pageroot>page</pageroot>
+	<sectionmode>both</sectionmode>
+	<exportmode>normal</exportmode>
+	<assessmentmode>none</assessmentmode>
+	<generateindex>True</generateindex>
+	<showtoc>False</showtoc>
+	<tocwidth>200</tocwidth>
+	<shownavigation>True</shownavigation>
+	<footer>WebExplorations.com</footer>
+	<singlepage>False</singlepage>
+	<hyperlinksmain>False</hyperlinksmain>
+	<popupsmain>True</popupsmain>
+	<idstring>CG2009410171449</idstring>
+	<scorm-questionmode>selftest</scorm-questionmode>
+	<scorm-masteryscore>0</scorm-masteryscore>
+	<cgbuild>2.4.1  Build 200800626</cgbuild>
+	<trialstatus>reg</trialstatus>
+	<schemefolder>c:/program files/coursegenie/resources/en.lproj/schemes/WebCT UTF-8</schemefolder>
+</settings>
+
+<newpage>
+<pagetitle>Web Forms</pagetitle>
+<section/>
+<para  align="left"><b><image alt="Forms: Getting information from the user" width="576" height="432" class="normal">pic001.jpg</image></b></para>
+<para/>
+
+<para  align="left"><b>Forms allow you to start a conversation.</b> Without forms you are only able to talk to the user, and they can only listen or read. </para>
+<para/>
+
+<para  align="left"><b>By adding forms to your web pages you have the ability to:</b></para>
+<para/>
+
+
+<list type="2" level="1" start="1">
+	<item level="1">Collect data from your customers</item>
+	<item level="1">Allow the user to make decisions and customize what feed-back they receive</item>
+	<item level="1">Allow users to change the web site environment</item>
+	<item level="1">A customer order form is an example of data collection.</item>
+</list>
+
+<para/>
+
+<para  align="left">Making several selections from drop-down boxes to determine which data the customer wants to view shows how forms can determine what information the customers should see. <hyperlink><name>CarSoup.com</name><url>http://carsoup.com/</url></hyperlink> is an excellent example of this use of forms.</para>
+<para/>
+
+<para  align="left">Adding a single-button form to a page will allow users to change their environment, from frames to no frames, a different background color, turning music on and off, watching a video, etc.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Client/Server Architecture</pagetitle>
+<para  align="left"><image alt="Several client computers sending requests to a server." width="576" height="432" class="normal">pic002.jpg</image></para>
+<para/>
+
+<para  align="left"><b>Before you learn the elements that make up forms and their objects let's go over the client/server model.</b></para>
+<para/>
+
+<para  align="left"><b>Remember that web pages "live" on a web server.</b> A request is made from a client machine requesting a certain page from the web server. When the server receives the request it sends the necessary files back to the client and the web page displays in the browser window.</para>
+<para/>
+
+<para  align="left">There are all types of files on the web server. Not only the HTML files (plain text) but image files as well. There are also small programs on the server called server-side scripts.</para>
+<para/>
+
+<para  align="left">Just as the web page knows which image files should be displayed, the &#60;form> element knows the name of the server-side script that should run when the form is submitted by the user.</para>
+<para/>
+
+<para  align="left"><b>When the user clicks on the "submit" button, the information from the form is sent to the server along with the name of the program, or script, that will handle the data.</b></para>
+<para/>
+
+<para  align="left"><b>A server-side script can do all types of things.</b> A few examples are: </para>
+
+<list type="2" level="1" start="1">
+	<item level="1">store the data in a database, </item>
+	<item level="1">send an email to a specific address, </item>
+	<item level="1">pull new data from a database (based on the form data criteria) </item>
+	<item level="1">create a new web page</item>
+</list>
+
+<para/>
+
+<para  align="left"><b>In this course you will only be learning how to create a form. </b>You won't be able to manipulate data on the server because you won't have the ability to create the custom server-side scripts. Those techniques will be covered in courses pertaining to JavaScript, PHP and other scripting languages or server-side programming.</para>
+<para/>
+
+<heading>Client-Server Architecture</heading>
+<para/>
+
+<paneltext>
+<para  align="left">The architecture therefore involves two programs, a client 'browser'' and a server, communicating across a network... The server is free to generate the documents either by sending real files, or by generating virtual hypertext on the fly in response to a request.</para>
+<para/>
+
+<para  align="left">- Tim Berners-Lee, et al.; World-Wide Web: An Information Infrastructure for High­Energy Physics; January 1992</para>
+</paneltext>
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Having a Conversation with a Web Server</pagetitle>
+<para  align="left"><image alt="Information flowing from the client page to the server." width="576" height="432" class="normal">pic003.jpg</image></para>
+<para/>
+
+<para  align="left"><b>Client:</b> Hello, could you give me a web page named orderBlank.html?</para>
+<para/>
+
+<para  align="left"><b>Server: </b>Certainly, here it is along with three GIF files showing you the product as well as some cool buttons.</para>
+<para/>
+
+<para  align="left"><b>Client: </b>This is great. I'm going to fill in all the blanks with my name, address, phone, and email and click on the submit button. (psst, when you get all my information please run the script named order.php.</para>
+<para/>
+
+<para  align="left"><b>Server:</b> Okee Dokee. Let's see (rummaging through a shoebox filled with CGI scripts and PHP pages.) Ah, here it is, order.php. I'll just feed all your information into the script and see what happens.....</para>
+<para/>
+
+<para  align="left">Ok, first the script saved all your order information in a database. <br/>Then it built a new web page for you. <br/>It looks like a verification page of your order. <br/>Here you go. No graphics with this web page. Maybe next time.</para>
+<para/>
+
+<para  align="left"><b>Client: </b>Oh good, just what I wanted. I'm going to print this out so I have a hard copy for my files. I'm off to look somewhere else on the web.</para>
+<para/>
+
+<para  align="left">(Notice the client doesn't bother to respond to the server. The server is busy handling other requests and doesn't require a response from the client. It considered its job done when it responded with the verification.)</para>
+<para/>
+
+<para  align="left"><b>Note: </b>The graphic shows CGI scripts. CGI stands for Common Gateway Interface. A CGI script is the interface between the client and the server or gateway. These are commonly written using Perl. Other options on the server include web pages with PHP code embedded in with the XHTML elements.<br/><br/><b>Server-Side Scripting</b></para>
+<para/>
+
+<para  align="left"><b><image alt="List of server-side languages that are available." width="576" height="432" class="normal">pic004.jpg</image></b></para>
+<para/>
+
+<para  align="left"><b>Server-side scripting allows the programmer to handle information from the client and run programs that will create new web pages on the fly. </b>The benefit of this is that the programmer maintains control and the code is more secure. <br/><br/>Client-side languages, such as JavaScript respond differently on different browsers (you never know what your user will be viewing the web pages with) and the source-code is very visible to anyone that can see the web page.</para>
+<para/>
+
+<para  align="left"><b>Some of the more common server-side scripting languages include:</b></para>
+<para/>
+
+
+<list type="2" level="1" start="5">
+	<item level="1"><b>PHP</b> - A very popular as a scripting language.</item>
+	<item level="1"><b>ASP.NET</b> - Active Server Pages running on Microsoft servers.</item>
+	<item level="1"><b>JSP</b> - Java Server Pages utilize the Java Language (the big brother to JavaScript)</item>
+	<item level="1"><b>Perl</b> -  one of the original languages used to create CGI scripts..</item>
+	<item level="1"><b>ColdFusion</b> by Adobe is similar to PHP and ASP.NET and requires a special ColdFusion server.</item>
+</list>
+
+<para/>
+
+<para  align="left"><b>All of these languages run on the web server and handle the form data as it is submitted by the user.</b></para>
+<para/>
+
+<para  align="left">But enough of theory, let's start making a form!</para>
+</newpage>
+
+<newpage>
+<pagetitle>The &#60;form> Element</pagetitle>
+<para  align="left"><b>The &#60;form> element encloses all of the objects such as textboxes, buttons, and drop-down boxes.</b> A form can include dozens of objects or just one. CSS and even tables can be used to help organize the form objects on a page.</para>
+<para/>
+
+<para  align="left"><b>The &#60;form> tag is used within the &#60;body> element of a web page.</b></para>
+<para/>
+
+<para  align="left">Let's build a form containing all of the objects available to you as a web programmer</para>
+<para/>
+
+<para  align="left"><b>Create a simple web page with a table with 8 rows and 2 columns. </b> Don't forget to add the summary attribute to the table as well as the comment block at the top of the page and descriptive comments for each form object.</para>
+<para/>
+
+<para  align="left">Enclose the &#60;table> and &#60;/table> tags inside the &#60;form> and &#60;/form> tags.<br/>Name the form "demo" using the name=" " attribute.</para>
+<para/>
+
+<para  align="left"><b>Here's what your code should look like:</b></para>
+<para  align="left"><image alt="Code for form object" width="549" height="365" class="normal">pic005.jpg</image></para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Objects to Put in the Form</pagetitle>
+<para  align="left"><image alt="List of form objects and the recommended prefix for each." width="576" height="432" class="normal">pic006.jpg</image></para>
+<para/>
+
+<para  align="left"><b>There are 9 different controls that can be used inside the &#60;form> element.</b></para>
+<para/>
+
+<para  align="left"><b>The Button, Reset, and Submit all make buttons and allow the web page to capture clicks from the user. </b>The Button is a general purpose control or object while the Reset button clear's the values from all of the form objects. The Submit button's only purpose is to send the data in the form to the server.</para>
+<para/>
+
+<para  align="left"><b>Checkboxes</b> are used to find user preferences when there can be more than one choice. </para>
+<para/>
+
+<para  align="left"><b>Radio buttons</b> are used when there can only be one choice. They are named for the old fashioned car radios that allowed a person to select preset stations by pushing a row of buttons.</para>
+<para/>
+
+<para  align="left"><b>List boxes or drop-down boxes</b> allow the user to select a choice (or several choices from a list). An example would be a list of state abbreviations.</para>
+<para/>
+
+<para  align="left"><b>Text, Password, and TextArea</b> allow the user to type in text information. Text box is usually for short answers such as name, address, and email. Password text boxes display the input as a series of asterisks (*) to help keep passwords secure from on-lookers. Textarea allows the user to type in multiple lines of information. A comment box would be a good use for a textarea object.</para>
+<para/>
+
+<para  align="left"><b>The Hidden object </b>is used to send information to the server that the end-user will not see. For example, sending the name of a web site that the server can use when generating an email. The web site is included in the subject line so the administrator or client can see where the email came from.</para>
+<para/>
+
+<para  align="left"><b>Each of these has a prefix </b>that makes it easier to identify what it is, especially when you are writing code that runs out on the server. It makes a lot more sense knowing that you are working with a txtName text box than "name" which could be a text area, a radio button, or a drop down list.</para>
+<para/>
+
+<para  align="left"><b>Use the prefixes consistently with all your forms and your programming efforts will be much simpler in the future.</b></para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Text or Input Boxes (txt)</pagetitle>
+<para/>
+
+<para  align="left"><b>Let's add a text box to your form. Here is the code:</b></para>
+<para/>
+
+<para  align="left"><image alt="Set up a text box using default values for faster development" width="576" height="459" class="normal">pic007.jpg</image></para>
+<para/>
+
+<para  align="left"><b>Here are the results:</b></para>
+<para  align="left"><image alt="Output of the textbox code." width="333" height="124" class="normal">pic008.jpg</image></para>
+<para/>
+
+<para/>
+
+<para  align="left"><b>The text box allows the user to type in single line entries.</b>  This is perfect for name, address, and phone numbers.</para>
+<para/>
+
+<para  align="left"><b>Here are the attributes you can use to customize this object:</b></para>
+<para/>
+
+<para  align="left"><b>type="text" </b>tell the browser that this is a text box.</para>
+<para/>
+
+<para  align="left"><b>name=" " </b>allows you to name the object so it can be referred to by the CGI script. (You should use the name attribute for every object inside a form.) Keep in mind that spaces are not allowed. Be smart and keep your names all lower case except for word boundaries and don't use plural names.</para>
+<para  align="left"><br/><b>size=" "</b> tells the browser the length of the text box in characters.</para>
+<para  align="left"> <br/><br/><b>maxlength=" "</b> tells the browser the maximum number of characters you will allow. If the maxlength is longer than the size, then the textbox will scroll as the user types in characters.</para>
+<para  align="left"><br/><b>value=" "</b> will assign a string value to the text box. This helps non-visual browsers but is an irritation for visual users because they have to delete the text before they can type their own text in. If you use value then keep it short.</para>
+<para/>
+
+<para  align="left">Notice how the attributes can be stacked for readability. Remember, web browsers ignore the line returns in the code unless they find a &#60;br /> or a &#60;p> &#60;/p> tag.</para>
+<para/>
+
+<para  align="left"><b>Also, the value=" " attribute is used to supply a default value in the textbox. </b>This is a real time-saver when programming with forms. All the programmer has to do is hit Enter for each form object and he or she doesn't waste time typing in information every time they run the page.  Later, when the web page goes "live" this default value will be removed.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>The Password Box (pwd)</pagetitle>
+<para/>
+
+<para  align="left"><image alt="Adding a password box to the file" width="576" height="432" class="normal">pic009.jpg</image></para>
+<para/>
+
+<para  align="left"><b>The password text box is used to prevent others from seeing a password as it is typed in. </b>It acts just like a textbox except that the characters display as shapes so they are unrecognizable.</para>
+<para/>
+
+<para  align="left"><b>Keep in mind that this is a display mechanism only. When the password is sent to the server across the web it is sent as normal text and can easily be extracted using a packet sniffer.</b> If you are sending critical information such as passwords from your web page forms, make certain that the data is encrypted. This will be done by a server-side language and special Web connections such as a Virtual Private Network (VPN). <br/></para>
+<para  align="left"><b>Add a password text box to the demonstration form.</b></para>
+<para/>
+
+<para  align="left">Use the same &#60;input /> element, but make the value of the type attribute "password":</para>
+<para/>
+
+<para  align="left"><image alt="Code used to create a password input box." width="356" height="328" class="normal">pic010.jpg</image></para>
+<para/>
+
+<para  align="left">Again, we used the value to set up a default value to save time during program development.</para>
+<para/>
+
+<para  align="left"><b>Here is what the output should look like:</b></para>
+<para  align="left"><image alt="Output showing the textbox and password box." width="341" height="140" class="normal">pic011.jpg</image></para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Drop Down Lists (lst)</pagetitle>
+<para/>
+
+<para  align="left"><b>Selection or drop down lists can allow the user to select an item from a list.<br/></b></para>
+<para  align="left">Unlike the elements we've used so far, this is a two-tag element that surrounds each of the &#60;option> that should be included in the list.</para>
+<para/>
+
+<para  align="left"><b>size="  "</b>  The number of items displayed is determined by the size attribute. A value of "1" will make the list appear as a drop-down list and can be very useful when you don't want to waste real estate on the screen.</para>
+<para/>
+
+<para  align="left"><b>multiple="multiple"</b> If you want the user to be able to select several options, add the attribute multiple to the &#60;select> element. The user can select the items by holding the control key down and clicking each item to toggle it on or off.</para>
+<para/>
+
+<para  align="left"><b>selected="selected"</b> can be used in the &#60;option> that should be selected by default with the form is first displayed.</para>
+<para/>
+
+<para/>
+
+<para  align="left">Add the following code. Don't forget, the &#60;select> element will only work if it is between the &#60;form> and &#60;/form> tags.)</para>
+<para/>
+
+<para  align="left"><image alt="Code to add a list box to the form" width="536" height="256" class="normal">pic012.jpg</image></para>
+<para/>
+
+<para  align="left"><b>Here is what the results should look like:</b></para>
+<para  align="left"><image alt="Output showing the list box" width="343" height="215" class="normal">pic013.jpg</image></para>
+<para/>
+
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Radio Buttons (opt)</pagetitle>
+<para  align="left"><b>Radio Buttons allow a single choice to be made from a list of choices.</b> (If multiple options are wanted, then use checkboxes.)</para>
+<para/>
+
+<para  align="left"><b><image alt="Code to add radio buttons to a form" width="576" height="227" class="normal">pic014.jpg</image></b></para>
+<para/>
+
+<para  align="left"><b>And here is what the results will look like:</b></para>
+<para  align="left"><b><image alt="Form with radio buttons added." width="333" height="308" class="normal">pic015.jpg</image></b></para>
+<para  align="left"><b>The name attribute is critical for radio buttons. Notice that it is the same for each radio button object. </b>The browser uses the name to determine which radio buttons should be grouped together. With that information the browser automatically turns off radio buttons as others are selected by the user.</para>
+<para/>
+
+<para  align="left"><b>checked="checked"</b> Add the attribute checked="checked" as part of the &#60;input> element if you want a specific radio checked when the form is first displayed. If you don't include a checked attribute in one of the elements, none of them will be selected.</para>
+<para/>
+
+<para  align="left"><b>There's one other tricky piece about radio buttons.</b> The value of the value attribute is what is sent to the server. Don't be fooled thinking the text after the &#60;input> tag is sent, that is only for the end-user.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>List Boxes vs. Radio Buttons</pagetitle>
+<para  align="left"><image alt="Selection list boxes" width="576" height="432" class="normal">pic016.jpg</image><b>Use the selection list or drop down box when you have more than three items to choose from.</b> Selected lists also keep your forms from becoming too cluttered.</para>
+<para/>
+
+<para  align="left">With the multiple attribute you can allow the user to select multiple entries.</para>
+<para/>
+
+<para  align="left">Contingent (next to each other) entries can be selected by clicking on one item, holding down the shift key, and then clicking on the last item wanted in the list. All of the items in between the two will be selected.</para>
+<para/>
+
+<para  align="left">If the CTRL key is held down, only the items clicked on will be selected. This works only if the multiple attribute is included in the &#60;selection> element.</para>
+<para/>
+
+<para  align="left"><b>Use Radio Buttons when you have a short list (3 or fewer items) and you have the real estate to spare.</b></para>
+<para  align="left"> </para>
+</newpage>
+
+<newpage>
+<pagetitle>Checkboxes (chk)</pagetitle>
+<para  align="left"><b>Checkboxes allow multiple options to be made by the user.</b></para>
+<para/>
+
+<para  align="left"><b>Here is the code you can add to your form:</b></para>
+<para  align="left"><b><image alt="code for check boxes" width="576" height="308" class="normal">pic017.jpg</image></b></para>
+<para/>
+
+<para  align="left"><b>Here is what the output should look like:</b></para>
+<para  align="left"><image alt="Output showing checkboxes" width="337" height="399" class="normal">pic018.jpg</image></para>
+<para/>
+
+<para  align="left"><b>Here are some of the attributes you can use:</b></para>
+<para  align="left"><b>type="checkbox" </b>designates the input to be a checkbox.<br/></para>
+<para  align="left"><b>name=" "</b> The name attribute is used by the browser to determine which checkboxes are in the same group. This is very similar to the radio button object.</para>
+<para/>
+
+<para  align="left"><b>value=" " </b>Like the radio button, the value is only sent to the  server if the selection is checked.</para>
+<para/>
+
+<para  align="left"><b>checked="checked"</b> If you want the box to be selected or checked when the page first displays, add the attribute checked="checked to the &#60;input> element.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Text Area (txa)</pagetitle>
+<para  align="left"><image alt="Using the text area object in a form" width="576" height="432" class="normal">pic019.jpg</image></para>
+<para/>
+
+<para  align="left"><b>The textarea box allows the user to input multiple lines of text.</b>  It is perfect for the typical comment box.</para>
+<para/>
+
+<para  align="left"><b>rows="  "</b><br/><b>cols=" "</b> The attributes for rows and cols allow you to determine how many lines of visible text will display on the page. If the user wants to type in more lines, the textarea will automatically scroll.</para>
+<para/>
+
+<para  align="left">If you want text to display inside the textarea, add it after the start tag &#60;textarea>. Keep it short though, because the user will have to delete your text before typing their own.</para>
+<para/>
+
+<para  align="left">This is a two-tag element, so don't forget the ending tag &#60;/textarea>!</para>
+<para/>
+
+<para  align="left">Add a textarea without any text showing to your demonstration page. Try it first with 100 cols to see how the width affects the table columns. Then change it back to 50 cols:</para>
+<para/>
+
+<para  align="left"><image alt="code for textarea" width="575" height="244" class="normal">pic020.jpg</image></para>
+<para  align="left">Normally the &#60;textarea> and &#60;/textarea> tags are put together without any space or lines between them.</para>
+<para/>
+
+<para  align="left">If you put them on separate lines the browser will add spaces inside the text area and the cursor will sit in the middle.</para>
+<para/>
+
+<para  align="left"><b>Here is the output:</b></para>
+<para  align="left"><image alt="Output using the Textarea box" width="396" height="547" class="normal">pic021.jpg</image></para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Hidden Fields  (hdn)</pagetitle>
+<para/>
+
+<para  align="left"><b>Hidden fields are often used to send data to the server that the user doesn't know or care about.</b> For example, a contact form on different websites sends information to the server which than sends out emails to specific people with the user's questions. <b>How can the emails be automatically set up to show which site the email question originated from?</b></para>
+<para/>
+
+<para  align="left">By using a hidden field this information can be sent to the server and included in the subject line and content of all the emails sent out.</para>
+<para/>
+
+<para  align="left"><b>Here's an example of an email from the Computer Careers server</b> showing how the information from a hidden field is used in the Subject: line (personal information has been deleted for privacy purposes):</para>
+<para  align="left"><image alt="An email showing how the hidden field is inserted into the subject line" width="388" height="235" class="normal">pic022.jpg</image></para>
+<para/>
+
+<para  align="left">Hidden fields can be placed anywhere within the &#60;form> element although they are usually placed together in one location.</para>
+<para/>
+
+<para  align="left"><b>Add a hidden field to the demonstration form:</b></para>
+<para  align="left"><image alt="Adding a hidden field to the form" width="576" height="187" class="normal">pic023.jpg</image></para>
+<para/>
+
+<para  align="left">Because it is hidden it will not appear on the web page form.</para>
+<para  align="left"> </para>
+</newpage>
+
+<newpage>
+<pagetitle>Buttons (btn)</pagetitle>
+<para  align="left"><b>There are three types of buttons, submit, reset, and the plain ordinary old button.</b> Which one is determined by the attribute<b> type=" "</b> which can have values of "submit", "reset", or "button".</para>
+<para/>
+
+<para  align="left"><b>type="submit"</b> The submit button collects the information from the form and sends it to the server.</para>
+<para/>
+
+<para  align="left"><b>type="reset"</b> The reset button clears all the input from the form and returns the objects to their default values if there are any.  This is being used less and less because most often users simply go to the field that needs editing and make the fix. They rarely (if ever) want to start over and retype everything.</para>
+<para/>
+
+<para  align="left"><b>type="button"</b> The button button can be used to get an action from the user and is usually connected with a JavaScript function. One example would be a button that would turn off the music on a web page. As soon as the user clicked the button, a short JavaScript function runs that toggles the sound off or on.</para>
+<para/>
+
+<para  align="left"><b>value="  "</b> The value attribute will display on the face of the button.</para>
+<para/>
+
+<para  align="left"><b>Add a submit button to your demonstration form:</b></para>
+<para/>
+
+<para  align="left"><image alt="Adding a submit button to the form" width="395" height="251" class="normal">pic024.jpg</image></para>
+<para/>
+
+<para  align="left"><b>Here's what the finished form will look like:</b></para>
+<para  align="left"><image alt="Final version of the form showing all the objects" width="397" height="567" class="normal">pic025.jpg</image></para>
+</newpage>
+
+<newpage>
+<pagetitle> Form action="mailto:  "</pagetitle>
+<para/>
+
+<para  align="left"><b>The submit button now brings us back full circle: to the &#60;form> tag.</b>  When the submit button is clicked, it uses the <b>action=" "</b> attribute and <b>method=" "</b> attribute in the &#60;form> tag to determine how the form values should be sent to the server and what file should handle the form information out on the server.</para>
+<para  align="left">, and how the data from the form should be transmitted to the server.</para>
+<para/>
+
+<para  align="left"><b>action=" "</b> The action attribute is the name of the file on the web server which will read and handle the form values. </para>
+<para/>
+
+<para  align="left"><b>action=mailto:yourClientEmail@gmail.com</b> You can also use the <b>mailto: </b> protocol to simulate using a script. When a browser sees <b>mailto:</b> it automatically opens up the email client program that is installed on the user's computer. (This only works when an email client is installed and will not work on computers, such as the school labs, that do not have a mail program installed.)</para>
+<para/>
+
+<para  align="left"><b>method=" "</b> The method attribute tells the browser how to send the form values to the server. The values for this attribute can be either "post" or "get".</para>
+<para/>
+
+<para  align="left"><b>method="post" </b>Post has the browser pack up the form values into a bundle, much like packing a suitcase full of data and shipping it over the Internet to the server. This "suitcase" of information can be encrypted if necessary.</para>
+<para/>
+
+<para  align="left"><b>method="get"</b> Get takes the form values and adds them to the end of the URL request that is sent to the server.  Using the get method is not secure and any information from the form can be easily seen by anyone that cares to capture the information. The is also a character limit to the get method.</para>
+<para/>
+
+<para  align="left"><b>So, let's do something with the form values by adding the necessary attributes to the &#60;form> tag. </b>Use your own email address to test everything out. </para>
+<para/>
+
+<para  align="left"><image alt="Adding the necessary form attributes actionand method to the form element" width="449" height="229" class="normal">pic026.jpg</image></para>
+<para/>
+
+<para  align="left"><b>When you click the submit button your email program will run.</b></para>
+<para  align="left">And, because we use the method get you can see the values on the URL being sent to the server (in this case the mailto: email program)</para>
+<para/>
+
+<para  align="left"><image alt="Showing the URL with the form values embedded after the URL address being requested." width="576" height="53" class="normal">pic027.jpg</image></para>
+<para/>
+
+<para  align="left"><b>enctype="text/plain"</b>  The enctype=" " attribute ensures that the data will be in a readable (line by line) format in the email that is sent.</para>
+<para/>
+
+<para  align="left">If the enctype=" " is <b>not</b> used the data will be sent in the email as a clump of text. All the spaces are replaced with plus signs "+" and each variable is separated from the others with an ampersand "&#38;".</para>
+<para  align="left"><b>If you use the attribute enctype="text/plain" each form value pair will be on a separate, easy-to-read line.</b></para>
+<para/>
+
+<para  align="left"><b>Update the subject line on the email by using this hack</b></para>
+<para  align="left">You can change the subject line by adding it after a ? on the action.</para>
+<para/>
+
+<para  align="left"><b>Change the &#60;form> attributes to look like this:</b></para>
+<para  align="left"><b><image alt="Adding the enctype attribute to the form tag" width="576" height="132" class="normal">pic028.jpg</image></b></para>
+<para/>
+
+<para/>
+
+<para  align="left"><b>When the submit button is sent an email is created. If you use the correct attributes you should see an email similar to this:</b></para>
+<para/>
+
+<para  align="left"><image alt="form values being sent as an email." width="377" height="419" class="normal">pic029.jpg</image></para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Typing in Test Data</pagetitle>
+<para  align="left"><b>When testing programs you will spend a lot of time testing something over and over. </b></para>
+<para  align="left">It is very common for a developer to test a page 20 - 30 times getting everything just right.  If that developer takes 60 seconds to input the test data each time, they will end up wasting over 20 - 30 minutes just typing in data!</para>
+<para/>
+
+<para  align="left">When you are working on a tight deadline or trying to finish up a project in the small hours of the morning, 20 minutes is a lot of time!</para>
+<para/>
+
+<para  align="left"><b> Here's some tips that will save time and make your debugging easier:</b></para>
+<para/>
+
+
+<list type="3" level="1" start="1">
+	<item level="1"><b>Set up default values in the form</b> when testing out the web page.<br/></item>
+	<item level="1"><b>Keep things short.</b> Instead of typing in a full name "John Jacob Jingle Himmer Schmidt", just type in the letter "a" or "first".<br/><br/>For multiple lines use "programming code" by hitting keys at random. Make sure to include lots of spaces so the line will word wrap: j klfjdj alksjfdj dfl jadflja dfk j ljdfja fjfljsalfjsfdj jf jadfl jlsdjf lsjfl jf fjlfdjlajfl lfdj ljj'jf lkj flj f.<br/></item>
+	<item level="1"><b>Use smart data.</b> Input data that matches the field. <br/>A zip field might be "1111" <br/>A state could be "MN". <br/>A first name field might be "first". <br/>Phone numbers can be (123) 456-7890.<br/><br/>Long numbers like serial numbers can be handled the same way: 1234567890123.<br/></item>
+	<item level="1"><b>Keep track of which test is which.</b> If you have to test something 10-20 times (not uncommon) it will be easier to track the results if you add it to your data. First name could be "name1", "name2", and "name3" for each consecutive trial.<br/></item>
+	<item level="1"><b>Identify test data.</b> Sometimes test data gets mixed up with live data. Always include phrases like "testing" or "testTextAreaj lkjd fljfljdj ldj fjdfl jkljflj etc." or "testStreet", "testCity", "testZip". If the data does get mixed in with real data it is easy to search and destroy.<br/></item>
+	<item level="1"><b>Be consistent with your test data. </b>Sometimes it is the data that breaks a program. Always use the same test data over and over <b>so you know you are testing the form or program and not the data</b>.<br/></item>
+	<item level="1"><b>If things are not changing on the web page make sure you are viewing the correct file. </b>Often you may end up editing one file and the browser is viewing another file. (I won't tell you how often this has happened to me, and I'm a paid professional.) In an very obvious spot, like at the end of an &#60;h1> text add something weird like "ABC" and then view the page. If your new text does not display than check to make sure you are viewing the same file that you are editing.<br/></item>
+</list>
+
+<heading>The faster and more consistent you can input test data, the less time it will take to debug your program or form.</heading>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Set the Tab Order</pagetitle>
+<para  align="left"><image alt="Set the tab order" width="576" height="432" class="normal">pic030.jpg</image></para>
+<para/>
+
+<para  align="left">American and European users expect to TAB through a form from left to right, top to bottom.  Often if you add a new object in the middle of your form it will be in the wrong tab order.</para>
+<para/>
+
+<para  align="left"><b>tabindex=" "</b>  Add the tabindex=" " attribute to each of the controls on the form. This will give you the control you need to decide which field becomes active when the user hits the TAB key.</para>
+<para/>
+
+<para  align="left">For example:  <b>&#60;input name="fname" tabindex="1" /></b></para>
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Keyboard Shortcuts</pagetitle>
+<para  align="left"><b>accesskey=" "  is another attribute that is helpful.</b> It can be included with the following controls: </para>
+
+<list type="2" level="1" start="1">
+	<item level="1">button</item>
+	<item level="1">input</item>
+	<item level="1">label</item>
+	<item level="1">textarea.</item>
+</list>
+
+<para/>
+
+<para  align="left"> In Windows the user holds down the ALT key and the specific accesskey to make the cursor jump to that control. (On the Macintosh, use the CTRL key.)</para>
+<para/>
+
+<para  align="left">Don't forget to show the underlined character to let the user know that an access key (or hotkey) is available.</para>
+<para/>
+
+<para  align="left"><b>Here is the code showing you how to do this:</b></para>
+<para  align="left"><image alt="Using accesskey to add a hot key to some of the text fields" width="472" height="339" class="normal">pic031.jpg</image></para>
+<para/>
+
+<para/>
+
+<para  align="left">Here is what the form will look like with the hot keys underlined to visually show what they are to the user:</para>
+<para  align="left"><image alt="the altkey attribute in action" width="340" height="263" class="normal">pic032.jpg</image></para>
+<para/>
+
+<para  align="left">Use <b>ALT n</b> to jump to the name text box and use <b>ALT p</b> to jump to the password text box.</para>
+<para/>
+
+<para  align="left">Notice how the default text is highlighted when the access key "<b>ALT n</b>" is used for the first name field. When text is highlighted, the next key hit automatically deletes the highlighted text and displays the incoming text. This is a real time saver for entering information into forms.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Summary</pagetitle>
+<para/>
+
+<para  align="left">That wraps up forms. You will be using them more and more, especially when you start working with scripting languages such as PHP, ASP.NET, Java, C#, and VB.NET.</para>
+<para/>
+
+<para  align="left"><b>The demonstration form you created with this tutorial has all the essential code you need to create a form on your web page. Keep it as a quick reference for future classes (especially Web Programming!) as well as projects with your clients.</b></para>
+<para/>
+
+<para  align="left"> Here is a copy of <hyperlink><name>the completed form web page</name><file>media/form.html</file></hyperlink>.</para>
+<para/>
+
+<para/>
+
+<para  align="center">*** *** ***</para>
+<para/>
+
+<para  align="left">This completes this tutorial: Web Forms, An Overview by Peter K. Johnson - April 2009</para>
+<para  align="left">Read my blog at:   <hyperlink><name>http://webexplorations.com/blog</name><url>http://webexplorations.com/blog</url></hyperlink></para>
+<para/>
+
+<para/>
+
+<htmlinclude>
+<center> <!--Creative Commons License--><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/"><img alt="Creative Commons License" border="0" src="http://creativecommons.org/images/public/somerights20.png"/></a><br/>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/">Creative Commons Attribution-NonCommercial-ShareAlike 2.5  License</a>.<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<Work rdf:about="">
+		<license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/" />
+	<dc:type rdf:resource="http://purl.org/dc/dcmitype/InteractiveResource" />
+	</Work>
+	<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/><requires rdf:resource="http://web.resource.org/cc/ShareAlike"/></License></rdf:RDF> -->
+</center>
+</htmlinclude>
+<para/>
+
+<para/>
+
+<para/>
+
+
+
+
+
+
+</newpage>
+
+
+</courseGenie>
+

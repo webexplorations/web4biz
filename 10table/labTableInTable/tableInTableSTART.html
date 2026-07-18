@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- tableInTable.html - Lab demonstrating how to put a table inside a table
+     by Peter Johnson - peterj@sctc.mnscu.edu
+     Revised: 06-19-04
+              03-18-11 Updated to XHTML and utilize CSS and XHT
+-->
+<head>
+<title>Table Demo - Tables Inside of Tables</title>
+<style type="text/css">
+body {
+background-color: #D7D7D7;           /* light gray */ 
+}
+
+table {
+background-color: #EBF5FC;           /* light blue */ 
+width:            90%;               /* based on width of display */
+text-align:       center;
+border:           2px #000080 solid; /* dark blue */
+}
+
+td, th {
+border:           2px #006000 solid; /* forest green */
+padding:          10px;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Tables Inside of Tables</h1>
+
+<!-- * * * * * * * * * * * * * * * * * *
+            M A I N    T A B L E 
+* * * * * * * * * * * * * * * * * *  -->     
+<table summary="Main table with gallery information">
+   <!-- HEADING ROW  -->
+  <tr> 
+    <th width="20%">Column One (20% of table width)</th>
+    <th width="80%">Column Two (80% of table width)</th>
+  </tr>
+  
+  <!-- ROW ONE -->
+  <tr> 
+    <td>
+       <hr width="75%" />
+       R1C1
+       <hr width="75%" />
+       You can use a horizontal rule element &lt;hr /> inside a cell.<br /><br />
+       Once the borders are removed this will give a nice
+       design emphasis to that text.
+    </td>
+    <td>R1C2</td>
+  </tr>
+  
+  <!-- ROW TWO -->
+  <tr> 
+    <td>
+       <hr width="75%" />
+       R2C1<br />
+       <hr width="75%" />
+       Notice how additional lines of text affect the depth of 
+       all cells on the same row. </td>
+    <td> 
+      R2C2 
+      <!-- * * * * * *
+         !!! Put the inner table inside here. !!!!
+       * * * * * * * -->
+   </td>
+  </tr>
+  
+  <!-- ROW THREE -->
+  <tr> 
+    <td>R3C1</td>
+    <td>R3C2</td>
+  </tr>
+  <!-- END OF OUTER TABLE -->
+</table>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- webDevFileZillaTranscript.html - Transcript of video
+     Peter Johnson - peter.johnson@southcentral.edu
+     Written: 07/26/09
+     Revised: 08/04/11 converted text file to html
+-->
+<head>
+  <title>Using FileZilla Video</title>
+  <style type="text/css">
+p:first-line {
+font-weight:    700;
+}
+
+p:first-letter {
+color:          #000060;  /* dark blue */
+font-size:      2em;
+}
+
+/* gradient background - transparent to blue */
+body {
+background-image: -moz-linear-gradient(top, transparent, #f5f6ff);
+background-image: -webkit-gradient(linear, center top, center bottom, from(transparent), to(#f5f6ff));
+background-image: -o-linear-gradient(top, transparent, #f5f6ff);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='transparent', endColorstr='#f5f6ff');
+/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='transparent', endColorstr='#f5f6ff')";
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+background-image: linear-gradient(top, transparent, #f5f6ff);
+}
+  </style>
+</head>
+<body>
+<h1>Using FileZilla</h1>
+
+<p>My name is Peter Johnson and I'm going to show you a quick demonstration of using FileZilla with the t.server.</p>
+<p>
+Go ahead and load up FileZilla. When you have it running, you'll notice along the top there's a place to put in a host, username, and password. I don't usually use these quick connect fields because than I have to type them in everytime I go to the site.</p>
+<p>
+ Instead, I go to this icon in the upper left and set up my site there. You'll probably want to click on the "New Site" and call it something to do with the t.server so you know what it is You can see here that I have several web sites that I maintain with FileZilla. </p>
+<p>
+So, use "new site" and here are the different fields that you fill in. For the host you want to put in your first name, your last initial dot t dot southcentral dot edu. Keep the Port field blank. On the server type there is a drop down. You want to use plain FTP. Some servers will ask for secure FTP and that would be FTPS. Also, on your ports, some servers request a specific port. for security reasons and that's where you would put that in. For the Logontype you can use the drop down and instead of "anonymous" you want to select "normal". Your user name can't be any longer than 8 characters. That's one of the limitations set up by the server administrator. Just like your host name, it is your first name and last initial. Now there's a "t" on the end of mine but that is because the administrator set me up with a "t", but I've set all of your accounts up with your first name last initial and no "t". And if you go past 8 characters, you have a long first name, just drop back so there is just the first 8 characters. Your password is your school id including the leading zeros. You can add a comment down here. Something about the t.server or the Computer Careers web server or whatever you like just so you know what this site is for. Than hit the "Connect" button. </p>
+<p>
+These are the panels of FileZilla Up at the top you can see the error messages and connection messages. So you can see that we have connected correctly. If you don't get a valid connection, go back and double check and make sure we have connected correctly. Your filename, hostname, and your password. Those are the three things that are almost always wrong.</p>
+<p>
+These other two panels are the folder structure Here on the left is the folder structure for your computer. And on the right, is the folder system for the server. You can see that we are out in the root because it has that slash These often take a lot of space so I go up to these icons on the top and I close those out. They are still there if you need them but, it saves room so you can just look at the structure itself. </p>
+<p>
+In order to view your web pages you are going to have to go into the public_html folder. Double click on that, out on the server, Yours will probably be empty. You'll probably have a folder with two dots. Mine has some files in it already so you can see how the files are set up. Over on the left this is my file structure on my local computer. You can right mouse click on these files and choose "upload". Like on this index.html file, you can select it, right-mouse click, and than choose "upload". And it is going to go right up into here. on the server. </p>
+<p>
+Now, if I want to upload some graphics, I would open up my graphic folder. And, out on the server open up my graphic folder and again, select, right-mouse click, and choose "upload". If you look down at the bottom panel you'll see any qued files. Sometimes you'll transfer 100 - 200 files for a large web site There's a counter down here on the tab showing how many files are in the queue and how many are yet to be transferred. and how many have finished. </p>
+<p>
+It gets very tiresome every time you go out to a web site to always have to select the public_html folder. So, I'm going to go back here to my root and again, you can see that I am in the root because of the slash in the path field. And, if I go back to my site manager and make sure you are at the t.server and go into the "Advanced" tab. You can select the local directory and browse to your local directory and locate where that is at and you can put your remote directory. If I move this over you can see that I want to go to public_html so I'll just type in: public_html. Leave everything else as it is. </p>
+<p>
+[error beeping sound]. And maybe I have to start it from the root. Ahh, so that's what I had to do. [added the slash in front of the directory name] So, now, when I go out to reconnect FileZilla asks me if I want to break my connection and I say "yes". and when I reconnect it automatically goes into my public_html folder off of the root so I am in the working directory right away. </p>
+<p>
+One thing to note is that everything on my hard drive over here on the left, matches what I have out on my server. You want these two to be a mirror of each other. So do all of your work out on your hard drive or flash drive, and then transfer copies of everything, including the folder structure up to your server. If you stay organized that way it will reduce the errors ten fold. And, everything you do locally will be able to be duplicated on the server keeping your life much, much simplier. Also think of this as a one-way street You are going to go from your hard drive out to the server. Don't start taking files from the server and moving them backwards unless you have a hard drive crash and you have to reconstruct some files. </p>
+<p>
+But, normally you always want to work from your hard drive out to the server. That way you have a one-way flow of information and you know that your originals are on your hard drive and your duplicates are on the server. So, that shows you how to use FileZilla and Once you have your files uploaded up to the t.server here's how you view them. </p>
+<p>
+If you look on the remote site side you'll see public_html. This is the folder you are in Let's bring a browser in. What I do is resize the browser so I can see the address bar and the filenames in FileZilla. Type in my site name which is peterj.t.southcentral.edu and if I just leave it at that it is going to go into public_html folder. displaying my index.html file. And there's my website. </p>
+<p>
+Now, if I want to go into LivingLinks.org Let me open this folder up and you'll see LivingLinks doesn't have an index.html, so I'll have to type in edit.php. Looking up here at my root site path I can see that I have to go into my livingLinks folder, so you can think of this (peterj.t.southcentral.edu) as my public_html folder and then I put in my livingLink in the path and then finally edit.php. Notice that if I don't type in the edit.php there is no index.html so on the t.server we have it set up so it shows you all your files. This is poor practice. A real server won't do this, they will have this turned because it is a security risk. But, you are using the t.server to learn so this will show you if you don't have a file name in the folder. what you can choose and you can see by the maroon that I have already been out to edit.php. Again, you put in your site name and then use the remote site address link as your path and then the filenames to determine what to put on your browser address bar for the URL. </p>
+<p>
+So, let's just go out again to peterj.t.southcentral.edu and look at my host. We are looking at this file right here. </p>
+<p>
+You can use FileZilla with virtually every web server that is out there as long as you know the host name, user id and the password and the port. 
+</p>
+</body>
+</html>
+

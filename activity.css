@@ -1,0 +1,231 @@
+/* activity.css - styling for course Learning Activities Page
+   Peter K. Johnson - peterKjohnson.com
+   Written:  05-19-11
+   Revised:  07-21-11
+             08-21-15 Added Optima as main font
+*/ 
+body {
+  font-size:    medium;
+  background-color: #E6E6FA;   /* pale blue */
+  font-family:  optima, Helvetica, Arial, sans-serif; 
+}
+
+#frame {
+  max-width: 800px;
+  margin:    0px auto 0px auto;
+  background-color: white;
+  border:    1px #000080 solid;
+  padding:   0px 10px 0px 0px;
+  /* rounded corners and shadowing: http://css3.me/ */
+   -moz-border-radius:9px;
+   -webkit-border-radius:9px;
+   border-radius:9px;
+   /*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+   -moz-box-shadow:0px 0px 6px #000000;
+   -webkit-box-shadow:0px 0px 6px #000000;
+   box-shadow:0px 0px 6px #000000;
+   /*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
+} 
+
+.optional {
+color:       green;
+font-weight: 700;
+font-size:   1.05em;
+}
+
+section img {
+margin:      5px 15px 5px 15px;
+}
+
+h1 {
+  color:      #000060;       /* dark blue */
+  background: transparent;
+  font-size:  200%;
+  padding:    0px 25px 0px 25px;
+}
+
+h2 {
+  color:      #000060;
+  background: transparent;
+  font-size:  150%;
+  padding:    0px 0px 0px 25px;
+}
+
+h3 {
+  color:      #000080;
+  font-size:  135%;
+  padding:    0px 0px 0px 10px;
+  margin:     5px 0px 0px 25px;
+}
+
+h4 {
+  font-size:    125%;
+  padding:      0px 0px 5px 25px;
+  margin:       0px;
+  border-top:   #AAA solid 1px;
+  border-bottom:#AAA solid 1px;
+  text-align:   left;
+  background-color: #DDD;
+/* round h4 corners otherwise they will ruin the frame rounded corner */
+-webkit-border-top-left-radius:  10px;
+-webkit-border-top-right-radius: 10px;
+-moz-border-radius-topleft:      10px;
+-moz-border-radius-topright:     10px;
+border-top-left-radius:          10px;
+border-top-right-radius:         10px;
+
+}
+
+p {
+margin:       5px 10px 10px 30px;
+padding:      0px 10px 0px 0px;
+}
+
+header {
+border:          3px solid #000060;
+background-color:white;
+height:          7em;
+margin:          20px 10px 5px 10px;
+width:           785px;
+/* Round all corners */
+-webkit-border-radius:  10px;
+-moz-border-radius:     10px;
+border-radius:          10px;
+}
+
+section {
+clear:                 both;
+background-color:      white;
+margin:                10px 0px 5px 10px; 
+font-weight:           400;
+padding:               0px 0px 0px 0px;
+border:                1px solid #000090; 
+/* rounded corners on top */
+-webkit-border-top-left-radius: 10px;
+-webkit-border-top-right-radius:10px;
+-moz-border-radius-topleft:     10px;
+-moz-border-radius-topright:    10px;
+border-top-left-radius:         10px;
+border-top-right-radius:        10px;
+}
+
+ol, ul {
+margin:          0px 0px 0px 20px;
+}
+
+ol.imageIndent,
+ul.imageIndent {
+margin:                 0px 0px 0px 150px;
+}
+
+#objective a img {
+border:               1px solid #000080;
+-moz-border-radius:   10px;
+-webkit-border-radius:10px;
+border-radius:        10px;
+}
+
+/* Description of page - Left side of header */
+.identity {
+margin:          0px 0px 0px 0px;
+float:           left;
+width:           80%;
+text-align:      left;
+}
+
+.identity table {
+margin:          0px 0px 0px 15px; /* keep inside of frame */
+padding:         0px;
+}
+
+.identity h1,
+.identity h2 {
+text-align:      left;
+margin:          0px;
+padding:         0px;
+}
+
+.identity td {
+padding:         5px 0px 0px 10px;
+vertical-align:  top;
+}
+
+
+/* Visual links to Course Map and To-Do Summary/Learning Activities
+   - Right side of header */
+.navigation {
+float:           right;
+width:           20%;
+}
+
+.navigation table {
+border:          0px;
+text-align:      center;
+width:           100%;
+margin:          10px 30px 0px 0px;
+}
+.navigation td{
+padding:         0px;
+margin:          0px;
+}
+.navigation a {
+text-decoration:  none;
+font-size:        xx-small;
+}
+
+/* Clear the float right after the header */
+#objective {
+clear:           both;
+margin:          0px 0px 0px 10px;
+padding:         0px;
+}
+
+/* Assessment Block - Split into two columns */
+table#assessment {
+width:           100%;
+}
+
+table#assessment td.descr {
+margin:          0px;
+padding:         10px;
+width:           70%; 
+border:          1px green solid;
+}
+
+table#assessment td.dueDate {
+margin:          0px;
+padding:         10px;
+width:           20%;
+text-align:      center;
+font-size:       .80em;
+border:          1px green solid;
+}
+
+/* use a special font for the slogan */
+footer {
+font-family:     'Permanent Marker', helvetica, sans-serif;
+text-align:      center;
+font-weight:     100;
+font-size:       2em;
+margin:          0px;
+padding:         0px;
+}
+
+
+.warning {
+color:           #AA0000; /* red */
+font-weight:     800;
+}
+
+section iframe,
+.activity iframe,
+#objective iframe {
+margin:          15px 15px 0px  15px;
+} 
+
+.alert {
+color:           #005000;  /* dark green */
+font-weight:     800;
+}
+
+  

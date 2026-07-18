@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="gen/cg_content.xsl"?>
+
+<courseGenie>
+
+<metadata>
+	<lom>
+		<general>
+			<title>
+				<string>Web Development - The Web</string>
+				<language>en</language>
+			</title>
+			<keyword>
+				<string>Web client server internet</string>
+				<language>en</language>
+			</keyword>
+			<description>
+				<string>How the Web works</string>
+				<language>en</language>
+			</description>
+		</general>
+		<lifeCycle>
+			<version>
+				<string>May 2009</string>
+				<language>en</language>
+			</version>
+		</lifeCycle>
+		<rights>
+			<description>
+				<string>Creative Commons</string>
+				<language>en</language>
+			</description>
+		</rights>
+	</lom>
+	<misc>
+		<item>
+			<key>Objectives</key>
+			<value>How the Web works</value>
+		</item>
+		<item>
+			<key>Author</key>
+			<value>Peter K. Johnson</value>
+		</item>
+		<item>
+			<key>Organisation</key>
+			<value>South Central College</value>
+		</item>
+		<item>
+			<key>Date</key>
+			<value>May 2009</value>
+		</item>
+		<item>
+			<key>creator</key>
+			<value>Created by Wimba Create, licenced to South Central College</value>
+		</item>
+	</misc>
+</metadata>
+<settings>
+	<pageroot>page</pageroot>
+	<sectionmode>both</sectionmode>
+	<exportmode>normal</exportmode>
+	<assessmentmode>none</assessmentmode>
+	<generateindex>True</generateindex>
+	<showtoc>False</showtoc>
+	<tocwidth>200</tocwidth>
+	<shownavigation>True</shownavigation>
+	<footer>Web Explorations</footer>
+	<singlepage>False</singlepage>
+	<hyperlinksmain>False</hyperlinksmain>
+	<popupsmain>True</popupsmain>
+	<idstring>CG2009517162220</idstring>
+	<scorm-questionmode>selftest</scorm-questionmode>
+	<scorm-masteryscore>0</scorm-masteryscore>
+	<cgbuild>2.4.1  Build 200800626</cgbuild>
+	<trialstatus>reg</trialstatus>
+	<schemefolder>c:/program files/coursegenie/resources/en.lproj/schemes/WebCT UTF-8</schemefolder>
+</settings>
+
+<newpage>
+<pagetitle>The Web</pagetitle>
+<section/>
+<para  align="left"><image alt="Three people surfing the web over coffee" width="575" height="431" class="normal">pic001.jpg</image></para>
+<para/>
+
+<para  align="left"><b>This tutorial will help you understand what happens when you click on a link and the browser displays a web page.</b></para>
+<para/>
+
+<para  align="left">You've seen what the Internet looks like, and you've seen how the client/server concept makes file sharing possible between lots of different web servers around the world (as long as they are connected to the Internet or some other network.)</para>
+<para/>
+
+<para  align="left">In this tutorial you will be walking through the steps a web request takes, tracing the journey from browser to a web server and back again.</para>
+<para/>
+
+<para  align="left">The browser on your machine is considered a client application. And the web server is just that: a server. <b>This is client/server in action!</b></para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>   Web Questions</pagetitle>
+<para/>
+
+<para  align="left"><image alt="Who invented the Web? How old is the Web? How is the Web different than the Internet?" width="576" height="235" class="normal">pic002.jpg</image></para>
+<para/>
+
+<para  align="left"><b>You will see how the Web actually works "backstage". </b>When you are finished you should have a clear understanding of the difference between the Web and the Internet.</para>
+<para/>
+
+<para  align="left">Along the way you'll meet a very interesting and humble, fellow, Sir Tim Berners-Lee, the inventor of the Web.</para>
+<para/>
+
+<para  align="left">And you will find out that there are only two things that are allowed on the Internet: ones and zeros... Lots and lots of ones and zeros.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>   Pieces that make up the Web</pagetitle>
+<para  align="left"><image alt="Pieces of the Web" width="563" height="335" class="normal">pic003.jpg</image><longdesc><br/>(1) Browser sends a request, (2) A connection is made, (3) to the ISP Internet Service Provider, (4) DNS domain name service is checked to get IP address, (5) sent to the router to find its way across the (6) Internet, (7) passes through the firewall, and (8) received by the Web Server.</longdesc></para>
+<para/>
+
+<para  align="left"><b>Here's the pieces we will be fiddling around with. </b></para>
+<para/>
+
+<para  align="left"><b>First we need a (1) browser.</b> Pick a browser, any browser. They all work on the same principle, which is to ask for a web page, get lots of files in return, puts these together and displays the results.</para>
+<para/>
+
+<para  align="left"><b>(2) We need a  connection to the Internet</b> so we can request information from different servers. </para>
+<para/>
+
+<para  align="left"><b>(3) </b>This involves using an<b> ISP (Internet Service Provider)</b> which is where our connection is actually made to the Internet.</para>
+<para/>
+
+<para  align="left"><b>(4)</b> The ISP also maintains a <b>DNS (Domain Name Server)</b> which is a simple lookup table. It takes the words we type in as a URL and finds out what the IP address of that web server.</para>
+<para/>
+
+<para  align="left"><b>(5) </b>Our request will bounce from <b>router to router</b>, </para>
+<para/>
+
+<para  align="left"><b>(6)</b> across <b>the Internet</b>, until it finally ends at </para>
+<para/>
+
+<para  align="left"><b>(7) the web server's firewall.</b> If the ports match, </para>
+<para/>
+
+<para  align="left"><b>(8)  The web server will receive and process the request </b>sending a copy of the requested file(s) back to the client computer.</para>
+<para/>
+
+<para  align="left"><b>This is just the first half of the journey of our web page.</b> Once a request is made then the other half is sending the web page back to the browser to be displayed.</para>
+<para/>
+
+<para  align="left"><b>But first, who figured all of this out? </b></para>
+</newpage>
+
+<newpage>
+<pagetitle>   Who Invented the Web?</pagetitle>
+<para  align="left"><image alt="Tim Berners-Lee" width="251" height="303" class="leftalign">pic004.jpg</image></para>
+<para  align="left"><b>Let's say you have this great idea of a computer holding lots of files which are copied and sent out to any other computer that requests them.</b> How would you connect all of these requesting computers to all of the servers? Is there a network that was big enough to handle that? A network of networks?</para>
+<para/>
+
+<para  align="left">This is what Tim Berners-Lee was thinking about in the late 1980's  when he came up with the idea of sharing files through a series of hyperlinks on a page.</para>
+<para/>
+
+<para  align="left">Each link would send out a request to a specific server someplace in the world, hopefully getting back a file and displaying it.</para>
+<para/>
+
+<para  align="left"><image alt="Who invented the Web?" width="576" height="312" class="normal">pic005.jpg</image></para>
+<para/>
+
+<para  align="left"><b>The network was already there (the Internet), all Tim Berners-Lee needed was to write a program that would send the request over the Internet and display the results when they came back.</b> That was the easy part. The hard part was convincing his colleagues that this would be a useful idea. So, he wrote a program he called a browser and the rest is history. </para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>   The Browser</pagetitle>
+<para  align="left"><image alt="The Browser makes REQUESTS to servers via the Internet. There are almost a billion servers on the Internet, each holding thousands of html files and graphics." width="408" height="307" class="normal">pic006.jpg</image></para>
+<para/>
+
+<para  align="left"><b>Start with the browser.</b> It is simply a software program designed to send a request to a web server and display the files that are returned using a special markup language called XHTML.</para>
+<para/>
+
+<para  align="left">Having a web browser program and being connected to the Internet gives you the ability to access billions of  pages of information and media files.</para>
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>   The Connection</pagetitle>
+<para  align="left"><image alt="The Connection connects the computer to the network. This can be a modem using the telephone lines, DSL, Cable Modem, wireless, or via satellite" width="456" height="293" class="normal">pic007.jpg</image></para>
+<para/>
+
+<para  align="left">Next, you need to connect this browser/client to the Internet. This is done either by a</para>
+<para/>
+
+<para  align="left">-- Dial-up networking (slow - 56kbps),</para>
+<para/>
+
+<para  align="left">-- DSL (Digital Subscriber Line) (faster - 512 kbps),</para>
+<para/>
+
+<para  align="left">-- wireless, or</para>
+<para/>
+
+<para  align="left">-- a cable modem (fastest - 1,500 kbps or 1.5mbps).</para>
+<para/>
+
+<para  align="left">The dial-up connection consists of a modem that converts the digital information from your computer into an audio signal used by the telephone line. Another modem at the ISP converts the audio signal back to digital so the request can be sent across the Internet which can only handle digital signals (ones and zeros) like your computer.</para>
+<para/>
+
+<para  align="left"><b>The DSL and cable modems connect to a network card in your computer use TCP/IP digital signals without the added overhead of converting and de-converting the signals into audio signals.</b></para>
+</newpage>
+
+<newpage>
+<pagetitle>   The ISP - Part I</pagetitle>
+<para  align="left"><image alt="The ISP - Internet Service Provider is your connection to the Internet. Examples include HickoryTech, Verizon, AOL, and MSN." width="444" height="333" class="normal">pic008.jpg</image></para>
+<para/>
+
+<para  align="left"><b>The connection goes to your ISP or Internet Service Provider</b>. AOL and MSN are national ISPs having computers in all major cities and towns across the nation. There are also many regional ISPs. HickoryTech.net and Verizon are two of the main regional ISPs for the Mankato, Minnesota area.</para>
+<para/>
+
+<para  align="left"><b>This is where the connection from your computer meets the Internet.</b></para>
+</newpage>
+
+<newpage>
+<pagetitle>   DNS - Domain Name Server</pagetitle>
+<para  align="left"><image alt="The Domain Name Server (DNS) does a lookup to determine the IP address of the server. Every domain has its own unique web address (An IP address) The DNS allows us to use names in English which correlate to IP addresses which are harder for us to remember, but easier for computers to use." width="576" height="432" class="normal">pic009.jpg</image><longdesc><br/>For example, Google.com might have an IP address of 216.239.33.100<br/><br/>A DNS is maintained by your ISP. (There's also a small one on your computer.)</longdesc></para>
+<para/>
+
+<para  align="left"><b>Let's request a web page. Let's request a search from Google.com.</b></para>
+<para/>
+
+<para  align="left"><b>Every web site has its own unique address.</b> Its IP address, a 12-digit number. So, just type in Google's IP address in the "address" or URL field of your browser.</para>
+<para/>
+
+<para  align="left"><b>What? You don't know the IP address?</b></para>
+<para/>
+
+<para  align="left">Ok then, let's put the DNS (Domain Name Server) to work.</para>
+<para/>
+
+<para  align="left">Type in the words "google.com" in the address (URL) field of your browser.</para>
+<para/>
+
+<para  align="left">This will send a request to your ISP which immediately notices that you are sending string characters not numbers.</para>
+<para/>
+
+<para  align="left"><b>Your ISP uses its DNS - Domain Name Server to lookup the name you typed in and get the IP address.</b> It's almost like a phone book. You look up a name and come up with the unique phone number for that person.</para>
+<para/>
+
+<para  align="left">Your ISP sends this IP address back to your browser which then sends out another request asking for 216.239.33.100, which used to be the IP address for the domain named Google.com.</para>
+<para/>
+
+<para  align="left"><b>Without the DNS we would be stuck having to type in the IP address for every web site we wanted to see. Not a fun idea for people that prefer using words over numbers.</b></para>
+<para/>
+
+<para  align="left"><b>The DNS isn't such a big deal until you suddenly remember that there are billions of servers that make up the Web.</b> That's a lot of IP addresses and domain names to keep track of!</para>
+<para  align="left">The DNS system works in zones.</para>
+<para/>
+
+<para  align="left">The first DNS zone is on your computer. It consists of a file named hosts. In Windows XP this file is located in: C:\WINDOWS\system32\drivers\etc\hosts.</para>
+<para/>
+
+<para  align="left">Looking at this file you will see that it is made up of three columns. The first shows the IP addresses, a second column contains the domain names, and an optional third column for comments:</para>
+<para/>
+
+<para  align="left"> </para>
+<para  align="left">127.0.0.1       localhost       # this is the IP address for your computer</para>
+<para  align="left"> </para>
+<para/>
+
+<para  align="left">If the domain you typed in is not listed here, your browser goes out to your ISP and uses their DNS list. If your ISP can't find a match they go out on the Domain Name System to a higher zone. Your ISP and other zones cache, or hold, new names that are discovered, keeping the system fairly dynamic.</para>
+<para/>
+
+<para  align="left">Once a match is found the resulting IP address is sent back to your browser. If a match can't be found you receive the infamous "Server not found" error.</para>
+</newpage>
+
+<newpage>
+<pagetitle>   The ISP - Part II Ones and Zeros</pagetitle>
+<para  align="left"><image alt="On the Internet everything is transmitted on a wire so there is only ONE or ZERO. Wires either have current or they don't." width="420" height="315" class="normal">pic010.jpg</image></para>
+<para/>
+
+<para  align="left"><b>Once your browser has the IP address it needs it sends the request back out through your ISP toward the server.</b></para>
+<para  align="left">Words, images, sound files, hyperlinks. How does all this stuff fit through the network wires?</para>
+<para/>
+
+<para  align="left">The answer is digital. Ones and Zeros.</para>
+<para/>
+
+<para  align="left"><b>A wire either has current or not. If there is current it is a one, if not it is a zero. The patterns of these waves determine what is being transmitted.</b></para>
+<para/>
+
+<para  align="left">It is up to the software programs using TCP/IP to take information, convert it into ones and zeros, and then package it up and send it out on the Internet.</para>
+</newpage>
+
+<newpage>
+<pagetitle>   Routers</pagetitle>
+<para  align="left"><image alt="The Routers on the Internet shuttle the IP data packets around. You can think of a router as if it was a postal mail sorter. Instead of using zip codes the router uses the IP address." width="576" height="399" class="normal">pic011.jpg</image><longdesc><br/>Here you can see the IP address of 216.239.33.100 translates out on the Internet as 11011000.11101111.1000001.1100100</longdesc></para>
+<para/>
+
+<para  align="left"><b>Your request, converted into ones and zeros, has gone from your browser, to the DNS lookup, to your ISP, and is now wandering around the Internet.</b></para>
+<para/>
+
+<para  align="left">The routers on the Internet use the IP address to determine where the request packet should be sent. This is much like a postal worker uses zip codes to determine where a letter should be sent.</para>
+<para/>
+
+<para  align="left">Keep in mind that the IP address is all ones and zeros. To the network, the IP address we use 216.239.33.100 looks like this 11011000.11101111.100001.1100100. (The dots are there for you, only the ones and zeros exist on the network.)</para>
+<para/>
+
+<para  align="left"><b>You can see this yourself if you use a calculator and translate each IP number into binary.</b></para>
+<para/>
+
+<para  align="left">In Windows open up the calculator: <b> Start/run/ type in: calc</b></para>
+<para  align="left">Using the menu items change the view to Scientific: <b>   view/scientific</b></para>
+<para  align="left">Choose the appropriate radio button to input binary, than switch to decimal</para>
+<para/>
+
+<para  align="left"><image alt="A view of the Windows calc in scientific mode showing how to set binary or decimal view of a number." width="477" height="316" class="normal">pic012.jpg</image></para>
+<para/>
+
+<para  align="left"><b>Here is a video showing this in action:</b></para>
+<para/>
+
+
+
+<media type="flash">
+	<file>decimal2binary.swf</file>
+	<path>M:\Users\peterj\Desktop\macExternal\courseContent\classWebDev\SRCWebDevWWW\graphic\</path>
+	<width></width>
+	<height></height>
+	<autostart>true</autostart>
+	<loop>false</loop>
+	<align>center</align>
+	<playerlink>true</playerlink>
+	<longdesc>Using Calc to see decimal and binary numbers</longdesc>
+	<caption>Using Calc in Windows</caption>
+</media>
+
+<para/>
+
+<para/>
+
+<para/>
+
+<para/>
+
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>  The Internet</pagetitle>
+<para  align="left"><image alt="The network that allows all the clients and servers to communicate with each other. Using telephone lines, satellite, and fiber optic cable" width="552" height="339" class="normal">pic013.jpg</image></para>
+<para/>
+
+<para  align="left"><b>The Internet is the network that allows all of these communications to happen.</b> It consists of communication lines, satellites, fiber optic cables, and wireless connections.</para>
+<para/>
+
+<para  align="left">The Internet uses the TCP/IP protocol which designates how the information packets are constructed.</para>
+<para/>
+
+<para  align="left"><b>The Internet was designed for redundancy. </b>This means that if one route is blocked, the data packets can go an alternative way. It also means that if a packet is lost or destroyed, there is enough overlapping information in the other packets so the document can usually be reconstructed.</para>
+</newpage>
+
+<newpage>
+<pagetitle>  Firewalls</pagetitle>
+<para  align="left"><image alt="The firewall protects the server. Different requests are sent to different ports or entry points. A web request always comes to door number 80. An email always comes to door number 25 and a file transfer (FTP) comes to door (port) 21." width="540" height="360" class="normal">pic014.jpg</image><longdesc><br/>If a port is closed by a firewall than the requests coming into that port are ignored. </longdesc></para>
+<para/>
+
+<para  align="left"><b>The browser's request gets routed around the Internet and finally comes to the web server.</b></para>
+<para/>
+
+<para  align="left">But, before the server can receive it, the request must pass through a firewall.</para>
+<para/>
+
+<para  align="left"><b>The firewall protects the server.</b> Different requests are sent to different ports or entry points. A web request always comes to door number 80. An email always comes to door number 25 and a file transfer (FTP) comes to door (port) 21.</para>
+<para/>
+
+<para  align="left">If a port is closed by a firewall than the requests coming into that port are ignored. If the request does not match then it is blocked and ignored.</para>
+<para/>
+
+<para  align="left"><b>Firewalls are basically very dumb (but very useful) guardians.</b> The firewall doesn't inspect the contents of the packet, it only looks to see what type of packet it is and what port it wants to use. If there is a match, the packet can continue. If not, the packet is blocked and stopped.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>  The Web Server</pagetitle>
+<para  align="left"><image alt="When the web server receives a request for a web page it finds the file and makes a copy of it and any graphic files and returns them to the client in the form of many IP data packets." width="552" height="384" class="normal">pic015.jpg</image><longdesc><br/>The Internet was born in 1969.<br/>The Web was born in 1990.<br/><br/>Several different domains are stored on a commercial web server.</longdesc></para>
+<para/>
+
+<para/>
+
+<para  align="left"><b>The Google.com web server finally gets your request. But how does it know what file to send back to your browser?</b></para>
+<para/>
+
+<para  align="left">Servers are set up with certain defaults. If a file name is not included they usually send a file named index.html. So, a request for http://www.Google.com/ would send a copy of the index.html file from the web server.</para>
+<para/>
+
+<para  align="left">This is a nice convenience for the user, especially if they are a slow typist.</para>
+<para/>
+
+<para  align="left"><b>The server is like a gigantic copy machine.</b> It makes copies of the requested web page (and any other files like graphics or sound files) and sends the copies back to the requesting computer.</para>
+</newpage>
+
+<newpage>
+<pagetitle>  The Return Trip</pagetitle>
+<para/>
+
+<para  align="left"><image alt="The return trip goes through the firewall, bounces between routers out on the Internet, back to your ISP and into your computer to be displayed by your browser." width="576" height="432" class="normal">pic016.jpg</image></para>
+<para/>
+
+<para  align="left"><b>The files are converted into multiple TCP data, each containing the IP address of your ISP and your computer. These pass through the server's firewall.</b></para>
+<para/>
+
+<para  align="left">On to the Internet, they are routed by the routers, back to the ISP, through your connection and into your computer where they are reconstructed into temporary files on your drive.</para>
+<para/>
+
+<para  align="left">Your browser then uses the XHTML markup file to display the text as well as any other files such as graphics or media files.</para>
+<para/>
+
+<para  align="left">Hmmmm... Why didn't the packets all visit the DNS on the return trip. If you are not certain you might want to go back and find out what the purpose of the DNS is. </para>
+</newpage>
+
+<newpage>
+<pagetitle>  Checking In - Can you answer all the questions?</pagetitle>
+<para/>
+
+<para  align="left"><b>You should now have a good idea of how the Web actually works as well as the difference between the Internet and the WWW.</b></para>
+<para/>
+
+<para  align="left"><b>1. Who invented the Web? And when did he or she do this?</b></para>
+<para/>
+
+<para  align="left"><b>2. Internet vs Web - </b>What is the difference between the Internet and the Web?</para>
+<para/>
+
+<para  align="left"><b>3. Information on the Internet</b></para>
+<para  align="left">What form is all the web information that passes through the Internet?</para>
+<para/>
+
+<para  align="left"><b>4. DNS - </b>Why doesn't the server utilize the DNS when it sends the web page data packets back to the client?</para>
+<para/>
+
+<para/>
+
+<para  align="center">*** *** ***</para>
+<para  align="left"><b>Answers:</b></para>
+<para  align="left"><b>1. </b>Sir <b>Tim Berners-Lee</b> invented the Web in <b>1990</b>.</para>
+<para  align="left">2.<b>The Internet is simply a network of networks. </b>The Web consists of pages of information being exchanged across the Internet.</para>
+<para  align="left">3. Files are sent through the Internet as <b>binary</b> - ones and zeros. Even the graphic images and sound files.</para>
+<para  align="left">4.If you know the purpose of the DNS then you will know this answer. </para>
+<para/>
+
+<para/>
+
+<para  align="center"><b>*** *** ***</b></para>
+<para  align="center"><b>This completes the tutorial: Web Development - The Internet</b></para>
+<para  align="center">August 2006. Revised May 2009. </para>
+<para  align="left">Written by Peter K. Johnson, Instructor</para>
+<para  align="left">South Central College</para>
+<para  align="left">North Mankato, MN 56003</para>
+<para  align="left">Peter.Johnson@southcentral.edu</para>
+<para/>
+
+<para  align="left"><b>Read my blog at:  </b> <hyperlink><name>http://webexplorations.com/blog</name><url>http://webexplorations.com/blog</url></hyperlink></para>
+<para/>
+
+<para/>
+
+<htmlinclude>
+<center> <!--Creative Commons License--><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/"><img alt="Creative Commons License" border="0" src="http://creativecommons.org/images/public/somerights20.png"/></a><br/>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/">Creative Commons Attribution-NonCommercial-ShareAlike 2.5  License</a>.<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<Work rdf:about="">
+		<license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/" />
+	<dc:type rdf:resource="http://purl.org/dc/dcmitype/InteractiveResource" />
+	</Work>
+	<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/><requires rdf:resource="http://web.resource.org/cc/ShareAlike"/></License></rdf:RDF> -->
+</center>
+</htmlinclude>
+<para/>
+
+<para/>
+
+<para/>
+
+
+
+
+
+
+</newpage>
+
+
+</courseGenie>
+

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- webIcon.html - Demo using web Icons
+  Based on the article: http://www.sitepoint.com/use-webfont-icons-bullet-points-html5-lists/
+  Peter Johnson - peterk@webExplorations.com
+  Written:   11-28-13 
+  Revised: 
+  
+  (1) Build font library at IcoMoon http://icomoon.io/app/#/select
+  (2) Download and unzip putting font files in an font folder 
+  (3) Add @font-face inside <style> element
+  (4) Set up classes/id in HTML
+  (5) Display character using unicode    &#xE602;
+  (6) Style character in CSS using unicode: content: "\e602";
+   
+  -->
+ <title>Using Web Icons</title>
+
+ <script type="text/javascript">
+
+ </script>
+ <style type="text/css">
+@font-face {
+	font-family: 'petericon';
+	src:url('font/petericon.eot');
+	src:url('font/petericon.eot?#iefix') format('embedded-opentype'),
+		url('font/petericon.ttf') format('truetype'),
+		url('font/petericon.woff') format('woff'),
+		url('font/petericon.svg#petericon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+  body {
+  background:  #EEE;
+  font-size:   16px;
+  font-family: helvetica, arial, sans-serif;
+  }
+  
+  h1 {
+  border:  1px #000080 solid;
+  padding: 10px;
+  background:  #AAA;
+  color:    white;
+  }
+  
+  h2 {
+  background: #DDD;
+  color:      #000080;
+  padding:    10px;
+  border:     1px #000080 solid;
+  }
+  
+  li {
+  margin:     1.5em 0 0 0;
+  
+  }
+  
+  #frame {
+  max-width:   800px;
+  margin:      auto;
+  border:      1px solid #000080;
+  padding:     20px;
+  }
+  
+ .petericon{
+ font-family: petericon, helvetica, sans-serif;
+ font-size:    3em;
+text-shadow: 3px 3px 6px rgba(82, 150, 150, 0.82); }
+ 
+ ul.icon {
+ list-style:   none;   /* turn off default bullet */
+ }
+ 
+ ul.icon li.globe:before {
+ font-family: petericon;
+ content: "\e602";
+ float:   left;
+ width:   1.4em;
+text-shadow: 3px 3px 6px rgba(82, 150, 150, 0.82); }
+ 
+ </style>
+</head>
+<body>
+<div id="frame">
+<h1>Using Web Icons <span class="petericon">&#xE600;
+</h1>
+<div class="petericon">&#xE602;</div>
+
+<p>
+Setup an unordered list with each item marked with classes</p>
+
+<!-- http://www.sitepoint.com/use-webfont-icons-bullet-points-html5-lists/ -->
+<ul class="icon">
+<li class="globe">Item one</li>
+<li class="globe">Item two</li>
+<li class="globe">Item three</li>
+</ul>
+</frame>
+</body>
+</html>

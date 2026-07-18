@@ -1,0 +1,36 @@
+4. Select the function of an e-mail link from the choices below.
+a. automatically send you an e-mail message with the visitor's e-mail address as the reply-to field
+*b. launch the default e-mail application for the visitor's browser with your e-mail address as the recipient
+c. display your e-mail address so that the visitor can send you a message later
+d. link to your mail server
+
+20. Select the element used to hyperlink web pages to each other from the list below:
+a. link
+b. hyperlink
+*c. anchor
+d. target
+
+21. Use the ______ element to create a generic area or section on a web page that is physically separated from others.
+*a. div
+b. strong
+c.  h1
+d. small
+
+22. When should you use a relative hyperlink?
+a.	Always, the W3C prefers relative hyperlinks
+*b. When you need to link to a web page internal to your website
+c. When you need to link to a web page external to your website
+d.	Never, the W3C has deprecated relative hyperlinks
+
+23. When should you use an absolute hyperlink?
+a.	Always, the W3C prefers absolute hyperlinks
+b. When you need to link to a web page internal to your website
+*c. When you need to link to a web page external to your website
+d.	Never, the W3C has deprecated relative hyperlinks
+
+24. How would you configure a hyperlink from the index.html file to another file named services.html which is located in the same folder?
+a. <a target="services.html">Services</a>
+*b. <a href="services.html"> Services </a>
+c. <a name="services.html"> Services </a>
+d. <a> Services </a>
+

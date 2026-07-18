@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html>
+<!-- indexGIMP.html - main activity page for Module: CSS - Web4Biz course
+     Peter K. Johnson - peterk@webExplorations.com
+     Written:  5-17-11 Build template using jQuery
+
+      MAINTENANCE CHECKLIST:
+      (1) Make sure checkmark.png and detailPage.png are in the root graphic directory
+      (2) Make sure jQuery is in the root folder.
+      (3) Update title
+      (4) Update total activity time for the module (around line #235)
+    
+     REVISED:  11-12-11 modified code originally from actForm.html
+               07-24-13 PKJ modified from 02FileManagement/index.html
+               08-07-13 Added History of SEO to Learning Activities
+               08-18-14 PKJ Checked all links.
+
+Accessibility:
+(1) Add noscript element and hide if JavaScript is enabled.
+(2) Use CSS to make visibility: hidden; the .toDo elements in case JavaScript is disabled.
+(3) Use jQuery to change this CSS to visibility: visible;
+(4) Use jQuery to create a hyperlink that toggles between the detailed learning activities and the abbreviated toDo lists.
+    This will be added after the p#toggleToDo (at the top of the Learning Activities)
+
+Classes and IDs:
+Paragraph used to position hyperlink: #toggleTodo
+Hyperlink:                            #displayToggle
+Verbose Activity item:                .activity
+Short Todo item:                      .todo
+Name of icon/activity image:          #iconImg
+Name of icon/activity link:           #iconLink
+
+DEBUG CHECKLIST:
+(1) If #iconImg and #iconLink are not displaying, make certain you have the jQuery library in the root folder.
+-->
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <title>Edit Graphics</title><!--
+******************************************************
+* * * * * * * * * jQuery Stuff * * * * * * * * * * * *
+****************************************************** -->
+
+  <script type="text/javascript" src="../jquery-1.6.2.js">
+</script>
+  <script type="text/javascript">
+$("document").ready( function( )
+  {
+     // Change the CSS so .todo items display when toggled
+     $('.todo').css("visibility", "visible");
+     $('#iconImg').css("visibility", "visible");
+     $('#iconLink').css("visibility", "visible");
+     // Hide all the todo items
+     $('.todo').hide( );
+     $('#tipOfWeek').hide();
+
+     //When user clicks on todo link or the iconLink,
+     // toggle the screen between details/summary to-do list
+     $('#displayToggle').click(togglePage);
+     $('#iconLink').click(togglePage);
+     $('#iconImg').click(togglePage);
+     $('#tipImg').click( function()
+     {
+        $('#tipOfWeek').toggle();
+     }); // end of #tipImg.click( )
+  }); // end of .ready( )
+
+   // Toggle the screen between detailed and summary views
+   function togglePage( )
+   {
+      $('.activity').toggle();
+      $('.todo').toggle();
+
+      // Show the detailed Learning Activities
+      if($('.activity').is(':visible'))
+      {
+        $("#displayToggle").text('See Checklist View');
+        // Display the todoIcon
+        $("#iconImg").attr("src","../graphic/checkmark.png");
+        // Change the hyperlink
+        $("#iconLink").text("See Checklist View");
+        // Hide the objective section
+        $("#objective").show();
+        $("#wiifm").show( );
+        $("#nextModule").show( );
+        $(".assessment").show( );
+        $("#tip").show( );
+      }
+      else // show the summary to-do list
+      {
+        $("#displayToggle").text("See Detailed View");
+        // Display the Learning Activity Icon
+        $("#iconImg").attr("src", "../graphic/detailPage.png");
+        $("#iconLink").text("See Detailed View");
+        // Show the objectives
+        $("#objective").hide( );
+        $("#wiifm").hide( );
+        $("#nextModule").hide( );
+        $(".assessment").hide( );
+        $("#tip").hide( );
+      }
+   }// end of togglePage( )
+
+  </script><!-- Make page IE backwards compatible using CSS3 and HTML5 -->
+
+  <script type="text/javascript" src="../modernizr.js">
+</script><!--[if (gte IE 6)&(lte IE 8)]>
+  <script type="text/javascript" src="../selectivizr-min.js"></script>
+  <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
+<![endif]-->
+  <!-- *************************************************   
+* * * * * * * * * CSS Stuff * * * * * * * * * * * *
+****************************************************** -->
+  <!-- Font Loading -->
+  <link href='http://fonts.googleapis.com/css?family=Permanent+Marker&v2' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+@import url(../activity.css);
+  </style>
+  <style type="text/css">
+ /* Initially hide the toDo list items in case JavaScript is disabled.
+      Use jQuery to show them if JavaScript is available. */
+   .todo,
+   #iconImg,
+   #iconLink {
+   visibility:      hidden;
+   }
+
+   .todo p {
+   /* Add checkbox as background image to control position */
+   background:      transparent url("../graphic/checkbox.png") no-repeat 0px 2px ;
+   padding:         5px 10px 7px 40px;  /* make room for checkbox */
+   margin:          0px 0px 0px 20px;
+   }
+
+   #tipImg {
+  /* Round all corners */
+  -webkit-border-radius:  130px;
+  -moz-border-radius:     130px;
+  border-radius:          130px;
+  border:                 1px green solid;
+  margin:                 10px 20px 5px 5px;
+  }
+  </style><!-- Fix IE Anamolies so IE recognizes HTML5 elements -->
+  <!--[if lt IE 9]>
+<script>
+// Set up new elements so old browsers will recognize for CSS
+var e = ("abbr,article,aside,audio,canvas,datalist,details,"
+   + "figure,footer,header,hgroup,mark,menu,meter,nav,output,"
+   + "progress,section,time,video").split(',');
+   for (var i = 0; i < e.length; i++)
+   {
+      document.createElement(e[i]);
+   }
+</script>
+<![endif]-->
+</head>
+
+<body>
+  <div id="frame">
+    <header>
+      <div class="identity">
+        <table summary="Page heading and module icon">
+          <tr>
+            <td rowspan="2"><img src="../graphic/gimp.png" width="100" alt="file folder icon"></td>
+
+            <td>
+              <h1>Edit Graphics</h1>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <h5>Using GIMP - The free photo editor.</h5>
+            </td>
+          </tr>
+        </table>
+      </div><!-- end of .identity -->
+      <!-- ****** NAVIGATION (To-Do List/Detailed List Graphics) ******* -->
+
+      <div class="navigation">
+        <table summary="navigation links to course map and todo list" border="1">
+          <tr>
+            <td><img id="iconImg" src="../graphic/checkmark.png" alt="to-do list icon" width="50"></td>
+          </tr>
+
+          <tr>
+            <!-- This link is handled null. It triggers a click event handled by jQuery -->
+
+            <td>
+              <a id="iconLink" href="#">See Checklist View</a>
+            </td>
+          </tr>
+        </table>
+      </div><!-- end of .navigation -->
+    </header>
+<!-- ************************************************
+* * * * O B J E C T I V E S    S E C T I O N  * * * *
+***************************************************** -->
+
+    <section id="objective">
+      <!-- Objectives -->
+      <h4>In this module you will learn:</h4>
+<img src="graphic/noahBallPlayer.png" alt="Noah, a ball player watching the game from the fence" style="margin: 10px 15px; width: 100px; float:right;" />
+      <ul>
+         <li>How to increase the SEO of a web site.</li>
+         <li>Use a photo editor to create graphics suitable for web use.</li>
+         <li>Download and install GIMP</li>
+         <li>Modify a digital photo so it is web-ready.</li>
+         <li>Work with layers.</li>
+         <li>Create custom gradients.</li>
+         <li>Create montage images</li>
+         <li>Create animated gifs</li>
+      </ul>
+    </section>
+<!-- ************************************************
+WII-FM
+***************************************************** -->
+
+    <section id="wiifm">
+      <!-- WII-FM -->
+
+      <h4>WII-FM (What's In It - For Me)</h4>
+
+      <p>
+      <strong>When was the last time you saw a web page without graphics?</strong>. Images  are what make your web pages interesting. Knowing how to use a photo editor is a critical skill for web development.
+      </p>
+      <p>
+      If you have access to Adobe Photoshop you will find that even though the GIMP commands are different, the basic concepts are all the same, especially when using layers, selection tools, and filters. Feel free to use Photoshop if you prefer.
+      </p>
+
+    </section>
+<!-- ***************************************************
+* * * * L E A R N I N G    A C T I V I T I E S   * * * *
+******************************************************** -->
+
+    <section class="activityGroup">
+      <h4 id="toggleTodo">Complete these Learning Activities:</h4>
+
+      <p><strong>Total estimated time for this module:</strong> 9 hours.</p>
+      <!-- jQuery will insert a link here for toggling between detailed and summary to-do list
+       based on the id="toggleTodo" set in the object above this comment. -->
+      <noscript>
+      <p><strong>You have JavaScript turned off.</strong> Enable it to view a short list of all the To-Do items.</p></noscript>
+      <hr>
+
+
+<!-- ************************
+Tutorial: SEO
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+<p>
+ <strong>Work through <a href="seo/index.htm" target="_blank">Tutorial:SEO</a></strong> to learn more about Search Engine Optimization. 
+</p>
+<p>
+ <strong>Estimated Time:</strong> 30 minutes
+</p>
+</div><!-- end of .activity -->
+
+<!-- SUMMARY -->
+<div class="todo">
+  <p>
+  Work through <a href="seo/index.htm" target="_blank">Tutorial:SEO</a> to learn more about Search Engine Optimization.
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+
+<!-- ************************
+History of SEO - SlideShare
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+<p>
+ <strong>Look at the  <a href="http://www.slideshare.net/HubSpot/hub-spot-historyofseocoffeetips" target="_blank">History of SEO</a></strong> to get a feel of how SEO works in today's world.. 
+</p>
+<p>
+ <strong>Estimated Time:</strong> 15 minutes
+</p>
+</div><!-- end of .activity -->
+
+<!-- SUMMARY -->
+<div class="todo">
+  <p>
+  Look at the  <a href="http://www.slideshare.net/HubSpot/hub-spot-historyofseocoffeetips" target="_blank">History of SEO</a>.
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+
+<!-- ************************
+Images from the Web - Flickr.com
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+  <p>
+  <strong>Complete the Tutorial: <a href="imageFromWeb/index.htm" target="_blank"> Getting Images from the Web </a> </strong>  - A short tutorial showing how to find free photos using Flickr.com and creative commons licensing.
+  </p>
+  <p>
+  
+  You'll learn how to use the photos on flickr.com using advanced search for Creative Commons images.
+  </p>
+  <p>
+  You will need to know this technique in order to complete the graded project.</p>
+  
+  <p>
+  <strong>Estimated Time:</strong> 30 minutes
+  </p>
+</div><!-- end of .activity -->
+
+<!-- SUMMARY -->
+<div class="todo">
+  <p>
+  Complete the Tutorial: <a href="imageFromWeb/index.htm" target="_blank"> Getting Images from the Web </a>.
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+Read the Book - GIMP Reference Manual
+***************************** -->
+<!-- DETAIL -->
+<div class="activity">
+  <p>
+  Here is the <a href="http://www.GIMP.org/docs/" target="_blank">GIMP Manual</a> - a free, on-line book that you can use as a quick reference.
+  </p>
+  <p>
+  And, if you want to learn more about GIMP after you finish this module, here is <a href="http://www.gimp.org/books/" target="_blank">a list of GIMP reference books</a>.
+  </p>
+ </div><!-- end of .activity -->
+
+<!-- SUMMARY -->
+<div class="todo">
+<p>
+  Keep the <a href="http://www.GIMP.org/docs/" target="_blank">GIMP Manual</a> handy so you can refer to it as you use the program.
+</p>
+</div><!-- end of .todo -->
+<hr>
+
+
+<!-- ************************
+Install GIMP
+***************************** -->
+<!-- DETAIL -->
+<div class="activity">
+<p>
+<strong>Install GIMP on your system. You can <a href="http://www.gimp.org/downloads/" target="_blank">download the newest version here: gimp.org/downloads</a></strong>.
+</p>
+<p>
+   <a href="graphic/gimpForMacDownload.png" target="_blank">
+   <img src="graphic/gimpForMacDownload.png" alt="GIMP download site for Mac" style="margin: 0 25px 0 0; width: 75px; float: right;" />
+</a>
+
+   <strong>Using a Mac? </strong> Here is a screenshot showing what to download. <br />
+   (Click on the image for a larger view.)
+</p>
+<br />
+<p>
+   <strong style="color:red;">Warning: </strong> Only download from this site. GIMP is open-source and people can install malware into the program and offer it for download on their site. Don't be duped. Only download this program from gimp.org/downloads
+</p>
+<p>
+<strong>Estimated Time:</strong> 30 minutes.      
+</p>
+</div><!-- end of .activity -->
+
+<!-- SUMMARY -->
+<div class="todo">
+  <p>
+  Install GIMP on your system. You can <a href="http://www.gimp.org/downloads/" target="_blank">download the newest version here.</a>
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+GIMP Quickies
+***************************** -->
+<!-- DETAIL -->
+<div class="activity">
+<p>
+<strong>Learn these <a href="http://www.gimp.org/tutorials/Lite_Quickies/" target="_blank">Gimp Lite Quickies</a></strong> to learn some basic photo editing techniques such as:
+</p>
+<ul>
+<li>Change the size of an image - Scale</li>
+<li>Make jpg files smaller</li>
+<li>Crop an image</li>
+<li>Find stats about your image (file size, dimensions)</li>
+<li>Flip and rotate an image</li>
+</ul>
+
+<p>
+<strong>Estimated Time:</strong> 1 hour
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+  Learn these <a href="http://www.gimp.org/tutorials/Lite_Quickies/" target="_blank">Gimp Lite Quickies</a>.
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+Draw a straight line
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+<p>
+<a href="http://www.gimp.org/tutorials/Straight_Line/" target="_blank"><img src="graphic/straightLineX.png" alt="A black X drawn using GIMP" style="margin: 0 15px; width: 150px; float: left;" /></a>
+
+<strong>Can't draw a straight line? </strong>With GIMP and the SHIFT key everyone can draw straight lines. Work through this simple <a href="http://www.gimp.org/tutorials/Straight_Line/" target="_blank">Straight Line Tutorial</a> to learn how. (Note: There is a bit of snarky attitude in this tutorial. Stay loose and smile at his sarcasm.)
+</p>
+<p>
+<strong>Estimated Time:</strong> 30 minutes
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+  Work through this simple <a href="http://www.gimp.org/tutorials/Straight_Line/" target="_blank">Straight Line Tutorial</a> to learn how.
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+Tutorial: Fun Days Parade
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+<p>
+<strong>Work through the <a href="gimpOpenLayer/index.htm" target="_blank">Tutorial: Using Layers with GIMP</a>.</strong>
+</p>
+<p>
+Learn how to:
+</p>
+<ul>
+<li>Open up an image</li>
+<li>Resize an image</li>
+<li>Add text to an image</li>
+</ul>
+
+<p>
+<a href="graphic/funDayParadeBoy.jpg" target="_blank">
+<img src="graphic/funDayParadeBoy.jpg" alt="Fun Days Parade - three boys sitting on road" width="150" align="left" /></a>
+Here is the high resolution photo - <a href="funDayParadeBoy.jpg" target="_blank">funDayParadeBoy.jpg</a> that is used in the tutorial (Right-mouse click, "Save image as")<br />
+<br />
+</p>
+<p>
+  <strong>Estimated Time:</strong>2 hours.
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+  Work through the <a href="gimpOpenLayer/index.htm" target="_blank">Tutorial: Using Layers with GIMP</a>.
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+Tutorial: Make a Montage of Photos
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+<p>
+<a href="graphic/eagleGirlMontage.jpg" target="_blank"><img src="graphic/eagleGirlMontage.jpg" alt="Montage with a Bald Eagle and a girl daydreaming against a blue sky" style="margin: 0 15px; width: 150px; float: right;" /></a>
+<strong>Complete this tutorial to learn <a href="gimpMontage/index.htm" target="_blank">how to create a montage using GIMP</a>.</strong>
+</p>
+<p>
+You'll learn how to:
+</p>
+<ul>
+<li>Use the fuzzy selection tool</li>
+<li>How to build an image using layers</li>
+<li>How to resize images</li>
+<li>How to copy and paste selections, and crop images.</li>
+</ul>
+<p>
+The techniques you learn in this tutorial will help you complete future projects for this course as well as give you valuable skills for image manipulation on your own site.
+</p>
+<p>
+<strong>Estimated Time:</strong> 2 hours</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+<p>
+Complete this tutorial to learn <a href="gimpMontage/index.htm" target="_blank">how to create a montage using GIMP</a>.
+</p>
+</div><!-- end of .todo -->
+<hr />
+
+
+<!-- ************************
+GIMP Tutorial: Animated GIFs
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+<p>
+<a href="GIMPAnimated.pdf" target="_blank"><img src="graphic/coverGimpAnimated.png" alt="Cover to tutorial: GIMP Animated" style="margin: 0 15px; width: 100px; float: left;" /></a>
+ <strong>Work through <a href="GIMPAnimated.pdf" target="_blank">Tutorial: Create An Animated GIF Using GIMP</a></strong> to learn how you can create animated photos. (Think of the portrait on your site blinking and smiling to the user.) 
+</p>
+<p>
+Here is a <a href="graphic/hawkImage4BuildAnimatedGIFUsingGIMP.zip" target="_blank">zip file with the original images</a> used in the tutorial (hawkImage4BuildAnimatedGIFUsingGIMP.zip).
+</p>
+<p>
+ <strong>Estimated Time:</strong> 2 hours.
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+  <strong>Work through <a href="GIMPAnimated.pdf" target="_blank">Tutorial: Create An Animated GIF Using GIMP</a></strong> to learn how you can create animated photos.
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+
+<!-- ************************
+Make a pencil drawing 
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+<p>
+  <a href="graphic/pelicanOriginal.jpg" target="_blank"><img src="graphic/pelicanOriginal.jpg" alt="Original photo of pelicans flying over the ocean" style="margin: 0 15px; width: 45%; float:left; " /></a>
+  
+<br /><br /><br /><br />
+<span class="optional">OPTIONAL:</span> <strong>Convert your portrait to a pencil drawing</strong> <a href="http://www.gimpusers.com/tutorials/making-a-pencil-drawing-from-a-photo.html" target="_blank">Tutorial: From Photo to Pencil Drawing Using GIMP.</a>
+<br />
+<br />
+Click on the images for a larger view.
+<br />
+<br />
+</p>
+<br />
+<br />
+<br />
+<p>
+  <a href="graphic/pelicanDrawing.png" target="_blank"><img src="graphic/pelicanDrawing.png" alt="Pencil rendition of pelicans flying over the ocean" style="margin: 0 15px; width: 90%; " /></a><br />
+</p>
+<p>
+<strong>Estimated Time:</strong> 2 hours
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>  
+  <span class="optional">OPTIONAL:</span> Convert your portrait to a pencil drawing.
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+Designer's Guide to DPI
+***************************** -->
+<!-- DETAIL -->
+<div class="activity">
+<p>
+<a href="http://sebastien-gabriel.com/designers-guide-to-dpi/home" target="_blank">
+   <img src="graphic/designerGuideToDPI.png" alt="screen shot showing resolution differences from The Designer Guide to DPI" style="margin: 0 25px 0 0; width: 100px; float: left;" />
+</a>
+A free book, <a href="http://sebastien-gabriel.com/designers-guide-to-dpi/home" target="_blank">The Designer's Guide to DPI</a> from a Google developer highlighting the details of image resolution and DPI.
+</p>
+
+<p>
+<strong>Estimated Time:</strong> 1 hour
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+  Learn these <a href="http://www.gimp.org/tutorials/Lite_Quickies/" target="_blank">Gimp Lite Quickies</a>.
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+
+<!-- ************************ 
+Selective Colorization
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+<p>
+<object align="left" width="300" height="225"><param name="movie" value="//www.youtube.com/v/w3IyhL4VWRw?version=3&amp;hl=en_US&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="//www.youtube.com/v/w3IyhL4VWRw?version=3&amp;hl=en_US&amp;rel=0" type="application/x-shockwave-flash" width="300" height="225" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+<a href="graphic/noahBallPlayer.png" target="_blank"><img src="graphic/noahBallPlayer.png" alt="Noah, a ball player watching the game from the fence" style="margin: 0 15px; width: 150px; float: right;" />
+</a>
+<span class="optional">OPTIONAL:</span> <strong>Watch this video to learn how to  <a href="http://www.youtube.com/watch?v=w3IyhL4VWRw" target="_blank">Create a photo with Selective Colorization</a>.
+</strong>
+</p>
+
+<p>
+This can be very effective an eye-catching on your website without being distracting (like an animated graphic can be.)
+</p>
+<br />
+<p>
+<strong>Estimated Time:</strong> 30 min.<br />     
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+<span class="optional">OPTIONAL:</span> Watch this video to learn how to  <a href="http://www.youtube.com/watch?v=w3IyhL4VWRw" target="_blank">Create a photo with Selective Colorization</a>.  
+</p>
+</div><!-- end of .todo -->
+<hr />
+
+</section>
+
+    
+<!-- ************************************************
+* * * * A S S E S S M E N T    S E C T I O N  * * * *
+***************************************************** -->
+<section class="assessment">
+  <h4>Your Graded Assignments For This Module</h4>
+
+  <!-- ************************
+  Graded Quiz: webComm
+  ***************************** -->
+    <p>
+    <strong>Take the Graded Quiz: WebComm</strong>
+    </p>
+
+    <ol>
+    <li>There will be 10 true/false and multiple choice questions.</li>
+    <li>10 questions - 10 minutes - 10 points</li>
+    <li>Feel free to use your book or look stuff up on the Web or try things out on your computer.</li>
+    <li>You will have one chance to take the quiz.</li>
+    <li>The questions will be from the same database that the self-quiz uses.</li>
+    <li>The quiz will be scored automatically and your points shown in your D2L grade book.</li>
+    </ol>
+    
+    <p>
+    <strong>Estimated Time:</strong> 10 minutes 
+    </p> 
+    <p>
+    Look on the Course Map for the due date for this graded activity.
+    </p>
+  <hr />
+
+ 
+   <!-- ************************
+  Project: SEOGimp
+  ***************************** -->
+    <p>
+  <a href="../13project/prjSEOGimp.pdf" target="_blank"><img src="../13project/graphic/coverPrjSEOgimp.png" alt="cover for Project:GimpAnimated specifications" style="margin: 0 35px 0 0; width: 150px; float: left;" /></a>
+
+      <strong>Finish <a href="../13project/prjSEOGimp.pdf" target="_blank">Project: SEOGimp</a>
+    </strong>
+    </p>
+    <p>
+    <strong>Remaining work to be done:</strong>
+    </p>
+    <ul>
+    <li>Create an info-graphic showing SEO tips demonstrating your use of GIMP to build a montage</li>
+    <li>Add this to the hostInfo.html web page.</li>
+    <li>Update the t.server with the updated page.</li>
+    </ul> 
+    <br />
+    <br />
+    <p>
+    <strong>What should be on my web site?</strong> 
+    </p>
+    <ul>
+    <li>Your resume page (index.html)</li>
+    <li>The hostInfo.html page with the graphic showing how FTP works, the web host comparison, and the SEO Tips graphic</li>
+    <li>The external style sheet that all your web pages will be using. (You created this for Project:CSS)</li>
+    <li>A graphic folder with all the images in it.</li>
+    </ul>
+    <p>
+    Look on the Course Map for the due date for this graded activity.
+    </p>
+  <hr />
+ 
+</section>
+    
+<!-- ************************************************
+Tip of the Week
+***************************************************** -->
+    <section>
+      <img src="../graphic/lightBulb.png" alt="hand holding lightbulb all lit up" align="left" width="90" id="tipImg">
+
+      <h4>Your Tip-Of-The-Week</h4>
+
+      <p>(Click on the lightbulb to reveal the tip.)<br>
+      <br></p>
+
+      <div id="tipOfWeek">
+        <h3>Pixlr.com - An free, online photo editor.</h3>
+
+        <p>
+        <a href="http://pixlr.com/" target="_blank"><img src="graphic/pixlrLogo.jpg" alt="Pixlr.com logo" style="margin: 0 15px; width: 150px; float: left;" /></a>
+        
+        Want to make some fast edits?  Bookmark this URL to <a href="http://pixlr.com/" target="_blank">Pixlr.com</a> giving you instant access to a really powerful editor. 
+        </p>
+        <p>
+        You can use the <strong>Advanced Editor</strong> which is very much like Photoshop or you can use the <strong>Efficient</strong> version for quick edits and image size changes.
+        </p>
+      <br />
+      <hr />
+
+      </div><!-- end of #tipOfWeek -->
+    </section>
+    
+<!-- ************************************************
+What's Next?
+***************************************************** -->
+<section id="nextModule">
+  <h4>What's Next?</h4>
+  <img src="../graphic/li.png" alt="people" style="margin: -20px 15px 0px 5px; width: 90px; float: left;">
+  <p>Making lists of things. The basic element for building menus on your pages.
+ <br />
+ <br />
+  </p>
+</section>
+
+    <footer>
+      <p>Strong start... Successful finish.</p>
+    </footer>
+  </div><!-- end of #frame -->
+</body>
+</html>

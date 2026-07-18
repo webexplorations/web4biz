@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html>
+<!-- indexCSS.html - main activity page for Module: CSS - Web4Biz course
+     Peter K. Johnson - peterk@webExplorations.com
+     Written:  5-17-11 Build template using jQuery
+
+      MAINTENANCE CHECKLIST:
+      (1) Make sure checkmark.png and detailPage.png are in the root graphic directory
+      (2) Make sure jQuery is in the root folder.
+      (3) Update title
+      (4) Update total activity time for the module (around line #235)
+    
+     REVISED:  11-12-11 modified code originally from actForm.html
+               07-21-13 PKJ modified from 02FileManagement/index.html
+               08-18-14 PKJ Checked all links - fixed project link to 13project folder
+
+Accessibility:
+(1) Add noscript element and hide if JavaScript is enabled.
+(2) Use CSS to make visibility: hidden; the .toDo elements in case JavaScript is disabled.
+(3) Use jQuery to change this CSS to visibility: visible;
+(4) Use jQuery to create a hyperlink that toggles between the detailed learning activities and the abbreviated toDo lists.
+    This will be added after the p#toggleToDo (at the top of the Learning Activities)
+
+Classes and IDs:
+Paragraph used to position hyperlink: #toggleTodo
+Hyperlink:                            #displayToggle
+Verbose Activity item:                .activity
+Short Todo item:                      .todo
+Name of icon/activity image:          #iconImg
+Name of icon/activity link:           #iconLink
+
+DEBUG CHECKLIST:
+(1) If #iconImg and #iconLink are not displaying, make certain you have the jQuery library in the root folder.
+-->
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <title>CSS</title><!--
+******************************************************
+* * * * * * * * * jQuery Stuff * * * * * * * * * * * *
+****************************************************** -->
+
+  <script type="text/javascript" src="../jquery-1.6.2.js">
+</script>
+  <script type="text/javascript">
+$("document").ready( function( )
+  {
+     // Change the CSS so .todo items display when toggled
+     $('.todo').css("visibility", "visible");
+     $('#iconImg').css("visibility", "visible");
+     $('#iconLink').css("visibility", "visible");
+     // Hide all the todo items
+     $('.todo').hide( );
+     $('#tipOfWeek').hide();
+
+     //When user clicks on todo link or the iconLink,
+     // toggle the screen between details/summary to-do list
+     $('#displayToggle').click(togglePage);
+     $('#iconLink').click(togglePage);
+     $('#iconImg').click(togglePage);
+     $('#tipImg').click( function()
+     {
+        $('#tipOfWeek').toggle();
+     }); // end of #tipImg.click( )
+  }); // end of .ready( )
+
+   // Toggle the screen between detailed and summary views
+   function togglePage( )
+   {
+      $('.activity').toggle();
+      $('.todo').toggle();
+
+      // Show the detailed Learning Activities
+      if($('.activity').is(':visible'))
+      {
+        $("#displayToggle").text('See Checklist View');
+        // Display the todoIcon
+        $("#iconImg").attr("src","../graphic/checkmark.png");
+        // Change the hyperlink
+        $("#iconLink").text("See Checklist View");
+        // Hide the objective section
+        $("#objective").show();
+        $("#wiifm").show( );
+        $("#nextModule").show( );
+        $(".assessment").show( );
+        $("#tip").show( );
+      }
+      else // show the summary to-do list
+      {
+        $("#displayToggle").text("See Detailed View");
+        // Display the Learning Activity Icon
+        $("#iconImg").attr("src", "../graphic/detailPage.png");
+        $("#iconLink").text("See Detailed View");
+        // Show the objectives
+        $("#objective").hide( );
+        $("#wiifm").hide( );
+        $("#nextModule").hide( );
+        $(".assessment").hide( );
+        $("#tip").hide( );
+      }
+   }// end of togglePage( )
+
+  </script><!-- Make page IE backwards compatible using CSS3 and HTML5 -->
+
+  <script type="text/javascript" src="../modernizr.js">
+</script><!--[if (gte IE 6)&(lte IE 8)]>
+  <script type="text/javascript" src="../selectivizr-min.js"></script>
+  <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
+<![endif]-->
+  <!-- *************************************************   
+* * * * * * * * * CSS Stuff * * * * * * * * * * * *
+****************************************************** -->
+  <!-- Font Loading -->
+  <link href='http://fonts.googleapis.com/css?family=Permanent+Marker&v2' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+@import url(../activity.css);
+  </style>
+  <style type="text/css">
+ /* Initially hide the toDo list items in case JavaScript is disabled.
+      Use jQuery to show them if JavaScript is available. */
+   .todo,
+   #iconImg,
+   #iconLink {
+   visibility:      hidden;
+   }
+
+   .todo p {
+   /* Add checkbox as background image to control position */
+   background:      transparent url("../graphic/checkbox.png") no-repeat 0px 2px ;
+   padding:         5px 10px 7px 40px;  /* make room for checkbox */
+   margin:          0px 0px 0px 20px;
+   }
+
+   #tipImg {
+  /* Round all corners */
+  -webkit-border-radius:  130px;
+  -moz-border-radius:     130px;
+  border-radius:          130px;
+  border:                 1px green solid;
+  margin:                 10px 20px 5px 5px;
+  }
+  
+  #love {
+  font-weight:            800;
+  color:                  purple;
+  }
+  </style><!-- Fix IE Anamolies so IE recognizes HTML5 elements -->
+  <!--[if lt IE 9]>
+<script>
+// Set up new elements so old browsers will recognize for CSS
+var e = ("abbr,article,aside,audio,canvas,datalist,details,"
+   + "figure,footer,header,hgroup,mark,menu,meter,nav,output,"
+   + "progress,section,time,video").split(',');
+   for (var i = 0; i < e.length; i++)
+   {
+      document.createElement(e[i]);
+   }
+</script>
+<![endif]-->
+</head>
+
+<body>
+  <div id="frame">
+    <header>
+      <div class="identity">
+        <table summary="Page heading and module icon">
+          <tr>
+            <td rowspan="2"><img src="../graphic/css.png" width="100" alt="CSS Logo"></td>
+
+            <td>
+              <h1 style="font-size:1.90em;margin:0px;">Cascading Style Sheets</h1>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <h5>Color, fonts, layout, and other fun stuff</h5>
+            </td>
+          </tr>
+        </table>
+      </div><!-- end of .identity -->
+      <!-- ****** NAVIGATION (To-Do List/Detailed List Graphics) ******* -->
+
+      <div class="navigation">
+        <table summary="navigation links to course map and todo list" border="1">
+          <tr>
+            <td><img id="iconImg" src="../graphic/checkmark.png" alt="to-do list icon" width="50"></td>
+          </tr>
+
+          <tr>
+            <!-- This link is handled null. It triggers a click event handled by jQuery -->
+
+            <td>
+              <a id="iconLink" href="#">See Checklist View</a>
+            </td>
+          </tr>
+        </table>
+      </div><!-- end of .navigation -->
+    </header>
+<!-- ************************************************
+* * * * O B J E C T I V E S    S E C T I O N  * * * *
+***************************************************** -->
+
+    <section id="objective">
+      <!-- Objectives -->
+      <h4>In this module you will learn:</h4>
+
+      <ul>
+         <li>How to utilize color and color schemes.</li>
+         <li>How hex color codes work.</li>
+         <li>Using CSS to add color, borders, margins, and fonts.</li>
+         <li>How to create new blocks and layouts on the page.</li>
+         <li>Use external files to hold the CSS code that is common to all the pages on your site.</li>
+      </ul>
+    </section>
+<!-- ************************************************
+WII-FM
+***************************************************** -->
+
+    <section id="wiifm">
+      <!-- WII-FM -->
+
+      <h4>WII-FM (What's In It - For Me)</h4>
+
+      <p>
+      <strong>My web page is so boring. I want some color. I want a specific page layout. I want specific fonts.</strong>
+      </p>
+      <p>
+      You are going to <span id="love">love</span> CSS!
+      </p>
+
+    </section>
+<!-- ***************************************************
+* * * * L E A R N I N G    A C T I V I T I E S   * * * *
+******************************************************** -->
+
+    <section class="activityGroup">
+      <h4 id="toggleTodo">Complete these Learning Activities:</h4>
+
+      <p><strong>Total estimated time to complete these Learning Activities:</strong> 7 hours.</p>
+      <!-- jQuery will insert a link here for toggling between detailed and summary to-do list
+       based on the id="toggleTodo" set in the object above this comment. -->
+      <noscript>
+      <p><strong>You have JavaScript turned off.</strong> Enable it to view a short list of all the To-Do items.</p></noscript>
+      <hr>
+
+
+<!-- ************************
+Determine Your Site
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+  <p>
+  <strong>Write down a brief description of what you plan to do for your website.</strong> The end result for this course is to have your own web site. It is recommended that you create an personal portfolio/resume for yourself but you are free to create a site on whatever subject or organization that you would like. 
+  </p>
+  
+  <p>Here is an example that one of your instructor's has created: <a href="http://peterkjohnson.com" target="_blank">Peter Johnson</a>
+  </p>
+
+  <p>
+   As you complete these learning activities start designing your website. Write down  ideas you might want to use. (Include the URL or web address of the example site if you have it!)
+  </p>
+  <ul>
+  <li>The color scheme for your site.</li>
+  <li>What will the page layout look like?</li>
+  <li>What are 2-3 things you want to show? (For example: resume, blog, hobbies)</li>
+  <li>What information/photos will go in the header?</li>
+  <li>What information/photos will go in the footer?</li>
+  </ul>
+
+<p>
+   Here is an <a href="shareColorScheme.html" target="_blank">example of a layout file</a> used with clients to document the design items for a project. Click on each image for a larger view.
+</p>
+<p>
+<a href="graphic/shareLogin.png" target="_blank">
+   <img src="graphic/shareLogin.png" alt="login screen for SHARE" style="margin: 0 25px 0 0; width: 100px;" />
+</a>
+&nbsp; &nbsp; &nbsp;
+<a href="graphic/shareModuleList.png" target="_blank">
+   <img src="graphic/shareModuleList.png" alt="module list in the SHARE course" style="margin: 0 25px 0 0; width: 100px;" />
+</a>
+&nbsp; &nbsp; &nbsp;
+<a href="graphic/shareModule.png" target="_blank">
+   <img src="graphic/shareModule.png" alt="List of modules in the SHARE course" style="margin: 0 25px 0 0; width: 100px;" />
+</a>
+</p> 
+<p>
+   Right-mouse click on the web page in a browser and select "View Source" to see how inline CSS was used for the color swatches. (If you print out the page you have to turn background printing on to get the color swatches to print. Firefox and Safari will do this. Chrome will not.) 
+  <p><strong>Estimated Time:</strong> 5 minutes or less.
+  </p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+    Write down a brief description of what you plan to do for your website. 
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+
+<!-- ************************
+CSS Introduction
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+<p>
+<a href="introCSS.pdf" target="_blank"><img src="graphic/coverIntroCSS.png" alt="cover image of Tutorial CSS Intro" style="margin: 0 15px; width: 150px; float: right;" />
+</a>
+<strong>Work through <a href="introCSS.pdf" target="_blank">Tutorial:CSS Introduction</a></strong> to learn how to add color and style to your web pages. 
+</p>
+<p>
+<strong>Go from plain to interesting by learning how to:</strong>
+</p>
+<ul>
+<li>Add color to the page</li>
+<li>Change fonts</li>
+<li>Add borders and change margins</li>
+<li>Float images next to text</li>
+</ul>
+
+<p>
+   <strong>Source code</strong> for <a href="introCSSCode.zip" target="_blank">Nicollet Web Site - introCSSCode.zip</a>
+</p>
+<p>
+<strong>Estimated Time:</strong> 60 minutes
+</p>
+</div><!-- end of .activity -->
+
+<!-- SUMMARY -->
+<div class="todo">
+  <p>
+  Work through <a href="introCSS.pdf" target="_blank">Tutorial:CSS Introduction</a>.
+  </p>
+</div><!-- end of .todo -->
+<hr />
+<br />
+<br />
+<!-- ************************
+CSS Not working?
+***************************** -->
+<!-- DETAIL -->
+<div class="activity">
+<p>
+<br /><br />
+<img src="graphic/lightbulb.png" alt="Lightbulb all lit up" style="margin: -70px 15px 0 0; width: 175px; float: left;" /><strong>CSS not working?</strong>. Go through the expert checklist on page 119 of the textbook. This will fix almost 90% of your errors (and greatly reduce your frustration with learning a new styling language.)
+</p>
+<p>
+<cite>Photo from <a href="http://www.flickr.com/photos/tschiae/" target="_blank">flickr.com by TschiAe</a></cite>
+</p>
+<br />
+</div><!-- end of .activity -->
+
+<!-- SUMMARY -->
+<div class="todo">
+  <p>
+  CSS not working?. Go through the expert checklist on page 119 of the textbook.
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+
+<!-- ************************
+Take the Quiz
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+  <p>
+  <strong>Take the Self-Quiz: CSS</strong>. You can take the self-quizzes as many times as you like. 
+  </p>
+  <p>
+  <strong>Be smart and take the self-quiz once each day to learn the material.</strong> 
+  </p>
+   
+  <p><strong>Estimated Time:</strong> 10 minutes (probably a lot less) each time you take a self-quiz.</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+    Take the Self-Quiz: CSS. 
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+
+<!-- ************************
+Read the Book
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+  <p>
+  <strong>Read chapter 3 & 4</strong> of Basics of Web Design HTML5 and CSS3.  </p>
+<img src="../graphic/textbookCover.jpg" alt="cover of the textbook" style="margin: 10px 25px 0 30px; width: 80px; float: left;" />  <ul>
+  <li>How to apply design concepts to web pages.</li>
+  <li>What different layouts can I use?</li>
+  <li>How does my page look on a mobile phone?</li>
+  <li>Protocols? What's that?</li>
+  <li>What's a div? What's a span?</li>
+  <li>Using CSS to add color, fonts, and other cool stuff</li>
+  </ul>
+  <p>
+  <strong>Estimated Time:</strong> 1 hour
+  </p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+<p>
+  Read chapter 3 & 4 of Basics of Web Design HTML5 and CSS3.
+</p>
+</div><!-- end of .todo -->
+<hr>
+
+
+<!-- ************************
+Tutorial: Color Theory for the Web
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+<p>
+<strong>Read through this <a href="http://webdesign.tutsplus.com/articles/design-theory/an-introduction-to-color-theory-for-web-designers/" target="_blank">Tutorial: An Introduction to Color Theory for Web Designers</a></strong>.
+</p>
+<p>
+<strong>Look at the examples in this article from Smashing Magazine: <a href="http://www.smashingmagazine.com/2010/01/28/color-theory-for-designers-part-1-the-meaning-of-color/" target="_blank">The Meaning of Color</a></strong>.
+</p>
+<p>
+<strong>Estimated Time:</strong> 30 minutes
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+  Read through this <a href="http://webdesign.tutsplus.com/articles/design-theory/an-introduction-to-color-theory-for-web-designers/" target="_blank">Tutorial: An Introduction to Color Theory for Web Designers</a>
+  <br />
+  Look at the examples in this article from Smashing Magazine: <a href="http://www.smashingmagazine.com/2010/01/28/color-theory-for-designers-part-1-the-meaning-of-color/" target="_blank">The Meaning of Color</a>.
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+Choose your color scheme
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+<p>
+<a href="graphic/colorScheme.png" target="_blank"><img src="graphic/colorScheme.png" alt="example of a color scheme with swatches and Hex codes" style="margin: 0 15px; width: 200px; float: right;" /></a>
+
+<strong>Using this Smashing Magazine tutorial:<a href="http://www.smashingmagazine.com/2010/02/08/color-theory-for-designer-part-3-creating-your-own-color-palettes/" target="_blank">Color Theory: Part 3</a></strong> develop your own color scheme for your website. 
+</p>
+<p>
+<strong>Notes:</strong>
+</p>
+<ul>
+<li>You have to register on the Kuler site to be able to color match a photo as she does in the tutorial.</li>
+<li>Pay attention to the sections, "The Easiest Color Schemes" and "10 Sites with Great Color Schemes".</li>
+</ul>
+
+<p>
+Here is a page with <a href="http://www.youthedesigner.com/2011/04/05/20-color-scheme-generators-for-web-and-graphic-designers/" target="_blank">20 Color Scheme Generators</a> you can use. (ColorWizard has been popular with students. Color Hunter is useful if you have a logo or photo that you want to match your site.)
+</p>
+
+<p>
+<strong>Estimated Time:</strong> 1 hour <br />      
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+  Using this Smashing Magazine tutorial:<a href="http://www.smashingmagazine.com/2010/02/08/color-theory-for-designer-part-3-creating-your-own-color-palettes/" target="_blank">Tutorial:HTML</a></strong> develop a color scheme you want to use for your own site.
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+Additive Color
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+<p>
+<a href="http://youtu.be/ksS-FJ3B8Og" target="_blank"><img src="graphic/rgbDemo.png" alt="screen shot of the RGB demo video" style="margin: 0 15px; width: 300px; float: right;" /></a>
+Watch this quick <a href="http://youtu.be/ksS-FJ3B8Og" target="_blank">demonstration video showing how additive colors work.</a>
+</p>
+<ul>
+<li>What color does the ping pong ball appear to be when the blue light hits it?</li>
+<li>What color does the ping pong ball appear to be when the red light is added?</li>
+<li>What color does the ping pong ball appear to be when the green light is added?</li>
+<li>If you were painting (subtractive color) the ping pong ball what color would it be if you mixed in blue and red?</li>
+<li>How about if you mixed blue, red, and green?  Would you get white or another color?</li>
+<li>Does a computer monitor or mobile phone use additive or subtractive color?</li>
+</ul>
+
+<strong>Estimated Time:</strong> 2 minutes <br />      </p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+Watch this quick <a href="http://youtu.be/ksS-FJ3B8Og" target="_blank">demonstration video showing how additive colors work.</a>
+</p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+Colorful Resume
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+<p>
+<a href="graphic/resume.png" target="_blank"><img src="graphic/resume.png" alt="sample student resume showing use of color" style="margin: 0 15px; width: 100px; float: left;" /></a>
+<strong>Put color theory to work.</strong> Add color to your resume/portfolio design to make it stand out.
+</p>
+<p>
+Here are some <a href="http://www.nwmissouri.edu/business/ColorfulResumes/index.htm" target="_blank">examples of what you can do with your resume</a> while still appearing very professional.
+</p>
+<p>
+<strong>Estimated Time:</strong> 5 minutes
+</p>
+<br />
+<br />
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+  Add color to your resume/portfolio design to make it stand out. Examples: <a href="http://www.nwmissouri.edu/business/ColorfulResumes/index.htm" target="_blank">examples of what you can do with your resume</a>.
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+
+<!-- ************************
+Using the <div> element
+***************************** -->
+<!-- DETAIL -->
+<div class="activity">
+<a href="graphic/centering.png" target="_blank"><img src="graphic/centering.png" alt="screen shot showing results of HTML demo on centering content on the page." style="margin: 0 5%; width: 90%;" />
+</a>
+<p>
+<strong>Here's how to set up a web page so it will work on every browser no matter what resolution it is.</strong>
+</p>
+<p>
+The trick is to set up a &lt;div&gt; element with an id="frame" and set this to max-width: 800px; using CSS.
+</p>
+<p>
+Set the margins to auto to automatically center this 'frame' on the page. Here is an <a href="pageCentering.html" target="_blank">example showing how to center things with &lt;div> and CSS</a>. 
+</p>
+<p>
+<strong>Right-mouse click on the web page and select "View Source" to see the code.</strong>
+</p>
+<p>
+<strong>Estimated Time:</strong> 30 minutes <br />      
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+  Use the &lt;div> element to center your page on any monitor. <a href="pageCentering.html" target="_blank">Example code showing how to center things with &lt;div> and CSS</a>.  
+</p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+Color Blindness
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+<p>
+<span class="optional">OPTIONAL:</span> <strong>Read this PDF article, <a href="colorBlind.pdf">'The Eye of the Beholder' - Designing for Colour-Blind Users</a></strong>
+</p>
+<p>
+<strong>Focus on:</strong><br />
+(1) The graphics to see how different a page can look to people with different types of color blindness.<br />
+(2) The two bulleted items on page 5 and 6 and use these when you are choosing colors for a web page.
+</p>
+<p>
+<strong>Estimated Time:</strong> 10 minutes
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+<span class="optional">OPTIONAL:</span> Read this PDF article, <a href="colorBlind.pdf">'The Eye of the Beholder' - Designing for Colour-Blind Users</a>.
+</p>
+</div><!-- end of .todo -->
+</p>
+<hr />
+
+<!-- ************************
+2-col layout
+***************************** -->
+<!-- DETAIL -->
+<div class="activity">
+<p>
+<a href="layout2colCSS.pdf" target="_blank"><img src="graphic/cover2col.png" alt="screen shot showing the borders used for a 3-column layout" align="left" width="100" /></a>
+<strong>Complete the tutorial: <a href="layout2colCSS.pdf" target="_blank"> 2-col CSS Layout</a>. </strong>
+</p>
+<p>
+<iframe width="300" height="225" src="http://www.youtube.com/embed/CvZgufxBO9o" frameborder="0" allowfullscreen align="right"></iframe>
+This hands-on lab. When you have finished the lab you will have a fluid 2-column template that you can use in the future to build new web pages.
+</p>
+<p>
+Save the finished file in the same folder as your basic HTML template that you created earlier in the course so you can find it easily and quickly.
+</p>
+<p>
+This tutorial will also show you how to use the &lt;div&gt; element to mark out sections on
+a page that can be customized with their own CSS rules. Keep in mind that HTML5 includes
+the new elements for &lt;header>, &lt;footer>, and &lt;nav> so you don't have
+to set up ids for these.
+</p>
+<p>
+Here are the START and FINAL .html files, <a href="2colLayoutDemo.html.zip" target="_blank">2colLayoutDemo.html.zip</a> that you can use.
+</p>
+<p>
+<strong>Estimated Time:</strong> 1 hour
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+  Complete the tutorial: <a href="layout2colCSS.pdf" target="_blank"> 2-col CSS Layout</a>.  
+</p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+3-col layout
+***************************** -->
+<!-- DETAIL -->
+<div class="activity">
+<p>
+<a href="layout3colCSS.pdf" target="_blank"><img src="graphic/cover3col.png" alt="screen shot showing the borders used for a 3-column layout" align="left" width="100" /></a>
+<strong>Complete the tutorial: <a href="layout3colCSS.pdf" target="_blank"> 3-col CSS Layout</a>. </strong>
+</p>
+<p>
+This lab builds on what you learned in the 2-column layout. Use that template to build your very own 3-column template.
+</p>
+<p>
+Save the finished file in the same folder as your basic HTML template that you created earlier in the course so you can find it easily and quickly.
+</p>
+<p>
+<strong>Estimated Time:</strong> 30 minutes.
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+  Complete the tutorial: <a href="layout3colCSS.pdf" target="_blank"> 3-col CSS Layout</a>.   
+</p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+3 CSS Techniques
+***************************** -->
+<!-- DETAIL -->
+<div class="activity">
+<p>
+<a href="techniqueCSS.pdf" target="_blank"><img src="graphic/cover3CSSTechnique.png" alt="screen shot of cover to the tutorial" align="left" width="100" />
+</a>
+<strong>Complete the Tutorial: <a href="techniqueCSS.pdf" target="_blank">3 CSS Techniques</a></strong> - Faux columns, parchment effect, and rounded corners.
+</p>
+<p>
+A common problem is having text on top of a graphic. It is almost impossible to read.
+This tutorial will show you how to use transparency to create a parchment effect giving
+the text on a page a background so it is readable. This also gives the web page a more
+3D, layered look.
+</p>
+<p>
+Here are the START .html files as well as the graphic images that are used in this tutorial, <a href="techniqueCSSResource.zip" target="_blank">techniqueCSSResource.zip</a>
+</p>
+<p>
+<strong>Estimated Time:  </strong>15 minutes.
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+  Complete the Tutorial: <a href="techniqueCSS.pdf" target="_blank">3 CSS Techniques</a> - Faux columns, parchment effect, and rounded corners.  
+</p>
+</div><!-- end of .todo -->
+<hr />
+
+
+<!-- ************************
+3 Ways to Use CSS - 
+***************************** -->
+<!-- DETAIL -->
+<div class="activity">
+<p>
+<a href="externalCSS.pdf" target="_blank"><img src="graphic/coverExternalCSS.png" alt="screen shot of cover to the 3 Ways to Use CSS" align="left" width="100" />
+</a>
+<strong>Complete the Tutorial: <a href="externalCSS.pdf" target="_blank">3 Ways to Use CSS</a> - External, Embedded, In-Line</strong>.
+</p>
+<p>
+Learn how to use external style sheets, embedded styles (like you have been doing all along), and in-lines CSS for styling specific elements.
+</p>
+<p>
+<strong>Estimated Time:  </strong>30 minutes.
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+  Complete the Tutorial: <a href="externalCSS.pdf" target="_blank">3 Ways to Use CSS</a> - External, Embedded, In-Line.  
+</p>
+</div><!-- end of .todo -->
+<hr />
+
+</section>
+    
+<!-- ************************************************
+* * * * A S S E S S M E N T    S E C T I O N  * * * *
+***************************************************** -->
+<section class="assessment">
+  <h4>Your Graded Assignments For This Module</h4>
+  <p>
+  <img src="../graphic/stopSign.png" alt="stop sign" style="margin: 0 10px 0 0; width: 60px; float: left;" /><strong>Stop! </strong><br />
+  Don't frustrate yourself. Do the Learning Activities BEFORE starting these graded activities. <br />
+  Ask yourself, "Am I here to learn something I can use... or to just finish the course and get a grade?"
+  </p>
+  <hr />
+
+
+  <!-- ************************
+  Graded Quiz: webComm
+  ***************************** -->
+    <p>
+    <strong>Take the Graded Quiz: HTML</strong>
+    </p>
+
+    <ol>
+    <li>There will be 10 true/false and multiple choice questions.</li>
+    <li>10 questions - 10 minutes - 10 points</li>
+    <li>Feel free to use your book or look stuff up on the Web or try things out on your computer.</li>
+    <li>You will have one chance to take the quiz.</li>
+    <li>The questions will be from the same database that the self-quiz uses.</li>
+    <li>The quiz will be scored automatically and your points shown in your D2L grade book.</li>
+    </ol>
+    
+    <p>
+    <strong>Estimated Time:</strong> 10 minutes 
+    </p> 
+    <p>
+    Look on the Course Map for the due date for this graded activity.
+    </p>
+  <hr />
+  
+  <!-- ************************
+  Project:CSS 
+  ***************************** -->
+ <a href="prjCSS.pdf" target="_blank"><img src="graphic/coverPrjCSS.png" alt="cover shot of Project:CSS specifications" style="margin: 0 25px 0 10px; width: 100px; float: left;" /></a>
+ <p>
+    <strong>Complete the <a href="../13project/prjCSS.pdf" target="_blank">Project: CSS</a></strong>.
+    </p>
+    <p>Using your resume web page you will show your CSS expertise by:
+    </p>
+    <ul>
+    <li>Adding color, borders, and margins to web pages</li>
+    <li>Using external, embedded, and in-line CSS code</li>
+    <li>Using &lt;div> and &lt;span> elements along with the naming attributes: id=" " and class=" "</li>
+    <li>Formatting web pages into 2-column and 3-column layouts</li>
+    </ul>
+    
+    <p>
+    Look on the Course Map for the due date for this graded activity.
+    </p>
+  <hr />
+</section>
+    
+<!-- ************************************************
+Tip of the Week
+***************************************************** -->
+    <section>
+      <img src="../graphic/lightBulb.png" alt="hand holding lightbulb all lit up" align="left" width="90" id="tipImg">
+
+      <h4>Your Tip-Of-The-Week</h4>
+
+      <p>(Click on the lightbulb to reveal the tip.)<br>
+      <br></p>
+
+      <div id="tipOfWeek">
+        <h3>Make Shapes with CSS</h3>
+
+        <p>
+        Chris Coyier loves CSS. Here is a page showing <a href="http://css-tricks.com/examples/ShapesOfCSS/" target="_blank">how you can use CSS to create a myriad of shapes for your web pages</a>.
+        </p>
+        <p>
+        Here is a triangle using in-line CSS:<br />
+        <!-- Triangle using CSS from Chris Coyier -->
+        <div style="width: 0px; height: 0px; border-top: 50px solid #000080; border-left: 50px solid transparent; margin: auto;" ></div>
+        &nbsp;&nbsp;
+        </p>
+        <p>
+        <strong>To see the code for the other shapes on the page:</strong>
+        </p>
+        <ol>
+        <li>Right-mouse click on the css-tricks page</li>
+        <li>Select "View Source"</li>
+        <li>Use CTRL F (find) to locate the ShapesOfCSS.css file</li>
+        <li>Notice how each shape has its own unique id "#"</li>
+        <li>Copy the code you want and add it to your page</li>
+        </ol>
+      <br />
+      <hr />
+
+      </div><!-- end of #tipOfWeek -->
+    </section>
+    
+<!-- ************************************************
+What's Next?
+***************************************************** -->
+<section id="nextModule">
+  <h4>What's Next?</h4>
+  <img src="../graphic/ftp.png" alt="FTP logo" style="margin: -20px 15px 0px 5px; width: 90px; float: left;">
+  <p>Time to get your page(s) published. FTP will help you copy your files out to the server so the rest of the world can view them. Bouncing Bees!
+  </p>
+</section>
+
+    <footer>
+      <p>Strong start... Successful finish.</p>
+    </footer>
+  </div><!-- end of #frame -->
+</body>
+</html>

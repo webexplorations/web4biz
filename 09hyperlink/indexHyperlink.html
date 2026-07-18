@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- indexHyperlink.html - main activity page for Module: CSS - Web4Biz course
+     Peter K. Johnson - peterk@webExplorations.com
+     Written:  5-17-11 Build template using jQuery
+              10-26-13 Rebuild for Web4Biz
+
+      MAINTENANCE CHECKLIST:
+      (1) Make sure checkmark.png and detailPage.png are in the root graphic directory
+      (2) Make sure jQuery is in the root folder.
+      (3) Update title
+      (4) Update total activity time for the module (around line #235)
+    
+     REVISED:  11-12-11 modified code originally from actForm.html
+               07-05-13 PKJ modified from 02FileManagement/index.html
+               08-18-14 PKJ Removed Jacob Nielson link about title attribute
+                            Fixed project link to 13project folder
+
+Accessibility:
+(1) Add noscript element and hide if JavaScript is enabled.
+(2) Use CSS to make visibility: hidden; the .toDo elements in case JavaScript is disabled.
+(3) Use jQuery to change this CSS to visibility: visible;
+(4) Use jQuery to create a hyperlink that toggles between the detailed learning activities and the abbreviated toDo lists.
+    This will be added after the p#toggleToDo (at the top of the Learning Activities)
+
+Classes and IDs:
+Paragraph used to position hyperlink: #toggleTodo
+Hyperlink:                            #displayToggle
+Verbose Activity item:                .activity
+Short Todo item:                      .todo
+Name of icon/activity image:          #iconImg
+Name of icon/activity link:           #iconLink
+
+DEBUG CHECKLIST:
+(1) If #iconImg and #iconLink are not displaying, make certain you have the jQuery library in the root folder.
+-->
+
+  <title>Hyperlinks</title><!--
+******************************************************
+* * * * * * * * * jQuery Stuff * * * * * * * * * * * *
+****************************************************** -->
+
+  <script type="text/javascript" src="../jquery-1.6.2.js">
+</script>
+  <script type="text/javascript">
+$("document").ready( function( )
+  {
+     // Change the CSS so .todo items display when toggled
+     $('.todo').css("visibility", "visible");
+     $('#iconImg').css("visibility", "visible");
+     $('#iconLink').css("visibility", "visible");
+     // Hide all the todo items
+     $('.todo').hide( );
+     $('#tipOfWeek').hide();
+
+     //When user clicks on todo link or the iconLink,
+     // toggle the screen between details/summary to-do list
+     $('#displayToggle').click(togglePage);
+     $('#iconLink').click(togglePage);
+     $('#iconImg').click(togglePage);
+     $('#tipImg').click( function()
+     {
+        $('#tipOfWeek').toggle();
+     }); // end of #tipImg.click( )
+  }); // end of .ready( )
+
+   // Toggle the screen between detailed and summary views
+   function togglePage( )
+   {
+      $('.activity').toggle();
+      $('.todo').toggle();
+
+      // Show the detailed Learning Activities
+      if($('.activity').is(':visible'))
+      {
+        $("#displayToggle").text('See Checklist View');
+        // Display the todoIcon
+        $("#iconImg").attr("src","../graphic/checkmark.png");
+        // Change the hyperlink
+        $("#iconLink").text("See Checklist View");
+        // Hide the objective section
+        $("#objective").show();
+        $("#wiifm").show( );
+        $("#nextModule").show( );
+        $(".assessment").show( );
+        $("#tip").show( );
+      }
+      else // show the summary to-do list
+      {
+        $("#displayToggle").text("See Detailed View");
+        // Display the Learning Activity Icon
+        $("#iconImg").attr("src", "../graphic/detailPage.png");
+        $("#iconLink").text("See Detailed View");
+        // Show the objectives
+        $("#objective").hide( );
+        $("#wiifm").hide( );
+        $("#nextModule").hide( );
+        $(".assessment").hide( );
+        $("#tip").hide( );
+      }
+   }// end of togglePage( )
+
+  </script><!-- Make page IE backwards compatible using CSS3 and HTML5 -->
+
+  <script type="text/javascript" src="../modernizr.js">
+</script><!--[if (gte IE 6)&(lte IE 8)]>
+  <script type="text/javascript" src="../selectivizr-min.js"></script>
+  <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
+<![endif]-->
+  <!-- *************************************************   
+* * * * * * * * * CSS Stuff * * * * * * * * * * * *
+****************************************************** -->
+  <!-- Font Loading -->
+  <link href='http://fonts.googleapis.com/css?family=Permanent+Marker&v2' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+@import url(../activity.css);
+  </style>
+  <style type="text/css">
+ /* Initially hide the toDo list items in case JavaScript is disabled.
+      Use jQuery to show them if JavaScript is available. */
+   .todo,
+   #iconImg,
+   #iconLink {
+   visibility:      hidden;
+   }
+
+   .todo p {
+   /* Add checkbox as background image to control position */
+   background:      transparent url("../graphic/checkbox.png") no-repeat 0px 2px ;
+   padding:         5px 10px 7px 40px;  /* make room for checkbox */
+   margin:          0px 0px 0px 20px;
+   }
+
+   #tipImg {
+  /* Round all corners */
+  -webkit-border-radius:  130px;
+  -moz-border-radius:     130px;
+  border-radius:          130px;
+  border:                 1px green solid;
+  margin:                 10px 20px 5px 5px;
+  }
+  </style><!-- Fix IE Anamolies so IE recognizes HTML5 elements -->
+  <!--[if lt IE 9]>
+<script>
+// Set up new elements so old browsers will recognize for CSS
+var e = ("abbr,article,aside,audio,canvas,datalist,details,"
+   + "figure,footer,header,hgroup,mark,menu,meter,nav,output,"
+   + "progress,section,time,video").split(',');
+   for (var i = 0; i < e.length; i++)
+   {
+      document.createElement(e[i]);
+   }
+</script>
+<![endif]-->
+</head>
+
+<body>
+  <div id="frame">
+    <header>
+      <div class="identity">
+        <table summary="Page heading and module icon">
+          <tr>
+            <td rowspan="2"><img src="../graphic/a.png" width="100" alt="file folder icon"></td>
+
+            <td>
+              <h1>Hyperlinks</h1>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <h5>Connecting the Web... one link at a time.</h5>
+            </td>
+          </tr>
+        </table>
+      </div><!-- end of .identity -->
+      <!-- ****** NAVIGATION (To-Do List/Detailed List Graphics) ******* -->
+
+      <div class="navigation">
+        <table summary="navigation links to course map and todo list" border="1">
+          <tr>
+            <td><img id="iconImg" src="../graphic/checkmark.png" alt="to-do list icon" width="50"></td>
+          </tr>
+
+          <tr>
+            <!-- This link is handled null. It triggers a click event handled by jQuery -->
+
+            <td>
+              <a id="iconLink" href="#">See Checklist View</a>
+            </td>
+          </tr>
+        </table>
+      </div><!-- end of .navigation -->
+    </header>
+<!-- ************************************************
+* * * * O B J E C T I V E S    S E C T I O N  * * * *
+***************************************************** -->
+
+    <section id="objective">
+      <!-- Objectives -->
+            <h4>In this module you will learn:</h4>
+
+        <h3>Use Hyperlinks and Anchors on a web page.</h3>
+      <a href="graphic/linkSameSite.png" target="_blank"><img src="graphic/linkSameSite.png" alt="illustration showing how links on a page connect other pages on the same site" style="margin: 0 15px; width: 150px; float: right;" /></a>
+        <ul>
+          <li>The basic pattern for every link and anchor.</li>
+          <li>Linking to another page on your site.</li>
+          <li>Linking to a page out on the Web.</li>
+          <li>Setting an anchor.</li>
+          <li>Linking to an anchor.</li>
+          <li>Linking to an anchor on another page.</li>
+          <li>Create links to download files to the user's computer</li>
+          <li>Creating an email link.</li>
+          <li>Styling links using CSS.</li>
+          <li>How to use links with images.</li>
+        </ul>
+    </section>
+<!-- ************************************************
+WII-FM
+***************************************************** -->
+
+    <section id="wiifm">
+      <!-- WII-FM -->
+
+      <h4>WII-FM (What's In It - For Me)</h4>
+
+        <p><strong>Blue, underlined text: <a href="http://en.wikipedia.org/wiki/Hyperlink" target="_blank">The Hyperlink</a></strong> &nbsp; Not much to look at... But, it changed the world.<br>
+        In this module you'll learn how to include hyperlinks on your web pages. You'll also discover the trick to opening pages in new windows or the same window as well as how to use anchors to jump to specific spots on a page.<br></p>
+
+    </section>
+<!-- ***************************************************
+* * * * L E A R N I N G    A C T I V I T I E S   * * * *
+******************************************************** -->
+
+    <section class="activityGroup">
+      <h4 id="toggleTodo">Complete these Learning Activities:</h4>
+
+      <p><strong>Total estimated time for this module:</strong> 6 hours.</p>
+      <!-- jQuery will insert a link here for toggling between detailed and summary to-do list
+       based on the id="toggleTodo" set in the object above this comment. -->
+      <noscript>
+      <p><strong>You have JavaScript turned off.</strong> Enable it to view a short list of all the To-Do items.</p></noscript>
+      <hr>
+
+
+<!-- ************************
+Take the Quiz
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+<p>
+  <strong>Take the SelfQuiz:Hyperlinks.</strong> This is your LEARNING experience.<br>
+  You can take this self-quiz as many times as you like. Keep in mind that it will close Sunday night before the graded quiz opens.
+</p>
+  <p>
+  <strong>Be smart and take the self-quiz once each day to learn the material.</strong> 
+  </p>
+   
+  <p><strong>Estimated Time:</strong> 10 minutes (probably a lot less) each time you take a self-quiz.</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+    Take the Self-Quiz: Hyperlinks. 
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+
+<!-- ************************
+Read the Book
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+  <p>
+  <strong>Read pages 48-56 in Chapter 2 and 228-229 in Chapter 8</strong> of Basics of Web Design HTML5 and CSS3 - HTML Basics.  </p>
+<img src="../graphic/textbookCover.jpg" alt="cover of the textbook" style="margin: 10px 25px 0 30px; width: 80px; float: left;" />  <ul>
+  <li>Creating an anchor</li>
+  <li>Hyperlinks in another tab or window</li>
+  <li>Relative Hyperlinks</li>
+  <li>Block anchors</li>
+  <li>Email hyperlinks</li>
+  </ul>
+  <p>
+  <strong>Estimated Time:</strong> 1 hour
+  </p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+<p>
+  Read pages 48-56 in chapter 2 and 228-229 in Chapter 8 of Basics of Web Design HTML5 and CSS3 - HTML Basics.
+</p>
+</div><!-- end of .todo -->
+<hr>
+
+
+<!-- ************************
+Tutorial: Creating Hyperlinks
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+<p>
+<img src="graphic/cover.png" alt="cover of the Hyperlink tutorial" style="margin: 0 15px; width: 100px; float: left;" />
+<strong>View the <a href="hyperlink.pdf" target="_blank">Tutorial: Creating Hyperlinks</a></strong> - Learn how to link to internal pages, pages out on the Web, and how to use CSS to make your links look and act more interesting to the user.
+</p>
+<br />
+<p>
+Here is a <a href="hyperlinkUsingCSS.html" target="_blank">copy of the code examples</a>.
+<br />
+<p>
+<strong>Estimated Time:</strong> 1 hour<br />      
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+  View the <a href="hyperlink.pdf" target="_blank">Tutorial: Creating Hyperlinks</a>.
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+Lab: Link to Anchors
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+<p>
+<strong>Complete the <a href="labUseLink.html" target="_blank">Use Link Lab</a></strong>.
+</p>
+<p>
+<strong>Estimated Time:</strong> 2 hours 
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+  Complete the <a href="labUseLink.html" target="_blank">Use Link Lab</a>.
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+Build a Menu
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+<p>
+<strong>Use CSS to make menus using unordered lists of hyperlinks.</strong>  <a href="http://www.webcredible.co.uk/user-friendly-resources/css/css-navigation-menu.shtml" target="_blank">A basic menu</a> - Creating a basic menu system using CSS
+</p>
+<p>
+<strong>Estimated Time:</strong> 2 hours.
+</p>
+
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+Use CSS to make menus using unordered lists of hyperlinks.  <a href="http://www.webcredible.co.uk/user-friendly-resources/css/css-navigation-menu.shtml" target="_blank">A basic menu</a>  </p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+CSS and Hyperlinks - Pseudo-elements
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+<p>
+   
+  <strong>Use CSS to change the appearance of your hyperlinks including pseudo-elements</strong>.<br />
+  
+   <a href="graphic/cssHyperlinkBefore.png" target="_blank">
+   <img src="graphic/cssHyperlinkBefore.png" alt="Before image of hyperlinks" style="margin: 20px 25px 0 0; width: 200px; float: left;" />
+</a>
+<a href="graphic/cssHyperlinkAfter.png" target="_blank">
+   <img src="graphic/cssHyperlinkAfter.png" alt="After image of hyperlinks" style="margin: 20px 0px 0 20px; width: 200px; float: right;" />
+</a>
+
+</p>
+<p>
+   (Click on images for a larger view.)
+</p>
+<p>
+   Start with <a href="cssHyperlinkSTART.html" target="_blank">cssHyperlinkSTART.html</a> and fill in the CSS to change the appearance of your hyperlinks using <a href="http://www.smashingmagazine.com/2010/02/13/the-definitive-guide-to-styling-web-links/" target="_blank">The Definitive Guide to Styling Web Links as a reference</a>.
+</p>
+   
+  <p>
+     <strong>Estimated Time:</strong> 30 minutes
+  </p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+    Use CSS to change the appearance of your hyperlinks including pseudo-elements
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+
+<!-- ************************
+Bento Box CSS
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+<p>
+<a href="graphic/bentoCSS.png" target="_blank"><img src="graphic/bentoCSS.png" alt="Bento Box CSS game" style="margin: 0 15px; width: 150px; float: left;" />
+</a>
+<span class="optional">OPTIONAL:</span> <strong><a href="http://flukeout.github.io/" target="_blank">Want to learn more about CSS selectors?</a> Check out this Bento box game.</strong>
+<br /><br /><br />
+<strong>How to play:</strong>
+</p>
+<ul>
+<li>Mouse over the object to see what its element name is.</li>
+<li>Read the description in the right panel to know what type of selector the game is expecting.</li>
+<li>Type in the correct selector and the items will disappear. Poof!<br />
+   No need for style rules! This is just working with the selector statement.
+</li>
+<li>Type in the wrong selector and they will shake their heads, "No."</li>
+<li>Pay attention to how your brain learns. (Frustration before triumph.)</li>
+</ul>
+<p>
+<strong>Estimated Time:</strong> 15 minutes
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+<span class="optional">OPTIONAL:</span><a href="http://flukeout.github.io/" target="_blank">Want to learn more about CSS selectors?</a> </p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+Transition Menus
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+<p>
+<span class="optional">OPTIONAL:</span> <strong><a href="http://techstream.org/Web-Design/Dock-Menu-with-CSS3" target="_blank">Add transitions to your icon menus</a></strong>
+<p>
+<strong>Estimated Time:</strong> 1 hour
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+<span class="optional">OPTIONAL:</span> <strong><a href="http://techstream.org/Web-Design/Dock-Menu-with-CSS3" target="_blank">Add transitions to your icon menus</a>
+ </p>
+</div><!-- end of .todo -->
+<hr />
+
+
+</section>
+    
+<!-- ************************************************
+* * * * A S S E S S M E N T    S E C T I O N  * * * *
+***************************************************** -->
+<section class="assessment">
+  <h4>Your Graded Assignments For This Module</h4>
+  <p>
+  <img src="../graphic/stopSign.png" alt="stop sign" style="margin: 0 10px 0 0; width: 60px; float: left;" /><strong>Stop! </strong><br />
+  Don't frustrate yourself. Do the Learning Activities BEFORE starting these graded activities.
+    </p>
+  <hr />
+
+  <!-- ************************
+  Graded Quiz: webComm
+  ***************************** -->
+    <p>
+    <strong>Take the Graded Quiz: ListMenu</strong>
+    </p>
+
+    <ol>
+    <li>There will be 10 true/false and multiple choice questions.</li>
+    <li>10 questions - 10 minutes - 10 points</li>
+    <li>Feel free to use your book or look stuff up on the Web or try things out on your computer.</li>
+    <li>You will have one chance to take the quiz.</li>
+    <li>The questions will be from the same database that the self-quiz uses.</li>
+    <li>The quiz will be scored automatically and your points shown in your D2L grade book.</li>
+    </ol>
+    
+    <p>
+    <strong>Estimated Time:</strong> 10 minutes 
+    </p> 
+    <p>
+    Look on the Course Map for the due date for this graded activity.
+    </p>
+  <hr />
+  
+  <!-- ************************
+  Project: 
+  ***************************** -->
+     <p>
+     <a href="../13project/prjListMenuChecklist.html" target="_blank">
+      <img src="../13project/graphic/coverPrjListMenu.png" alt="cover for Project: List Menu Specs" style="margin: 0 15px; width: 80px; float: left;" />
+     </a>
+    Work on the <a href="../13project/prjListMenuChecklist.html" target="_blank">Project: ListMenu</a>
+    </p>
+    <p>
+    This project covers Lists, Hyperlinks, and Menus. 
+    </p>
+    <p>
+    You should already have your pages and lists set up from the Module: Lists. 
+    </p>
+    <p>
+    Now just add the hyperlinks and build a menu system.
+    <br />
+    </p>
+  <hr />
+</section>
+    
+<!-- ************************************************
+Tip of the Week
+***************************************************** -->
+    <section>
+      <img src="../graphic/lightBulb.png" alt="hand holding lightbulb all lit up" align="left" width="90" id="tipImg">
+
+      <h4>Your Tip-Of-The-Week</h4>
+
+      <p>(Click on the lightbulb to reveal the tip.)<br>
+      <br></p>
+
+      <div id="tipOfWeek">
+        <h3>Get Icons for your Links</h3>
+
+        <p>
+        <a href="http://www.famfamfam.com/lab/icons/silk/" target="_blank">FamFamFam.com</a> offers free icons under the Creative Commons license.
+        </p>
+        <p>
+        <img src="graphic/silkIconList.png" alt="silk icons" />
+        </p>
+      <br />
+      <hr />
+
+      </div><!-- end of #tipOfWeek -->
+    </section>
+    
+<!-- ************************************************
+What's Next?
+***************************************************** -->
+<section id="nextModule">
+  <h4>What's Next?</h4>
+  <img src="../graphic/table.png" alt="people" style="margin: 0 15px -30px 5px; width: 90px; float: left;">
+  <p>
+  Organize data into tables. Add a little CSS, and you have a great looking display of key information or comparison charts on your pages.
+  </p>
+</section>
+
+    <footer>
+      <p>Strong start... Successful finish.</p>
+    </footer>
+  </div><!-- end of #frame -->
+</body>
+</html>

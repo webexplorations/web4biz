@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html>
+<!-- indexWordpress.html - install and use Wordpress - Web4Biz course
+     Peter K. Johnson - peterk@webExplorations.com
+     Written:  11-30-13 Build template using jQuery
+               11-18-14 PKJ Checked all links. 
+
+      MAINTENANCE CHECKLIST:
+      (1) Make sure checkmark.png and detailPage.png are in the root graphic directory
+      (2) Make sure jQuery is in the root folder.
+      (3) Update title
+      (4) Update total activity time for the module (around line #235)
+    
+     REVISED:  11-12-11 modified code originally from actForm.html
+               11-16-13 PKJ modified from 02FileManagement/index.html
+               11-18-14 PKJ Removed Starker's HTML theme link - Theme is no longer being maintained.
+                            Fixed link to project. Checked all other links.
+
+Accessibility:
+(1) Add noscript element and hide if JavaScript is enabled.
+(2) Use CSS to make visibility: hidden; the .toDo elements in case JavaScript is disabled.
+(3) Use jQuery to change this CSS to visibility: visible;
+(4) Use jQuery to create a hyperlink that toggles between the detailed learning activities and the abbreviated toDo lists.
+    This will be added after the p#toggleToDo (at the top of the Learning Activities)
+
+Classes and IDs:
+Paragraph used to position hyperlink: #toggleTodo
+Hyperlink:                            #displayToggle
+Verbose Activity item:                .activity
+Short Todo item:                      .todo
+Name of icon/activity image:          #iconImg
+Name of icon/activity link:           #iconLink
+
+DEBUG CHECKLIST:
+(1) If #iconImg and #iconLink are not displaying, make certain you have the jQuery library in the root folder.
+-->
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <title>Wordpress - Web4Biz</title><!--
+******************************************************
+* * * * * * * * * jQuery Stuff * * * * * * * * * * * *
+****************************************************** -->
+
+  <script type="text/javascript" src="../jquery-1.6.2.js">
+</script>
+  <script type="text/javascript">
+$("document").ready( function( )
+  {
+     // Change the CSS so .todo items display when toggled
+     $('.todo').css("visibility", "visible");
+     $('#iconImg').css("visibility", "visible");
+     $('#iconLink').css("visibility", "visible");
+     // Hide all the todo items
+     $('.todo').hide( );
+     $('#tipOfWeek').hide();
+
+     //When user clicks on todo link or the iconLink,
+     // toggle the screen between details/summary to-do list
+     $('#displayToggle').click(togglePage);
+     $('#iconLink').click(togglePage);
+     $('#iconImg').click(togglePage);
+     $('#tipImg').click( function()
+     {
+        $('#tipOfWeek').toggle();
+     }); // end of #tipImg.click( )
+  }); // end of .ready( )
+
+   // Toggle the screen between detailed and summary views
+   function togglePage( )
+   {
+      $('.activity').toggle();
+      $('.todo').toggle();
+
+      // Show the detailed Learning Activities
+      if($('.activity').is(':visible'))
+      {
+        $("#displayToggle").text('See Checklist View');
+        // Display the todoIcon
+        $("#iconImg").attr("src","../graphic/checkmark.png");
+        // Change the hyperlink
+        $("#iconLink").text("See Checklist View");
+        // Hide the objective section
+        $("#objective").show();
+        $("#wiifm").show( );
+        $("#nextModule").show( );
+        $(".assessment").show( );
+        $("#tip").show( );
+      }
+      else // show the summary to-do list
+      {
+        $("#displayToggle").text("See Detailed View");
+        // Display the Learning Activity Icon
+        $("#iconImg").attr("src", "../graphic/detailPage.png");
+        $("#iconLink").text("See Detailed View");
+        // Show the objectives
+        $("#objective").hide( );
+        $("#wiifm").hide( );
+        $("#nextModule").hide( );
+        $(".assessment").hide( );
+        $("#tip").hide( );
+      }
+   }// end of togglePage( )
+
+  </script><!-- Make page IE backwards compatible using CSS3 and HTML5 -->
+
+  <script type="text/javascript" src="../modernizr.js">
+</script><!--[if (gte IE 6)&(lte IE 8)]>
+  <script type="text/javascript" src="../selectivizr-min.js"></script>
+  <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
+<![endif]-->
+  <!-- *************************************************   
+* * * * * * * * * CSS Stuff * * * * * * * * * * * *
+****************************************************** -->
+  <!-- Font Loading -->
+  <link href='http://fonts.googleapis.com/css?family=Permanent+Marker&v2' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+@import url(../activity.css);
+  </style>
+  <style type="text/css">
+ /* Initially hide the toDo list items in case JavaScript is disabled.
+      Use jQuery to show them if JavaScript is available. */
+   .todo,
+   #iconImg,
+   #iconLink {
+   visibility:      hidden;
+   }
+
+   .todo p {
+   /* Add checkbox as background image to control position */
+   background:      transparent url("../graphic/checkbox.png") no-repeat 0px 2px ;
+   padding:         5px 10px 7px 40px;  /* make room for checkbox */
+   margin:          0px 0px 0px 20px;
+   }
+
+   #tipImg {
+  /* Round all corners */
+  -webkit-border-radius:  130px;
+  -moz-border-radius:     130px;
+  border-radius:          130px;
+  border:                 1px green solid;
+  margin:                 10px 20px 5px 5px;
+  }
+  
+  .identity img {
+  width:                  200px;
+  margin:                 -50px 0px 0px 0px;
+  }
+  </style><!-- Fix IE Anamolies so IE recognizes HTML5 elements -->
+  <!--[if lt IE 9]>
+<script>
+// Set up new elements so old browsers will recognize for CSS
+var e = ("abbr,article,aside,audio,canvas,datalist,details,"
+   + "figure,footer,header,hgroup,mark,menu,meter,nav,output,"
+   + "progress,section,time,video").split(',');
+   for (var i = 0; i < e.length; i++)
+   {
+      document.createElement(e[i]);
+   }
+</script>
+<![endif]-->
+</head>
+
+<body>
+  <div id="frame">
+    <header>
+      <div class="identity">
+        <table summary="Page heading and module icon">
+          <tr>
+            <td rowspan="2"><img src="../graphic/w.png" alt="file folder icon" style="margin: 0 15px; width: 100px;" />
+                          </td>
+
+            <td>
+              <h1>Wordpress</h1>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <h5>Instant websites!</h5>
+            </td>
+          </tr>
+        </table>
+      </div><!-- end of .identity -->
+      <!-- ****** NAVIGATION (To-Do List/Detailed List Graphics) ******* -->
+
+      <div class="navigation">
+        <table summary="navigation links to course map and todo list" border="1">
+          <tr>
+            <td><img id="iconImg" src="../graphic/checkmark.png" alt="to-do list icon" width="50"></td>
+          </tr>
+
+          <tr>
+            <!-- This link is handled null. It triggers a click event handled by jQuery -->
+
+            <td>
+              <a id="iconLink" href="#">See Checklist View</a>
+            </td>
+          </tr>
+        </table>
+      </div><!-- end of .navigation -->
+    </header>
+<!-- ************************************************
+* * * * O B J E C T I V E S    S E C T I O N  * * * *
+***************************************************** -->
+
+    <section id="objective">
+      <!-- Objectives -->
+      <h4>In this module you will learn:</h4>
+      <h3>Use a Content Management System (CMS) to create a dynamic web site.</h3>
+      <ul>
+            <li>Describe what a blog is and how they can be useful to an organization.</li>
+
+            <li>Create a new MySQL database on a web server using cPanel.</li>
+
+            <li>Install a CMS such as Wordpress on a web server</li>
+
+            <li>Change the appearance of the CMS using pre-written themes</li>
+
+            <li>Customize a theme using CSS</li>
+
+            <li>Add at least three modules to increase the capabilities of the CMS.<br></li>
+         </ul><br>
+
+         <p><strong>Important:</strong> This module uses LOTS of logins. Use the <a href="../06ftp/siteOrganizer.html" target="_blank">Site Organizer</a> sheet (originally introduced in the FTP module) to keep track of them:<br></p>
+
+         <ol>
+            <li><strong>Login information to access the cPanel out on your t.server</strong>
+              <ul>
+                 <li>URL and port number for cPanel</li>
+                 <li>User ID and password for cPanel</li>
+                 <li>Special notes (answering the security warnings)</li>
+              </ul>
+            </li>
+
+            <li><strong>Login information to access FTP out on your t.server.</strong>
+              <ul>
+                 <li>URL to FTP part of the website.</li>
+                 <li>User ID and password </li>
+                 <li>Special notes (make certain you are in the public_html)</li>
+              </ul>
+            </li>
+
+            <li><strong>Database name, database user, database password for your Wordpress data.</strong> (Wordpress will require this information so it can access the tables in the mySQL database on the server.)
+               <ul>
+                 <li>Full name of the database (will have your username prefix)</li>
+                 <li>Full user name (wll have your username prefix)</li>
+                 <li>Password for the database</li>
+              </ul>
+            </li>
+
+            <li><strong>Wordpress admin login</strong>
+                <ul>
+                 <li>URL to Wordpress admin</li>
+                 <li>User ID and password for the Wordpress site. </li>
+              </ul>
+            </li>
+         </ol>
+
+         <p><strong>Print the information carefully.</strong> Put a slash through zeros (so they don't look like the letter &quot;o&quot;) and underline capital&nbsp;letters with three lines.<br>
+         <br>
+         <strong>Don't just write down the login information, label it!</strong> So many students just scribble down the login info and then get confused on which login in is used for which purpose. Stay neat and organized and it&nbsp;will&nbsp;really save you a lot of time&nbsp;and stress.</p>
+    </section>
+<!-- ************************************************
+WII-FM
+***************************************************** -->
+    <section id="wiifm">
+      <h4>WII-FM (What's In It - For Me)</h4>
+
+      <h2>So your uncle wants a web site...</h2>
+
+      <p><strong>This module will show you how to use a popular blog framework, Wordpress, and your knowledge of HTML5 and CSS3 to quickly create web sites that your uncle, brother, or client can use and update on their own.</strong>
+      </p>
+      <p>
+      Save your time and energy for the more sophisticated work on client sites and leave the tedium of data entry and updating calendars to the client.
+      </p>
+      <p>
+      For this module you will be downloading a copy of Wordpress and installing it on your t.server.
+      </p>
+    </section>
+    
+<!-- ***************************************************
+* * * * L E A R N I N G    A C T I V I T I E S   * * * *
+******************************************************** -->
+<section class="activityGroup">
+<h4 id="toggleTodo">Complete these Learning Activities:</h4>
+
+<p>
+  <strong>Total estimated time for this module:</strong> 6 hours.
+</p>
+<!-- jQuery will insert a link here for toggling between detailed and summary to-do list
+ based on the id="toggleTodo" set in the object above this comment. -->
+<noscript>
+  <p>
+  <strong>You have JavaScript turned off.</strong> Enable it to view a short list of all the To-Do items.
+  </p>
+</noscript>
+<hr>
+
+
+<!-- ************************
+How a CMS works
+***************************** -->
+<div class="activity">
+<p>
+<a href="graphic/howCMSwork.gif" target="_blank">
+   <img src="graphic/howCMSwork.gif" alt="graphic showing how a CMS works with the client and server" style="margin: 0 15px; width: 150px; float: left;" />
+</a>
+   
+<strong>Work through the tutorial: <a href="cms/index.htm" target="_blank">How a CMS works</a></strong> to learn the basic technology behind Wordpress and other CMS platforms.
+</p>
+<p>
+There are two parts involved. (1) What the user sees and (2) A form that the editor or site administrator uses to add new content to the database.
+<p>
+  <strong>Estimated Time:</strong> 15 minutes
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+Work through the tutorial: <a href="cms/index.htm" target="_blank">How a CMS works</a>
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+Access the cPanel on your t.server
+***************************** -->
+<div class="activity">
+<p>
+<iframe width="299" height="152" src="http://www.youtube.com/embed/dcgTjFwQ_x8?rel=0" frameborder="0" allowfullscreen="" align="left"></iframe>
+<strong>Watch this video to learn <a href="http://youtu.be/dcgTjFwQ_x8?hd=1" target="_blank">how to access the cPanel (Control Panel) on the t.server.</a></strong>
+</p>
+<p>
+ You will be using the cPanel to create a new database that Wordpress will use to store all its information.
+</p>
+<p>
+If you plan on taking other classes for the Information Systems degree you will be using the cPanel a lot so keep this information handy for your account. (ie put it into LastPass.)
+</p>
+<p>
+  <strong>Make certain you write down this information so you can access the cPanel whenever you need to.</strong>
+</p>
+<ul>
+  <li>The URL or web address to the cPanel</li>
+  <li>Your userID</li>
+  <li>Your password</li>
+</ul>
+<p>
+<a href="labSetUpMySQL.html" target="_blank"><strong>Use this lab worksheet as a guide to help you login into cPanel</strong></a>
+</p>
+
+<p>
+<strong>Estimated Time:</strong> 30 minutes
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+Watch this video to learn <a href="http://youtu.be/dcgTjFwQ_x8?hd=1" target="_blank">how to access the cPanel (Control Panel) on the t.server.</a>
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+
+<!-- ************************
+3 Steps in Creating a Database on t.server
+***************************** -->
+<div class="activity">
+<p>
+<iframe width="299" height="152" src="http://www.youtube.com/embed/kMiahN6dIqU?rel=0" frameborder="0" allowfullscreen="" align="left"></iframe> 
+<strong>Watch this video to learn <a href="http://youtu.be/kMiahN6dIqU?hd=1" target="_blank">the three steps to creating a database on the t.server.</a></strong> You need to follow these steps exactly and in order.
+</p>
+<p>
+<strong>Make certain you write down (and label):</strong>
+</p>
+<ul>
+<li>The full name of the database</li>
+<li>The full name of the database username</li>
+<li>The database password you use.</li>
+</ul>
+
+<p>
+<strong>Estimated Time:</strong> 30 minutes
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+Watch this video to learn <a href="http://youtu.be/kMiahN6dIqU?hd=1" target="_blank">the three steps to creating a database on the t.server.</a>
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+
+<!-- ************************
+Install Wordpress
+***************************** -->
+<div class="activity">
+<p>
+  <iframe width="299" height="152" src="http://www.youtube.com/embed/PlvTNHVapSw?rel=0" frameborder="0" allowfullscreen="" align="left"></iframe>
+   <strong>Watch this video to learn <a href="http://youtu.be/PlvTNHVapSw?hd=1" target="_blank">how to install Wordpress.</a></strong>
+</p>
+<p>
+  <strong>Write down and label the following bits of information and label them:</strong>
+</p>
+<ul>
+<li>The URL or web address to your copy of Wordpress</li>
+<li>Your Wordpress administrator user name</li>
+<li>Your Wordpress administrator password</li>
+</ul>
+
+<h3>Where do you want your Wordpress blog to appear?</h3>
+<p>
+You can <a href="http://codex.wordpress.org/Creating_a_Static_Front_Page" target="_blank">learn how to set up a static front page on Wordpress.</a>  This will allow you to copy and paste the HTML code from your existing homepage into the Wordpress editing area. (Not your menus, just the body copy).
+</p>
+<p>
+<strong>If you want your blog to be part of your website but not your homepage</strong>, then put all the Wordpress files (NOT the Wordpress folder itself, just the files) in a subdirectory. For example  06public_html/blog  as well as public_html/blog out on your t.server.
+</p>
+<p>
+<strong>If you want Wordpress to be the home page of your site put all the Wordpress files in your root directory.</strong> (06public_html and public_html out on the t.server)
+</p>
+<p>
+<strong>IMPORTANT!</strong> Make a backup copy of your 06public_html. You might name it 06public_htmlBACKUP. That way you can always go back to your current website if you need/want to.
+<p>
+
+    <strong>Estimated Time:</strong> 30 minutes
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+<p>
+  Watch this video to learn <a href="http://youtu.be/PlvTNHVapSw?hd=1" target="_blank">how to install Wordpress.</a>
+</p>
+</div><!-- end of .todo -->
+<hr />
+
+
+<!-- ************************
+What can go wrong?
+***************************** -->
+<div class="activity">
+<p>
+<a href="graphic/filezillaError.png" target="_blank">
+ <img src="graphic/filezillaError.png" alt="screenshot of FileZilla not being able to connect" style="margin: 20px; width: 150px; float: right;" />
+</a>
+  <strong>What can go wrong?</strong>
+</p>
+<ol>
+  <li>
+  <strong>If you are using your laptop on campus,</strong> the wireless network has a firewall that will keep you from accessing your t.server. You'll have to use one of the lab computers to access your files with FileZilla. At home this won't be a problem, just on campus.
+  <br /><br /><br />
+  </li>
+  <li>
+    <strong>Often the database doesn't get connected with the user.</strong>
+    <a href="graphic/addUser.png" target="_blank">
+ <img src="graphic/addUser.png" alt="screenshot from cPanel showing that user is not connected to the database" style="margin: 20px; width: 150px; float: right;" />
+</a>
+ Go back into the cPanel and look at the table near the top of the database page. You should see the name of the database as well as the user name. If the user name is blank, go down to the bottom of the page and connect the database with the username again. You should see a permissions page. Select All on that page and click okay.
+  <br /><br />
+  </li>
+  <li>
+<a href="graphic/wordpressFileListing.png" target="_blank">
+ <img src="graphic/wordpressFileListing.png" alt="screenshot showing the folder structure and file listing for Wordpress" style="margin: 20px; width: 150px; float: right;" />
+</a>
+    <strong>Wordpress does not display. (Confused about which folder goes where?)</strong> When you unzipped the Wordpress file you may end up with a folder inside a folder. That's okay, just make sure the folder you rename to "blog" is the folder that contains the WP-files. That is the folder (and the files it contains) that you will upload to the public_html folder out on the t.server.
+  <br /><br />
+  </li>
+  <li>
+    <strong>File Not Found when trying to view Wordpress</strong> If you name the folder "Blog" and then try to view Wordpress out on the server using yourusername.t.southcentral.edu/blog, then you will get a "File Not Found" error. Go back and follow the naming conventions and name your files and folders consistently. (start with lower case, useCamelCaseForMultipleWords, no spaces.)
+  </li>
+</ol>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+Read over this checklist (view details of this checklist) if you are having trouble.
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+
+<!-- ************************
+Need to start again?
+***************************** -->
+<div class="activity">
+<p>
+<iframe width="299" height="152" src="http://www.youtube.com/embed/HTr5qWNhD_E?rel=0" frameborder="0" allowfullscreen="" align="left"></iframe> <strong>Having problems?</strong>
+</p>
+<p>
+Read the <a href="wordPressFAQ.html" target="_blank">Wordpress FAQ</a> (Frequently Asked Questions) about Wordpress installation issues students have had.
+</p>
+<p>
+<strong>Here's how to uninstall Wordpress so you can start over. <a href="http://youtu.be/HTr5qWNhD_E?hd=1" target="_blank">Using phpMyAdmin to remove all the information from the database.</a></strong>Before you re-install Wordpress you need to remove all the information from the database using phpMyAdmin (located out on the cPanel) as delete all the Wordpress files in the folder named "blog".
+</p>
+<p>
+<strong>Still broken?</strong> Go back out to <a href="http://wordPress.org" target="_blank">http://Wordpress.org</a> and re-download the original file, delete the files out on t.server and re-upload, and empty out the database tables. This will allow you to re-install starting from scratch.
+</p>
+</div><!-- end of .activity -->
+<hr />
+
+<!-- ************************
+Askimet Plugin
+***************************** -->
+<div class="activity">
+<p>
+<strong><a href="http://www.wpbeginner.com/beginners-guide/akismet-101-guide-for-all-wordpress-users/" target="_blank">Enable Askimet anti-spam protection.</a></strong>.
+</p>
+<p>
+If you don't protect against spammers, they will attack your site and fill every blog posting with comments that point to other sites completely unrelated to your website. It is a very boring and time-consuming task to go in and delete all of these comments from a long list of blog postings.
+</p>
+
+<p>
+<strong>Estimated Time:</strong> 30 minutes (Depending on how much time you spend browsing through all the plug-ins. Best to search for a specific topic/task and then pick the one with the highest rating.)
+</p>
+</div><!-- end of .activity -->
+<hr />
+
+<!-- SUMMARY -->
+
+<div class="todo">
+<p>
+<a href="http://www.wpbeginner.com/beginners-guide/akismet-101-guide-for-all-wordpress-users/" target="_blank">Enable Askimet anti-spam protection.</a>
+</p>
+</div><!-- end of .todo -->
+<hr />
+
+
+<!-- ************************
+OPTIONAL: Wordpress documentation
+***************************** -->
+<div class="activity">
+<p>
+<a href="http://codex.wordpress.org/Installing_Wordpress" target="_blank"><img src="graphic/wordpressLogo.png" alt="Wordpress Logo" style="margin: 0 15px; width: 150px; float: left;" /></a>
+
+<strong><span class="optional">OPTIONAL:</span> <a href="http://codex.wordpress.org/Installing_Wordpress" target="_blank">Use the Wordpress.org documentation</a></strong>
+</p>
+<p>
+Here is a written checklist that you might find helpful: <a href="wordPressFAQ.html" target="_blank">Peter's Wordpress FAQ</a>
+</p>
+<p>
+After you get Wordpress up and running, create a new user with Admin rights using your t.server username/password. This is like having a spare set of keys for your car. If you forget your admin userid/passwords you will have to re-install Wordpress from scratch.
+</p>
+
+<p>
+<strong>Estimated Time:</strong> 30 minutes
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+<span class="optional">OPTIONAL:</span> <a href="http://codex.wordpress.org/Installing_Wordpress" target="_blank">Use the Wordpress.org documentation</a>.
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+
+<!-- ************************
+Wordpress Themes
+***************************** -->
+<div class="activity">
+<p>
+<a href="graphic/webExplorationThemeList.png" target="_blank"><img src="graphic/webExplorationThemeList.png" alt="themes out on a Wordpress site" style="margin: 0 15px; width: 200px; float: right;" /></a>
+<strong>Choose two or three themes from the <a href="http://wordpress.org/extend/themes/" target="_blank">Theme Directory</a>.</strong>
+</p>
+<p>
+Here is a Wordpress information page on <a href="http://codex.wordpress.org/Using_Themes" target="_blank">themes and how to install them quickly and easily</a> out on your server.
+</p>
+<p>
+Here is a screenshot from Web Explorations showing the various themes that have been installed, ready to use. (Click on the graphic for a larger view.)
+</p>
+<p>
+<strong>Estimated Time:</strong> 15-30 minutes depending on how much time you spend browsing through all the themes. (Careful! It can really be a time suck.)</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+Choose two or three themes from the <a href="http://wordpress.org/extend/themes/" target="_blank">Theme Directory</a>.  </p>
+</div><!-- end of .todo -->
+<hr />
+
+
+<!-- ************************
+Wordpress Theme from scratch
+***************************** -->
+<div class="activity">
+<p>
+<strong><a href="http://blog.spoongraphics.co.uk/tutorials/how-to-build-a-custom-wordpress-theme-from-scratch" target="_blank">Create your own Wordpress theme from scratch</a></strong> using this tutorial from Chris Spooner.
+</p>
+<p>
+<strong>Download a base or starter theme.</strong> Download the zip file and unzip it inside your theme folder on your flash drive. Then upload it to the same folder out on your t.server in the folder wp-content/themes.
+</p>
+<p>
+<strong>Here are three to get you started:</strong>
+</p>
+<ul>
+<li><strong><a href="http://whiteboardframework.com/" target="_blank">The Whiteboard Theme</a></strong> - A great place to start with great documentation.</li>
+<li><strong><a href="http://themeclubhouse.digwp.com/" target="_blank">The H5 Theme</a></strong> - A theme that is more business oriented and less blog-looking. The download button is in the upper right corner of the page.
+</li>
+<li><a href="http://www.devlounge.net/design/5-awesome-bare-bones-wordpress-themes" target="_blank">Here is a list of other bare-bones themes</a> to get you started. There are more listed in the comments.</li>
+</ul>
+
+<p>
+<strong>Estimated Time:</strong> 2 hours
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+<a href="http://blog.spoongraphics.co.uk/tutorials/how-to-build-a-custom-wordpress-theme-from-scratch" target="_blank">Create your own Wordpress theme from scratch</a>.
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+OPTIONAL - Customize an existing theme
+***************************** -->
+<div class="activity">
+<p>
+<span class="optional">OPTIONAL:</span> <strong><a href="http://codex.wordpress.org/Theme_Development" target="_blank">Customize an existing theme</a></strong> by using this Wordpress guide.
+</p>
+<p>
+Here's an <a href="http://www.yvoschaap.com/weblog/wordpress_theme_generator/" target="_blank">online theme generator written by Yvos Chaap</a> that you can use to build a custom theme for Wordpress. Using your knowledge of CSS you can then fine tune the theme to your needs.
+</p>
+<p>
+Do a web search for: wordpress theme customize.
+</p>
+<p>
+<strong>Estimated Time:</strong> Minimum of 1 hour. You can spend days fine-tuning a theme.
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+<hr />
+
+<!-- ************************
+OPTIONAL - Add Plugins to your Wordpress installation
+***************************** -->
+<div class="activity">
+<p>
+<span class="optional">OPTIONAL:</span> <strong><a href="http://wordpress.org/extend/plugins/" target="_blank">Add plugin modules to your Wordpress installation</a></strong> for more capabilities.
+</p>
+<p>
+Don't go crazy though. Do one at a time and test it out for awhile before adding more.
+</p>
+
+<p>
+<strong>Estimated Time:</strong> 30 minutes (Depending on how much time you spend browsing through all the plug-ins. Best to search for a specific topic/task and then pick the one with the highest rating.)
+</p>
+</div><!-- end of .activity -->
+<hr />
+
+<!-- SUMMARY -->
+
+<div class="todo">
+<p>
+<span class="optional">OPTIONAL:</span><a href="http://wordpress.org/extend/plugins/" target="_blank">Add plugin modules to your Wordpress installation</a> for more capabilities.
+</p>
+</div><!-- end of .todo -->
+<hr />
+
+
+<!-- ************************
+OPTIONAL - Install WordPress on LocalHost
+***************************** -->
+<div class="activity">
+<p>
+<span class="optional">OPTIONAL:</span> <strong>You can install WordPress on your own computer using a webserver that is called localhost.</strong></p>
+<p>
+Here is a <a href="wordPressLocal.html" target="_blank">checklist highlighting the steps.</a></p>
+<p>
+<strong>Estimated Time:</strong> 30 min. </p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+<hr />
+
+<!-- ************************
+OPTIONAL - What's Next?
+***************************** -->
+<div class="activity">
+<p>
+<span class="optional">OPTIONAL:</span> <strong>Wonder what makes WordPress work?</strong> Here are some demo files to show you how PHP works.
+</p>
+<p>
+Here is a <a href="phpDemo.zip" target="_blank">PHPDemo.zip.</a></p>
+<p>
+<p>
+<strong>What's Next?</strong>
+</p>
+<ul>
+   <li>Learn more about PHP (Web Programming)</li>
+   <li>Going beyond WordPress: <a href="http://www.slideshare.net/webExplorations/what-isdrupal" target="_blank">Drupal</a></li>
+   <li>Want to do more programming? Start exploring <a href="http://www.learnjavaonline.org/" target="_blank"> Java</a></li>
+</ul>
+<br />
+<p>
+<strong>Estimated Time:</strong> 1 hour 
+</p>
+</div><!-- end of .activity -->
+
+<!-- SUMMARY -->
+<hr />
+
+
+</section>
+<!-- ************************************************
+* * * * A S S E S S M E N T    S E C T I O N  * * * *
+***************************************************** -->
+<section class="assessment">
+  <h4>Your Graded Assignments For This Module</h4>
+  <!-- ************************
+  Graded Quiz: webComm
+  ***************************** -->
+    <p>
+    <strong>Take the Graded Quiz: Form</strong>
+    </p>
+
+    <ol>
+    <li>There will be 10 true/false and multiple choice questions.</li>
+    <li>10 questions - 10 minutes - 10 points</li>
+    <li>Feel free to use your book or look stuff up on the Web or try things out on your computer.</li>
+    <li>You will have one chance to take the quiz.</li>
+    <li>The questions will be from the same database that the self-quiz uses.</li>
+    <li>The quiz will be scored automatically and your points shown in your D2L grade book.</li>
+    </ol>
+    
+    <p>
+    <strong>Estimated Time:</strong> 10 minutes 
+    </p> 
+    <p>
+    Look on the Course Map for the due date for this graded activity.
+    </p>
+  <hr />
+  
+  <!-- ************************
+  Project: Wordpress
+  ***************************** -->
+    <p>
+   <a href="../13project/prjWordPress.pdf" target="_blank"> 
+    <img src="../13project/graphic/coverPrjWordPress.png" alt="cover for Project: Wordpress Specifications" style="margin: 0 15px; width: 100px; float: left;" />
+    </a>
+    Begin work on the <a href="../13project/prjWordPress.pdf" target="_blank">Project: Wordpress</a>
+    </p>
+    <p>
+    &nbsp;    
+   </p>
+    <p>
+    &nbsp;    
+   </p>
+  <hr />
+</section>
+    
+<!-- ************************************************
+Tip of the Week
+***************************************************** -->
+<section>
+  <img src="../graphic/lightBulb.png" alt="hand holding lightbulb all lit up" align="left" width="90" id="tipImg">
+
+  <h4>Your Tip-Of-The-Week</h4>
+
+  <p>(Click on the lightbulb to reveal the tip.)<br>
+  <br></p>
+
+  <div id="tipOfWeek">
+    <h2>Tip of the Week:</h2><a href="http://www.amazon.com/gp/product/1119995965/ref=as_li_tf_tl?ie=UTF8&tag=webexploratio-20&linkCode=as2&camp=217145&creative=399373&creativeASIN=1119995965" target="_blank"><img src="graphic/wordPressSmashing.png" alt="Smashing WordPress book cover art" align="right"></a>
+
+     <h3>Want to learn more about WordPress?<br></h3>
+
+     <p>
+     <strong>Check out <a href="http://www.amazon.com/gp/product/1119995965/ref=as_li_tf_tl?ie=UTF8&tag=webexploratio-20&linkCode=as2&camp=217145&creative=399373&creativeASIN=1119995965" target="_blank">Smashing WordPress</a></strong>
+     </p>
+
+     <p>
+     Smashing WordPress shows you how to utilize the power of the WordPress platform, and provides a creative spark to help you build WordPress-powered sites that go beyond the obvious.
+     </p>
+
+     <p>
+     You will learn the core concepts used to post types, the admin bar, and lots of other useful new features.
+     </p>
+
+     <p>
+     Inside, WordPress expert Thord Daniel Hedengren takes you beyond the blog and shows you how WordPress can serve as a
+     </p>
+
+     <ul>
+        <li>CMS</li>
+        <li>a photo gallery</li>
+        <li>e-commerce site</li>
+        <li>and more.</li>
+     </ul>
+  <br />
+  <hr />
+  </div><!-- end of #tipOfWeek -->
+</section>
+
+<!-- ************************************************
+What's Next?
+***************************************************** -->
+<section id="nextModule">
+  <h4>Congratulations!</h4>
+  <img src="graphic/congratulation.jpg" alt="people clapping for your success during the staff meeting" style="margin: -20px 15px 0px 5px; width: 200px; float: right;">
+  <p>
+  You have completed this course and can now use HTML and CSS fluently. 
+  </p>
+  <p>
+  You should also have your own website that you can continue to add to and enhance. And, if you purchased your own domain name and hosting you now have your own little piece of the Web.
+  </p>
+  <p>
+  <strong>Good job!</strong>
+  </p>
+</section>
+    
+    <footer>
+      <p>Strong start... Successful finish.</p>
+    </footer>
+  </div><!-- end of #frame -->
+</body>
+</html>

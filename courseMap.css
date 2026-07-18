@@ -1,0 +1,164 @@
+/* 
+courseMap.css  - styles used by the course maps
+Peter Johnson   peter.johnson@southcentral.edu
+Written: 08-15-08
+Revised: PKJ 08-10-10 Set default settings to zero
+	      PKJ 08-17-11 Refined font choice and layout
+	                   Added .holiday class
+	                   Added left border to separate the two columns
+	      PKJ 08-21-15 Added optima as main font
+*/
+
+*  {
+margin:             0;
+padding:            0;
+}
+
+body {
+	margin:          0px;     /* reset all margins to null */
+	max-width:       960px;
+	font-family:     optima, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:       12px;
+   /* gradient background from http://css3.me/ */
+-moz-border-radius:9px;
+-webkit-border-radius:9px;
+border-radius:9px;
+/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+background-image: -moz-linear-gradient(top, #ffffff, #bfc1ff);
+background-image: -webkit-gradient(linear, center top, center bottom, from(#ffffff), to(#bfc1ff));
+background-image: -o-linear-gradient(top, #ffffff, #bfc1ff);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#bfc1ff');
+/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#bfc1ff')";
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+background-image: linear-gradient(top, #ffffff, #bfc1ff);
+-moz-background-clip: padding-box;
+-webkit-background-clip: padding-box;
+background-clip: padding-box;
+
+}
+#header {
+	height:      104px;  /* match size of background graphic */
+	padding:     0px 10px 0px 0px;
+	margin:      10px 0px 5px 20px;
+	width:       760px;
+	border:      1px solid black;
+	background:  white url(graphic/ccLogo398x100.jpg) no-repeat right;
+	
+}
+#header h1 {
+	margin:     5px 0px 0px 5px;
+	padding:    2px 2px 2px 0px;
+	color:      #000066;     /* dark blue */
+	align:      left;
+	font-size:  200%;
+	font-weight:light;
+}
+#header h2 {
+	margin:     2px 0px 0px 0px;
+	padding:    2px 2px 2px 7px;
+   color:      #000066;     /* dark blue */
+	style:      inline;
+	text-align: left;
+	font-size:  140%;
+	font-weight:lighter;
+	width:      40%;
+	}
+	
+#header p {
+padding:       2px 2px 2px 7px;
+}
+
+#colLeft {
+	width:        364px; /* this also determines where the colRight sits */
+   float:        left;
+	margin:       0px 5px 10px 20px;
+}
+
+#colRight {
+	width:        374px;
+	left:         390px; /* determines where the colRight prints out */
+	margin:       0px 5px 10px 5px;
+	float:        left;
+	border-left:  7px solid #bfc1ff;  /*match darkest gradient in body background */
+}
+
+#footer {
+	clear:       both;
+	background-color:  #FFFFFF;
+	margin:      0px 5px 10px 20px;
+	border:      1px solid #000000;  
+	height:      90px;
+	width:       770px; /* match the two columns */
+}
+
+#footer p {
+	float:       left;
+	padding:     20px 0px 0px 20px;
+	background-color: white;
+}
+
+#footer a {
+float:        right;
+text-decoration: none;
+}
+
+#footer a img {
+border:       none;
+}
+
+.module {
+	width:        380px;
+	padding:      0px 10px 0px 0px;   /*set margin on either side */
+	clear:        both;
+	border:       1px solid #CECECE;
+	background-color: #EEE;
+	height:       105px;    
+}
+
+.module p, 
+.module h4, 
+.module h5, 
+.module h6 {
+	margin:              0px;
+	padding-left:        90px;
+	line-height:         1.1em;
+}
+
+.module img {
+	width:        99px;
+	height:       99px;
+	float:        left;
+	padding:      0px 2px 2px 1px;
+	margin:       0px;
+}
+
+.module p {
+	position:     relative;
+	top:          0px;
+	width:        300px;
+	clear:        both;
+}
+
+.module h4 {
+	font-size:     110%;
+	font-weight:   bolder;
+}
+
+.module h5 {
+	font-size:     100%;
+	font-weight:   bold;
+}
+
+.module h6 {
+	font-size:     90%;
+	font-weight:   400;
+	line-height:   1.3em;
+}
+
+.holiday {
+	color:         #900000;    /* dark red */
+}

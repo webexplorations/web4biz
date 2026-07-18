@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html>
+<!-- indexFTP.html - main activity page for Module: FTP - Web4Biz course
+     Peter K. Johnson - peterk@webExplorations.com
+     Written:  5-17-11 Build template using jQuery
+
+      MAINTENANCE CHECKLIST:
+      (1) Make sure checkmark.png and detailPage.png are in the root graphic directory
+      (2) Make sure jQuery is in the root folder.
+      (3) Update title
+      (4) Update total activity time for the module (around line #235)
+    
+     REVISED:  11-12-11 modified code originally from actForm.html
+               07-22-13 PKJ modified from 02FileManagement/index.html
+               08-18-14 PKJ Updated 2014 Host review and added link and image to NoSupportLinux.com 
+                            Fixed project link to 13project folder.
+
+Accessibility:
+(1) Add noscript element and hide if JavaScript is enabled.
+(2) Use CSS to make visibility: hidden; the .toDo elements in case JavaScript is disabled.
+(3) Use jQuery to change this CSS to visibility: visible;
+(4) Use jQuery to create a hyperlink that toggles between the detailed learning activities and the abbreviated toDo lists.
+    This will be added after the p#toggleToDo (at the top of the Learning Activities)
+
+Classes and IDs:
+Paragraph used to position hyperlink: #toggleTodo
+Hyperlink:                            #displayToggle
+Verbose Activity item:                .activity
+Short Todo item:                      .todo
+Name of icon/activity image:          #iconImg
+Name of icon/activity link:           #iconLink
+
+DEBUG CHECKLIST:
+(1) If #iconImg and #iconLink are not displaying, make certain you have the jQuery library in the root folder.
+-->
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <title>FTP</title><!--
+******************************************************
+* * * * * * * * * jQuery Stuff * * * * * * * * * * * *
+****************************************************** -->
+
+  <script type="text/javascript" src="../jquery-1.6.2.js">
+</script>
+  <script type="text/javascript">
+$("document").ready( function( )
+  {
+     // Change the CSS so .todo items display when toggled
+     $('.todo').css("visibility", "visible");
+     $('#iconImg').css("visibility", "visible");
+     $('#iconLink').css("visibility", "visible");
+     // Hide all the todo items
+     $('.todo').hide( );
+     $('#tipOfWeek').hide();
+
+     //When user clicks on todo link or the iconLink,
+     // toggle the screen between details/summary to-do list
+     $('#displayToggle').click(togglePage);
+     $('#iconLink').click(togglePage);
+     $('#iconImg').click(togglePage);
+     $('#tipImg').click( function()
+     {
+        $('#tipOfWeek').toggle();
+     }); // end of #tipImg.click( )
+  }); // end of .ready( )
+
+   // Toggle the screen between detailed and summary views
+   function togglePage( )
+   {
+      $('.activity').toggle();
+      $('.todo').toggle();
+
+      // Show the detailed Learning Activities
+      if($('.activity').is(':visible'))
+      {
+        $("#displayToggle").text('See Checklist View');
+        // Display the todoIcon
+        $("#iconImg").attr("src","../graphic/checkmark.png");
+        // Change the hyperlink
+        $("#iconLink").text("See Checklist View");
+        // Hide the objective section
+        $("#objective").show();
+        $("#wiifm").show( );
+        $("#nextModule").show( );
+        $(".assessment").show( );
+        $("#tip").show( );
+      }
+      else // show the summary to-do list
+      {
+        $("#displayToggle").text("See Detailed View");
+        // Display the Learning Activity Icon
+        $("#iconImg").attr("src", "../graphic/detailPage.png");
+        $("#iconLink").text("See Detailed View");
+        // Show the objectives
+        $("#objective").hide( );
+        $("#wiifm").hide( );
+        $("#nextModule").hide( );
+        $(".assessment").hide( );
+        $("#tip").hide( );
+      }
+   }// end of togglePage( )
+
+  </script><!-- Make page IE backwards compatible using CSS3 and HTML5 -->
+
+  <script type="text/javascript" src="../modernizr.js">
+</script><!--[if (gte IE 6)&(lte IE 8)]>
+  <script type="text/javascript" src="../selectivizr-min.js"></script>
+  <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
+<![endif]-->
+  <!-- *************************************************   
+* * * * * * * * * CSS Stuff * * * * * * * * * * * *
+****************************************************** -->
+  <!-- Font Loading -->
+  <link href='http://fonts.googleapis.com/css?family=Permanent+Marker&v2' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+@import url(../activity.css);
+  </style>
+  <style type="text/css">
+ /* Initially hide the toDo list items in case JavaScript is disabled.
+      Use jQuery to show them if JavaScript is available. */
+   .todo,
+   #iconImg,
+   #iconLink {
+   visibility:      hidden;
+   }
+
+   .todo p {
+   /* Add checkbox as background image to control position */
+   background:      transparent url("../graphic/checkbox.png") no-repeat 0px 2px ;
+   padding:         5px 10px 7px 40px;  /* make room for checkbox */
+   margin:          0px 0px 0px 20px;
+   }
+
+   #tipImg {
+  /* Round all corners */
+  -webkit-border-radius:  130px;
+  -moz-border-radius:     130px;
+  border-radius:          130px;
+  border:                 1px green solid;
+  margin:                 10px 20px 5px 5px;
+  }
+  </style><!-- Fix IE Anamolies so IE recognizes HTML5 elements -->
+  <!--[if lt IE 9]>
+<script>
+// Set up new elements so old browsers will recognize for CSS
+var e = ("abbr,article,aside,audio,canvas,datalist,details,"
+   + "figure,footer,header,hgroup,mark,menu,meter,nav,output,"
+   + "progress,section,time,video").split(',');
+   for (var i = 0; i < e.length; i++)
+   {
+      document.createElement(e[i]);
+   }
+</script>
+<![endif]-->
+</head>
+
+<body>
+  <div id="frame">
+    <header>
+      <div class="identity">
+        <table summary="Page heading and module icon">
+          <tr>
+            <td rowspan="2"><img src="../graphic/ftp.png" width="100" alt="FTP logo - File Transfer Protocol"></td>
+
+            <td>
+              <h1>File Transfer Protocol</h1>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <h5>Getting Published</h5>
+            </td>
+          </tr>
+        </table>
+      </div><!-- end of .identity -->
+      <!-- ****** NAVIGATION (To-Do List/Detailed List Graphics) ******* -->
+
+      <div class="navigation">
+        <table summary="navigation links to course map and todo list" border="1">
+          <tr>
+            <td><img id="iconImg" src="../graphic/checkmark.png" alt="to-do list icon" width="50"></td>
+          </tr>
+
+          <tr>
+            <!-- This link is handled null. It triggers a click event handled by jQuery -->
+
+            <td>
+              <a id="iconLink" href="#">See Checklist View</a>
+            </td>
+          </tr>
+        </table>
+      </div><!-- end of .navigation -->
+    </header>
+<!-- ************************************************
+* * * * O B J E C T I V E S    S E C T I O N  * * * *
+***************************************************** -->
+
+    <section id="objective">
+      <!-- Objectives -->
+      <img src="graphic/filezillaLogo.jpg" alt="FileZilla logo" style="margin: 20px 15px; width: 75px; float: right;" />
+      <h4>In this module you will learn:</h4>
+      <ul>
+         <li>How to get your own domain name.</li>
+         <li>Where you can host your web site using your own domain name.</li>
+         <li>How to use FTP to publish your web pages and graphics out on the Web.</li>
+         <li>Using &lt;meta> elements</li>         
+      </ul>
+    </section>
+<!-- ************************************************
+WII-FM
+***************************************************** -->
+
+    <section id="wiifm">
+      <!-- WII-FM -->
+
+      <h4>WII-FM (What's In It - For Me)</h4>
+
+      <p>
+      <strong>Having a web page on your computer is okay... for about 5 minutes.</strong> But, the really power of building web pages is being able to publish whatever you want out on the Web.
+      </p>
+    <p>
+    <strong>Show the world whatever you want:</strong>
+    </p>
+      <ul>
+      <li>Your resume</li>
+      <li>Your photos or drawings</li>
+      <li>A blog</li>
+      <li>Your hunting/fishing trophies</li>
+      <li>A travel log</li>
+      <li>A company you are starting up</li>
+      </ul>   
+    </section>
+<!-- ***************************************************
+* * * * L E A R N I N G    A C T I V I T I E S   * * * *
+******************************************************** -->
+
+    <section class="activityGroup">
+      <h4 id="toggleTodo">Complete these Learning Activities:</h4>
+
+      <p><strong>Total estimated time for this module:</strong> 3 hours.</p>
+      <!-- jQuery will insert a link here for toggling between detailed and summary to-do list
+       based on the id="toggleTodo" set in the object above this comment. -->
+      <noscript>
+      <p><strong>You have JavaScript turned off.</strong> Enable it to view a short list of all the To-Do items.</p></noscript>
+      <hr>
+
+
+<!-- ************************
+Take the Quiz
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+  <p>
+  <strong>Take the Self-Quiz: FTPmeta</strong>. You can take the self-quizzes as many times as you like. 
+  </p>
+  <p>
+  <strong>Be smart and take the self-quiz once each day to learn the material.</strong> 
+  </p>
+   
+  <p><strong>Estimated Time:</strong> 10 minutes (probably a lot less) each time you take a self-quiz.</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+    Take the Self-Quiz: FTP. 
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+
+<!-- ************************
+Read the Book
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+  <p>
+  <strong>Read chapter 12</strong> of Basics of Web Design text.  </p>
+<img src="../graphic/textbookCover.jpg" alt="cover of the textbook" style="margin: 10px 25px 0 30px; width: 80px; float: left;" />  <ul>
+  <li>Obtain a domain name.</li>
+  <li>Choosing a hosting service.</li>
+  <li>Publishing files to the Web.</li>
+  </ul>
+  <br /><br />
+  <p>
+  <strong>Estimated Time:</strong> 1 hour
+  </p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+<p>
+  Read chapter 12 of Basics of Web Design HTML5 text.
+</p>
+</div><!-- end of .todo -->
+<hr>
+
+
+<!-- ************************
+Download FileZilla
+***************************** -->
+<!-- DETAIL -->
+<div class="activity">
+<p>
+<iframe width="300" height="169" src="http://www.youtube.com/embed/TyBRbgz-FFs" frameborder="0" allowfullscreen align="left"></iframe><strong>Watch this white board talk to see <a href="http://youtu.be/TyBRbgz-FFs" target="_blank" align="left">how FTP is different then normal browser requests</a> to the server.</strong>
+</p>
+<p>
+  Browsers can only request files from the server. It is a READ ONLY type of relationship.
+</p>
+<p>
+  FTP, on the other hand, allows a person to update files on the server so they can be read by the browser. It is a READ/WRITE relationship. To protect web sites from being hacked, FTP requires that you use the correct username and password. Normally you will only copy files out to the server but it is possible to download all the files on a server to your own computer.
+</p>
+<p>
+  Browsers are file readers. FTP applications, like CyberDuck and FileZilla, are file copy utility programs.
+</p>
+  
+<p>
+   <strong>Windows</strong> <a href="http://portableapps.com/apps/internet/filezilla_portable" target="_blank">FileZilla</a> from Portable Apps. You can also use CyberDuck (see below for Macintosh).
+</p>
+<p>
+   <strong style="color:red;">Warning: </strong> Do not download this software from other sites. Those versions most likely contain malware. 
+</p>
+
+<p>     
+   <strong>Macintosh - </strong> <a href="https://cyberduck.io/" target="_blank">https://cyberduck.io/</a>. 
+   There is a version for Mac OS X and Windows.
+<p>
+  <strong>Estimated Time:</strong> 30 minutes
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+  Download and use an FTP program to move your files out to your web server.
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+Connect with t.server
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+<p>
+   <iframe width="300" height="225" src="https://www.youtube.com/embed/s0xoWLkxI5c?rel=0&amp;showinfo=0" style="float:right; margin:0px 30px 0px 0px;" ></iframe> 
+
+  <iframe width="300" height="225" src="http://www.youtube.com/embed/x5erLs-XXYU" frameborder="0" style="float:left; margin:0px 30px 0px 0px;"></iframe>
+  <br />
+</p>
+<p style="clear:both;"> 
+   <strong>Watch these videos to see how to use FileZilla and CyberDuck</strong>.
+</p>
+<br />
+<p>
+  <a href="graphic/siteOrganizer.png"><img src="graphic/siteOrganizer.png" alt="site organizer" width="100" align="right"></a>
+  Save the following information in a notebook or use the <a href="siteOrganizer.html" target="_blank">Site Organizer</a> so you can refer to this information when you need it.
+</p>
+<br />
+<p>
+  <strong>Host or FTP site name:&nbsp;</strong> yourFirstNameInitialOfLastName.t.southcentral.edu (all lower case)
+  <br /><br />
+  <a href="graphic/siteManager.png" target="_blank">
+   <img src="graphic/siteManager.png" alt="screen shot showing Site Manager in Filezilla" style="margin: 0 25px 0 0; width: 200px; float: right;" />
+</a>
+
+  <strong>Port:</strong> leave empty on FileZilla (or use the default value of 21)
+  <br><br>
+  <strong>User Name:</strong> yourFirstNameInitialOfLastName - Must be 8 characters or less. (all lower case)
+</p>
+<p>
+  <strong>Password:</strong> your student ID number including leading zeros.
+</p>
+<p>
+  Everything will be in lower case.<br>
+  The spelling of your name is based on the class list found on D2L.<br>
+</p>
+<p>
+   Click on the images for a larger view.
+</p>
+<p>
+   <span style="color:red;font-weight: 800; font-size: 18px;">Bandwidth Warning!</span> 
+<strong>Be judicious with your uploads!</strong> Every web hosting site has to pay attention to band width. It is the same issue as limited mobile phone plans.
+    </p>
+    <p>
+       If a site gets bombarded with lots of requests they need to have the bandwidth in place to cover that. In order to do that they have to set limits on the bandwidth and when that is exceeded they charge extra.
+    </p>
+    <p>
+       <strong>Only upload new modules and themes or specific files that you have updated. </strong>
+      If you upload all the files every time you will get locked out of the server with a <strong><i>Bandwidth Exceeded</i></strong> message.
+    </p>
+    <p>
+       I am not able to override this and have to put in a help ticket to the network administrator.
+    </p>
+<p>
+ <strong>Estimated Time:</strong> 1 hour
+ </p>
+<!-- end of .activity -->
+</div>
+<div class="todo">
+  <p>
+  Connect to your hosting account out on the t.server.
+  </p>
+</div><!-- end of .todo -->
+<hr />
+<!-- SUMMARY -->
+
+
+<!-- ************************
+Organize files in 06public_html
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+<p>
+<strong><a href="graphic/projectFTPGraphic.png" target="_blank"><img src="graphic/projectFTPGraphic.png" alt="Layout for public_html" width="300" hspace="20" vspace="20" align="left"></a> Utilize your hosting site out on the t.server.</strong> Use FileZilla to transfer your file structure up to your new web server space.
+</p>
+<p>
+      You will have this space the entire time you are in the Computer Careers program.
+</p>
+<p>
+      Be smart and organize your folders on your local computer using the 06public_html folder that you set up at the beginning of the course.
+</p>
+<p>
+When everything is ready on your local computer, FTP the files up to the server, making sure the files that are inside 06public_html transfer into the folder public_html out on the server.
+</p>
+<p>
+Do all your work on your local files and then copy them up to the server. The files on the server should mirror what is on your computer.
+</p>
+<p>
+      Staying organized will save you lots of time and frustration.
+</p>
+<p>
+     <span class="warning"><strong>IMPORTANT!</strong></span> <strong>Your web site on the t.server has a limit of 500kb</strong>. This means you will want to make your images as small as possible and make certain you don't have any extra files that aren't needed out on the server. Make every file count!
+</p>
+<p>
+<strong>Estimated Time:</strong> 8-10 hours!!!</strong> (10 minutes if all your files are organized on your computer/flash drive and you don't mistype your userID and passwords to the t.server)
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+  Organize your website in your local 06public_html folder before copying them up to the public_html folder out on the t.server.
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+Meta tags
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+  <p>
+  <strong>Add metatags to your HTML template and all your web pages suing this <a href="meta/index.htm" target="_blank">Tutorial: How the metatags work</a>.</strong>
+  </p>
+  <p>
+  Add the description and robots meta tags to your template file. Validate this file so there are no errors/warnings. (You don't want to duplicate your errors every time you make a new page.)
+  </p>
+  <p>
+  <strong>Estimated Time:</strong> 30 minutes or less.
+  </p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+  Add metatags to your HTML template and all your web pages using this <a href="meta/index.htm" target="_blank">Tutorial: How the metatags work</a>..
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+Domain Names
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+  <p>
+  <strong>Tips on domain names:</strong> Watch out for names that might be misread by everyone around the world...
+  </p>
+  <p>
+  Here are some examples:
+  </p>
+  <ul>
+  <li><strong>www.expertsexchange.com</strong> - A site where programmers can trade advice is found named Experts Exchange.</li>
+  <li><strong>www.ladrape.co.uk</strong> - A British company selling high-end quilted bedspreads named La Drape, Ltd.</li>
+  <li><strong>www.angelfire.com/alt/americanscrapmetal</strong>- A scrap metal recycling firm named American Scrap Metal.</li>
+  <li><strong>www.speedofart.com</strong> - A collective or art designers are online called Speed of Art.</li>
+  <li><strong>www.therapistfinder.com</strong> - A directory for therapy services for a company named Therapist Finder.</li>
+  <li><strong><a href="http://uaa.alaska.edu/collegeofartsandsciences/" target="_blank">http://uaa.alaska.edu/collegeofartsandsciences/</a></strong></li>
+  </ul>
+  <p>
+  <strong>A little known secret is that domain names are not case sensitive.</strong> (The path statement is. Folder and file names are case sensitive!)
+  </p>
+  <p>
+  Show your clients how to use camelCase to make their web addresses more readable: http://WebExplorations.com -- http://SouthCentral.edu -- http://ExpertExchange.com<br>
+  <br>
+  <strong>Estimated Time:</strong> 0 minutes or less but could make you a hero to your clients
+  </p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+  Use upperLowerCase with domain names for readability.
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+Finding a Hosting Service
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+  <p>
+  <strong>Compare Web Hosts</strong> - <a href="http://net.tutsplus.com/articles/web-roundups/19-important-features-to-look-for-in-a-web-host/" target="_blank"><img src="graphic/nettutsLogo.png" width="195" height="64" align="left"></a>Here's a great article: <a href="http://net.tutsplus.com/articles/web-roundups/19-important-features-to-look-for-in-a-web-host/" target="_blank">19 Important Features to Look for in a Web Host</a> from NetTuts+.
+  </p>
+  <p>
+   <strong>Executive Summary: </strong> We don't make websites to let them sit on our own computers: we set them free on the web. While it's often more fun to create the website than to worry about hosting it, web hosting isn't a decision you should make quickly. In this roundup, I'll point out 19 things you should look for when choosing your web host.
+  </p>
+  <p>
+  From Amount of Storage to Amount of Bandwidth to Up-Time, this article will give you several guidelines that will help you choose a good hosting service for your clients' sites.
+  </p>
+  
+  <p>
+  <strong>Looking for a great web host? Need a place to register a domain name?</strong>
+  </p>
+  <p>  
+  <strong>Do a Google search for: web hosting ratings.</strong> <a href="http://www.hostingreview.org/" target="_blank">2014 Host Ratings</a>.
+  </p>
+  <p>
+  <a href="http://www.nosupportlinuxhosting.com/" target="_blank"><img src="graphic/noSupportMasthead.png" alt="No Support Hosting masthead" style="margin: 0 15px; width: 300px; float: left;" /></a>
+  One of my favorites is the $1/month - <a href="http://www.nosupportlinuxhosting.com/" target="_blank">http://www.nosupportlinuxhosting.com/</a>. I have a site that I use to test things out on like WordPress and Drupal installations.
+  <br /><br />
+  </p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+  Read this article <a href="http://net.tutsplus.com/articles/web-roundups/19-important-features-to-look-for-in-a-web-host/" target="_blank">19 Important Features to Look for in a Web Host</a> from NetTuts+ to help you determine a quality hosting service.
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+File Path
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+<p>
+  <img src="graphic/stackPaperwork.jpg" alt="man frustrated with paperwork" width="250" hspace="20" vspace="20" align="left">Confused about folders and files?
+</p>
+<p>
+Don't know how to organize things on your computer? 
+</p>
+<p>
+ Wondering how to tell the web browser where to look for everything?
+</p>
+<p>
+<strong>Check out this short <a href="webDevPath/index.htm" target="_blank">tutorial on the PATH statement.</a></strong>
+</p>
+<p>
+  <strong>Estimated Time:</strong> 30 minutes<br>
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+  Check out this short <a href="webDevPath/index.htm" target="_blank">tutorial on the PATH statement.</a>
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+SEO Tips
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+<p>
+<iframe width="300" height="169" src="http://www.youtube.com/embed/6AmRg3p79pM?rel=0" frameborder="0" allowfullscreen align="left"></iframe>
+Learn <a href="http://youtu.be/6AmRg3p79pM" target="_blank">6 SEO Tips from the Expert (Google)</a>
+</p>
+<br /><br />
+<p>
+Maile Ohye from Google covers the five most common errors
+she finds in SEO, and then concludes with six quick tips to make sure
+you're on the right track.
+</p>
+<br /><br />
+<p>
+  <strong>Estimated Time:</strong> 30 minutes<br>
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+  Check out this short <a href="webDevPath/index.htm" target="_blank">tutorial on the PATH statement.</a>
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+CSS Tricks - Full background image
+***************************** -->
+<div class="activity">
+<p>
+<img src="cssTrick/blueTwilight.jpg" alt="blue Twighlight taken by Peter K. Johnson" style="margin: 0 15px; height: 100px; float: right;" />
+<strong><a href="cssTrick/cssTrick.ppt" target="_blank">Here are some CSS tricks in a PowerPoint (cssTrick.ppt) you might find useful.</a></strong> (Right-mouse click on the link and images to save the files to your disk.)
+</p>
+<ul>
+<li>Rounded Corners</li>
+<li>Gradients (great for backgrounds)</li>
+<li>Fonts</li>
+<li>Resize an image to fill the background</li>
+</ul>
+<p>
+  Use this as a starter HTML web page: <a href="cssTrick/trick.html" target="_blank">trick.html</a>.
+</p>
+<p>
+<strong>Estimated Time:</strong> 30 minutes
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+<a href="cssTrick/cssTrick.ppt" target="_blank">Here are some CSS tricks you might find useful.</a>
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+</section>
+    
+<!-- ************************************************
+* * * * A S S E S S M E N T    S E C T I O N  * * * *
+***************************************************** -->
+<section class="assessment">
+  <h4>Your Graded Assignments For This Module</h4>
+
+  <!-- ************************
+  Graded Quiz: FTP Meta
+  ***************************** -->
+   <p>
+    <strong>Take the Graded Quiz: FTP Meta</strong>
+    </p>
+
+    <ol>
+    <li>There will be 10 true/false and multiple choice questions.</li>
+    <li>10 questions - 10 minutes - 10 points</li>
+    <li>Feel free to use your book or look stuff up on the Web or try things out on your computer.</li>
+    <li>You will have one chance to take the quiz.</li>
+    <li>The questions will be from the same database that the self-quiz uses.</li>
+    <li>The quiz will be scored automatically and your points shown in your D2L grade book.</li>
+    </ol>
+    
+    <p>
+    <strong>Estimated Time:</strong> 10 minutes 
+    </p> 
+    <p>
+    Look on the Course Map for the due date for this graded activity.
+    </p>
+  <hr />
+ 
+  <!-- ************************
+  Project: SEOGimp
+  ***************************** -->
+    <p>
+  <a href="../07GIMP/prjSEOGimp.pdf" target="_blank"><img src="../13project/graphic/coverPrjSEOgimp.png" alt="cover for Project:GimpAnimated specifications" style="margin: 0 35px 0 0; width: 150px; float: left;" /></a>
+
+      <strong>Start working on <a href="../13project/prjSEOGimp.pdf" target="_blank">Project: SEOGimp</a>
+    </strong>
+    </p>
+    <p>
+    <strong>Parts of the project you can do right now:</strong>
+    </p>
+    <ul>
+    <li>Create an info-graphic showing how FTP works</li>
+    <li>Create a web page with a list of 10 domain names and the web hosting comparison.</li>
+    <li>Copy essential files for your published website into 06public_html and FTP up to the t.server.</li>
+    </ul> 
+    </p>
+    <p>
+    Look on the Course Map for the due date for this graded activity.
+    </p>
+
+    <p>
+    <strong>What should be on my web site?</strong> 
+    </p>
+    <ul>
+    <li>Your resume page (index.html)</li>
+    <li>The hostInfo.html page with the graphic showing how FTP works, your domain name list, and the web host comparison.</li>
+    <li>The external style sheet that all your web pages will be using. (You created this for Project:CSS)</li>
+    <li>A graphic folder with all the images in it.</li>
+    </ul>
+    <p>
+    Look on the Course Map for the due date for this graded activity.
+    </p>
+  <hr />
+
+</section>
+    
+<!-- ************************************************
+Tip of the Week
+***************************************************** -->
+    <section>
+      <img src="../graphic/lightBulb.png" alt="hand holding lightbulb all lit up" align="left" width="90" id="tipImg">
+
+      <h4>Your Tip-Of-The-Week</h4>
+
+      <p>(Click on the lightbulb to reveal the tip.)<br>
+      <br>
+      </p>
+
+      <div id="tipOfWeek">
+ <a href="50ThingsYourCustomer.pdf" target="_blank"><img src="graphic/50Thing.png" alt="Cover of 50 Things Your Customer Wish You Knew" style="margin: 0 15px; width: 150px; border:1px solid #000080; float: left;" /></a><h2>Tip of the Week:</h2>
+
+  <h3>Fifty Things Your Customers Wish You Knew</h3>
+  <p>
+   This is an interesting and thought provoking booklet that will help you think of your clients and end users a little differently.
+  </p>
+  <p>
+   Notice the items marked in bold.
+  </p>
+  <p>
+  &nbsp;
+  </p>
+  <p>
+  <strong>This is interesting on two levels.</strong><br />
+  <strong>First: </strong> This eBook is a great reminder of how to pay attention to your clients and their end-users.
+  </p>
+  <p>
+  <strong>Second:</strong> Notice how this piece is also a self-promotion for Sonia Simone.
+  </p>
+  <ul>
+  <li>Her name and a URL are listed in the footer of every page.</li>
+  <li>What is she marketing?</li>
+  <li>Follow the links (This is an old eBook and the links are obsolete, but if you follow the trail you will come to her blog... It is worth the work.)</li>
+  <li>What "booklet" could you pull together that would bring people to your site?</li>
+  <li>Imagine having an eBook out there like this and a potential employer comes across your work.</li>
+  <li>An eBook such as this is easy to produce. Simply create a web page with the content and CSS and then print it out as a PDF file. (You can find PDF creation programs out on the Web.)</li>
+  </ul>
+  <br />
+  <hr />
+      </div><!-- end of #tipOfWeek -->
+    </section>
+    
+<!-- ************************************************
+What's Next?
+***************************************************** -->
+<section id="nextModule">
+  <h4>What's Next?</h4>
+  <img src="../graphic/gimp.png" alt="people" style="margin: -20px 15px 0px 5px; width: 90px; float: left;">
+  <p>
+  Photo editing is an essential skill used with web development. Learn how to create your own gradients, make animated gifs using Gimp, a free and open-source photo editor.
+  </p>
+</section>
+
+    <footer>
+      <p>Strong start... Successful finish.</p>
+    </footer>
+  </div><!-- end of #frame -->
+</body>
+</html>

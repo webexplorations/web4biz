@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+<!-- hyperlinkUsingCSS.html - Demonstration showing how anchors can be enhanced using CSS 
+  Peter Johnson - peterk@webExplorations.com
+  Written:   08-08-13 
+  Revised:   10-27-13 PKJ Set up unique id for each type of button  
+  -->
+ <title>Hyperlinks Using CSS</title>
+
+ <style type="text/css">
+ 
+  /* plain hyperlink - add border for visual reference */
+  a {
+  border:            1px #777 dotted;
+  }
+  
+  /* hyperlink without the underline */
+  #noUnderline:link,
+  #noUnderline:visited,
+  #noUnderline:hover,
+  #noUnderline:active{
+  text-decoration:    none;
+  padding:            10px;
+  }
+  
+  /* change link color based on state */
+  .colorChange:link {
+  color:              #4EC044;     /* lighter green */
+  text-decoration:    none;
+  padding:            10px;
+  }
+  
+  .colorChange:visited,
+  .colorChange:active {
+  color:             #008000;     /* forest green */
+  text-decoration:    none;
+  padding:            10px;
+  }
+  
+  #like {
+  text-decoration:    none;
+  color:              #6983AA;    /* steel blue */
+  padding:            10px;
+  }
+  
+  #like:visited {
+  color:              #008000;   /* forest green */
+  }
+  
+  #like:hover {
+  color:              black;
+  }
+  
+  .buttonize{
+  display:            inline-block;
+  padding:            10px 15px;
+  color:              #EEE;
+  background:         #008000;
+  text-decoration:    none;   /* Remove underline */
+  font-weight:        bold;
+  line-height:        1;
+  
+   /* Round the corners for various browsers */
+  -moz-border-radius: 5px;
+  -webkit-border-radius:5px;
+  /* add shadow effect to box */
+  -moz-box-shadow:    0 1px 3px #999;
+  -webkit-box-shadow: 0 1px 3px #999;
+  border-bottom:      1px solid #222;
+  position:           relative;
+  cursor:             pointer;  	
+  }
+  
+  .buttonize:hover {
+  color:              #D1DFF5;   /* light gray blue */
+  text-shadow:        0 0 5px #000080;
+  }
+    
+  #hovering:hover { 
+  text-shadow:        0 0 2px #999;
+  }
+  
+
+
+  body {
+  background:        #EEE;
+  font-size:         16px;
+  font-family:       helvetica, arial, sans-serif;
+  }
+  
+  h1 {
+  border:            1px #000080 solid;
+  padding:           10px;
+  background:        #AAA;
+  color:             white;
+  }
+  
+  p {
+  margin:            2em 0px 0px 0px;
+  }
+  
+  #frame {
+  max-width:         800px;
+  margin:            auto;
+  border:            1px solid #000080;
+  padding:           20px;
+  }
+ </style>
+</head>
+<body>
+<div id="frame">
+<h1>Hyperlinks Using CSS</h1>
+<!-- actual href removed to prevent jumping to another page -->
+<p>
+  Plain hyperlink: <a href="http://webExplorations.com/blog" title="Read my blog">Read my Blog</a> - Border added to links to show the size of the "hot" area.
+</p>
+<p>
+  Remove underline + add padding for larger target area: <a href="http://webExplorations.com/blog" title="Read my blog" id="noUnderline">Read my Blog</a>
+</p>
+<p>
+  Change link color: (all four states: new - visited - hover - active) <a href="http://webExplorations.com/blog" title="Read my blog" class="colorChange">Read my Blog</a>
+  <a href="http://webExplorations.com" class="colorChange">Visit my Site</a>
+  <br /><br />
+   -- Depends on browser implementation, especially for visited links.
+</p>
+<p>
+  Button Effect: <a href="http://webExplorations.com/blog" title="Read my blog" class="buttonize">Read my Blog</a>
+</p>
+<p>
+  Hover Effect: <a href="http://webExplorations.com/blog" id="hovering">Read my Blog</a>
+</p>
+
+<p>
+  Adding a graphic with text: <a href="http://webExplorations.com/blog" id="like">
+    <img src="graphic/like.png" alt="click here to show you like this page" style="width:50px;" />Like This
+  </a>
+</p>
+
+<p>
+Downloadable files using icon to designate the file type: 
+<a href="newsletter.pdf">
+   Read our newsletter
+   <img src="graphic/pdfLogo.png" 
+        alt="PDF icon" 
+        title="download as a PDF file"
+        style="width:65px; margin:0 0 -20px 5px;" />  
+</a>
+</p>
+
+<p>
+<strong>Whatever effect you use, be consistent and use the same effect for all the hyperlinks on the page.</strong>
+</p>
+<hr />
+<p>
+Thumbnail images as links to a larger photo:<br />
+<a href="graphic/structure.png" target="_blank">
+<img src="graphic/structure.png" alt="graphic showing the structure of a web site in German" style="margin: 0 15px; width: 150px; float: left;" />
+</a>
+<br />
+Please click on the image for a larger view.
+</p>
+
+</div> <!-- end of #frame -->
+</body>
+</html>

@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="gen/cg_content.xsl"?>
+
+<courseGenie>
+
+<metadata>
+	<lom>
+		<general>
+			<title>
+				<string>Web Development - GIMP</string>
+				<language>en</language>
+			</title>
+			<keyword>
+				<string>Web XHTML</string>
+				<language>en</language>
+			</keyword>
+			<keyword>
+				<string>GIMP</string>
+				<language>en</language>
+			</keyword>
+			<keyword>
+				<string>Graphic editing</string>
+				<language>en</language>
+			</keyword>
+			<keyword>
+				<string>Web Explorations</string>
+				<language>en</language>
+			</keyword>
+			<description>
+				<string>Using GIMP, A Photo Editing Program</string>
+				<language>en</language>
+			</description>
+		</general>
+		<lifeCycle>
+			<version>
+				<string>Revised Feb 2011</string>
+				<language>en</language>
+			</version>
+		</lifeCycle>
+		<rights>
+			<description>
+				<string>Creative Commons</string>
+				<language>en</language>
+			</description>
+		</rights>
+	</lom>
+	<misc>
+		<item>
+			<key>Objectives</key>
+			<value>How to increase SEO for your clients</value>
+		</item>
+		<item>
+			<key>Author</key>
+			<value>Peter K. Johnson</value>
+		</item>
+		<item>
+			<key>Organisation</key>
+			<value>http://WebExplorations.com</value>
+		</item>
+		<item>
+			<key>Date</key>
+			<value>May 2009 - Feb 2011</value>
+		</item>
+		<item>
+			<key>creator</key>
+			<value>Wimba Create</value>
+		</item>
+	</misc>
+</metadata>
+<settings>
+	<pageroot>page</pageroot>
+	<sectionmode>both</sectionmode>
+	<exportmode>normal</exportmode>
+	<assessmentmode>none</assessmentmode>
+	<generateindex>True</generateindex>
+	<showtoc>False</showtoc>
+	<tocwidth>200</tocwidth>
+	<shownavigation>True</shownavigation>
+	<footer>Web Explorations</footer>
+	<singlepage>False</singlepage>
+	<hyperlinksmain>True</hyperlinksmain>
+	<popupsmain>True</popupsmain>
+	<idstring>CG2012131164122</idstring>
+	<scorm-questionmode>selftest</scorm-questionmode>
+	<scorm-masteryscore>0</scorm-masteryscore>
+	<cgbuild>2.5.5 Build 20110624</cgbuild>
+	<schemefolder>c:/program files/wimbacreate/resources/en.lproj/schemes/Standard</schemefolder>
+</settings>
+
+<newpage>
+<pagetitle>Using GIMP - Open Files, View Layers</pagetitle>
+<section/>
+<para  align="left"><b><image alt="Gimp logo bar" width="576" height="35" class="normal">pic001.jpg</image></b></para>
+<para/>
+
+<para  align="left"><b>Here's what you will learn in this tutorial:</b></para>
+<para  align="left"><image alt="The GIMP mascot" width="309" height="180" class="leftalign">pic002.jpg</image></para>
+
+<list type="2" level="1" start="0">
+	<item level="1">How to use GIMP - a photo editor similar to PhotoShop (without the cost)</item>
+	<item level="1">Opening graphic files</item>
+	<item level="1">Changing Size</item>
+	<item level="1">Cropping Images</item>
+	<item level="1">Layers</item>
+</list>
+
+<para/>
+
+<para  align="left">This tutorial was created using GIMP Version 2.6.11</para>
+<para/>
+
+<para  align="left">Because this is open-source software it is constantly being upgraded and your version may appear slightly different.</para>
+<para/>
+
+<para  align="left">You can download the latest version on the SourceForge.net web site: <hyperlink><name>GIMP download</name><url>http://www.gimp.org/downloads/</url></hyperlink>. It is available for Windows, Macintosh OS X, and Linux.</para>
+<para/>
+
+<para  align="left">You can <hyperlink><name>view the User Manual on the web</name><url>http://docs.gimp.org/en/</url></hyperlink>.</para>
+<para/>
+
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Overview of GIMP Interface</pagetitle>
+<para  align="left">When you first start up GIMP (GNU Image Manipulation Program) the standard tool box will display in the upper left corner of your screen.</para>
+<para  align="left"><image alt="gimpToolbox" width="211" height="573" class="leftalign">pic003.gif</image>You can change the size and position of this toolbox area any time you want. Just click and drag an edge or click and drag the title bar and move the window where you want it.</para>
+<para/>
+
+<para  align="left"><b>If the Toolbox isn't displaying</b> use CTRL B or choose Windows/Toolbox from the menu bar.</para>
+<para/>
+
+<para  align="left">There are a lot of options here, but don't let that worry you. Most of them will just sit there and wait for you until you want to use them.</para>
+<para/>
+
+<para  align="left">As you click on an item, the options will change in the bottom half of the window.</para>
+<para/>
+
+<para  align="left">For example, in this example you can see that the Paintbrush tool is selected. In the lower half you see all the Paintbrush options that are available.</para>
+<para/>
+
+<para/>
+
+<para/>
+
+<para/>
+
+<para/>
+
+<para/>
+
+<para/>
+
+<para/>
+
+<para/>
+
+<para/>
+
+<para/>
+
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Viewing Different Dialog Choices</pagetitle>
+<para  align="left"><b>To open up files to edit select File/Open on the menu bar.</b></para>
+<para/>
+
+<para  align="left"><b><image alt="M:\classWebDev\SRCWebDevGimp\graphic\gimpFileOpen.png" width="575" height="463" class="normal">pic004.gif</image></b></para>
+<para/>
+
+<para  align="left"><b>Once an image is open, look along its menu bar and use Windows menu</b> to see the different dialog boxes you can open up. They are like little mini-toolboxes.</para>
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Changing Size</pagetitle>
+<para  align="left"><b>You can quickly change the size of an image </b>by using Image/Scale Image from the image menu:</para>
+<para  align="left"><b><image alt="Using Image/Scale Image to resize a picture." width="469" height="445" class="normal">pic005.gif</image></b></para>
+<para  align="left"><b>When the Scale Image dialog box comes up, make the choices you need.</b> If you want to keep the image in proportion, make sure the lock is on so changing the height or width will automatically adjust the other dimension.</para>
+<para/>
+
+<para/>
+
+<para  align="left"><b>Here I rescaled a photo that was 3216 pixels wide to 200 pixels.</b> Note how the height automatically calculated to 56 pixels. I also changed the resolution from 300 down to 72 to make the image as small as possible for the Web:</para>
+<para  align="left"><image alt="The Scale Image dialog box showing the locks so the picture proportions stay the same as you change either the length or the width." width="388" height="317" class="normal">pic006.gif</image></para>
+<para/>
+
+<para  align="left"><b>Important:</b> You can always shrink/rescale a photo to a smaller size but if you try to make a smaller image larger you will experience pixelation. </para>
+<para/>
+
+<para  align="left"><b>Here is the 200 pixel wide image enlarged to fill this page. </b>Notice how fuzzy the pixels are once they are enlarged.</para>
+<para/>
+
+<para  align="left"><image alt="Example showing pixelation as a small photo is enlarged." width="555" height="183" class="normal">pic007.jpg</image></para>
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Saving Different  Versions of a Photo</pagetitle>
+<para  align="left"><b>Save different versions of a photo by using File/Save As from the menu.</b></para>
+<para/>
+
+<para  align="left"><b>Always maintain your original photos in another folder.</b> Don't save your changes over the top of your originals. That way you can always go back to your originals and re-edit them.</para>
+<para/>
+
+<para  align="left"><image alt="gimpFileSaveAs.png" width="576" height="364" class="normal">pic008.gif</image></para>
+<para/>
+
+<para  align="left">It is a good idea to include the size in the file name to help you keep the different sizes separate. You can view the image size in the title bar.</para>
+<para/>
+
+<para  align="left"><image alt="C:\Users\peterWin\AppData\Local\Temp\VMwareDnD\0e196239\gimpFileSaveAsFolderBrowser.png" width="576" height="477" class="normal">pic009.gif</image></para>
+<para/>
+
+<para  align="left">Click on the + boxes to open up the file browser.</para>
+<para/>
+
+<para  align="left">The list of boxes along the top of the file browser shows the "path" through the folders to the current file. Each box is a subfolder of the box on its left.</para>
+<para  align="left"> </para>
+</newpage>
+
+<newpage>
+<pagetitle>Create a 600px wide image</pagetitle>
+<para  align="left">Go back to the original image and use the same steps to resize the image to 600px wide and save it with the file name:  funDayParadeBoy600x893.jpg</para>
+<para/>
+
+<para  align="center"><image alt="C:\Users\peterWin\AppData\Local\Temp\VMwareDnD\41eefb72\gimpResizeTo600.png" width="389" height="333" class="normal">pic010.gif</image></para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Opening the Layers Dialog Window</pagetitle>
+<para  align="left"><image alt="M:\classWebDev\SRCWebDevGimp\graphic\gimpLayer.png" width="575" height="297" class="normal">pic011.gif</image></para>
+<para/>
+
+<para  align="left"><b>Here is a shot of the Layers dialog</b>. I usually move it over to the right side of the screen:</para>
+<para/>
+
+<para  align="center"><b><image alt="The Layers dialog box" width="260" height="219" class="normal">pic012.jpg</image></b></para>
+<para/>
+
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Using Layers</pagetitle>
+<para  align="left"><b>One of the most useful tools for photo editing is the concept of layers.</b> Think of these as clear plastic sheets that allow you to position and edit various elements without affecting the other items in the photo.</para>
+<para/>
+
+<para  align="left">This is how photo montages are built. Check out the PhotoShop Contest site  (<hyperlink><name>http://photoshopcontest.com/</name><url>http://photoshopcontest.com/</url></hyperlink>) for some really interesting examples.</para>
+<para/>
+
+<para/>
+
+<para  align="left"><b>Add a new layer</b> click on the "New Layer" icon (blank sheet icon at far left).</para>
+<para/>
+
+<para  align="left"><b>Delete a layer </b>by clicking and dragging it to the Trashcan icon or by selecting it and clicking on the Trashcan icon.</para>
+<para/>
+
+<para  align="left">On the next page we will be adding text to the image. You will see how GIMP automatically makes a new layer for the text.</para>
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Adding Text to An Image</pagetitle>
+<para  align="left"><b>To add text to an image</b>, click on the Text tool in the toolbox (Large letter A icon).</para>
+<para/>
+
+<para  align="left"><b>Here is a link to a video showing how to add text.</b></para>
+<para  align="left"><hyperlink><name>http://youtu.be/b9Haj3Gj4hk</name><url>http://youtu.be/b9Haj3Gj4hk</url></hyperlink></para>
+<para/>
+
+<para/>
+
+<para  align="left"><b>To change a text properties</b>, make sure the Text tool is selected and highlight the text you want to change. Then, make the changes in the property box.</para>
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Converting Different Graphic File Types</pagetitle>
+<para  align="left"><b>Use file/save to save the file as another type.</b></para>
+<para  align="left"><b>You can open up the file extensions listing to see a list of different file types to save the file as.</b></para>
+<para/>
+
+<para  align="left">Each file type (.jpg, .gif, and .png) takes the photo and recompresses it using a different compression formula. Because of this <b>you can't just take a .jpg file and rename it to .gif.</b> You have to open it up in a photo editor and resave it as the new format. GIMP will compress the image using the correct compression rules.</para>
+<para/>
+
+<para  align="left"><b>You'll also notice, when you use "File/Save As" that you can save the file as a GIMP file (.xsd). </b>This allows you to preserve the layers and other editing tools that GIMP uses. Think of the GIMP files as your working files and the .jpg, .gif, and .png as finished images for the Web.</para>
+<para/>
+
+<para  align="left"><b><image alt="C:\Users\peterWin\AppData\Local\Temp\VMwareDnD\c2e47cd2\gimpFileType.png" width="569" height="501" class="normal">pic013.gif</image></b></para>
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Resources</pagetitle>
+<para/>
+
+<para  align="left"><image alt="GIMP mascot" width="288" height="167" class="leftalign">pic014.jpg</image></para>
+<para  align="left"><hyperlink><name>GIMP Documentation</name><url>http://www.gimp.org/docs/</url></hyperlink> - A very detailed how-to manual. Lots of screen shots and step-by-step tutorials. http://www.gimp.org/docs/</para>
+<para/>
+
+<para  align="left"><hyperlink><name>The Wiki Book About GIMP</name><url>http://en.wikibooks.org/wiki/The_GIMP</url></hyperlink> - an excellent GIMP resource. All the basic techniques are included here, edited by GIMP users around the world. http://en.wikibooks.org/wiki/The_GIMP</para>
+<para/>
+
+<para/>
+
+<para  align="center"><b>*** *** ***</b></para>
+<para  align="center"><b>This completes the tutorial: Web Development - GIMP</b></para>
+<para  align="center">May 2009</para>
+<para  align="center">Revised February 2012</para>
+<para/>
+
+<para  align="center"><b>*** *** ***</b></para>
+<para/>
+
+<para  align="left">Written by Peter K. Johnson, Instructor</para>
+<para  align="left">WebExplorations  http://</para>
+<para/>
+
+<para  align="left"><b>Read my blog at:  </b> <hyperlink><name>http://webexplorations.com/blog</name><url>http://webexplorations.com/blog</url></hyperlink></para>
+<para/>
+
+<para/>
+
+<htmlinclude>
+<center> <!--Creative Commons License--><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/"><img alt="Creative Commons License" border="0" src="http://creativecommons.org/images/public/somerights20.png"/></a><br/>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/">Creative Commons Attribution-NonCommercial-ShareAlike 2.5  License</a>.<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<Work rdf:about="">
+		<license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/" />
+	<dc:type rdf:resource="http://purl.org/dc/dcmitype/InteractiveResource" />
+	</Work>
+	<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/><requires rdf:resource="http://web.resource.org/cc/ShareAlike"/></License></rdf:RDF> -->
+</center>
+</htmlinclude>
+<para/>
+
+<para/>
+
+<para/>
+
+
+
+
+
+
+</newpage>
+
+
+</courseGenie>
+

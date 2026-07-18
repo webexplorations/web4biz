@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+<!-- devDocSHARE.html - Development Notes for SHARE - Fit Interactive
+  http://www.dupage.k12.il.us/
+  Peter Johnson - peterk@webExplorations.com
+  Written:   04-18-14
+  Revised:   02-21-15
+  -->
+ <title>SHARE Moodle Scheme</title>
+
+ <script type="text/javascript">
+
+ </script>
+ <style type="text/css">
+  body {
+  background:  #EEE;
+  font-size:   14px;
+  font-family: helvetica, arial, sans-serif;
+  }
+  
+  h1 {
+  border:  1px #000080 solid;
+  padding: 10px;
+  background:  #AAA;
+  color:    white;
+  }
+  
+  h2 {
+  background: #DDD;
+  color:      #000080;
+  padding:    10px;
+  border:     1px #000080 solid;
+  }
+  
+  h3 {
+  color:      #000080;
+  margin:     0px;
+  padding:    0px;
+  clear:      both;
+  }
+  
+  li {
+  margin:     1.5em 0 0 0;
+  }
+   
+  
+  /* hold all color boxes and text description */
+  .colorRow {
+  border:      1px black solid;
+  height:      175px;
+  margin:      0px auto;
+  padding:     2px 15px;
+  }
+  
+  /* text description under each color box */
+  .colorRow p {
+  margin:      0px auto;
+ 
+  }
+  
+  /* individual color box */
+  .colorBox {
+  height:      80px;
+  margin:      5px 5px 5px 0px;
+  width:       80px;
+  }
+  
+  /* each color box + text description */
+  .colorAndDesc {
+  float:       left;
+  width:       125px;
+  }
+  
+  #left {
+  float:    left;
+  width:    30%;
+  padding:  10px;
+  }
+  
+  #right {
+  width:    50%;
+  padding:  10px;
+  float:    right;
+  }
+    
+  #frame {
+  max-width:   800px;
+  margin:      auto;
+  border:      1px solid #000080;
+  padding:     20px;
+  }
+
+  
+  
+ </style>
+</head>
+<body>
+<div id="frame">
+   <h1>SHARE - Fit Interactive</h1>
+   
+   <div id="left">
+   <p>
+   <a href="http://www.moodle4learning.com/shareprogram/" target="_blank">Moodle Website</a>
+   </p>
+   <p>
+   <a href="http://www.fitinteractive.org/share-program" target="_blank">
+   SHARE Website
+   </a><br /><br />
+   
+
+   </p>
+   
+   <h3>Theme Choice</h3>
+   <p>
+   Base theme: Clean<br />
+   </p>
+   
+  </p>
+   
+   </div>
+   
+   <div id="right">
+   <h3>Logos</h3>
+   <p>
+   <img src="graphic/shareLogoLight.png" alt="SHARE Logo" style="width:250px;" />
+   <img src="graphic/shareLogoDark.png" alt="SHARE Logo dark" style="width:250px;" />
+     
+      <p>
+      </p>
+   </div>
+   
+   <h3>Color Scheme</h3>
+   <div class="colorRow">
+     <div class="colorAndDesc">
+        <div class="colorBox" style="background:#FFC50A;">&nbsp;</div>
+        <p>
+        #FFC50A<br />
+        rgb(255,197,10)<br />
+        Bright Yellow<br />
+        </p>
+     </div>
+     
+     <div class="colorAndDesc">
+        <div class="colorBox" style="background:#69318F;">&nbsp;</div>
+        <p>
+        #69318F<br />
+        rgb(105,49,143)<br />
+        Dark Purple<br />
+        
+        </p>
+     </div>
+     
+   <div class="colorAndDesc">
+        <div class="colorBox" style="background:#9d6bbf;">&nbsp;</div>
+        <p>
+        #9d6bbf<br />
+        rgb(157,107,191)<br />
+        Medium Purple<br />
+        
+        </p>
+     </div>
+
+     <div class="colorAndDesc">
+        <div class="colorBox" style="background:#C9B1D7;">&nbsp;</div>
+        <p>
+        #C9B1D7<br />
+        rgb(201,177,215)<br />
+        Lavender<br />
+        </p>
+     </div>
+     
+     <div class="colorAndDesc">
+        <div class="colorBox" style="background:#e5deed;">&nbsp;</div>
+        <p>
+        #E5DEED<br />
+        rgb(229,222,237)<br />
+        Light Lavender<br />
+        </p>
+     </div>
+     
+     <div class="colorAndDesc">
+        <div class="colorBox" style="background:#000;">&nbsp;</div>
+        <p>
+        #000<br />
+        rgb(0,0,0)<br />
+        Black<br />
+        <br />
+        </p>
+     </div>    
+   </div> <!-- end of .colorRow -->
+   
+  <p>
+  <strong>Technical Notes:</strong> The SHARE theme is a child theme based on the parent Clean  
+  </p>
+  <p>
+     Strings changed using Site Administration/Language/Language Customization<br />
+     Local strings are saved in moodledata/lang/xxlocal/folder to keep them from being overwritten when upgrading Moodle.
+  </p>
+  <ul>
+     <li>"Available courses" changed to: Your Modules</li>
+     <li>"Course overview" changed to: Module Overview</li>
+  </ul>
+  <p>
+     Customizing login screen: https://moodle.org/mod/forum/discuss.php?d=201891
+  </p>
+  <p>
+     <strong>Turn off guest login: </strong> Site Administration -> Users -> Permissions -> User Policies -> uncheck the box to "auto-login guests" <br />
+     Plugins/Authentication/Manage Authentication - Guest login button - hide button allowing guest access
+  </p>
+</div> <!-- end of #frame -->
+</body>
+</html>

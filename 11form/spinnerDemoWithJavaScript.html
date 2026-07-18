@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+  <title>Testing Inner HTML</title>
+  <script>
+  // block of code that can be used over and over
+  function calc()
+  {
+     // short term memory to hold bits of information
+     var inputOne = 0;
+     var inputTwo = 0;
+     
+     // get the value of first spinner and save it in temp memory
+     inputOne = document.frmInput.spinOne.value;
+     // finding the <span> on the page and saving its memory address in memory
+     myTotal = document.getElementById("input1");
+     // Doing brain surgery.
+     // Inserting the value from the spinner
+     // in between the <span></span> 
+     myTotal.innerHTML = inputOne + " + ";
+     
+     inputTwo = document.frmInput.spinTwo.value;
+     myTotal = document.getElementById("input2");
+     myTotal.innerHTML = inputTwo + " = " ;
+     
+     // Found the total spot in memory
+     myTotal = document.getElementById("total");
+     // Converted the two input from the spinner into numbers
+     // added them together
+     // inserted those inside the total <span></span>
+     myTotal.innerHTML = parseInt(inputOne,10) + parseInt(inputTwo,10);
+  }
+  </script>
+</head>
+<body>
+  <h1>Testing Inner HTML</h1>
+  
+  <form name="frmInput">
+  <!-- Set up a spinner and if it is changed by the user
+       call the block of code named calc( ) -->
+  <input type="number"
+       id="spinOne"
+       name="spinOne"
+       min="0"
+       max="100"
+       step="5"
+       value="0"
+       onChange="calc();" />
+       
+     <input type="number"
+       id="spinTwo"
+       name="spinTwo"
+       min="0"
+       max="100"
+       step="5"
+       value="0"
+       onChange="calc();" />
+  </form>
+  <br /><br />
+  <!-- Make hidden spots where our answer and text
+       can be automatically inserted by the calc( ) function4
+       Notice each one has its own unique ID.
+  -->
+  <span id="input1"></span>
+  <span id="input2"></span>
+  <span id="total"></span>
+</body>
+</html>

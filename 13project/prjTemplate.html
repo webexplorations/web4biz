@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- prjProcess.html -  Specifications for CSC235 Project Process
+     Peter Johnson - peterk@webExplorations.com
+  Written: PKJ 05-20-16
+  Revised: PKJ 08-11-16 Remove JSON references.
+  -->
+ <title>Project Process</title>
+</head>
+
+<body>
+<div class="container">
+<h1>CSC235 - Project: Process</h1>
+
+<div class="row">
+   <div class="col-sm-7">
+      <h2>Project Summary</h2>
+      <p>
+         <strong>Practicing Product Development</strong> 
+      </p>
+      <p>
+         As you worked through the learning activities for this week, you learned about several best practices used during application development.
+      </p>
+      <p>
+         Now it is your turn to put the process to work.
+      </p>
+      <p>
+      Imagine attending a meeting where a client just hired you to create a major software project that you estimate to be worth over $6,000. Where will you start? 
+      </p>
+
+      <p>
+         <strong>This project should be completed as five distinct steps:</strong>
+      </p>
+      <ol>
+         <li>Do a needs assessment.</li>
+         <li>Do a problem analysis.</li>
+         <li>Write proof-of-concept code.</li>
+         <li>Prototype the UI.</li>
+         <li>Write the app.</li>
+      </ol>
+         
+   </div>
+   <div class="col-sm-5">
+      <h2>Module Objectives</h2>
+      <p><strong>Design a database with multiple tables</strong></p>
+      <ul>
+         <li>Using the development process, write an app that meets the client’s needs.</li>
+         <li>Interview the client/instructor for a needs assessment of the client’s application.</li>
+         <li>Establish a clear and consistent problem-solving process.</li>
+         <li>Research the best solutions that are necessary to meet the client’s needs.</li>
+         <li>Write the application using the prototype process.</li>
+      </ul>
+   </div>
+</div>
+
+<p style="text-align: center;">
+   <strong>This is an individual assignment and the work must be your own.</strong>
+</p>
+
+<h2 id="manage">File Management</h2>
+<p>
+   Inside the www folder of your AMPPS application, make a new folder named <strong>prjProcess</strong>. It will contain the following files when the project is complete:  
+</p>
+<ul>
+   <li>A web page named <strong>index.php</strong></li>
+   <li>A web page named <strong>presentation.php</strong></li>
+   <li>A web page named <strong>edit.php</strong></li>
+   <li>Export your database into an .sql file.</li>
+   <li>A sub-folder named <strong>graphic</strong> to hold all any images you use.</li>
+   <li>An external CSS file named <strong>style.css</strong> with your CSS code.</li>
+</ul>
+
+
+<h2>Specifications (50 points total possible)</h2>
+<h3>Step 0. Think of a project</h3>
+<p>
+   Think of a simple app that will solve a problem similar to the hyperlink problem presented in this module. Here are some examples to act as a catalyst for your own app:
+</p>
+<ol>
+   <li><strong>A restaurant menu with links for different meals and/or courses</strong>, but with details that need to be updated on a regular basis. A visitor to the website can click on a link such as "Daily Special" or "List Soups/Salad/Entrees" to open a list of the current offerings for that category. A school lunch menu could be a variation of this type of app.</li>
+   <li><strong>A university course schedule that needs to be updated regularly</strong> to display available courses, as well as details for time, place, and instructor.</li>
+   <li><strong>A work schedule that allows employees to click their names</strong> revealing the times they are scheduled to work that week.</li>
+</ol>
+
+<h3>Step 1. Needs Assessment (10 points)</h3>
+<p>
+   Create a web page named <strong>presentation.php</strong> containing at least five questions you would ask a client in order to complete this project. Then, acting as the client, answer these questions.
+</p>
+<p>
+   As a guide, you can start with the five Ws (Who, What, When, Where, and Why). Followed up by any other information that would be helpful to fully understand this project.
+</p>
+<ul>
+   <li>Design this page as a presentation to a potential high-end client. (Your instructor is your high-end client in this case.)</li>
+   <li>Keep UX and readability in mind using headings, bullet points, bold and regular, and other HTML/CSS techniques. For example, display the questions using bold text and the answers as regular text.</li>
+   <li>Include your name, the title you are giving your project, and the current date at the top of the page. This information should display. Do not hide this information as a comment in the code. </li>
+   <li>Include a standard coding comment block at the top of the file </li>
+   <li>Include links near the bottom of the page to the page to the following on your remote server:
+      <ul>
+         <li>presentation.php file.</li>
+         <li>The home page (index.php).</li>
+         <li>The editing or management page (edit.php).</li>
+      </ul>
+   </li>
+</ul>
+
+<h3>Step 2. Problem Analysis (10 points)</h3>
+<p>
+At the bottom of <strong>presentation.php</strong> describe at least two ways you could approach this application as the developer. Your suggestions can be variations on the same approach. Your solution should break down the problem into individual parts.
+</p>
+<p>
+   Decide which is the best approach for your client and write a short paragraph highlighting your recommendation and why you think this is the best option for your client.
+</p> 
+<p>
+   <strong>You may find it helpful to answer the following questions:</strong>
+</p>
+<ul>
+   <li>How will the data be handled? What are some alternative formats for the data?</li>
+   <li>What will the UI be like, from when the user clicks on a link to when information displays? Visualize this using a simple sketch or flowchart. (A sketch is worth a thousand and one words to every client!)</li>
+   <li>Make this information appealing and readable as if you will presenting these ideas to your client.</li>
+</ul> 
+
+<h3>Step 3. Proof-Of-Concept Code (10 points)</h3>
+<p>
+   Using your problem analysis, documented in the presentation.php file, write proof-of-concept code demonstrating the solution(s). Name this file <strong>edit.php</strong>. The output from this code does not have to be pretty!
+</p>
+<p>
+   This code is to help you noodle around, solving specific problems inherent in the project.
+</p>
+<ul>
+   <li><strong>Determine where the <a href="http://www.phrases.org.uk/meanings/334550.html" target="_blank">sticky-wicket(s)</a> (specific problem areas) are</strong> in the project specs. What techniques will you need to figure out to make sure these parts of the program work?</li>
+   <li><strong>Keep the code as simple as possible.</strong> If you can solve the problem in a single line of code, that's excellent. </li>
+   <li><strong>Write several small, test programs</strong> to test specific solutions or techniques. Then, once you have a piece working, add it to the <strong>edit.php</strong> program as a function. This will allow you to focus on one thing at a time, building the final solution, one piece at a time.  (Psychologically, this is very hard for new programmers to do. But, once you get in the practice of writing "side" programs, you will never go back to the old way of only working one large and forever growing page of code.)</li>
+   <li><strong>Do not spend time writing user input code.</strong> Simply set up a variable with test data and use it in your example code. Later, it will be easy to replace that variable with data actually collected from the user.</li>
+   <li><strong>Focus on each problem without worrying about the other challenges.</strong> Being able to zoom in and focus on a single programming issue is key to being an effective programmer.</li>
+   <li><strong>Name your test files beginning with the word "test" in the name.</strong> To reduce clutter put all these files in a folder named <strong>testCode</strong></li>
+</ul>
+
+
+
+<h3>Step 4. Prototype the UI (5 points)</h3>
+<p>
+   Draw a prototype screen (wireframe) of your app based on the client's specs. You do not have to write the actual code. Just show a visual picture of what the screen might look like.
+</p>
+<ul>
+   <li>Use any drawing software you with to create this wireframe. Or, use pencil and paper and scan in the image.</li>
+   <li>Include this image at the bottom of <strong>prjReadMe.php</strong> Verify that you have formatted the image appropriately for display on the web page for size and clarity. Tiny, unreadable images or fuzzy images are not acceptable. As a rule of thumb, images should be between 500px and 1000px wide, with a proportionate height.</li>
+   <li>You will need a wireframe for both the user screen as well as the editing screen, used to update the links.</li>
+</ul>
+
+<h3>Step 5. Write the App (10 points)</h3>
+<p>
+Write the final app. It should include the following:
+</p>
+<ul>
+   <li>Name your app <strong>index.php</strong> with links to variable content, similar to what was done in the lessons. Each piece of variable content should have a unique ID. The content does not have to be a hyperlink.</li>
+   <li>A separate web page named <strong>edit.php</strong> with a user-friendly interface that would allow an office manager or administrative assistant to update the variable content.</li>
+   <li><strong>edit.php</strong> should also display a unique ID for each piece of content and the corresponding value for that content (similar to the ID/URL combination demonstrated in the lessons.)</li>
+   <li>All pages must have a clean UI, using the same CSS code for all pages.</li>
+</ul>
+<h3>5 points - Publish to the Server</h3>
+<p>
+   Publish your working code and database to the hosting service.
+</p>
+<p>
+   Upload all your files to the server.
+</p>
+
+<h3>Submitting your project</h3> 
+<ol>
+   <li>Verify that you have all the files listed in the <a href="#manage">File Management section</a> above.</li>
+   <li>Remove any test files or extra files and folders. Keep things neat and tidy to make your it easy and direct for your instructor to grade your work.</li>
+   <li>Zip up the prjProcess folder from your localhost and submit it to Blackboard.</li>
+   <li>In the comment section include the URL to your site out on the server. (Please double check to make sure the URL opens the correct page before submitting your work.)</li>
+   <li>This URL is for the instructor's review. You may also be posting the URL as part of your discussion posting which will allow the other students to view your web site.</li>
+</ol>
+
+<p>
+   <strong>Note: </strong> Publishing your work out on the server is not enough. You must submit your code and a valid URL to Blackboard in order to receive a grade for this project.
+</p>
+<div class="well">
+<h2>Other Notes</h2>  
+<h3>Points will be deducted for the following:</h3>
+<ul>
+   <li>Not following the naming conventions (code, file and folder names, form elements, data field names)</li>
+   <li>Using filenames other than those specified.</li>
+   <li>Spelling or grammar errors. Proof-read each others work. Use <a href="http://grammarly.com" target="_blank">Grammarly.com</a></li>
+   <li>Inadequate commenting.</li>
+   <li>Missing a comment block at the top of each page of code.</li>
+   <li>Poorly formatted code. Use tools such as <a href="http://www.freeformatter.com/html-formatter.html" target="_blank">Free Formatter</a> or <a href="http://www.danstools.com/html-beautify/" target="_blank">Dan's Tools - HTML formatter</a></li>
+</ul> 
+
+<h3>Commenting</h3>
+<p>
+   Comments are required for each block of code. Add comments as notations to the instructor showing your knowledge and understanding of the code in your own words. Just having the code is not acceptable.
+</p>
+<p>
+   Every file created by you must have a comment header block at the top of the page including the following:
+</p>
+<ul>
+   <li>Name of the file and its purpose.</li>
+   <li>Course name and project name</li>
+   <li>Your name  and email.</li>
+   <li>The date the file was written/created.</li>
+   <li>A place to document future revisions. (date, person, what was done)</li>
+</ul>
+
+<h3>Naming Conventions</h3>
+<p>
+   The following naming conventions must be followed when naming all folder, filename, id, and class names:
+</p>
+<ul>
+   <li>Always start with a lower case letter.</li>
+   <li>Do not use spaces or underscores "_"</li>
+   <li>useCamelCaseForReadability. Acronyms can remain all caps, using a hyphen "-" only when absolutely necessary.</li>
+   <li>Use singular names. For example, graphic not graphics. </li>
+   <li>Keep all HTML elements and filename extensions lower case (Watch out for photo editing software that tries to save the filename with the extension set to all caps.)</li>
+</ul> 
+
+</div>
+
+
+<p style="font-size:10px;font-weight:200;">
+   Revised: 08-11-16
+</p>
+</div>
+
+<!-- Bootstrap Framework -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+
+
+ <style>
+  body {
+  background:  #EEE;
+  font-size:   16px;
+  font-family: optima, helvetica, arial, sans-serif;
+  }
+  
+  h1 {
+  border:  1px #000080 solid;   /* dark blue */
+  padding: 10px;
+  background:  #AAA;
+  color:    white;
+  }
+  
+  h2 {
+  background: #DDD;
+  color:      #000080;
+  padding:    10px;
+  border:     1px #000080 solid;
+  }
+  
+  h3 {
+  font-size:  1.2em;
+  color:      #000080;
+  border-bottom:     1px solid #FFF;
+  }  
+  
+  
+#inLineText {
+   color:      #000080;  
+   font-weight: 700; 
+   font-size:  1.15em;
+   border:     1px solid white;
+   padding:    2px;
+   margin:     0 4px 0 0;
+   background: #DDD;  /* light gray */
+}
+
+.container {
+  padding:     20px;
+
+}
+  
+.highlight {
+   font-weight:  500;
+   color:       #000070;
+}
+
+.bg-info {
+   padding:     10px;
+}
+
+  table,
+  th,
+  td {
+  border-collapse:       true;
+  border:                1px #000080 solid;  /* dark blue */
+  }
+  
+  td,
+  th {
+  font-size:             .75em;
+  }
+  
+  th {
+  color:                  white;
+  background-color:       #000060;
+  }
+
+ </style>
+</body>
+</html>

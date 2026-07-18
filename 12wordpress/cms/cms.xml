@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="gen/cg_content.xsl"?>
+
+<courseGenie>
+
+<metadata>
+	<lom>
+		<general>
+			<title>
+				<string>How a CMS Works</string>
+				<language>en</language>
+			</title>
+			<keyword>
+				<string>CMS WordPress Content Management System</string>
+				<language>en</language>
+			</keyword>
+			<description>
+				<string>Content Management Systems</string>
+				<language>en</language>
+			</description>
+		</general>
+		<rights>
+			<description>
+				<string>Creative Commons</string>
+				<language>en</language>
+			</description>
+		</rights>
+	</lom>
+	<misc>
+		<item>
+			<key>Objectives</key>
+			<value>How a CMS Works</value>
+		</item>
+		<item>
+			<key>Author</key>
+			<value>Peter K. Johnson</value>
+		</item>
+		<item>
+			<key>Organisation</key>
+			<value>South Central College</value>
+		</item>
+		<item>
+			<key>Date</key>
+			<value>April 2009</value>
+		</item>
+		<item>
+			<key>creator</key>
+			<value>Created by Wimba Create, licenced to South Central College</value>
+		</item>
+	</misc>
+</metadata>
+<settings>
+	<pageroot>page</pageroot>
+	<sectionmode>both</sectionmode>
+	<exportmode>normal</exportmode>
+	<assessmentmode>none</assessmentmode>
+	<generateindex>True</generateindex>
+	<showtoc>False</showtoc>
+	<tocwidth>200</tocwidth>
+	<shownavigation>True</shownavigation>
+	<footer>WebExplorations.com</footer>
+	<singlepage>False</singlepage>
+	<hyperlinksmain>False</hyperlinksmain>
+	<popupsmain>True</popupsmain>
+	<idstring>CG2009412114059</idstring>
+	<scorm-questionmode>selftest</scorm-questionmode>
+	<scorm-masteryscore>0</scorm-masteryscore>
+	<cgbuild>2.4.1  Build 200800626</cgbuild>
+	<trialstatus>reg</trialstatus>
+	<schemefolder>c:/program files/coursegenie/resources/en.lproj/schemes/WebCT UTF-8</schemefolder>
+</settings>
+
+<newpage>
+<pagetitle>Content Management Systems</pagetitle>
+<section/>
+<para/>
+
+<para  align="left"><image alt="Title image - How a CMS (Content Management System) Works" width="576" height="432" class="normal">pic001.gif</image></para>
+<para/>
+
+<para  align="left">Content Management Systems (CMS) are becoming more and more prevelant. An example of these would be Drupal, WordPress, Blogger, and Moodle.</para>
+<para/>
+
+<para  align="left">This tutorial will show you graphically how a CMS works, using a server.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Client/Server</pagetitle>
+<para  align="left"><image alt="Two blocks designating the client and the server" width="576" height="432" class="normal">pic002.gif</image></para>
+<para  align="left">We start out with the very basics. We have a browser and a server. This is the client/server model. The web browser is the client.</para>
+</newpage>
+
+<newpage>
+<pagetitle>The Request</pagetitle>
+<para  align="left"><image alt="The client computer sends the server a request for a web page." width="576" height="432" class="normal">pic003.gif</image></para>
+<para  align="left">When the user clicks on a hyperlink or types in a specific URL, the browser sends a request to the web server.</para>
+<para/>
+
+<para  align="left">This request has the return address of the browser so the server will know where to return the web page, much like a return address is used by the postal service.</para>
+</newpage>
+
+<newpage>
+<pagetitle>The Response</pagetitle>
+<para  align="left"><image alt="The server sends back a response as a copy of the web page and any adiditional files such as graphics or multimedia files." width="576" height="432" class="normal">pic004.gif</image></para>
+<para  align="left">After the server gets a request it takes a copy of the web page and the accompanying graphics or multimedia and it sends it back as a response back to the client/browser where it is displayed.</para>
+<para/>
+
+<para  align="left">The server, in essence, is basically a large copy machine. It makes copies of everything and sends it back to the browser.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Server-Side Programming </pagetitle>
+<para/>
+
+<para  align="left"><image alt="Server-side programming involves programs that run on the server before the page is sent back to the client." width="576" height="432" class="normal">pic005.gif</image></para>
+<para/>
+
+<para  align="left">There's a new addition on the server, called server-side programming. When the client sends a request to the server, the server discovers that the page being requested has special programming in the document. This could be PHP, ASP.NET, JSP, or ColdFusion. All of these are server-side programming languages. These are languages that run on the server so, when the server gets the request, it processes the programming instructions.</para>
+<para/>
+
+<para  align="left">Where the power of this comes in is that the server-side languages (such as PHP) are able to link up with a database and use that data to build a web page on the fly.</para>
+<para/>
+
+<para  align="left">A good example of this would be eBay where you type in a certain product and the server creates a web page using the data in a database that shows a list of all the similar products that match your search.  No human built that page, it was all created on the fly based on the data in database.</para>
+<para/>
+
+<para  align="left">Amazon.com is another good example of this technology at work and so is the Google search page when it displays the results.</para>
+</newpage>
+
+<newpage>
+<pagetitle>Dynamic Pages</pagetitle>
+<para  align="left"><image alt="With server-side programming the page that is sent back to the client is pure HTML created on the fly by the server-side programming language." width="576" height="432" class="normal">pic006.gif</image></para>
+<para/>
+
+<para  align="left">When the server is finished creating this dynamic web page it sends back the plain HTML back to the browser. What the client sees is just a regular HTML page.	All the magic happens over on the server and using the database tables for the resources that are used to build the page.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Updating the Database (Content Management)</pagetitle>
+<para/>
+
+<para/>
+
+<para  align="left"><image alt="A user with the correct access can view special forms that will update the database on the server." width="576" height="432" class="normal">pic007.gif</image></para>
+<para/>
+
+<para  align="left">Here's where the CMS piece comes in. Each CMS, such as WordPress, has an administration or admin page that is accessed using a userID and password.</para>
+<para/>
+
+<para  align="left">The admin person sends a request to the web page with data from a form page. By clicking on different buttons, selecting different items from drop down lists, and filling out text boxes, the admin sends information to the server as a request. That information is saved in the server's database.</para>
+<para/>
+
+<para  align="left">So, let's say you are using WordPress and you are writing a new blog. As you type in your new blog entry, that information is getting stored in the database, along with meta data such as categories, keywords, and other information about the entry.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>New Page Info Displayed</pagetitle>
+<para  align="left"><image alt="When the page is requested the server-side language uses the database information to create the web page." width="576" height="432" class="normal">pic008.gif</image></para>
+<para/>
+
+<para  align="left">Next, when the user sends a request to read your blog or view a CMS web page, the browser sends a request to the server, and it goes through the same process, using PHP (or another server-side language)  to extract the right data from the database, builds the web page using the database information, and sends it back to the user.</para>
+<para/>
+
+<para  align="left"><b>So, there are two pieces.</b></para>
+<para  align="left">There is the admin section where the administrator updates the database using special form pages.</para>
+<para/>
+
+<para  align="left">The second piece is the next person that views the web page. This person will see the updated changes that were made to the database, getting an updated web page.</para>
+<para/>
+
+<para  align="left">These are the principles that all content management systems use.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Summary</pagetitle>
+<heading>What have you learned?</heading>
+<para/>
+
+
+<list type="2" level="1" start="1">
+	<item level="1">What does CMS stand for?</item>
+	<item level="1">Describe the client/server model</item>
+	<item level="1">What are the elements that make up a CMS system in addition to the client and server?</item>
+	<item level="1">How does a person update the CMS? Do they need to know how to access the server? or the database? or how to do FTP?</item>
+</list>
+
+<para/>
+
+<para/>
+
+<para  align="center">*** *** ***</para>
+<para/>
+
+<para  align="left">This completes this tutorial: Web Forms, An Overview by Peter K. Johnson - April 2009</para>
+<para  align="left">Read my blog at:   <hyperlink><name>http://webexplorations.com/blog</name><url>http://webexplorations.com/blog</url></hyperlink></para>
+<para/>
+
+<para/>
+
+<htmlinclude>
+<center> <!--Creative Commons License--><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/"><img alt="Creative Commons License" border="0" src="http://creativecommons.org/images/public/somerights20.png"/></a><br/>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/">Creative Commons Attribution-NonCommercial-ShareAlike 2.5  License</a>.<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<Work rdf:about="">
+		<license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/" />
+	<dc:type rdf:resource="http://purl.org/dc/dcmitype/InteractiveResource" />
+	</Work>
+	<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/><requires rdf:resource="http://web.resource.org/cc/ShareAlike"/></License></rdf:RDF> -->
+</center>
+</htmlinclude>
+<para/>
+
+<para/>
+
+<para/>
+
+
+
+
+
+
+</newpage>
+
+
+</courseGenie>
+

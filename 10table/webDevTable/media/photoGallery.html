@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- tableTemplate.html - Set up a basic table with CSS
+     Peter Johnson
+     Written:  03-11-09
+     Revised:  03-11-09
+-->
+<head>
+   <title>Table Template</title>
+   
+   <style type="text/css">
+   body {
+   background:  #EEEEEE url( ) no-repeat; 
+   }   
+   </style>
+   
+</head>
+<body>
+   <h1>Photo Gallery</h1>
+
+   <h2>Using align, valign, and colspan attributes</h2>
+
+   <table summary="Display photos with captions"
+          border="1" 
+          cellspacing="1" 
+          cellpadding="5">
+          
+   <!-- Heading Row -->
+   <tr>
+     <td rowspan="3" width="15%" align="left">This will span three rows 
+     and can contain a summary for the
+     entire photo gallery including the 
+     photographer's name and the source of the images.
+     </td>
+     <th colspan="3">Photo Gallery</th>
+   </tr>
+         
+   <!-- First row of images -->
+   <tr valign="bottom" align="center">
+     <td>
+        <img src="../../../08Table/webDevTable/media/graphic/gimpLogo.png" 
+             alt="GIMP logo"
+             title="GIMP logo" />
+     </td>
+     <td>
+        <img src="../../../08Table/webDevTable/media/graphic/handWithRainbowColor.jpg" 
+             alt="Hand against rainbow of color"
+             title="Hand against rainbow of color" />
+     </td>
+     <td>
+         <img src="../../../08Table/webDevTable/media/graphic/past2future.gif" 
+              alt="three panels showing the past, present, and future"
+              title="three panels showing the past, present, and future" />
+     </td>   
+   </tr>
+   <!-- First row of captions -->
+   <tr valign="top" align="center">
+     <td>GIMP</td>
+     <td>Rainbow Hand<br />
+         Photo from iStockPhoto.com
+     </td>
+     <td>Past, Present, Future</td>      
+   </tr>   
+   </table>
+   </body>
+</html>

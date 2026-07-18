@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+<!-- html5Form.html - Experimenting with HTML 5 form objects
+  Peter Johnson - peterk@webExplorations.com
+  Written:   11-13-14 
+  Revised:   
+  -->
+ <title>HTML5 Forms</title>
+
+ <script type="text/javascript">
+
+ </script>
+ <style type="text/css">
+  body {
+  background:  #EEE;
+  font-size:   16px;
+  font-family: helvetica, arial, sans-serif;
+  }
+  
+  h1 {
+  border:  1px #000080 solid;
+  padding: 10px;
+  background:  #AAA;
+  color:    white;
+  }
+  
+  h2 {
+  background: #DDD;
+  color:      #000080;
+  padding:    10px;
+  border:     1px #000080 solid;
+  }
+  
+  li {
+  margin:     1.5em 0 0 0;
+  }
+  
+  form input[type=text],
+  form input[type=email],
+  form input[type=url],
+  form input[type=number],
+  form input[type=range],
+  form input[type=date],
+  form input[type=color],
+  form input[type=submit]
+   {
+   color:    #000080;   /* navy blue */
+   font-size: 16px; 
+  }
+  
+  #frame {
+  max-width:   800px;
+  margin:      auto;
+  border:      1px solid #000080;
+  padding:     20px;
+  }
+ </style>
+</head>
+<body>
+<div id="frame">
+<h1>HTML5 Form Objects</h1>
+
+<form action="html5FormActionPage.html" method="get">
+   <!-- A text box with a text hint and autofocus -->
+   Name: <input type="text" 
+                name="txtName" 
+                placeholder="Type in your name"
+                autofocus >
+   <br /><br />
+   <!-- A text box for email and URL (web addresses)
+        On mobile devices includes the @ and . on main keyboard
+        On submit, validates the input -->
+   Email: <input type="email" 
+                 name="txtEmail" 
+                 placeholder="Type in your email">
+   <br /><br />
+   Your Web Address: <input type="url" 
+                            name="txtURL" 
+                            placeholder="Your web site">
+   <br /><br />
+   <!-- Number selector
+        On mobile device opens up number keyboard
+        On desktop device uses up/down arrows 
+           on the edge of the input box -->
+   How many copies of our book do you want? 
+   <input type="number"
+          name="numQty"
+          min="0"
+          max="100"
+          step="1"
+          value="1">
+   <br /><br />
+   <!-- Value selector -->
+   On a scale from 1-10 how well did you like our last book?<br />
+   (1 is not so hot - 10 is Zap Pow Good!)<br />
+   0 &nbsp; &nbsp; &nbsp; &nbsp; 
+     &nbsp; &nbsp; &nbsp; &nbsp; 
+     &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;10<br />
+   <input type="range"  
+          name="rngLike"
+          min="0"
+          max="10"
+          step="2"
+          value="5">
+   <br /><br />
+   What day would you like to set your appointment?<br />
+   <input type="date"
+          name="dateAppt">
+   <br /><br />
+   What is your favorite color<br />
+   <input type="color"
+          name="colorBack"
+          value="#CECECE">
+   <br /><br />
+  <input type="submit" 
+         value="Submit Your Information"> 
+</form>
+</div>
+</body>
+</html>

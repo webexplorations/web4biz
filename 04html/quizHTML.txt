@@ -1,0 +1,149 @@
+1. What element is used to configure a new paragraph?
+a. new
+b. paragraph
+*c. p
+d. div
+e. id
+f. par
+g. dblspace
+
+2. What element is used to create the main heading on the page?
+*a. h1
+b. h9
+c. head
+d. h
+e. hI
+f. hi
+g. main
+
+3. Which element is used to force the browser to display the next web object (either text or another element) on a new line?
+a. line
+b. p
+*c. br
+d. hr
+e. break
+f. par
+
+4. Which of the following is a true statement?
+a. The content that displays in the main browser window is contained in the head section.
+*b. The content that displays in the main browser window is contained in the body section.
+c. Information about the web page (metadata) is contained in the body section.
+d. You can put special display content, like footnotes, after the /html element.
+e. All of these are true.
+
+5. Choose the special character that is used to indicate a blank space.
+a. &blank;
+*b. &nbsp;
+c. &copy;
+d. &space;
+e. & ;
+f. &_;
+
+6. Choose the preferred element to use when emphasizing text that is intended to be displayed in italic font style.
+a. i
+b. strong
+*c. em
+d. b
+
+7. Choose the preferred element to use when displaying text in italic font style when there is no special emphasis on the words in the text.
+a. em
+*b. i
+c. strong
+d. b
+
+8. The text contained between title tags is:
+a. Not displayed by browsers.
+*b. Displayed in the title bar and the tabs of the browser window.
+c. Not used by search engines.
+d. Invisible to the end-user viewing the page.
+
+9. The meta elements are coded in the ___________ section of a web page document.
+a. body
+*b. head
+c. footer
+d. DOCTYPE
+e. section
+f. paragraph
+g. info
+
+10. The element used to create a horizontal line on a web page is:
+a. h1
+b. br
+*c. hr
+d. div
+e. rule
+
+11. The purpose of the ________ element is to contain information that would typically be some type of fine print or a disclaimer of some kind. 
+a. dd
+*b. small
+c. legal
+d. em
+e. cite
+
+12. Select the statement that is true.
+a. A web page will not display in a browser unless it passes validation tests. 
+b. A web page must pass HTML validation testing before it is used.
+c. Validation testing guarantees that your web page will look good.
+*d. Invalid HTML code may cause browsers to render the pages slower than otherwise.
+
+13. Choose the preferred element to use when you want to display text using a bold font style.
+a. i
+*b. strong
+c. em
+d. b
+e. bold
+
+14. Which is a valid line of code?
+a. <p><strong>Don't miss today's special!<strong></p>
+b. <strong><p>Don't miss today's special!</strong></p>
+*c. <p><strong>Don't miss today's special!</strong></p>
+d. <p><strong>Don't miss today's special!<strong><p>
+e. <p>Don't miss today's special!<p>
+
+15. Which is a VALID line of code?
+*a. <!DOCTYPE html><html><head><title>Title of Page</title></head><body><h1>Main Page</h1></body></html>
+b.<DOCTYPE html><html><head><title>Title of Page</title></head><body><h1>Main Page</h1></body></html>
+c.<DOCTYPE html><html><head><title>Title of Page</title><h1>Main Page<h1></head><body><p>This is a paragraph</p></body></html>
+d.<!DOCTYPE html><html><head><title>Title of Page</title></head><body><h1>Main Page</h1></body>
+e.<!DOCTYPE html><html><head><p>This is a paragraph</p><title>Title of Page</title></head><body><h1>Main Page<h1><body><html>
+
+16. Which is an INVALID line of code?
+a.<!DOCTYPE html><html><head><title>Text in Title Bar</title></head><body><h1>Main Page</h1></body></html>
+*b.<h1><p>This is a paragraph</p></h1>
+c.<head><title>Text in Title Bar</title></head><body><p>This is a paragraph</p></body>
+d.<p><strong>This is a paragraph</strong> describing the many good things about HTML.</p>
+e. <!DOCTYPE html><html><!-- index.html - the main page --><head><title>Text in Title Bar</title></head>
+
+17. Which line will cause validation errors?
+a.<h1>Contact us today</h1>
+b.<p><strong>Free Estimates</strong></p>
+c.<p><strong><i>Sale Every Thursday</i></strong></p>
+*d.<h6><i>5 Ways We Can Help You<i></h6>
+@Every start tag needs a stop tag
+
+18. Which is the valid line of code?
+*a.<h1>Meet the President</h1><p>This is a paragraph.</p><h2>Meet the Vice President</h2>
+b. <h2><p>Road Warrior Laptops</p></h1>
+c. <p><i><strong>Judging a book by its cover.</i></strong>
+d. <h3>Journey into the World of Web.<p>This is a paragraph describing the World of Web.</p></h3>
+@The header elements are block elements. So is the p element. You can't put a block inside of a block. In this example the p would have to go after the </h3>.
+
+19. The purpose of the ________  element is used to configure the main navigation area on a web page.
+a.  header
+*b. nav
+c. navigation
+d. command
+
+20. The purpose of the ________ element is used to configure the headings for a web page document or section of a web page document.
+a.  headings
+b.  nav
+*c. header
+d. head
+
+21. The purpose of the ________ element is used to configure the footer information on
+a web page document.
+a.  headings
+b.  foot
+c. div
+*d. footer
+

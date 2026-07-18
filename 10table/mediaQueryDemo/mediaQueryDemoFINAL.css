@@ -1,0 +1,91 @@
+/* mediaQueryDemo.css - 
+   Written by:   Peter K. Johnson - peterk@webExplorations.com
+                 04-16-15
+   Revised: PKJ  04-16-15
+*/
+  
+  body {
+  background:            #EEE;
+  font-size:             16px;
+  font-family: optima, helvetica, arial, sans-serif;
+  }
+  
+  h1 {
+  border:                1px #000080 solid;
+  padding:               10px;
+  background:            #AAA;
+  color:                 white;
+  }
+  
+  h2 {
+  background:            #DDD;
+  color:                 #000080;
+  padding:               10px;
+  border:                1px #000080 solid;
+  }
+  
+  li {
+  margin:                1.5em 0 0 0;
+  font-size:             .9em;
+  }
+  
+  section {
+  width:                 70%;
+  margin:                0 5px 0 25%;  /* left margin keeps from overlapping nav */
+  }
+  
+  nav {
+  width:                 15%;
+  float:                 left;   
+  }
+  
+  footer {
+  border:                1px #000080 solid;   /* dark blue */
+  clear:                 both;
+  padding:               15px;
+  }
+  
+  #topImage {
+  width:                 100%;
+  }
+  
+  
+  #frame {
+  max-width:             800px;
+  margin:                auto;
+  border:                1px solid #000080;
+  padding:               20px;
+  }
+
+/* Narrow mobile devices */
+@media only screen and (max-width: 500px) {
+   
+   #topImage {
+     display: none;
+  }
+  
+  h1 {
+     font-size:  1.1em;
+  }
+  
+  nav {
+     font-size:  .9em;
+     clear: both;
+     width: 100%;
+     margin: 0 auto 1em auto; 
+     border:  1px solid #000080;
+  }
+  
+  section {
+  width:      100%;
+  margin:     5px;
+  font-size:  .85em;
+  }
+  
+  footer {
+  font-size:  .75em;
+  }
+
+  
+} /* end of @media 400px - 500px */
+      

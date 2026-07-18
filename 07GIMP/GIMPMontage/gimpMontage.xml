@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../../05SEOGimp/gimpMontage/gen/cg_content.xsl"?>
+
+<courseGenie>
+
+<metadata>
+	<lom>
+		<general>
+			<title>
+				<string>Create a Montage Using GIMP</string>
+				<language>en</language>
+			</title>
+			<description>
+				<string>Use the photo editing software GIMP to combine several photos into one.</string>
+				<language>en</language>
+			</description>
+		</general>
+		<lifeCycle>
+			<version>
+				<string>Jan 9, 2010</string>
+				<language>en</language>
+			</version>
+		</lifeCycle>
+		<rights>
+			<description>
+				<string>Creative Commons</string>
+				<language>en</language>
+			</description>
+		</rights>
+	</lom>
+	<misc>
+		<item>
+			<key>Objectives</key>
+			<value>Know how to construct the 15 different types of selftest questions</value>
+		</item>
+		<item>
+			<key>Author</key>
+			<value>Peter Johnson</value>
+		</item>
+		<item>
+			<key>Organisation</key>
+			<value>WebExplorations</value>
+		</item>
+		<item>
+			<key>Date</key>
+			<value>Jan 2010</value>
+		</item>
+		<item>
+			<key>creator</key>
+			<value>Wimba Create</value>
+		</item>
+	</misc>
+</metadata>
+<settings>
+	<pageroot>page</pageroot>
+	<sectionmode>both</sectionmode>
+	<exportmode>normal</exportmode>
+	<assessmentmode>none</assessmentmode>
+	<generateindex>True</generateindex>
+	<showtoc>False</showtoc>
+	<tocwidth>180</tocwidth>
+	<shownavigation>True</shownavigation>
+	<footer>WebExplorations.com</footer>
+	<singlepage>False</singlepage>
+	<hyperlinksmain>True</hyperlinksmain>
+	<popupsmain>True</popupsmain>
+	<idstring>CG201019135649</idstring>
+	<scorm-questionmode>selftest</scorm-questionmode>
+	<scorm-masteryscore>0</scorm-masteryscore>
+	<cgbuild>2.5.0 Build 20090318</cgbuild>
+	<schemefolder>c:/program files/wimbacreate/resources/en.lproj/schemes/Wimba</schemefolder>
+</settings>
+
+<newpage>
+<pagetitle>Creating a Montage Using GIMP</pagetitle>
+<section/>
+<para/>
+
+<para  align="left"><image alt="Montage showing girl looking up at bald eagle with a cloudy blue sky in the background." width="173" height="283" class="leftalign">pic001.jpg</image>GIMP is an excellent tool to use when you want to combine several images into a single graphic.</para>
+<para/>
+
+<para  align="left">In this tutorial you will learn some of the techniques that will allow you to combine and resize images, creating a whole new graphic.</para>
+<para/>
+
+<para  align="left">Here is what your finished image will look like after combining photos of the sky, the eagle, and the girl.</para>
+<para/>
+
+<para/>
+
+<para/>
+
+<para/>
+
+<para/>
+
+<para/>
+
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>The Original Images</pagetitle>
+<para/>
+
+<para  align="left">Here are three photos from iStockPhoto.com. You can save them to your computer by right-mouse clicking on them and choosing "save image as"</para>
+<para/>
+
+<para  align="left"><image alt="image of clouds in a blue sky" width="232" height="104" class="normal">pic002.jpg</image></para>
+<para/>
+
+<para  align="left"><image alt="bald eagle soaring against a blue sky" width="227" height="151" class="normal">pic003.jpg</image></para>
+<para/>
+
+<para  align="left"><image alt="Young girl resting her chin on her hand, thinking about something and looking upwards." width="575" height="383" class="normal">pic004.jpg</image></para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Using GIMP Open The Image Files</pagetitle>
+<para/>
+
+<para  align="left">Open up each image using File/Open from the menu bar at the top of the tool panel.</para>
+<para/>
+
+<para  align="left">Once you browse to the folder where the images are you can open up multiple files by selecting them before you click the Open button. (Hold down the Ctrl key as you click on the files to select multiples.)</para>
+<para  align="left"><image alt="Open up each image using File/Open. Browse to the files you want to display in GIMP." width="576" height="368" class="normal">pic005.jpg</image></para>
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Create a New File</pagetitle>
+<para  align="left">Create a new file to hold the finished montage. Use File/New from the menu bar along the top of the tool panel. Set the size large enough, 800w x 600h. You can always reduce the finished version to a smaller size later.</para>
+<para/>
+
+<para  align="left">If you open up the Advanced Options in the "Create New Image" dialog box you can also set the dpi and color type. 72dpi and RGB color are good choices for web images.</para>
+<para  align="left"><image alt="Use a large image size such as 800x600. You can always reduce the final image down. Use the advanced options to set the dpi to 72" width="385" height="267" class="normal">pic006.jpg</image></para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Save the File</pagetitle>
+<para  align="left">Do a File/Save on the new file right away. Name the file montage.jpg including the extension in the name field.</para>
+<para/>
+
+<para  align="left">Open up the "Select File Type" option and make sure you highlight the file type you want. Use jpg for photos and gif or png for graphics or if you want transparent backgrounds.</para>
+<para/>
+
+<image alt="In the File/Save As dialog box type in the file name including the extension." width="575" height="436" class="normal">pic007.jpg</image><longdesc>Browse to where you want to save the file.<br/>Open up the Select File Type and set the type to either jpg, gif, or png.</longdesc>
+<para/>
+
+<para  align="left">If you are saving as a jpg you may receive this warning:</para>
+<para  align="left"><image alt="If you use a jpg file type you will get this warning: JPEG plug-in can't handle transparency. Click on the export button to respond and save the jpg image." width="427" height="221" class="normal">pic008.jpg</image></para>
+<para/>
+
+<para  align="left">Choose Export. </para>
+</newpage>
+
+<newpage>
+<pagetitle>Extract out the Image of the Girl</pagetitle>
+<para/>
+
+<para  align="left">There are many ways to separate an image from the background or extract part of an image from the rest of a photo. One quick way is to use the Fuzzy Selection Tool. </para>
+<para/>
+
+<para  align="left">Select the image of the girl, and with the fuzzy selection tool select the background. </para>
+<para/>
+
+Depending on the threshold value different parts of the background will be selected. You can either raise the threshold value or else hold the shift key down while you select other areas. You will see a small plus sign "+" as you move the cursor over the image. <br/><br/><image alt="Use the Fuzzy Selection tool to select areas of the background." width="576" height="343" class="normal">pic009.jpg</image><longdesc>Set the threshold level so larger or smaller areas are selected.<br/>Hold down the shift key while clicking the fuzzy selection tool to combine different areas as part of the same selection.</longdesc>
+<para/>
+
+<para  align="left">We want the image of the girl not the background. Use Selection/Invert to change the selected area from the background to everything that you didn't select as the background, which is the image of the girl.</para>
+<para  align="left"><image alt="Invert the selection by using Select/Invert (Ctrl i)" width="576" height="361" class="normal">pic010.jpg</image></para>
+<para/>
+
+<para  align="left">With the girl selected use Edit/Copy (Ctrl C) to save the image on the clipboard.</para>
+<para/>
+
+<para  align="left"><image alt="Copy the image using Ctrl C or Edit/Copy or Edit/Copy Visible" width="576" height="435" class="normal">pic011.jpg</image></para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Add the Girl to the Montage Image</pagetitle>
+<para  align="left">Switch back over to the montage image by choosing Window/montage from the menu bar.</para>
+<para/>
+
+<para  align="left">If you can't see the Layer Menu on the right side of the screen you can open it up by selecting File/Dialogs/Layers from the Tool Window or hit Ctrl L.</para>
+<para/>
+
+<para  align="left">Create a new layer in the new document by clicking on the new layer icon that looks like a blank page located at the bottom of the layer window or use Layer/New from the menu bar along the top of the montage window.</para>
+<para/>
+
+<para  align="left">Name this new layer "girl" and make sure it is selected (it will be highlighted in blue).</para>
+<image alt="Show the Layers dialog by using File/Dialogs/Layers or Ctrl L" width="549" height="509" class="normal">pic012.jpg</image><longdesc>At the top of the layers dialog there will be a drop down allowing you to choose which image you want to see the layers of if you have multiple documents open.</longdesc>
+<para/>
+
+<para/>
+
+<para/>
+
+<para  align="left">Once the new layer is selected you can paste the image of the girl into the new document using Edit/Paste.</para>
+<para  align="left"><image alt="At the top of the layers dialog there is a drop down menu allowing you to select the layers to a specific file." width="373" height="380" class="normal">pic013.jpg</image></para>
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Resize the image</pagetitle>
+<para/>
+
+<para  align="left">You can resize the new image by using the Scale Tool from the Tool window or Shift T. Change the size by clicking and dragging the boxes located on the corners and edges of the image. You'll see a double image allowing you to compare the new image size with the original.</para>
+<para/>
+
+<para  align="left">When you have the image the size you want hit ENTER. </para>
+<para  align="left">Looking at the Layer Window you will see that there is a new (floating) layer. You have to anchor this down by clicking on the anchor icon at the bottom of the Layer window or right-mouse clicking on the floating layer and choosing "anchor".</para>
+<para/>
+
+<image alt="To resize a layer use the Scale Tool (shift t) and scale it by click/dragging the boxes. Note there will be a duplicate image as you resize." width="575" height="295" class="normal">pic014.jpg</image><longdesc><br/>Anchor the finished size by clicking on the anchor icon at the bottom of the layers dialog. (Or right-mouse click on the layer and choose anchor)</longdesc>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Add the Sky Image to the Montage</pagetitle>
+<para/>
+
+<para  align="left">Use the same process to add the image of the sky to the montage.</para>
+<para/>
+
+<para  align="left">Select the sky photograph using the Window menu item.</para>
+<para/>
+
+<para  align="left">You will want the entire image and won't have to do use any selection tools. Select the entire image (CTRL A) and do a copy (Edit/Copy) to save the image in the clipboard.</para>
+<para/>
+
+
+<list type="3" level="1" start="1">
+	<item level="1">Switch back to the montage image using Window from the menu bar.</item>
+</list>
+
+<para/>
+
+
+<list type="3" level="1" start="2">
+	<item level="1">Create a new layer named "sky" (Make sure you are looking at the layers for the montage image by using the drop down at the top of the Layer window!)<br/></item>
+	<item level="1">Select the "sky" layer.<br/></item>
+	<item level="1">Paste in the image (Edit/Paste). It will cover the image of the girl, but we will fix that in step #7</item>
+	<item level="1">Resize the sky to fill the screen (Shift T). Hit Enter when finished.<br/></item>
+	<item level="1">Anchor the new layer by clicking on the anchor at the bottom of the layer dialog box.<br/></item>
+	<item level="1">Rearrange the layers by clicking and dragging the "sky" layer underneath the "girl" layer.</item>
+</list>
+
+<para  align="left"><image alt="Rearrange the layers by clicking and dragging them in a different order. The images on the top of the list will be closest to the viewer." width="529" height="363" class="normal">pic015.jpg</image></para>
+<para/>
+
+<para  align="left">Here's what the image should now look like:</para>
+<para/>
+
+<para  align="left"><image alt="Image showing girl thinking against a cloudy blue sky." width="576" height="432" class="normal">pic016.jpg</image></para>
+<para/>
+
+<para  align="left"><b>Note:</b> If a more sophisticated selection technique had been used the white border would not be around the edge of the girl.</para>
+<para/>
+
+<para  align="left">Don't forget to do a File/Save to save your work.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Add the Eagle to the Montage Image</pagetitle>
+<para/>
+
+<para  align="left">To add the eagle follow the same technique you've done already:</para>
+<para/>
+
+
+<list type="3" level="1" start="1">
+	<item level="1">Select the eagle.jpg image using Window from the menu bar.<br/></item>
+	<item level="1">Use the fuzzy selection tool and select the sky area. Set the threshold around 15. (Or, depending on your experience level,  use a more sophisticated selection method to get more details like around the wing tips.)</item>
+</list>
+
+<para/>
+
+<para  align="left"><image alt="The eagle image at 400%. Notice how the fuzzy selection tool doesn't catch all the details." width="576" height="288" class="normal">pic017.jpg</image></para>
+<para/>
+
+<para/>
+
+
+<list type="3" level="1" start="3">
+	<item level="1">Invert the selection using Selection/Invert<br/></item>
+	<item level="1">Copy the eagle using Ctrl C (or edit/copy)<br/></item>
+	<item level="1">Select the montage.jpg image<br/></item>
+	<item level="1">Create a new layer (layer/new) and name it "eagle"<br/></item>
+	<item level="1">Select the "eagle" layer<br/></item>
+	<item level="1">Paste in the eagle (CTRL v)<br/></item>
+	<item level="1">Resize it (Shift T)<br/></item>
+	<item level="1">Reposition it by clicking on the Move tool (four headed arrow) and dragging the layer.</item>
+</list>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Cropping An Image</pagetitle>
+<para/>
+
+<para  align="left">You can crop the final image using the crop tool (shift C). You will see boxes similar to the Scale tool that allow you to crop the image from all four sides.</para>
+<para/>
+
+<para  align="left">When you have the image how you want it hit ENTER.<br/></para>
+<image alt="Use the Crop tool (shift c) to crop the image. Use the settings for the crop tool to accomplish what you need such as keeping a fixed aspect ratio. Click and drag the handles to crop the image and hit enter when finished." width="576" height="381" class="normal">pic018.jpg</image><longdesc><br/>Notice that this crops all of the layers at once.</longdesc>
+<para/>
+
+<para  align="left">Here is the final image:</para>
+<para  align="left"><image alt="Finished image showing girl thinking about an eagle soaring with a bright blue sky with clouds in the background." width="257" height="420" class="normal">pic019.jpg</image></para>
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Summary</pagetitle>
+<para/>
+
+<para  align="left">You have learned how to combine multiple images into a single montage using GIMP.</para>
+<para/>
+
+<para  align="left">Some of the techniques you learned:</para>
+<para/>
+
+
+<list type="2" level="1" start="1">
+	<item level="1">Selecting images using the Fuzzy Selection Tool </item>
+	<item level="1">Inverting a selection to get the "opposite" </item>
+	<item level="1">Copy and pasting a selection from one image to another</item>
+	<item level="1">Scaling or resizing an image</item>
+	<item level="1">Cropping an image</item>
+</list>
+
+<para  align="left"> </para>
+</newpage>
+
+<newpage>
+<pagetitle>Resources</pagetitle>
+<para/>
+
+<para  align="left">Here are some valuable resources that will help you learn more about GIMP and make your photo editing sessions more productive:</para>
+<para/>
+
+<para  align="left"><b>Carol Spears - GIMP Quickies -  </b><hyperlink><name>http://www.gimp.org/tutorials/Lite_Quickies/</name><url>http://www.gimp.org/tutorials/Lite_Quickies/</url></hyperlink><br/><br/><b>She shows you how to use GIMP to:</b></para>
+
+<list type="2" level="1" start="1">
+	<item level="1">Change the size of an image (scale)</item>
+	<item level="1">Make jpg files smaller</item>
+	<item level="1">Crop an image</item>
+	<item level="1">Find out stats about an image</item>
+	<item level="1">Flip and/or rotate an image</item>
+</list>
+
+<para/>
+
+<para  align="left"><hyperlink><name>The GIMP Handbook</name><url>http://docs.gimp.org/2.4/en/index.html</url></hyperlink> shows you how to accomplish whatever you want using GIMP. Nice clear instructions with lots of graphics. <br/><hyperlink><name>http://docs.gimp.org/2.4/en/index.html</name><url>http://docs.gimp.org/2.4/en/index.html</url></hyperlink></para>
+<para/>
+
+<para/>
+
+<para  align="left">*******</para>
+<para  align="left">This completes the tutorial: Using GIMP to Create Photo Montages</para>
+<para  align="left">By Peter K. Johnson - January 9, 2010-01-09</para>
+<para/>
+
+<para  align="left">Visit my website:  <hyperlink><name>http://WebExplorations.com</name><url>http://webexplorations.com/</url></hyperlink></para>
+<para/>
+
+<para/>
+
+
+
+
+
+
+</newpage>
+
+
+</courseGenie>
+

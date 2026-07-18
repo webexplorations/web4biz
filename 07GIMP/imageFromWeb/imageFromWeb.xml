@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="gen/cg_content.xsl"?>
+
+<courseGenie>
+
+<metadata>
+	<lom>
+		<general>
+			<title>
+				<string>Using Photos from the Web</string>
+				<language>en</language>
+			</title>
+			<keyword>
+				<string>flickr</string>
+				<language>en</language>
+			</keyword>
+			<keyword>
+				<string>photos</string>
+				<language>en</language>
+			</keyword>
+			<keyword>
+				<string>creative commons</string>
+				<language>en</language>
+			</keyword>
+			<keyword>
+				<string>Web Explorations</string>
+				<language>en</language>
+			</keyword>
+			<keyword>
+				<string>Web Development</string>
+				<language>en</language>
+			</keyword>
+			<description>
+				<string>How to find photos on Flickr that have permission for use.</string>
+				<language>en</language>
+			</description>
+		</general>
+		<lifeCycle>
+			<version>
+				<string>August  2010</string>
+				<language>en</language>
+			</version>
+			<status>
+				<source>LOMv1.0</source>
+				<value>final</value>
+			</status>
+		</lifeCycle>
+		<rights>
+			<description>
+				<string>Creative Commons</string>
+				<language>en</language>
+			</description>
+		</rights>
+	</lom>
+	<misc>
+		<item>
+			<key>Objectives</key>
+			<value>How to add a small icon to the URL bar of each web page.</value>
+		</item>
+		<item>
+			<key>Author</key>
+			<value>Peter K. Johnson</value>
+		</item>
+		<item>
+			<key>Organisation</key>
+			<value>WebExplorations.com</value>
+		</item>
+		<item>
+			<key>Date</key>
+			<value>August 2010</value>
+		</item>
+		<item>
+			<key>creator</key>
+			<value>Wimba Create</value>
+		</item>
+	</misc>
+</metadata>
+<settings>
+	<pageroot>page</pageroot>
+	<sectionmode>both</sectionmode>
+	<exportmode>normal</exportmode>
+	<assessmentmode>none</assessmentmode>
+	<generateindex>True</generateindex>
+	<showtoc>False</showtoc>
+	<tocwidth>200</tocwidth>
+	<shownavigation>True</shownavigation>
+	<footer>WebExplorations.com</footer>
+	<singlepage>False</singlepage>
+	<hyperlinksmain>True</hyperlinksmain>
+	<popupsmain>True</popupsmain>
+	<idstring>CG20108317516</idstring>
+	<scorm-questionmode>selftest</scorm-questionmode>
+	<scorm-masteryscore>0</scorm-masteryscore>
+	<cgbuild>2.5.0 Build 20090318</cgbuild>
+	<schemefolder>c:/program files/wimbacreate/resources/en.lproj/schemes/Standard</schemefolder>
+</settings>
+
+<newpage>
+<pagetitle>Getting Photos from the Web</pagetitle>
+<section/>
+<para/>
+
+<heading><image alt="" width="561" height="141" class="normal">pic001.gif</image></heading>
+<heading>Just because images are on the Web does not mean you have permission to use them.</heading>
+<para/>
+
+<para  align="left"> Many individuals are willing to share their photos for free. Normally the only requirement is that you include a photo credit showing who took the photo. </para>
+<para/>
+
+<para  align="left">This tutorial will show you how to get free photos from the Web using the Flickr.com website.</para>
+<para  align="left"><br/></para>
+</newpage>
+
+<newpage>
+<pagetitle>Using Flickr.com</pagetitle>
+<para  align="left"><b>First, find the photo you want. </b>If it is from a digital camera you will want to resize it and make it as small as possible.  It should be smaller than 300 x 300 and the file size should be under 100 kb. Your camera software should have tools to make copies of your photos for emailing. Use those same tools to make photos for your eFolio.</para>
+<para/>
+
+<para  align="left">You can also get photos from the Web. <b>However, just because it is on the Web doesn't mean it is yours to use. </b></para>
+<para/>
+
+<para  align="left">One source out on the Web is<hyperlink><name> Flickr.com</name><url>http://flickr.com/</url></hyperlink>. Many people post their photos giving others permission to use them. Creative Commons is a new type of copyright that gives certain rights. For example, a photographer may allow you to use a photograph for your own purposes as long as you are not making money from it.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Use Advanced Search</pagetitle>
+<para/>
+
+<para  align="left">In order to see the available photos on Flickr.com use the standard search field at the top of the home page. Type in your search term. When the results show up you will see a link to "Advanced Search".</para>
+<para/>
+
+<para  align="left"><image alt="" width="576" height="123" class="normal">pic002.gif</image></para>
+<para/>
+
+<para  align="left">Click on this link and scroll down until you find an option for Creative Commons. Check the boxes that cover the type of creative commons you need and then click on the Search button.</para>
+<para/>
+
+<para  align="left"><image alt="" width="576" height="236" class="normal">pic003.gif</image></para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Downloading the Image</pagetitle>
+<para/>
+
+<para  align="left">When you find the photo you would like to use click on the thumbnail to get to the photo page.</para>
+<para/>
+
+<para  align="left"><image alt="" width="576" height="363" class="normal">pic004.gif</image></para>
+<para/>
+
+<para  align="left"><b>If you click on the Additional Information - Some rights reserved link</b> you will see what the photographer expects if you use his or her photo. Most often all you have to do is give credit of who shot the photo.</para>
+<para/>
+
+<para  align="left"><image alt="" width="576" height="377" class="normal">pic005.gif</image></para>
+<para/>
+
+<para  align="left">If you click on the All Sizes link (right above the photo) you will be able to download the photo. </para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Keeping the Originals Safe</pagetitle>
+<para/>
+
+<para  align="left">Be smart and download the image using the original size. Save it in a special Flickr folder on your computer and keep this as an original image. If the photo is larger than 300x300 then make a copy that is smaller that can be used on the Web.  </para>
+<para/>
+
+<para  align="left"><b>Keep the original photos separate and safe.</b> You can always go from a larger photo to a smaller one, but if you try to take a small photo and make it bigger it will be blurry and worthless.</para>
+<para/>
+
+<para  align="left"><image alt="" width="576" height="401" class="normal">pic006.gif</image></para>
+<para/>
+
+<para  align="left">Name the photo by subject, photographer, and size using spaces to separate each item. Most photos on Flickr.com are .jpg files so make certain the file name ends with .jpg.</para>
+<para/>
+
+<para  align="left">For example, this photo might be named:  <b>stallion-szedlisa-225x298.jpg<br/></b></para>
+<para  align="left"><b>Professional Secret:</b> Don't use spaces in file names. Web browsers don't like spaces in file names.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Credits</pagetitle>
+<para/>
+
+<para  align="left"><b>This completes the presentation: <br/>Getting Images from the Web</b></para>
+<para  align="left">August 2010</para>
+<para/>
+
+<para/>
+
+<para  align="left">Written by Peter K. Johnson, Instructor</para>
+<para  align="left">South Central College</para>
+<para  align="left">North Mankato, MN 56003</para>
+<para  align="left">Peter.Johnson@southcentral.edu</para>
+<para/>
+
+<para  align="left"><b>Read my blog at:  </b> <hyperlink><name>http://webexplorations.com/blog</name><url>http://webexplorations.com/blog</url></hyperlink></para>
+<para/>
+
+<para/>
+
+<htmlinclude>
+<center> <!--Creative Commons License--><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/"><img alt="Creative Commons License" border="0" src="http://creativecommons.org/images/public/somerights20.png"/></a><br/>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/">Creative Commons Attribution-NonCommercial-ShareAlike 2.5  License</a>.<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<Work rdf:about="">
+		<license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/" />
+	<dc:type rdf:resource="http://purl.org/dc/dcmitype/InteractiveResource" />
+	</Work>
+	<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/><requires rdf:resource="http://web.resource.org/cc/ShareAlike"/></License></rdf:RDF> -->
+</center>
+</htmlinclude>
+<para/>
+
+<para/>
+
+<para/>
+
+
+
+
+
+
+</newpage>
+
+
+</courseGenie>
+

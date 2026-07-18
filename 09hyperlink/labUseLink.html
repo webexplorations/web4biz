@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+<!-- .html -  
+  Peter Johnson - peterk@webExplorations.com
+  Written:   08-08-13 
+  Revised:   
+  -->
+ <title>AdventureWorks On Azure</title>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+   /* HTML MARKUP using class="expand" for the <img /> element.
+      Don't use any in-line CSS (it overrides the jQuery/embedded CSS).
+      
+      The Hyperlinks to full-size image are used if jQuery is not available.
+           
+      <a href="graphic/moduleList.png" target="_blank">
+         <img class="expand" src="graphic/moduleList.png" alt="module list in the SHARE course" style="float:left;"  />
+      </a>
+   */
+   $(document).ready(function( ) {
+     //alert("jQuery working");
+     $(function( ) {
+        $(".expand").click(function() {
+           // prevent the hyperlink from happening if jQuery active
+           $("a").removeAttr('href');
+           var thisImage = $(this);
+           thisImage.toggleClass('expand-change');
+        });
+     });
+   });
+</script>
+
+ <style type="text/css">
+  body {
+  background:  #EEE;
+  font-size:   16px;
+  font-family: optima, helvetica, arial, sans-serif;
+  }
+  
+  header img {
+  float:       left;
+  width:       150px;
+  margin:      0;
+  padding:     0;
+  }
+  
+  header {
+  background:    #CECECE;
+  border:        1px solid #000080;   
+  margin:        10px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;   
+  }
+  
+  article {
+  background:  white;
+  padding:     10px;
+  margin:      10px;
+  border:      1px solid #000080;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;   
+  }
+  
+  
+  li {
+  margin:     0 0 1em 0;
+  }
+  
+  h1, h2, h3, h4 {
+  color:                 #000090;      
+  }
+  
+  .code {
+     font-family:        "courier new", courier, monospace;
+     font-weight:        700;
+     font-size:          16px;
+  }
+  
+  /* use this to designate pre-existing code */
+  .codeLight {
+  color:                 #888;    
+  }
+  
+  #frame {
+  max-width:   800px;
+  margin:      auto;
+  border:      1px solid #000080;
+  padding:     20px;
+  }
+
+  /* CSS for the jQuery expanding images */
+  .expand {
+     width:             15%;
+     height:            15%;
+     margin:            10px 0px;
+     border:            1px blue solid;
+     -webkit-transition: width 2s ease, height 2s ease;
+     -moz-transition:   width 2s ease, height 2s ease;
+     -o-transition:     width 2s ease, height 2s ease;
+     transition:        width 2s ease, height 2s ease;
+  } 
+  
+  .expand-change {
+     width:              100%;
+     height:             100%;
+     margin:             10px 0px;
+     border:             1px purple solid;
+     -webkit-transition: width .5s ease, height 1s ease;
+     -moz-transition:    width 1s ease, height 1s ease;
+     -o-transition:      width 1s ease, height 1s ease;
+     transition:         width 1s ease, height 1s ease;
+     -webkit-box-shadow: 14px 18px 52px -1px rgba(23,36,69,1);
+     -moz-box-shadow:    14px 18px 52px -1px rgba(23,36,69,1);
+     box-shadow:         14px 18px 52px -1px rgba(23,36,69,1);  } 
+  
+ </style>
+</head>
+<body>
+<div id="frame">
+<header>
+   <img src="../graphic/a.png" alt="logo of the a element" />
+      <h1>WebDev - Learning Lab</h1>
+      <h2>Lab: Using Hyperlinks</h2>
+</header>
+
+<article>
+   <h3>Introduction </h3>
+   <p>
+   In this lab you will be building a mini-test site to experiment with linking and downloading files.
+   </p>
+</article>
+
+<article> 
+      <p>
+         <strong>This Learning Lab will help you discover the following:</strong>
+      </p>
+      <ul>
+      <li>Create hyperlinks to other files on your site.</li>
+      <li>Create anchors on a page.</li>
+      <li>Create hyperlinks to anchors located on the same web page.</li>
+      <li>Create hyperlinks to other pages.</li>
+      <li>Create hyperlinks to anchors on other pages.</li>
+      <li>Create hyperlinks to pages out on the Web.</li>
+      <li>Create a link that will download files for the user.</li>
+   </ul>
+</article>
+
+     
+<article>
+   <h3>Create a Folder and Three Files</h3>
+   <ol>
+      <li><strong>09hyperlink folder</strong> - (You may already have created this folder during the first week of this course.)</li>
+      <li><strong>index.html</strong> - Inside this folder create a basic web page named index.html or copy and paste an existing web page from your site into this folder.</li>          
+      <li><strong>longPage.html</strong> - Create a new page from your HTML template containing several headings and LOTS of text. You can use <a href="http://www.lipsum.com/" target="_blank">Lorem Ipsum</a> to fill the page up with dummy text.
+      <br /><br />
+      <i>Lorem Ipsum Tip:</i> Right-mouse click on the generated page and select "View Source". Scroll down to the actual Lorem Ipsum paragraphs and copy those. That way you won't have to add your own &lt;p> elements to the text.
+      <br />
+      <br />
+      Half way down this page create an &lt;h2> heading with the text, "My Favorite Things".</li>
+      <li><strong>A non-HTML File</strong> - Find a file that the user might want to download from your page. This could be a Word file, a PowerPoint, or and Excel spreadsheet. Any type of file that does not end with .html, .gif, .png, or .pdf. will work. Put this file in the same folder as your index.html file.
+      <ul class="tight">
+         <li>.exe - An executable file (a program that runs&nbsp;such as an installation program.)</li>
+         <li>.xls - An Excel file</li>
+         <li>.ppt - A PowerPoint File</li>
+         <li>.doc  or .docx&nbsp; - A Word Document</li>
+         <li>.zip - a compressed file</li>
+      </ul>
+      </li>
+   </ol>
+</article>
+
+<article>   
+   <h3>Add Text to index.html</h3>
+   <p>
+<strong>Add the following HTML items to 09hyperlink/index.html</strong>
+   </p>
+     <ul>
+      <li>An &lt;h1&gt; describing your page - For example: Peter Johnson's Home Page</li>
+      <li>An &lt;img /&gt; element displaying an image</li>
+      <li>Text to fill the page. We need to give the page some depth so you can see the anchors at work. You can use any content you want, including Lorem Ipsum.</li>
+      <li>An ordered list containing each of the following lines of text:
+         <ol class="tight">
+            <li>View a very,very long page.</li>
+            <li>View a very,very long page opening a new tab.</li>
+            <li>Go to the bottom of this page.</li>
+            <li>View "My Favorite Things"</li>
+            <li>Jump to South Central College website.</li>
+            <li>Download this file (Give the name of the file).</li>
+         </ol>
+      </li>
+     </ul>
+</article>
+
+<article>   
+   <h3>Link to another page on the same site</h3>
+   <p>
+   On index.html, edit the list item "View a very long page", adding in a hyperlink. The light-gray code should already be on the page.</p>
+   <pre class="code">
+   &lt;a href=&quot;longPage.html&quot;>
+   <span class="codeLight">View a very,very long page.</span>
+   &lt;/a>
+   </pre>
+   <p>
+   This code will replace the text inside of the &lt;li&gt; &lt;/li&gt; tags.
+   </p>
+   <p>
+   Save the page and view it in a browser. When you click on the link it should display the long page in your browser.
+   </p>
+ </article>
+   
+ 
+<article>   
+   <h3>Link to another page on the same site opening a new tab.</h4>
+   <p>
+   Edit the second list item "View a very long page opening in a new page", replacing the text with this code. (The light-gray code should already be on the page.)</p>
+   <pre class="code">
+   &lt;a href=&quot;longPage.html&quot; target=&quot;_blank&quot;>;
+   <span class="codeLight">View a very,very long page opening a new tab.</span>
+   &lt;/a>
+   </pre>
+   <p>
+   This is the same hyperlink, adding the attribute target=" ".
+   </p>
+   <p>
+   Save the page and view it in a browser. When you click on this link it should display the long page in a new tab.
+   </p>
+</article>
+ 
+<article>
+   <h3>2 Ways to Create Anchors.</h3>
+   <h4>Using the &lt;a> element</h4>
+   <p>
+   In index.html, right above the &lt;\body> tag, add an anchor:
+   </p>   
+   <pre class="code">
+   &lt;a name="bottomOfPage">&lt;/a>          
+   </pre>
+   <p>
+   This is a hidden anchor because it doesn't have any text to display.
+   </p>
+   <hr width="33%" />
+   <h4>Using the id=" " attribute</h4>
+   <p>
+   In longPage.html add an id="favorite" attribute to the &lt;h2>My Favorite Things&lt;/> heading.
+   </p>   
+   <pre class="code">
+   &lt;h2 id="favorite">My Favorite Things&lt;/p>
+   </pre>
+</article>
+
+<article>
+   <h3>Link to an anchor.</h3>
+   <p>
+   In index.html, edit the third item in the list, replacing it with a link to the anchor at the bottom of the page. (The light-gray code should already be on the page.)
+   </p>  
+   <pre class="code">
+  <span class="codeLight"> &lt;li></span>
+   &lt;a href="#bottomOfPage">
+   <span class="codeLight">Go to the bottom of this page.</span>
+   &lt;/a>
+  <span class="codeLight"> &lt;/li></span>
+   </pre>
+   <p>
+   Save the file and view the page. When you click on this link the browser should jump to the bottom of the page. If you don't have enough text on the page to show the change use CTRL + to make the text larger.
+   </p>
+   <p>
+   The browser treats the anchor as an id, or a unique place marker on the page.
+   </p>
+</article>
+ 
+<article>
+   <h3>Link to an anchor on another page.</h3>
+   <p>
+   In index.html, edit the fourth item in the list, replacing it with a link to the anchor you added to the long page.
+   </p>  
+   <pre class="code">
+   <span class="codeLight">&lt;li></span>
+   &lt;a href="longPage.html#favorite">
+   <span class="codeLight">View "My Favorite Things"</span>
+   &lt;/a>
+   <span class="codeLight">&lt;/li></span>
+   </pre>
+   <p>
+   Save the file and view the page. When you click on this link the browser should jump to the longPage.html and then down to the h2 heading, My Favorite Things.
+   </p>
+</article>
+
+<article>
+   <h3>Link to a page on the Web.</h3>
+   <p>
+   In index.html, edit the fifth item in the list, replacing it with a link to South Central College's website.
+   </p>  
+   <pre class="code">
+   <span class="codeLight">&lt;li></span>
+   &lt;a href="http://southCentral.edu">
+   <span class="codeLight">Jump to South Central College website.</span>
+   &lt;/a>
+   <span class="codeLight">&lt;/li></span>
+   </pre>
+   <p>
+   When the browser sees the text http://  it knows to go out on the Web to find that domain/filename. In this case it would be a file named index.html on the domain SouthCentral.edu
+   </p>    
+</article>
+
+<article>
+   <h3>Links to Download Files</h3>
+   <p>
+   In index.html, edit the sixth item in the list, replacing it with a link to the non-HTML file you have in the folder. For the href=" " attribute use the actual filename of your file including the extension.
+   </p>  
+   <pre class="code">
+   <span class="codeLight">&lt;li></span>
+   &lt;a href="replaceThisWithTheNameOfYourNon-HTMLFile.???">
+   <span class="codeLight">Download this file (Give the name of the file).</span>
+   &lt;/a>
+   <span class="codeLight">&lt;/li></span>
+   </pre>
+   <p>
+   When the browser sees a file that it does not know how to display, it opens a file/save input window for the user, or automatically downloads the file into the user's download folder, depending on how her or his browser is set.
+   </p>  
+   <p>
+   Save the file and click on the link. Look for the file in your download folder using Windows Explorer.
+   </p>  
+</article>
+
+<article>
+<h3>Links Around Images</h3>
+   <p>
+   In index.html, locate the &lt;img /> element. Treat it like text, wrapping an &lt;a>&lt;/a> element around it.
+   </p>
+   <p>
+   You will be using the same filename for both the href=" " attribute in the &lt;a> tag and the src=" " attribute in the &lt;img /> element.
+   </p>
+   <p>
+   Under the image add a paragraph telling the user to click on the image. (The light-gray code should already be on the page.)
+   </p>
+   
+   <pre class="code">
+   &lt;a href="nameOfYourImage.png" target="_blank">
+   <span class="codeLight">&lt;img src="nameOfYourImage.png" </span>
+        style="width:100px;border:purple solid 1px;" 
+        <span class="codeLight">alt="description of your image" /></span>
+   &lt;/a>
+   
+   &lt;p>(Click on the image for a larger view.)&lt/p>
+   
+   </pre>
+   <p>
+   When the user clicks on the image it triggers the hyperlink, displaying the actual image file in a new tab. In-line styling was used for the &lt;img /> element so the difference is obvious. Adjust as necessary.
+   </p>  
+</article>
+
+
+<article>
+   <h3>What have you learned?</h3>
+   <ul>
+      <li>What two techniques can you use to create an anchor?</li>
+      <li>How to jump to anchors on the same page?<br />
+      How to jump to anchors on another page on the same site?<br />
+      Why didn't we learn how to jump to anchors on a site out on the Web?</li>
+      <li>How do we jump to a site out on the Web? What is the key text to tell the browser to look on the Web?<br />
+      What happens if a filename is not included after the domain name?<br />
+      What happens if an index.html is not found on a server?</li>
+      <li>What makes a file download instead of displaying in the browser?</li>
+      <li>What is the trick of using a thumbnail graphic so users can view a larger image?</li>
+   </ul>
+</article>
+<p style="font-size:10px;font-weight:200;">
+Revised: 03-25-15
+</p>
+</div>
+
+</body>
+</html>

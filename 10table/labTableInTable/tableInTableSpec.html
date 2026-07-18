@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Lab Table in Table</title>
+<!-- CSS Styles -->
+<style type="text/css">
+body {
+font-family:     Arial, Helvetica, sans-serif; 
+font-size:       large;
+}
+
+#frame {
+width:                 800px;
+margin:                0px auto 20px 5px;  /* center frame on page */
+}
+/* headings dark blue */
+/* always start a new page for level one head */
+h1, h2, h3, h4, h5, h6 {
+ padding:              5px 20px  5px 20px;
+ margin:               0px 0px 0px 0px;
+}
+
+h1, h2 {
+background-color:       #A5CBF2 ;   /* pale blue */
+border:                 1px solid #000080; /* dark blue */
+}
+
+h1 {
+ font-size:             160%; 
+}
+h2 {
+ font-size:             120%; 
+}
+
+h3 {
+font-size:              110%;
+color:                  #000080;  /* dark blue */  
+}
+
+p, li {
+padding:                5px;
+margin:                 0px 20px 0px 20px;  
+}
+
+</style>
+
+</head>
+<body>
+<div id="frame">
+<h1 align="center" class="grayBlock"> Practice Lab<br />
+Coding a Table inside a Table</h1>
+<h3>Tables can be nested inside of tables. This gives the web programmer control of object
+  placement inside any particular cell.<br />
+<a href="graphic/tableInTableFinalOutput.png" target="_blank"><img src="graphic/tableInTableFinalOutput.png" alt="Final Output of Table inside of table" width="400" hspace="20" vspace="20" border="2" /></a></h3>
+<p><strong>This practice lab will allow you to explore:</strong></p>
+<ul>
+   <li>A quick way to build tables inside of tables</li>
+   <li>How to use CSS to style the tables on a page</li>
+   <li>How to use the id=&quot; &quot; attribute inside an element to selectively style items using CSS</li>
+</ul>
+<h3>The key technique is to write two separate tables. </h3>
+<p>Once you get them set up the way you want them, simply copy the inner table code and paste it inside the specific cell of the outer table.</p>
+<p>&nbsp;</p>
+<h2>Begin with the main or outer table</h2>
+<ol>
+  <li>Use the <a href="tableInTableSTART.html">tableInTableSTART.html </a>file as a starting point.&nbsp; (right-mouse click on the file, choose &quot;Save Link As&quot; from list of options.)</li>
+  <li>View this table in a browser. (Click on the image for a larger view.)<br />
+     <a href="graphic/tableInTableStartOutput.png" target="_blank"><img src="graphic/tableInTableStartOutput.png" alt="Output for Table inside Table Start file" width="400" hspace="20" vspace="20" border="2" /></a><br />
+  </li>
+  <li>Notice how the width of the columns can be established in the &lt;th&gt; or &lt;td&gt; elements. This only has to be done in the first row.<br />
+     <a href="graphic/tableInTableWidth.png" target="_blank"><img src="graphic/tableInTableWidth.png" alt="Setting the width of the column" width="400" hspace="20" vspace="20" border="2" /></a><br />
+  </li>
+  <li>Notice as you change the size of the browser, the table automatically adjusts. This is controlled using the  CSS width statement for the table selector.<br />
+     <a href="graphic/tableInTableCSSWidth.png" target="_blank"><img src="graphic/tableInTableCSSWidth.png" alt="width of table set in CSS" width="400" hspace="20" vspace="20" border="2" /></a></li>
+  <li>Notice how the CSS border property is set for the table, td, and th selectors. That gives the table the grid effect most people are used to. It also means you can control if the borders show just around the table itself or around each cell.<br />
+  </li>
+</ol>
+<h2>Create the Second Table </h2>
+<ol>
+  <li>
+     <p>Inside the &lt;body&gt; element,  right before the &lt;h1&gt; heading, create another table. <br />
+        Putting it at the top of the page will make it easier to see as you develop the table. You won't have to scroll down the page every time you preview the results.<br />
+        <a href="graphic/tableInTableInnerTable.html.png" target="_blank"><img src="graphic/tableInTableInnerTable.html.png" alt="Code for Second table" width="400" border="2" /></a><br />
+        <br />
+        Here is what the finished page should look like (click on the image for a larger view):<br />
+        <br />
+        <a href="graphic/innerTableSeparate.png" target="_blank"><img src="graphic/innerTableSeparate.png" alt="Inner and outer tables as separate objects" width="400" hspace="20" vspace="20" border="2" /></a></p>
+  </li>
+</ol>
+  
+  
+<h2>Use id=&quot; &quot; attributes to apply specific styles
+  </h2>
+<h3>Often a web designer will want the inner table to have a different look and feel. You can use CSS to do this. <br />
+</h3>
+<ol>
+   <li><strong>CSS Best Practices:</strong> Always write the CSS to style from general to specific.<br />
+      For example, write the CSS selectors that style all of the table, th, and td elements.<br />
+   Then, follow that with specific CSS selectors for more specific styling changes.<br />
+   <br />
+   </li>
+   <li>In the &lt;table&gt; element of the inner table, add an id=&quot; &quot; attribute.<br />
+      <br />
+      <a href="graphic/tableID.png" target="_blank"><img src="graphic/tableID.png" alt="add id attribute to the inner table " width="400" hspace="20" vspace="20" border="2" /></a><br />
+      <br />
+   </li>
+   <li>Inside the &lt;style&gt; element in the &lt;head&gt; add styling for this specific table without affecting any other tables on the page. <br />
+      Write the specific CSS properties AFTER the more general ones.<br />
+      <br />
+      You should already have the general CSS code written. Just add a nice comment at the top identifying this code.<br />
+      Then add the more specific table styling.
+      <br />
+      <br />
+      <a href="graphic/general2Specific.png" target="_blank"><img src="graphic/general2Specific.png" alt="styling specific id items" width="400" hspace="20" vspace="20" border="2" /></a><br />
+      <br />
+      Note how the more specific #innerTable td and #innerTable th both require the id marker and are separated with a comma.<br />
+      <br />
+      <strong>Here is what the output should look like: </strong>(click on the image for a larger view).
+      <br />
+      <a href="graphic/cssIDOutput-1.png" target="_blank"><img src="graphic/cssIDOutput-1.png" alt="Output showing the specific styling for the inner table" width="400" hspace="20" vspace="20" border="2" /><br />
+      <br />
+   </a>If you added more tables to the page (without using the id=&quot; &quot; attribute) they would be styled just like the larger, outer table using the more generic table CSS selectors.</li>
+</ol>
+<p>&nbsp;</p>
+<h2> Add the Images</h2>
+<ol>
+   <li>In the same folder as the .html page you are developing, create a new folder named: <strong>graphic</strong>.<br />
+      <br />
+      Here is a suggested folder structure. You may have slightly different names for the folders on your computer. <br />
+      The important thing is to understand the relationship between this particular graphic folder and the web page you are building. They are both in the same folder.
+      <br />
+      <br />
+   <strong>Notice the path statement at the bottom of the screen shot. </strong>This is the full or exact name of the file, showing its location in&nbsp;the file system (the file hierarchy).<br />
+   <br />
+   <a href="graphic/folderStructure.png" target="_blank"><img src="graphic/folderStructure.png" alt="folder structure" width="400" hspace="20" vspace="20" border="2" /></a><br />
+   <br />
+   </li>
+   <li><strong>Save the images to the graphic folder.</strong> Right-mouse
+      click on each image below. Select &quot;save image as&quot; from list of options.<br />
+   Save these in the <strong>graphic</strong> folder.&nbsp; &nbsp;<br />
+   <br />
+   <strong>Follow the naming conventions! <br />
+   </strong>(Start with lower case, no spaces, no underscores, no plurals. useCamelCaseOnlyCapitalizingTheFirstLetterOfNewWords)
+   <br />
+   This will help you get the spelling correct when your files are moved out to the server which enforces UPPER/lowercase.
+   &nbsp;&nbsp; &nbsp;<br />
+   <br />
+<img src="graphic/firework.gif" alt="Couple watching fireworks" width="188" height="140" border="2" />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="graphic/handstand.jpg" alt="Person Doing Handstands" width="150" height="150" border="2" /><br />
+<br />
+<br />
+   </li>
+   <li><strong>Now, back to the inner table.&nbsp;</strong> Replace the &quot;Inner R1C1&quot; and &quot;Inner R1C2&quot;
+   text strings with an &lt;img /&gt; element inside the top two &lt;td&gt; cells.<br />
+Replace the lower &quot;Inner R2C1&quot; and &quot;Inner R2C2&quot; text strings with some captions inside the lower two &lt;td&gt; cells.<br />
+<br />
+Here is some code you can use as a guide:<br />
+<a href="graphic/addingImageCode.png" target="_blank"><img src="graphic/addingImageCode.png" alt="Adding Images and Captions to the inner table" width="400" hspace="20" vspace="20" border="2" /></a><br />
+<br />
+<strong>Here is what it should look like when you have the images and captions in place:</strong><br />
+<br />
+<a href="graphic/addingImageOutput.png" target="_blank"><img src="graphic/addingImageOutput.png" alt="Output showing images and captions" width="400" hspace="20" vspace="20" border="2" /></a><br />
+<br />
+   </li>
+   <li><strong>Let's center the captions inside the row and make them bolder.<br />
+      </strong> The quickest way to do that is to center the text in the row using CSS.<br />
+      <br />
+      <a href="graphic/cssCenterCaption.png" target="_blank"><img src="graphic/cssCenterCaption.png" alt="Center the captions" width="400" hspace="20" vspace="20" border="2" /></a><br />
+      <br />
+      You could have set up a specific id=&quot; &quot; attribute for this row, but try to keep things as simple as you can. Later, if you needed to be more specific you can always take that road.<br />
+   </li>
+</ol>
+<h2>Move the Inner Table into Position (In 3 steps without using the mouse!)</h2>
+<h3> Finally, we have the everything set up the way we want, especially with the inner table. </h3>
+<h3>Now it is simply cutting the&nbsp;inner table code (including the comments) and pasting it inside the &lt;td&gt; data&nbsp;cell of the outer table.</h3>
+<p><strong>1. Select the inner table code</strong>. A great trick is to click and drag down the line numbers (in most text editors). This selects the entire line(s) and perserves your code formatting.<br />
+   <br />
+   <strong>2. Cut the code using CTRL X.</strong></p>
+<p><strong>3. Repostion the cursor and paste the code using CTRL C.</strong><br />
+   <br />
+   Let's put it in the R2C2 position of the larger table.</p>
+<p><strong>Here is the code&nbsp;after it has been moved:</strong>&nbsp; (Click on image for larger view)</p>
+<p><a href="graphic/tableInTableCode.png" target="_blank"><img src="graphic/tableInTableCode.png" alt="Table in Table code" width="400" hspace="20" vspace="20" border="2" /></a></p>
+<p><strong>And here is a sample of what you output should look like:&nbsp;</strong> (Click on the image for a larger view.)</p>
+<p><a href="graphic/tableInTableUncentered.png" target="_blank"><img src="graphic/tableInTableUncentered.png" alt="Table inside of table uncentered" width="400" hspace="20" vspace="20" border="2" /></a></p>
+<h3><strong>Finish up with a bit of CSS to get everything centered:</strong></h3>
+<p><a href="graphic/cssCenterAll.png" target="_blank"><img src="graphic/cssCenterAll.png" alt="Use CSS to center all" width="400" hspace="20" vspace="20" border="2" /></a></p>
+<p><strong>And here is the finished page:</strong> (Click on the image for a larger view.)</p>
+<p><a href="graphic/tableInTableFinalOutput.png" target="_blank"><img src="graphic/tableInTableFinalOutput.png" alt="Final Output of Table inside of table" width="400" hspace="20" vspace="20" border="2" /></a></p>
+<p><strong>Here is the complete source code:&nbsp;</strong> <a href="tableInTableFINAL.html" target="_blank">tableInTableFINAL.html</a>.&nbsp; (Right-mouse click on&nbsp;the file. Choose &quot;save link as&quot; from the list of options.)</p>
+<hr />
+<p>
+   Tutorial written by Peter K. Johnson<br />
+   Revised: March 18, 2011 by Peter Johnson
+</p>
+</div> <!-- end of #frame -->
+</body>
+</html>

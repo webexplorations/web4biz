@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- calendar.html - Using tables and CSS to create a calendar
+     Peter Johnson
+     Written:  03-11-09
+     Revised:  03-12-09
+-->
+<head>
+   <title>Calendar</title>
+   
+   <style type="text/css">
+   body {
+   background:  #EEEEEE url( ) no-repeat; 
+   }  
+   
+   table {
+   border:          1px solid #000090; /* dark blue border */
+   border-spacing:  2px 4px;           /* narrow left-right border */
+   font-family:     "Lucida Grande", Futura, Arial, sans-serif;
+   } 
+   
+   th {
+   border:          1px solid #900000; /* dark red border */
+   color:           #009000;           /* forest green */
+   font-size:       65%;
+   text-transform:  uppercase; 
+   padding:         0px 5px 0px 5px; 
+   }
+   
+   caption {
+   font-size:       200%;
+   font-style:      italic;
+   font-family:     "Lucida Grande";
+   }
+   
+   td {
+   border:          1px solid #000090;  /* dark blue */
+   height:          5.5em;
+   width:           5.5em;
+   padding:         5px;
+   vertical-align:  top;
+   }
+   
+   /* odd rows */
+   tr {
+   background-color: white;   
+   }
+   
+   /* even rows */
+   tr.even {
+   background-color: #D2D2F8;  /* very light blue */ 
+   }
+   
+   /* text added for specific dates on the calendar */
+   .note {
+    font-size:       80%;
+    text-align:      right;
+    padding-left:    20px 
+   }
+   </style>
+   
+</head>
+<body>
+   <h1>Calendar</h1>
+
+   <table summary="calendar"
+          border="3">
+   <caption>January</caption>   
+   <!-- Day of Week -->
+   <tr>
+     <th>Sun</th>
+     <th>Mon</th>
+     <th>Tues</th>
+     <th>Wed</th>
+     <th>Thurs</th>
+     <th>Fri</th>
+     <th>Sat</th>
+   </tr>
+
+   <!-- week one -->
+   <tr>
+     <td>1</td>
+     <td>2</td>
+     <td>3</td>
+     <td>4</td>
+     <td>5</td>
+     <td>6 
+        <div class="note">
+           Tony's Birthday
+        </div>
+     </td>
+     <td>7</td>
+   </tr>
+   <!-- week two -->
+   <tr class="even">
+     <td>8</td>
+     <td>9</td>
+     <td>10</td>
+     <td>11</td>
+     <td>12</td>
+     <td>13</td>
+     <td>14</td>
+   </tr>
+   
+   <!-- week three -->
+   <tr>
+     <td>15</td>
+     <td>16</td>
+     <td>17</td>
+     <td>18</td>
+     <td>19</td>
+     <td>20</td>
+     <td>21</td>
+   </tr>
+   <!-- week four -->
+   <tr class="even">
+     <td>22</td>
+     <td>23 
+        <div class="note">
+           Sally's Birthday
+        </div>
+     </td>
+     <td>24</td>
+     <td>25</td>
+     <td>26</td>
+     <td>27</td>
+     <td>28</td>
+   </tr>
+
+   </table>
+   </body>
+</html>

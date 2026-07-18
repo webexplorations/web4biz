@@ -1,0 +1,446 @@
+1. Why do you need to specifically eject a flash drive before removing it from the computer?
+a) To make sure there are no viruses being transferred to the flash drive.
+@@Viruses don't play a direct part here.
+*b) To flush the memory buffer between the computer and the flash drive.
+@@Correct!
+c) To flush the memory buffer on the flash drive so no data is lost on the computer.
+@@The memory buffer is on the main system or the computer, not the flash drive.
+d) To calculate how big the finished file will be on the flash drive.
+@@This is done automatically by the operating system as the file is read onto the flash drive.
+
+2. Flash drives are considered to be ____________________.
+a) multi media
+@@multi media would be videos, animations, and audio files. These could be stored on a flash drive but the flash drive itself is not considered to be multi media.
+*b) external media
+@@Correct. Any external storage device such as hard disks, flash drives, or USB connections to cameras are all considered multi media.
+c) mobile devices
+@@mobile devices are cell phones or tablet computers.
+d) always connected to the system
+@@Nope. The beauty of a flash drive is that it can easily be disconnected from the system and carried around.
+e) meta data
+@@meta data is data about data. The structure of a file would be meta data about that file.
+
+3. A buffer is ______________.
+a) like a car that carries people all different places.
+b) like a sponge that holds information instead of water. When it becomes full the extra water (or information) runs off.
+*c) like a glass of water that is emptied automatically as soon as the water reaches a certain level. 
+d) like a traffic cop who tells which car can go at what time.
+
+4. When using a flash drive or other external media data is stored in a buffer. As soon as the buffer becomes full the data is __________________.
+a) flushed out of the buffer
+b) written back to the computer
+c) erased from the computer but saved in the buffer
+*d) written to the flash drive and then then buffer is emptied, waiting for more data to build up.
+
+5. If you don't eject a flash drive properly _____________.
+a) You may lose the information on your computer.
+@@The data remains on your computer. It is the data in the buffer that could be lost before it is written to the flash drive.
+*b) There may still be data in the buffer which hasn't been transferred to the flash drive and it will be lost.
+c) Everything on the flash drive could be deleted.
+@@No, only the information in the temporary buffer.
+d) Specific information that you just typed would be lost from your computer and your flash drive. It is not a pretty sight.
+@@No, only the information in the temporary buffer.
+
+6. On a Mac you don't have to eject a flash drive, just external hard drives.
+False
+T@@All external media must be ejected properly to move the data from the temporary buffer onto the external device. A flash drive like an external hard drive is considered external media.
+
+7. When using Windows 8 you don't have to eject a flash drive, just external hard drives.
+False
+T@@All external media must be ejected properly to move the data from the temporary buffer onto the external device. A flash drive like an external hard drive is considered external media. 
+
+8. When using Windows 7 you don't have to eject an external hard disk, just flash drives.
+False
+T@@All external media must be ejected properly to move the data from the temporary buffer onto the external device. A flash drive like an external hard drive is considered external media. 
+
+9. When creating new folders in Windows where can you right-mouse click to get the "new/folder" option?
+a) On the menu bar when the mouse is over the File option.
+b) On any folder or device in the left panel.
+c) Simply click on any file or folder icon.
+d) Position the cursor on the text of a file or folder name.
+*e) On the blank background area of the file listing panel of File Manager.
+
+10. A quick way to change to a different program that is running on your computer is to use ____________. Hold the first key down and then tap on the second key to rotate through all the programs icons.
+*a) COMMAND-TAB on the Mac or ALT-TAB on Windows
+b) COMMAND-F1 on the Mac or CONTROL-TAB on Windows.
+c) COMMAND F12 on a Mac or ALT-F12 on Windows.
+d) FN-TAB on the Mac or WINDOWS-TAB on Windows.
+
+11. True or False: Windows Explorer is the same thing as Internet Explorer (IE).
+False
+T@@Windows Explorer is the file management program for Windows 7. Internet Explorer (IE) is a browser used for viewing web pages.
+
+12. True or False: Windows Explorer is very similar as File Explorer. Just different versions.
+True
+F@@Windows Explorer is the file management tool for Windows 7 and earlier versions of Windows. In Windows 8 they renamed it to File Explorer.
+
+13. True or False: File Explorer is designed to accomplish the same thing as Finder on the Mac.
+True
+F@@File Explorer, Windows Explorer, and Finder on the Mac are all used to help you manage the files and folders on your system.
+
+14. True or False: Finder is used for the same task as Internet Explorer, Chrome, and Firefox.
+False
+T@@Finder is like File Explorer. It is used to manage the file system. Internet Explorer, Chrome, and Firefox are all browsers designed to display web pages.
+
+15. True of False: Files can contain folders.
+False
+T@@Folders contain things. But files cannot contain a folder. That would be like saying a piece of paper can hold a file folder. It just doesn't work.
+
+16. Folder names do not have an extension (ie .doc or .html) Why?
+a) File extensions are optional on both files and folders. They are to help us remember things. The computer just ignores them.
+@@Extensions are very useful to the computer, but just so it knows what to do with a file. 
+b) If you put an extension on a folder you might end up with a double extension because the real extension on folder names is always hidden from view.
+@@Files may have the extension hidden but folders have no extension, hidden or otherwise.
+*c) Folders only hold things. They don't do anything else, so the operating system doesn't need to have an indication of what program to use when a user double clicks on a folder. It simply opens to show what is inside.
+
+17. What type of program will most likely run if a user double-clicks on a file with the extension .ppt or .pptx?
+*a) PowerPoint
+b) Microsoft Word
+c) Microsoft Excel
+d) Google Chrome
+e) File Manager
+
+18. What type of program will most likely run if a user double-clicks on a file with the extension .doc or docx?
+a) PowerPoint
+*b) Microsoft Word
+c) Microsoft Excel
+d) Google Chrome
+e) File Manager
+
+19. What type of program will most likely run if a user double-clicks on a file with the extension .xls?
+a) PowerPoint
+b) Microsoft Word
+*c) Microsoft Excel
+d) Google Chrome
+e) File Manager
+
+20. True or False: You can change your system so it opens a specific program based on the extension. For example, you can change Windows so it will automatically open Google Chrome instead of Internet Explorer (IE).
+True
+TF@@Right-mouse click on the filename in File Manager and select  the option "Open with" and then select "Choose default program..."
+
+21. True or False: A shortcut in Windows is the same thing as an alias on the Mac.
+True
+
+22. True or False: You can rename a shortcut to anything you want without affecting the original file.
+True
+F@@A shortcut or alias is a pointer to the actual file. You can think of it as a nickname. If you change you nickname your birth name isn't affected.
+
+23. True or False: If you delete a shortcut on your system the original file will be deleted as well. So be careful!
+False
+T@@A shortcut or alias is a pointer to the actual file. If you delete the shortcut the original file will not be affected.
+
+24. You can tell an icon is a shortcut by _______________.
+a) Looking at the name of the file
+b) Looking for a small arrow in the upper right-hand corner of the file icon
+c) noticing that the icon color is lighter or faded out when compared to the original file
+*d) Looking for a small arrow in the lower left-hand corner of the file icon
+e) Looking for the astericks "*" in the filename.
+
+25. True or False: If you set up a shortcut to a file on a flash drive it will always be valid as long as the flash drive is inserted in the computer.
+False
+T@@Windows assigns drive letters to external media. So, one time your flash drive might be E: and another time (if there is already a flash drive attached) it might be F:. The shortcut will always be looking for a specific drive letter.
+
+26. The most useful view to use in File Manager to look at a folder filled with graphic files is the __________.
+*a) Icon View
+b) List View
+c) Detail View
+d) Default View
+e) Path View
+
+27. The most useful view to use in File Manager to see a lot of filenames all on the same page is the __________.
+a) Icon View
+*b) List View
+c) Detail View
+d) Default View
+e) Path View
+
+28. The most useful view to use in File Manager to sort files by their date/time stamp is the  __________.
+a) Icon View
+b) List View
+*c) Detail View
+d) Default View
+e) Path View
+
+29. The most useful view to use in File Manager to sort files by name and is the  __________.
+a) Icon View
+b) List View
+*c) Detail View
+d) Default View
+e) Path View
+
+30. The most useful view to use in File Manager to group all the files by type or file extension is the __________.
+a) Icon View
+b) List View
+c) Detail View
+*d) Default View
+e) Path View
+
+31. The path statement tells the system ____________.
+*a) where a particular file is located in the series of folders and subfolders
+b) where a file is located in memory
+c) all the different places on the computer's hard drive where copies of a particular file are located
+d) where the device files (drivers) are located on the system.
+e) the metadata is located describing the different software versions used on the system.
+
+32. Using File Manager you can see the path to the selected file ___________.
+*a) at the top of the File Manager window
+b) along the bottom margin of the File Manager window
+c) when you mouse-over a filename (in the tool-tip that pops up)
+d) when you right-mouse click on the filename and select "Show Path"
+
+33. True or False - It is smart to hide file extensions on your system.
+False
+T@@You WANT to see the file extensions. As a computer user you need to know what type of files you are working with, especially when you rename them.
+
+34. File extensions are ___________________.
+a) used to organize files by categories. They are much like keywords or tags
+@@No. File extensions are used by the operating system to determine with program to run when the user double-clicks on a file.
+b) not really important because the computer ignores them
+@@The operating system uses the file extension so it knows what program to open when the user double-clicks on that file icon.
+c) nice to have but are best kept hidden
+@@The exact opposite. You WANT to be able to always see the full name of the file including the extension.
+*d) tell the system what program to use to view or run the file when the user double-clicks on the file
+e) always added to every file name and folder name
+@@No! Don't add extensions to folder names. It gets very confusing. Folders only hold things. They don't need an extension.
+
+35. True or False - You can turn file extension on so they always display in both Windows and on a Mac.
+True
+
+36. True or False - If you can't see the file extensions it is possible to rename a file with a double extension such as: myfile.html.txt. The operating system will use the last extension to display or run the file.
+True
+
+37. To turn on file extensions in Windows you first have to unhide the menu bar if it is hidden (Organize/Layout/Menu bar). On the menu bar use the following selection:
+a) File/Properties/Show Extensions
+b) View/Folder Options/Show File Extensions/Always
+*c) Tools/Folder Options/View/Uncheck "Hide extensions for known file types"
+d) View/Tools/Check "Show extensions for known file types"
+e) Tools/General/Check "Show file extensions"
+
+38. Files normally display in alphabetical order. What is a good way to name files to group them in numeric order.
+a) This can't be done with today's software.
+b) Name the files with numbers in front of them: 1Myfile, 2NextFile, 3AnotherFile
+@@If you name files like this then they will sort by the first digit: 1MyFile, 10FileName, 11AnotherFile... 2NextFile will come after 19AnotherFile, 2NextFile, 21AnotherFile....
+c) Use the words one, two, three at the end of the file name
+@@This won't work because the files will still be sorted alphabetically by the first characters.
+*d) Name the files using 01MyFile, 02NextFile, 03AnotherFile, etc. so they order properly.
+e) Click on the column title to resort the column
+@@This won't work. It will only sort the filenames alphabetically or in reverse alphabetical order.
+
+39. An consistent way to open File Explorer is to ___________.
+*a) Right-mouse click on the Windows icon in the lower left corner of the screen.
+b) Right-mouse click on the background of the desktop.
+@@Try it. What happens? What options show up in the right-mouse click option menu?
+c) Left-mouse click on the background of the desktop.
+@@Try it. You'll see that nothing happens.
+d)Click on the Windows icon in the lower left corner and in the search box type: Explorer. Click on the item that has the blue e icon for Internet Explorer. 
+@@Don't confuse Internet Explorer (IE) with Windows Explorer (Windows 7) or File Explorer (Windows 8)
+
+40. Which of the following naming conventions is wrong:
+a) Always start filenames using a lower case letter.
+*b) Use spaces whenever you can
+@@No. The Web hates spaces and changes them all to:  %20 Don't use spaces in your file names
+c) Use camelCaseByCapitalizingTheFirstCharacterOfEachWordForReadability
+d)Don't use underscores "_"  On hyperlinks, especially with web addresses, people can't tell if it is a space or an underscore.
+e)Don't use plurals. That way you don't have to guess if you need to use "graphic" or "graphics" to access your image files.
+f)Be consistent. Name all your filenames using the same naming rules.
+
+41. Which of the following naming conventions is wrong:
+*a) Always start filenames out using a capital letter.
+@@In programming a name with a capital letter is normally a Class or a special type of file. Everything else starts with lower case. People working in code
+b)Don't use spaces.
+c)Don't use underscores "_"
+d)Use camelCaseByCapitalizingTheFirstCharacterOfEachWordForReadability
+e)Don't use plurals.
+
+42. True or False: Folders can be creating inside of other folders.
+True
+F@@This is one if the powerful things about computers. You can store things in a series of folders and subfolders and sub-sub folders keeping everything neat and organized.
+
+43. True or False: It is best to keep the folder structure as simple as possible.
+True
+TF@@Normally you want to have a root folder with subfolders and sub-subfolders inside of the those. Anything more complex gets to be hard to maintain and time-consuming to find files.
+
+44. When you zip files together you are _______.
+a) compressing and encrypting them
+b) encrypting each one with a key phrase
+c) uncompressing the files and displaying their contents
+*d) compressing them into a single file
+e) displaying their contents one file at a time but very quickly
+
+45. True or False: If you zip up a folder it will contain all the subfolders and files inside of it as well.
+True
+TF@@This is a great way to zip up your assignments. Just zip the folder that holds all your project files.
+
+46. True or False - You can't zip images. They are already compressed.
+False
+TF@@You can zip up a group of images. However, if they are .jpg, .gif, or .png files they are already compresses so you probably won't see a huge reduction in file size. 
+
+47. True or False: On Windows if you double-click on a zip file it will display the files and folders. It is very difficult to tell if they are zipped or not.
+True
+TF@@This is one of the tricky things about Windows. You can view the contents of a zip file by double-clicking on it, but the files are still zipped. You have to purposedly unzip the .zip file before you can use the files properly.
+
+48. To zip up a group of files and folders in Windows do the following: _____________.
+*a) right-mouse click on the selected items, select "Send to", select "Compressed (zip) folder"
+b) left-mouse click on the selected items and select "Zip (compressed) files" from the list of options
+c)right-mouse click on the selected items and select "Zip (compressed) files" from the list of options
+d) from the menu bar select File/Zip
+e) You need a separate program to zip files. You can't do it within Windows.
+
+49. What hot keys should you be using to quickly select a list of files that are all adjacent (touching)?
+a) Hold down the shift key and control key (command on the Mac) and click on the first one of the list. Keep holding the shift key and click on the last item.
+*b)Hold down the shift key and click on the first one of the list. Keep holding the shift key and click on the last item.
+c) Hold down the control key (command on the Mac) and hit the number key for the number of files to select.
+d) Hold down the control key (command on the Mac) click on the first filename, then, still holding the control/command key, click on the last filename
+e) Hold down the shift and function key (option on the Mac) while you select the first and last filename.
+@Hotkeys allow you to work faster and more efficiently. Like a professional.
+
+50. What hot keys should you be using to save a file?
+a) CTRL c on Windows - COMMAND c on Mac
+b) CTRL v on Windows - COMMAND v on Mac
+*c) CTRL s on Windows - COMMAND s on Mac
+d) CTRL z on Windows - COMMAND z on Mac
+e) CTRL a on Windows - COMMAND a on Mac 
+@Hotkeys allow you to work faster and more efficiently. Like a professional.
+
+51. What hot keys should you be using to copy an item or file that is selected?
+*a) CTRL c on Windows - COMMAND c on Mac
+b) CTRL v on Windows - COMMAND v on Mac
+c) CTRL s on Windows - COMMAND s on Mac
+d) CTRL z on Windows - COMMAND z on Mac
+e) CTRL a on Windows - COMMAND a on Mac 
+@Hotkeys allow you to work faster and more efficiently. Like a professional.
+
+52. What hot keys should you be using to paste a file or phrase that has been copied?
+a) CTRL c on Windows - COMMAND c on Mac
+*b) CTRL v on Windows - COMMAND v on Mac
+c) CTRL s on Windows - COMMAND s on Mac
+d) CTRL z on Windows - COMMAND z on Mac
+e) CTRL a on Windows - COMMAND a on Mac 
+@Hotkeys allow you to work faster and more efficiently. Like a professional.
+
+53. What hot keys should you be using to select everything in the current active window?
+a) CTRL c on Windows - COMMAND c on Mac
+b) CTRL v on Windows - COMMAND v on Mac
+c) CTRL s on Windows - COMMAND s on Mac
+d) CTRL z on Windows - COMMAND z on Mac
+*e) CTRL a on Windows - COMMAND a on Mac 
+@Hotkeys allow you to work faster and more efficiently. Like a professional.
+
+54. What hot keys should you be using to undo something you've typed or deleted on your computer?
+a) CTRL c on Windows - COMMAND c on Mac
+b) CTRL v on Windows - COMMAND v on Mac
+c) CTRL s on Windows - COMMAND s on Mac
+*d) CTRL z on Windows - COMMAND z on Mac
+e) CTRL a on Windows - COMMAND a on Mac 
+@Hotkeys allow you to work faster and more efficiently. Like a professional.
+
+55. True or False: Using hot keys saves you time.
+True
+TF@@Every time your fingers move from the mouse to the keyboard, your brain has to jump start. Mouse movements use a different, more visual part of your brain while keyboarding is mainly using the touch portion of your brain. It may be milliseconds but it still disrupts your thought process and takes time.
+
+56. If a group of files are selected what is the best way to unselect certain files?
+a)Hold down the SHIFT key while single clicking on the filename you want to unselect.
+b)Hold down the SHIFT/CTRL keys (SHIFT/COMMAND on the Mac) while you single click on the filename you want to unselect.
+c)Click somewhere else on the screen to unselect all the files and then click on the single file you want.
+d)Hold down the F5 key (F12 on the Mac) while you double click on the file you want to unselect.
+*e) Hold down the CONTROL key (COMMAND on Mac) while single clicking on the file you want to unselect.
+
+57. True or False: To select a group of files you can click and drag, lassoing the files you want. Every file the "lasso" touches will be selected.
+True
+
+58. You want to make a second, duplicate copy of a file. Should you move it or copy it?
+a) Move it.
+@@When you move a file, it is deleted from the original place and a new copy is put where you designate.
+*b) Copy it.
+
+59. On a web page, if an image file cannot be found the browser normally _________.
+a) doesn't display anything
+*b) displays an icon of a broken image
+c) displays a default photo from the documents folder
+d)displays a red circle with a diagonal line across it
+
+60. The path is _____________.
+a) the connection between the system and the external media, like a flash drive or external hard drive
+b)the collection of files inside a specific folder
+c) the tree structure of the file system starting at the root and branching out to all the folders and subfolders
+*d) the series of folders and sub folders the system has to access to get to the actual file
+
+61. True or False: On Windows the path is case-sensitive. UPPER/lower case matter.
+False
+TF@@Windows does not check UPPER or lower case. But, most other systems including web servers do. So, it is important that you always name your files using the same pattern of upper and lower case letters. (Follow the naming conventions!)
+
+62. The correct separator to use for path names is:
+*a) / - The forward slash
+b) \ - The backslash
+c) | - The pipe 
+d) & - The ampersand
+e) - - A dash 
+f) , - A comma
+@Don't confuse the \ and /. The \ "backslash" is used when working the command line in Windows. All the rest of the time you will be using the / "forward slash"  Same key as the ? on your keyboard.
+
+63. True or False - files can be stored in a long series of folders. Although it is not practical a file could be stored in a series of folders and subfolders over 50 folders deep.
+True
+TF@@There is almost no limit to how many sub folders you can use. But practical limits keeps it to ten or fewer. Most web sites only go two layers deep, maybe three.
+
+64. Following the naming conventions presented in class which one is incorrect?
+a) index.html
+*b) georgePortrait.JPG
+c) contactPage.html
+d) dogWithStick.jpg
+e) labTest.txt
+f) labTest.doc
+@always use lower case except for the first character of each new word
+
+65. Following the naming conventions presented in class which one is incorrect?
+a) catSleeping.html
+b) georgePortrait.png
+c) contactList.txt
+d) sales2014.xls
+*e) labTests.txt
+f) lab4Test.png
+@Don't use plurals - So you don't have to ask yourself: Was it graphic or graphics?
+
+66. Following the naming conventions presented in class which one is incorrect?
+*a) JohnClaredinPresident.jpg
+b) georgePortrait.jpg
+c) contactPage.html
+d) dogWithStick.jpg
+e) labTest.txt
+f) labTest.doc
+@The first letter of a filename or folder should be lower case
+
+67. Following the naming conventions presented in class which one is incorrect?
+a) angelNetworkLogo.jpg
+b) georgePortrait.jpg
+*c) contact Page.html
+d) dogWithStick.jpg
+e) labTest.txt
+f) labTest.doc
+@Don't use spaces. The Web really hates spaces and changes them into %20. How ugly is that?
+
+68. Following the naming conventions presented in class which one is incorrect?
+a) mountainStream.jpg
+b) georgePortrait.jpg
+c) contactPage.html
+d) dogWithStick.jpg
+*e) lab_test_03.txt
+f) labTest.doc
+@Don't use underscores _ they get hidden in underlined hyperlinks and look like spaces
+
+69. Following the naming conventions presented in class which one is incorrect?
+a) index.html
+*b) cindyjohnsonpresident.jpg
+c) contactPage.html
+d) dogWithStick.jpg
+e) labTest.txt
+f) labTest.doc
+@useCamelCaseForReadabilityCapitalizingTheFirstLetterOfEachNewWord
+
+70. Why should you consistently follow the naming conventions?
+a) Because my instructor said to.
+b) It is how professional programmers around the world name files, folders, and variables.
+*c) I'll have fewer mistakes because my code will match the actual file names and I won't have to look up filenames all the time to see how I spelled them.
+d) I'll make fewer mistakes because I'll be acting like a computer and computers are programmed to read files this way.
+@@Computers read binary (ones and zeros) but they are exacting. The naming conventions are designed to save you time so you don't have to look up file names to see how you spelled them.
+e) This is how the Web works, using naming conventions like this.
+

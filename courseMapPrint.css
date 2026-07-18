@@ -1,0 +1,29 @@
+/* courseMapPrint.css - use this CSS for printing the course map
+Peter Johnson - peter.johnson@southcentral.edu
+08/15/08
+Revised:  PKJ 05-14-14 remove footer to make more room for each module block
+          PKJ 08-10-14 Change font size from 16 to 12px
+ */
+
+/* ***********************************************
+     Add printing css to overcome relative positioning issues
+	  *********************************************** */
+body {
+font-size:    12px;
+}
+
+#colLeft {
+position:   absolute;
+top:        125px;
+}
+
+#colRight {
+position:   absolute;
+top:        125px;
+}
+
+.module {
+height:       105px;    
+}
+
+

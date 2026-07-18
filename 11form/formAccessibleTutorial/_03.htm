@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<meta name="moduletitle" content="Accessible Forms">
+<meta name="description" content="A short tutorial showing how to add accessibility to your forms">
+<meta name="objectives" content="Show users how to use a Drupal Website">
+<meta name="author" content="Peter K. Johnson">
+<meta name="organisation" content="http://webexplorations.com">
+<meta name="version" content="No Version metadata">
+<meta name="date" content="November 2006">
+<meta name="copyright" content="No Copyright metadata">
+<meta name="creator" content="Created by Course Genie, licensed to South Central College.">
+<meta name="keywords" content="web, programming, form, accessibility, fieldset, label">
+
+<title>Grouping Elements with the &lt;fieldset&gt; &amp; &lt;legend&gt;</title>
+<link rel="stylesheet" type="text/css" href="cg.css">
+<script src="cgmain.js" type="text/javascript" language="JavaScript"></script><script src="cglocale.js" type="text/javascript" language="JavaScript"></script>
+
+
+
+</head>
+
+
+
+<body onload="" onunload="" onbeforeunload="">
+
+<noscript>Your browser does not support Javascript. You should still be able to navigate through these materials but selftest questions will not work.</noscript>
+
+<a href="#Main"><img src="buttons/btn_skip.gif" alt="Skip to main content" width="1" height="1" border="0"></a><div id="header">
+
+<a name="_top"></a>
+<a href="_04.htm" onMouseOut="imgSwap('next_top','buttons/btn_next_topup.gif')" onBlur="imgSwap('next_top','buttons/btn_next_topup.gif')" onMouseOver="imgSwap('next_top','buttons/btn_next_topdown.gif')" onFocus="imgSwap('next_top','buttons/btn_next_topdown.gif')"><img class="floattopright" name="next_top" border="0" src="buttons/btn_next_topup.gif" width="30" height="24" alt="Next page"></a>
+<a href="index.htm" onMouseOut="imgSwap('index_top','buttons/btn_contents_topup.gif')" onBlur="imgSwap('index_top','buttons/btn_contents_topup.gif')" onMouseOver="imgSwap('index_top','buttons/btn_contents_topdown.gif')" onFocus="imgSwap('index_top','buttons/btn_contents_topdown.gif')"><img class="floattopright" name="index_top" border="0" src="buttons/btn_contents_topup.gif" width="30" height="24" alt="Contents page"></a>
+<a href="_02.htm" onMouseOut="imgSwap('prev_top','buttons/btn_prev_topup.gif')" onBlur="imgSwap('prev_top','buttons/btn_prev_topup.gif')" onMouseOver="imgSwap('prev_top','buttons/btn_prev_topdown.gif')" onFocus="imgSwap('prev_top','buttons/btn_prev_topdown.gif')"><img class="floattopright" name="prev_top" border="0" src="buttons/btn_prev_topup.gif" width="30" height="24" alt="Previous page"></a>
+
+<h1>Accessible Forms</h1>
+
+</div>
+
+<table width="100%" cellspacing="0" summary="Main layout table for two-column layout"><tr>
+<td width="" align="left" valign="top" id="maintable-toc">
+
+<div id="toc">
+
+<h2><a id="toc-title" href="index.htm">Table of Contents</a></h2>
+
+<ol class="section">
+<li>
+<a href="_01.htm">Creating Accessible Forms </a>
+<ol>
+<li><a href="_02.htm">What does &lt;label&gt; do? </a></li>
+<li class="currentpage">Grouping Elements with the &lt;fieldset&gt; &amp; &lt;legend&gt; </li>
+<li><a href="_04.htm">Summary </a></li>
+</ol>
+</li>
+</ol>
+
+</div>
+
+</td>
+<td width="*" align="left" valign="top" id="maintable-content">
+
+<div id="main-content-withtoc">
+
+<a name="Main"></a>
+
+<h2>Grouping Elements with the &lt;fieldset&gt; &amp; &lt;legend&gt;</h2>
+
+<h3><b>Use the &lt;legend&gt; to chunk your form into groups</b></h3>
+<p>If you are presented with a list of 50 seemingly unrelated checkboxes on a survey it can be very daunting and will frighten most users away.</p>
+<p>You can use the &lt;fieldset&gt; element to chunk the form into groups.</p>
+<p>For example, you could break the 50 questions into 5 clearly groups that relate to each other. This will greatly increase the usability of the page for all users.</p>
+<h3><b>Use the &lt;legend&gt; element to identify each fieldset.</b></h3>
+<p>Here is an example of the &lt;fieldset&gt; and &lt;legend&gt; elements.</p>
+<p>Here is the code:</p>
+<div class="paneltext"><p>
+<b>&lt;fieldset&gt;<br>&lt;legend&gt;My Radio Buttons&lt;/legend&gt;</b><br>&lt;input type=&quot;radio&quot; id=&quot;rad0&quot; name=&quot;rad&quot; /&gt;<br>&lt;label for=&quot;rad0&quot;&gt;Option 0&lt;/label&gt;<br>&lt;input type=&quot;radio&quot; id=&quot;rad1&quot; name=&quot;rad&quot; /&gt;<br>&lt;label for=&quot;rad1&quot;&gt;Option 1&lt;/label&gt;<br>&lt;input type=&quot;radio&quot; id=&quot;rad2&quot; name=&quot;rad&quot; /&gt;<br>&lt;label for=&quot;rad2&quot;&gt;Option 2&lt;/label&gt;<br>. . .<br><b>&lt;/fieldset&gt;</b>
+</p></div>
+<p>CSS can be used to change the outline or character formatting. You can either use the in-line style or use an id or class designation in the &lt;head&gt; section of the page.</p>
+<div class="paneltext">
+<p>&lt;fieldset style=&quot;width: 300px;</p>
+<p>                       display:inline;</p>
+<p>                       border:2px solid #000099;</p>
+<p>                       padding:6px;</p>
+<p>                       vertical-align:top&quot;&gt;</p>
+<p>&lt;legend&gt;My Radio Buttons&lt;/legend&gt;</p>
+<p>&lt;input type=&quot;radio&quot; id=&quot;rad0&quot; name=&quot;rad&quot; /&gt;</p>
+<p>&lt;label for=&quot;rad0&quot;&gt;Option 0&lt;/label&gt;</p>
+<p>&amp;nbsp;&amp;nbsp;&amp;nbsp;</p>
+<p>&lt;input type=&quot;radio&quot; id=&quot;rad1&quot; name=&quot;rad&quot; /&gt;</p>
+<p>&lt;label for=&quot;rad1&quot;&gt;Option 1&lt;/label&gt;</p>
+<p>&lt;input type=&quot;radio&quot; id=&quot;rad2&quot; name=&quot;rad&quot; /&gt;</p>
+<p>&lt;label for=&quot;rad2&quot;&gt;Option 2&lt;/label&gt;</p>
+<p>&lt;/fieldset&gt;</p>
+</div>
+<p><img src="images/pic002.gif" width=" 297" height=" 85" alt="" border="0" class="normal"></p>
+<p>Notice the how the ~&amp;nbsp; non-breaking spaces were used to separate the items making it clear which circle goes with which label onscreen.</p>
+
+</div>
+
+</td>
+</tr></table>
+
+<div id="footer-withtoc">
+
+<a href="_04.htm" onMouseOut="imgSwap('next_bot','buttons/btn_next_botup.gif')" onBlur="imgSwap('next_bot','buttons/btn_next_botup.gif')" onMouseOver="imgSwap('next_bot','buttons/btn_next_botdown.gif')" onFocus="imgSwap('next_bot','buttons/btn_next_botdown.gif')"><img class="floatright" name="next_bot" border="0" src="buttons/btn_next_botup.gif" width="30" height="24" alt="Next page"></a>
+<a href="index.htm" onMouseOut="imgSwap('index_bot','buttons/btn_contents_botup.gif')" onBlur="imgSwap('index_bot','buttons/btn_contents_botup.gif')" onMouseOver="imgSwap('index_bot','buttons/btn_contents_botdown.gif')" onFocus="imgSwap('index_bot','buttons/btn_contents_botdown.gif')"><img class="floatright" name="index_bot" border="0" src="buttons/btn_contents_botup.gif" width="30" height="24" alt="Contents page"></a>
+<a href="_02.htm" onMouseOut="imgSwap('prev_bot','buttons/btn_prev_botup.gif')" onBlur="imgSwap('prev_bot','buttons/btn_prev_botup.gif')" onMouseOver="imgSwap('prev_bot','buttons/btn_prev_botdown.gif')" onFocus="imgSwap('prev_bot','buttons/btn_prev_botdown.gif')"><img class="floatright" name="prev_bot" border="0" src="buttons/btn_prev_botup.gif" width="30" height="24" alt="Previous page"></a>
+
+<p>Using CCI Space</p>
+
+</div>
+
+
+
+</body>
+
+</html>

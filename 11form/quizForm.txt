@@ -1,0 +1,250 @@
+1. Select the statement below that is true about forms.
+	a. The form element is optional
+b. It is recommended to use mailto: as the action on a form since that is the easiest for the web developer
+*c. A form can be used to pass information to a program or script on the web server
+d. none of the above is true
+
+2. Select the HTML code to configure a button that, when clicked, will automatically reset form fields to their default values.
+*a. <input type="reset">
+b. <input type="submit" value="Reset">
+c. <reset>
+d. <form action="reset">
+
+3. Use the _____ attribute on the form element to specify the name and location of the script that will process the form control values.
+*a. action
+b. process
+c. method
+d. none of the above
+
+4. Select the form control below that does not use the input element.
+a. text box
+*b. select list
+c. checkbox
+d. radio button
+
+5. Select the HTML tag below that configures a textbox named "email" that is 40 characters wide.
+a. <input type="text" id="email" width="40" >
+*b. <input type="text" name="email" size="40" >
+c. <input type="text" name="email" space="40" >
+d. <input type="text" width="40" >
+
+6. Select the form control below that would be most appropriate to accept free-form comments about your website.
+a. select list
+b. text box
+*c. scrolling text box
+d. None of the above
+
+7. You would like to conduct a survey and ask your web page visitors to indicate the computer operating systems that they use. Each visitor could use more than one computer operating system. Select the form control that is best to use for this purpose.
+*a. check box
+b. radio button
+c. text box
+d. scrolling text box
+
+8. An order form contains an area for web visitors to select their state or province. You need to limit the amount of space on the form that is used for this feature. Select the form control that is best to use for this purpose.
+a. check box
+b. radio button
+c. text box
+*d. select list
+
+9. Choose the HTML tag below that would configure a scrolling text box with the name "feedback", 3 rows, and 60 characters.
+a. <textarea name="feedback" width="60" rows="3"></textarea>
+b. <input type="textarea" name="feedback" size="60" rows="3" >
+*c. <textarea name="feedback" rows="3" cols="60"></textarea>
+d. none of the above
+
+10. Select the HTML below that would associate a label displaying the text “Phone” with the text box named customerPhone.
+a. Phone: <input type="textbox" name="customerPhone">
+*b. <label>Phone: <input type="text" name="customerPhone"></label>
+c. <label for="Phone">Phone: </label><input type="text" name="Phone" id="customerPhone">
+d. <label>Phone:</label> <input type="text" name="customerPhone">
+
+11. Select the attribute used to limit the number of characters that a text box will accept.
+a. size
+*b. maxlength
+c. limit
+d. columns
+
+12. Select the element used to visually group a number of form controls.
+a. group
+b. fieldset
+*c. form
+d. label
+
+13. Select the attribute used to configure the width of a text box as displayed in a browser.
+*a. size
+b. maxsize
+c. limit
+d. columns
+
+14. Select the type of form control that "disguises" the characters that are typed.
+a. text box
+*b. password box
+c. encrypt box
+d. hidden box
+
+16. The _________________ is a standard method or protocol for web pages to request special processing on the web server, such as database queries, sending e-mails, or handling form data.
+a. fieldset
+*b. Common Gateway Interface (CGI)
+c. JavaScript
+d. MIME
+
+17. What attributes are valid for the select element?
+a. name, id, multiple
+b. name, id, multiple, rows, cols
+*c. name, id, multiple, selected
+d. name, id, multiple, checked
+
+18. When configuring a radio button form control, the value of the ______ of each radio button must be the same
+*a. name
+b. id
+c. value
+d. none of the above
+
+19. Select the true statement from the choices below.
+a. A scrolling text box is created using an input element with type="textarea".
+b. A text box is created using an input element with type="box". 
+c. A select list is created using select and input elements.
+*d. A scrolling text box is created using a textarea element.
+
+20. The purpose of the __________ element is to configure a label for a fieldset element.
+a. label 
+b. p 
+c. form
+*d. legend
+
+21. Select the value of the type attribute that configures an HTML5 spinner control.
+a. spinner
+b. range
+*c. number
+d. input
+
+22. Select the value of the type attribute that configures an HTML5 slider control.
+a. spinner
+*b. range
+c. number
+d. input
+
+23. Select the true statement from those listed below.
+a. The input element with type=”email” will cause all browsers to edit for a valid e-mail address.
+b. The required attribute will cause all browsers to verify that the user has entered information into the form control.
+c. The input element with type=”date” will cause all browsers to display a calendar control
+*d. The input element with type=”email” will cause browsers that do not support the attribute to display a text box.
+
+24. The HTML5 _____________ form control provides the user with a selection of choices along with an option to enter information.
+a. select list
+b. check box
+*c. datalist
+d. slider
+
+25. Choose the item below that is not a valid value for the input element’s type attribute.
+a.  radio
+b.  url
+*c. e-mail
+d. text
+
+26. Which of the following form conrols would be appropriate for an area that your visitors can use to type in comments about your website?
+a. text box
+@@A text box only allows a short phrase.
+b. select list
+@@A drop down list allows users to choose from a list but doesn't allow them to add their own feedback.
+c. radio button
+@@A radio button allows the user to pick one choice from a list but doesn't allow them to add their own input.
+*d. scrolling text box
+@@Correct. This is also called a text area.
+
+27. Which attribute of the <form> tag is used to tell the browser what page to request as soon as the user submits the form?
+*a. action
+@@Correct. The action=" " attribute tells the browser what page to jump to when the submit button is pressed.
+b. process
+@@This is not a valid attribute for the <form> tag
+c. method
+@@The method=" " attribute describes how the values from the form will be transmitted to the server. The value of this attribute is either GET (tack the values on the end of the URL of the request) or POST (pack the values up in a 'suitcase' and send them to the server along with the action URL.
+d. id
+@@The id=" " attribute is the unique name for this control.
+
+28. Forms contain various types of ________ such as text boxes and buttons, that accept information from a web page visitor.
+a. hidden elements
+b. labels
+*c. form controls
+d. legends
+
+29. Choose the tag that would configure a text box with the name "city" and a display width of 40 characters.
+a.<input type="text" id="city" width="40">
+@@width=" " is only used for type="image"
+*b.<input type="text" id="city" size="40">
+@@correct.
+c.<input type="text" id="city" space="40">
+@@This is not a valid attribute for the input tag.
+d.<input type="text" id="city" max="40">
+@@Specifies the maximum value for an <input> element not the display width.
+
+30. Which of the following form controls would be appropraite for an area that your visitors can use to type in their email address?
+a. select list
+@@The select list is used for drop down lists.
+*b. text box
+@@Correct. A text box is perfect for short text inputs like an email address
+c. scrolling text box
+d. textarea
+@@A textarea is more appropriate for longer text such as suggestions or comments from the user. It can have multiple lines and include scroll bars.
+
+31. You would like to conduct a survey and ask your web page visitors to vote for their favorite search engine. Which of the following form controls is best to use for this purpose?
+a. checkbox
+@@Not a good choice. The checkbox allows multiple answers to be selected.
+*b. radio button.
+@@correct.
+c. textbox
+@@The textbox is best for text input. You would get so many different types of answers that it would be hard to analyze the information that was collected.
+d. scrolling text box (textarea)
+@@The textarea is best for long text input. You would get so many different types of answers that it would be hard to analyze the information that was collected.
+
+32. You would like to accept a number that's in a range from 1-50. the user needs visual verification of the number they selected. Which of the following form controls is best to use for this purpose?
+a. spinner
+b. radio button
+c. checkbox
+*d. slider
+
+33. What will happen when a browser encounters a new HTML5 form control that it does not support?
+a. The computer will shut down.
+b. The browser will crash.
+c. The browser will display an error message.
+*d. The browser will display an input text box.
+e. The browser will simply ignore the control.
+
+34. Which tag would configure a scrolling textbox with the name comments, two rows, and thirty characters?
+*a. <textarea name="comments" width="30" rows="2"></textarea>
+b. <input type="textarea" name="comments" size="30" rows="2" />
+c. <textarea name="comments" cols="30" rows="2"></textarea>
+d. <textarea name="comments" width="30" rows="2" />
+@The textarea is a double tag element. Normally there is no space or text in between the start and stop tag.
+
+35. Choose the item that would associate a label displaying the text Email: with the text box named: email.
+a. Email: <input type="textbox" name="email" id="email" /> 
+b. <label>Email: <input type="text" name="email" id="email" /></label>
+c. <label for="email">Email:</label><input type="text" name="email" id="email" />
+d. Either a or b
+*e. Either b or c
+@A label can be bound to an element either by using the "for" attribute, or by placing the element inside the <label> element.
+
+36. When you want to send the form information to the server in a packet so it is not visible to everyone you would want to use this attribute and value.
+*a. method="POST"
+b. method="GET" 
+c. action="POST" 
+d. action="GET"  
+
+37. When you want to send the form information to the server as part of the URLyou would want to use this attribute and value.
+a. method="POST"
+*b. method="GET" 
+c. action="POST" 
+d. action="GET"  
+
+38. Form values are sent to the server for processing. What method would create a URL that looks like this:  http://myDomainName/contact.html&firstname=Alice?lastname=Smith
+a. method="POST"
+*b. method="GET" 
+c. action="POST" 
+d. action="GET"  
+
+39. When sending form values to an email address it is smart to format the data into separate lines using the _________ attribute inside the <form> tag.
+a. enctype="format"
+b. enctype="data"
+*c. enctype="text/plain"
+d. enctype="multipart/form-data"

@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- list.html - demonstrate how lists are built
+     Peter Johnson
+     Written:  05-18-09
+     Revised:  05-18-09
+-->
+<head>
+   <title>Lists</title>
+   <style type="text/css">
+   /* set up a custom bullet for the unordered list */
+   ul { 
+   list-style-image:  url("bullet.png"); 
+   } 
+   
+   ol {
+    list-style-type: katakana-iroha;
+    }
+   </style>
+</head>
+<body>
+   <h1>Demo Lists</h1>
+
+   <h3>Custom Bullet using CSS</h3>
+   <ul>
+   
+      <li>First Item</li>
+         <ul type="square">
+            <li>First sub item</li>
+            <li>Second sub item</li>
+            <li>Third sub item</li>
+         </ul>
+    
+      
+      <li>Second Item</li>
+      <li>Third Item</li>   
+   </ul>
+
+   <h3>Unordered List with circles</h3>
+   <ul type="circle">
+      <li>First Item</li>
+      <li>Second Item</li>
+      <li>Third Item</li>   
+   </ul>
+
+   <h3>Ordered List with Numbers</h3>
+   <ol>
+      <li>First Item</li>
+      <li>Second Item</li>
+      <li>Third Item</li>   
+   </ol>
+
+   <h3>Ordered List with lower case letters</h3>
+   <ol type="a">
+      <li>First Item</li>
+      <li>Second Item</li>
+      <li>Third Item</li>   
+   </ol>
+
+</body>
+</html>

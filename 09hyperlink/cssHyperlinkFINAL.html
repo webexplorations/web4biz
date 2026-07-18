@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+<!-- cssHyperlink.html - Different CSS techniques with hyperlinks.
+  Peter Johnson - peterk@webExplorations.com
+  Written:   08-08-13 
+  Revised:   
+  -->
+ <title>CSS Hyperlinks</title>
+
+ <style type="text/css">
+  body {
+  background:            #EEE;
+  font-size:             16px;
+  font-family: helvetica, arial, sans-serif;
+  }
+  
+  a {
+  padding:               5px;
+  border:                1px solid black;
+  line-height:           2em;
+  text-decoration:       none;
+  border-radius:         5px;      /* round the corners */
+  }
+  
+  /* Using pseudo-classes */
+  a:link {
+  color:                 #a25ba2;             /* purple */
+  }
+  
+  a:visited {
+  color:                 #33826d;             /* teal use a darker shade */
+  }
+  
+  a:hover {
+  background:            #AAA;               /* dark grey */
+  color:                 #FFFFFE;
+  text-shadow:           4px 4px 4px #000000;     /* hshadow vshadow blur-radius color */
+  }
+  
+ </style>
+ 
+</head>
+<body>
+<div id="frame">
+<h1>Using CSS with Hyperlinks</h1>
+
+<a href="http://Southcentral.edu" 
+   title="Visit South Central College">South Central College</a><br />
+   
+<a href="http://Adobe.com">Adobe</a><br />
+
+<a href="http://Nikon.com">Nikon</a><br />
+
+<a href="http://Apple.com">Apple</a><br />
+</div>
+</body>
+</html>

@@ -1,0 +1,352 @@
+1. Cascading Style Sheet rules are comprised of:
+*a. Selectors and Declarations
+b. Properties and Declarations
+c. Selectors and Attributes
+d. Elements and Attributes
+@Selectors are like h1 and the declarations are made up of properties and values such as color:  blue;
+
+2. When CSS is coded in the body of the web page as an attribute of a single HTML tag it is called ________.
+a. embedded
+*b. in-line
+c. external
+d. imported
+
+3. Select the items below that can be used as a CSS Selector.
+a. an HTML element
+b. a class name
+c. an id name
+*d. All of these answers are valid
+
+4. Which of the following will configure all the span elements with red (#FF0000) text color?
+*a. span { color: #FF0000; }
+b. #span { color: #FF0000; }
+c. .span { color: #FF0000; }
+d. <span style=”color: #FF0000;”>
+e. All of these answers are valid
+
+5. To apply a style to one or more of elements on a web page, configure a CSS _____________.
+a. group
+b. id
+*c. class
+d. attribute
+@A class "." can be used multiple times on a page. (Think as a class as a group of similar things like a "class of people"). An id "#" is unique to the page and should only be used for one object on the page.
+
+6. An External Style Sheet normally uses the _____ file extension.
+a. .ess
+*b. .css
+c. .html
+d. No file extension is necessary
+
+7. Use the ______ element to associate a web page with an external style sheet.
+a. target
+b. a
+c. include 
+*d. link
+
+8. Select the correct code below that uses CSS to configure a background color of #eaeaea for a web page.
+*a. body {background-color:#eaeaea; }
+b. body {background-color:#eaeaea} ;
+@@ The semi-colon has to be inside the closed curly brace.
+c. document {background-page:#eaeaea; }
+d. body {bgcolor:#eaeaea; }
+e. None of these answers are valid.
+
+9. Select the code below that configures a class called “offer” with blue text using CSS.
+a. offer { color: blue; }
+*b. .offer { color: blue; }
+c. .offer { text: blue; }
+d. #offer { color: blue; }
+@class selectors use a period "."  id selectors use a hash mark "#"
+
+10. Use the ______ element to create areas on a web page that are embedded within block formatting elements such as the <h1> or <p> elements.
+a. div
+*b. span
+c. both a and b
+d. neither a nor b
+
+11. Use the _____ element to add embedded styles on a web page.
+a. link
+*b. style
+c. embed
+d. css
+d. All of these answers are valid
+
+12. Use the ______ element to create a block area or section on a web page that will be separate from other items.
+*a. div
+b. strong
+c.  h1
+d. small
+@div is used to mark out a block. span is used to mark out a section of the page that is in-line and does not form a separate block.
+
+13. CSS was first approved as a standard by the W3C in ______.
+*a. 1996 - five years after the Web was created
+b. 2002 - twelve years after the Web was created
+c. 1992 - two years after the Web was created
+d. None of these answers are valid
+
+14.  Which of the following is the CSS property used to set the background color? 
+a.bgcolor:
+*b.background-color:
+c.color:
+d.None of these answers are valid
+
+15. Which CSS property can have multiple values?
+a. bgcolor:
+b. background-color:
+*c. background:
+d. color:
+e. None of these answers are valid
+@background: can include a color code, a url( ) image, no-repeat, repeat-x, or repeat-y. It is a combination of several individual properties.
+
+16.  Which of the following is the CSS property used to set the text color? 
+a.bgcolor
+b.background-color
+*c.color
+d.text
+e.None of these answers are valid
+
+
+17.  According to the CSS rules of precedence, ______ styles override ________ styles. 
+a. external, embedded 
+b. embedded, in-line 
+*c. in-line, external 
+d. external, in-line
+@Think general to specific:  external --> embedded --> in-line
+
+18. Which of the following is a CSS selector that will configure the anchor elements within the nav id.
+*a. #nav a
+b. .nav a
+c. #nav anchor
+d. anchor .nav
+@first use the outer selector, in this case the id #nav and then use the the inner selector, in this case a hyperlink.
+
+19. To apply a style to exactly one element on a web page, configure a CSS _____________.
+a. group
+*b. id
+c. class
+d. None of these answers are valid
+
+20. Where do you place the code to associate a web page with an external style sheet?
+a. in the external style sheet
+b. in the DOCTYPE of the web page document
+c. in the body section of the web page document
+*d. in the head section of the web page document
+e. All of these answers are valid
+
+21. Which of the following is a CSS selector that will configure the paragraph elements within the footer element.
+a. p footer
+*b. footer p
+c. #footer p
+d. .footer p
+
+22. Which of the following symbols terminates a style declaration?
+a. : colon
+*b. ; semi-colon
+c. ! exclamation mark
+d. # hash mark
+
+23. Which of the following is an HTML attribute used to add in-line styles to a tag?
+a. link
+*b. style
+c. id
+d. type
+e. All of these answers are valid
+@An example would be: <p style="color:blue; border:1px solid blue;">
+
+24. Which of the following is correct CSS syntax?
+*a. p { color: #000000; }
+b. p { color=#000000; }
+c. p : color #000000;
+d. p { color;#000000; }
+e. None of these are correct.
+
+25. Which type of selector is specified by placing a # symbol in front of the selector name?
+a. tag
+b. first
+c. class
+*d. id
+e. All of these answers are valid
+
+26. Which type of selector is specified by placing a . symbol in front of the selector name?
+a. tag
+b. first
+*c. class
+d. id
+e. None of these answers are valid.
+
+27. How would you style only the img elements inside of the element: <div class="bio">
+a. img .bio { border:1px solid #000080; margin:10px; }
+@@ The img is inside of the class so it would come afterwards in the selector:  .bio img
+b. #bio img { border:1px solid #000080; margin:10px; }
+@@ The period "." is used to designate a class. The hashmark "#" is used for unique id names.
+c. img { border:1px solid #000080; margin:10px; }
+@@ This would style all the images on the page. You only want the images inside the <div class="bio"> object.
+*d. .bio img { border:1px solid #000080; margin:10px; }
+@@ Correct. 
+e. bio img { border:1px solid #000080; margin:10px; }
+f. None of these are valid.
+
+28. Select the best reason to include height and width attributes on an image element.
+a. They are required attributes and must always be included.
+*b. To help the browser render the page faster because it reserves the appropriate space for the image.
+c. To help the browser display the image in its own window.
+d. None of these is a valid reason.
+
+29. Select the browser’s action when you configure BOTH a background color and background image for the body selector.
+a. The browser will display the background color instead of the background image
+b. The browser will display no background for the page because it is “confused”
+*c. The browser will display the background color while the background image loads and before the background image is displayed
+d. None of these are valid.
+
+30. Select the element that displays an image on a web page.
+a. a 
+*b. img
+c. image
+d. graphic
+e. gif
+
+31. Choose the attribute used to provide information if an image is not available, such as screen readers and search engines such as Google.
+*a. alt
+b. text
+c. src
+d. height
+e. seo
+
+32. Choose the graphic format that is best-suited to display photographs on web pages.
+*a. jpg
+b. photo
+c. gif
+d. psd
+e. xcf
+f. bmp
+
+33. Choose the graphic format that supports transparency.
+a. jpg or jpeg
+*b. gif or png
+c. bmp
+d. tif or tiff
+e. None of these support transparency
+
+34. A smaller version of a larger image that usually links to the larger image is called a:
+a. hyperlink
+*b. thumbnail image
+c. small image
+d. wallpaper
+
+35. Select the CSS code below that will configure a background image called parchment.gif.
+*a. body {background-image:url(parchment.gif); }
+b. document {background:parchment.gif; }
+c. body {background:parchment.gif’}
+d. body {background-color:parchment.gif;}
+@You could also use body{ background: white url(parchment.gif) no-repeat; }
+
+36. Select the code below that configures a background image to repeat horizontally across a web page.
+a. repeat: across;
+*b. background-repeat: repeat-x;
+c. background-repeat: no-repeat;
+d. background-repeat: repeat-y;
+@x is across and y is up and down. Think of the y as an arrow pointing up and down.
+
+37. Select the code below that associates a favorites icon named favicon.ico with a web page document.
+*a. <link rel="icon" type="image/x-icon" href="favicon.ico">
+b. <img href="favicon.ico" alt="favorites" width="16" height="16">
+c. <a href="favicon.ico"> <img href="favicon.ico" alt="favorites" width="16" height="16"></a>
+d. <link rel="favicon" type="image/gif" href="favicon.ico">
+
+38. The process of ensuring that web pages coded with new or advanced techniques still are usable in browsers that do not offer support for the newer features is called:
+a. validation 
+b. valid enhancement
+*c. progressive enhancement 
+d. optimization
+
+39. Choose the graphic format that supports millions of colors, supports variable transparency levels, and uses lossless compression.
+a. gif
+b. jpg
+*c. png
+d. None of these have all these capabilities.
+
+40. Which is the correct way to add comments to CSS code?
+a. <!--   -->
+*b. /*    */
+c.  //
+d.  REM
+e.  /
+f. None of these.
+
+41. A favicon is a specialized image format that uses the ______ extension.
+*a. .ico
+b. .icon
+c. .gif
+d. .fav
+e. None of these.
+
+42. True or False: A favicon is simply a small version of a jpg, gif, or png file.
+False
+T@@A favicon is a specialized image format. Use an online favicon editor to convert a gif, jpg, or png image into an .ico file.
+
+43. Why won't this CSS code work? h1 { color: #white; font-size: 2.5em; }
+a. A decimal point is not allowed when using em spacing
+b. em is not a valid measurement
+*c. when using a color name the hash mark is not used
+d. font-size is not valid
+e. there should be a semi-colon ";" after color
+
+44. Why won't this CSS code work properly showing the paragraph using Times Roman font? <p style="color:#000080; font-family: times roman, arial, serif;">
+a. You cannot use CSS inside a specific element.
+b. style is not a valid attribute.
+c. times roman needs to have double quotes around it because of the space in the name.
+*d. times roman needs to have single quotes around it because of the space in the name.
+@Whenever you use inline CSS you have to use single quotes so they don't counteract the double quotes being used by the style=" " attribute itself.
+
+45. Why won't this CSS code work? body { background color: #FEFEFE url(graphic/myBackgroundImage.png) no-repeat; }
+*a. background color is not the correct property for these multiple values. 
+b. background color must have a hyphen.
+c. There should be a semi-colon after #FEFEFE.
+d. #FEFEFE should not be a part of the background color
+e. This code will work fine.
+
+46. What is one of the reasons why the image named <img src="JohnsPortrait.JPG" alt="John's portrait" /> might not display?
+a. The file might be located in a graphic folder so you would have to use src="graphic/JohnsPortrait.JPG"
+b. The actual file name might be johnsPortrait.JPG (UPPER/lower case matter when listing file names)
+c. The actual file name might be johnsPortrait.jpg (UPPER/lower case matter even on file extensions)
+d. The image file is located somewhere else on the hard drive or on another flash drive and the browser is looking in the same folder as the web page.
+e. The actual file name might be JohnsPortrait.png instead of .JPG.
+*f. All of these are reasons why an image might not display. 
+@Keep a checklist in your head: Do the file names match? Is the file in the correct folder? Is the filename spelled correctly?
+
+47. If an image file named chiefIngredientLogo.png is stored in a sub-folder named graphic, what is the correct way to display it on a web page?
+a. <img src="graphic/chiefIngrediantLogo.png" alt="logo for Chief Ingredient" />
+@@ Spelling matters. Ingrediant should be spelled with an "e" ingredient. Use CTRL C (copy) and CTRL V (paste) with filenames to make sure your code matches the actual filename.
+b. <img src="/graphic/chiefIngredientLogo.png" alt="logo for Chief Ingredient" />
+@@ Never start the path name with a slash "/". That tells the browser to go all the way to the top of the directory tree (the root) to look for the file.
+c. <img src="chiefIngredientLogo.png" alt="logo for Chief Ingredient" />
+@@ The logo is in the sub-folder named graphic so you have to include that as part of the file name so the browser knows where to find the image file.
+d. <img src="graphic/cheifIngredientLogo.png" alt="logo for Chief Ingredient" />
+@@ Spelling matters. cheif should be spelled chief. Use CTRL C (copy) and CTRL V (paste) with filenames to make sure your code matches the actual filename.
+e. <img src="graphic/chiefIngredientLogo.jpg" alt="logo for Chief Ingredient" />
+@@ Filenames matter. The file is a .png file but the browser is looking for a .jpg!
+f. <img src="graphics/chiefIngrediantLogo.png" alt="logo for Chief Ingredient" />
+@@ Spelling matters. Was the sub-folder named graphic or graphics?  Now you have to go into the file system and check...
+*g. <img src="graphic/chiefIngredientLogo.png" alt="logo for Chief Ingredient" />
+@@ Correct!
+
+48. Why won't this CSS code work?
+body {
+color:      #008000
+background: #FEFEFE
+margin:     20px 10px
+padding:    2em
+}
+a. body is not a valid selector.
+@@ body is a very valid selector. It is used to set defaults styles for the entire page such as font-family, font-size, and font-color. 
+b. background: always requires multiple values such as url( ) and no-repeat.
+@@ background: can have multiple values but it isn't required.
+c. The selector should be using parenthesis ( ) instead of curly braces { }
+@@ The curly braces are correct. 
+*d. Each of the properties are missing a semi-colon ";" at the end.
+@@ Those darn missing semi-colons will break all the lines that follow. Don't forget them!
+e. em is not a valid measurement for padding
+@@em is a very valid measurement and allows the padding to dynamically change as the size of the browser window changes.
+f. margin and padding must have at least four values for top, right, bottom, and left.
+@@margin and padding can have four values but it is not required. Two values designate top/bottom and left/right. One value uses that same measurement on all four sides of the object.
+

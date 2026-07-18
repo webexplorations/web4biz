@@ -1,0 +1,532 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="gen/cg_content.xsl"?>
+
+<courseGenie>
+
+<metadata>
+	<lom>
+		<general>
+			<title>
+				<string>Why is XHTML so Cool?</string>
+				<language>en</language>
+			</title>
+			<keyword>
+				<string>Web Development</string>
+				<language>en</language>
+			</keyword>
+			<keyword>
+				<string>XHTML</string>
+				<language>en</language>
+			</keyword>
+			<keyword>
+				<string>Communications</string>
+				<language>en</language>
+			</keyword>
+			<description>
+				<string>Background and Details about XHTML</string>
+				<language>en</language>
+			</description>
+		</general>
+		<lifeCycle>
+			<version>
+				<string>July 30, 2010</string>
+				<language>en</language>
+			</version>
+		</lifeCycle>
+		<rights>
+			<description>
+				<string>Creative Commons</string>
+				<language>en</language>
+			</description>
+		</rights>
+	</lom>
+	<misc>
+		<item>
+			<key>Objectives</key>
+			<value>Background to how web pages work in a browser</value>
+		</item>
+		<item>
+			<key>Author</key>
+			<value>Peter K. Johnson</value>
+		</item>
+		<item>
+			<key>Organisation</key>
+			<value>South Central College</value>
+		</item>
+		<item>
+			<key>Date</key>
+			<value>August 2006 - Revised July 2010</value>
+		</item>
+		<item>
+			<key>creator</key>
+			<value>Wimba Create</value>
+		</item>
+	</misc>
+</metadata>
+<settings>
+	<pageroot>page</pageroot>
+	<sectionmode>both</sectionmode>
+	<exportmode>normal</exportmode>
+	<assessmentmode>none</assessmentmode>
+	<generateindex>True</generateindex>
+	<showtoc>True</showtoc>
+	<tocwidth>200</tocwidth>
+	<shownavigation>True</shownavigation>
+	<footer>http://WebExplorations.com</footer>
+	<singlepage>False</singlepage>
+	<hyperlinksmain>True</hyperlinksmain>
+	<popupsmain>True</popupsmain>
+	<idstring>CG2010730113645</idstring>
+	<scorm-questionmode>selftest</scorm-questionmode>
+	<scorm-masteryscore>0</scorm-masteryscore>
+	<cgbuild>2.5.0 Build 20090318</cgbuild>
+	<schemefolder>c:/program files/wimbacreate/resources/en.lproj/schemes/Standard</schemefolder>
+</settings>
+
+<newpage>
+<pagetitle>Why is XHTML so Cool?</pagetitle>
+<section/>
+<para/>
+
+<heading>Here's what you should learn from this tutorial.</heading>
+<para/>
+
+<image alt="Overview" width="203" height="152" class="leftalign">pic001.jpg</image><longdesc><br/>Overview (1) Why HTML is so cool, (2) Where did HTML come from? and (3) I just want to create a web page!</longdesc>First, you'll experience life without XHTML and then see how it changes things.<br/>
+<para  align="left">Next, you'll get a little background of where HTML and XHTML came from, another alternative to HTML, and you'll have experience what the world was like before HTML when we read a story titled "Ladle Rat Rotten Hut" . </para>
+<para/>
+
+<para  align="left">Finally, you'll learn some of the basic rules of XHTML and find out how it works the way it does. The magic of the Web brought to you by Tim Berners-Lee.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Communciation is Driving Force behind HTML</pagetitle>
+<para/>
+
+<heading>It is in our nature as humans to communicate with other people. The Web allows us to do this on a level previously unseen in human history.</heading>
+<para/>
+
+<image alt="Communication" width="203" height="151" class="leftalign">pic002.jpg</image><longdesc><br/>People need to communicate ideas.  From books to web pages. Using commonly accepted standards. Using words, images, and sound.</longdesc>The reason XHTML is so very cool is that it allows you to communicate with other people globally.
+<para/>
+
+<heading>Let's look back in time:</heading>
+<para  align="left">Before the printing press, only the people in power, such as royalty and clergy had books. The invention of the printing press changed all that, and slow but sure, information became available to a many more people as literacy grew and printing became an industry.</para>
+<para/>
+
+<para  align="left"><b>Books (and all printed matter) are still a very important communication tools.</b> The "paperless office" of the future doesn't look like it is going to happen. Why? Because people enjoy books. They like to hold them, flip the pages, and carry them around. It also seems as if our brains receive more information when we hold something as opposed to just looking at it on a computer screen. </para>
+<para/>
+
+<para  align="left"><b>However, books also have a few weaknesses:</b></para>
+
+<list type="2" level="1" start="1">
+	<item level="1">They are designed to be used by one person at a time. </item>
+	<item level="1">It is difficult to do a search</item>
+	<item level="1">They are expensive to publish and distribute</item>
+	<item level="1">Once printed they cannot be easily updated</item>
+</list>
+
+<para/>
+
+<para  align="left"><b>What if you want to get information to more than one person? Or have do a quick search across a document?</b></para>
+<para  align="left">That's where web pages step in. They are digital making them easy to distribute across a network. They are very easy to update, and you can search a large book in seconds. Just like books changed how people lived and thought, so is the Web changing how we live and think.</para>
+<para/>
+
+<para  align="left"><b>Books and web pages have both use a written language.  And all languages have rules or standards.</b></para>
+<para  align="left">Be it English or Arabic there is a set of rules for the language so people can decipher what the words and sentences mean. The same is true of XHTML. There are very specific rules called standards.  However, instead of people using these rules to decipher the contents, XHTML is to be read and interpreted by computer programs -- our web browser software. </para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>The Story of Ladle Rat Rotten Hut</pagetitle>
+<para/>
+
+<heading>So how cool is HTML? You tell me. </heading>
+<para  align="left">Here's an activity that will give you first-hand experience on what has happened to the world of text since the Web was introduced.  As you do this, keep in mind that this is a global phenomenon.	</para>
+<para/>
+
+<image alt="Levels of Clarity" width="203" height="151" class="leftalign">pic003.jpg</image><longdesc><br/>Read LadleRat.txt. What is missing that would improve the communication level?<br/><br/>Read LadleRat.html - What "clues" increase the level of communication?</longdesc>We will be reading one of my favorite fables, the story of Ladle Rat Rotten Hut.
+<para/>
+
+<para  align="left"><b>First, look at the plain text version</b> <hyperlink><name>http://webexplorations.com/book/webDev/ladleRat.txt</name><url>http://webexplorations.com/book/webDev/ladleRat.txt</url></hyperlink></para>
+<para  align="left">Not much information, is there? Just text. No clues to what is going on. Sure, you could spend a few hours figuring out the story, but that's not communication, is it?</para>
+<para/>
+
+<para  align="left"><b>OK, now let's try the XHTML version:</b> http://webexplorations.com/book/webDev/ladleRat.html</para>
+<para  align="left">Notice all the clues: there's a graphic, the hyperlinks on the left relate in some way to the story, and now you can at least see where the paragraphs are. Notice how useful the hyperlinks are in the story, giving you, the reader, clues and more information whenever <b>you</b> want it.</para>
+<para/>
+
+<para  align="left">Compare the difference between the plain text and the XHTML page. Even though you still don't understand the story, notice how much "nicer" the XHTML page is with its graphics, layout, and multiple clues. It all comes down to which is the better communication tool. A blop of text or a nicely designed page built with XHTML?</para>
+<para/>
+
+<para  align="left">This text is obscure on purpose. I wanted you to focus on the mechanism not the story. Here are some tips to help you read and understand the story:</para>
+<para/>
+
+
+<list type="2" level="1" start="1">
+	<item level="1">Try reading it out loud. </item>
+	<item level="1">Each word is an actual word (from an English dictionary), but has been substituted for the "correct" words based on sound. </item>
+	<item level="1">Instead of visual words think of them as audio words.<br/>For example: gull = girl and sorghum stenches = circumstances. </item>
+</list>
+
+<para/>
+
+<para  align="left"><b>Note:</b> Keep Ladle Rat Rotten Hut in mind the next time you write a paper in Word. Don't just dump a pile of text on your reader's lap. Use headings, graphics, and hyperlinks to make the paper more interesting and readable. </para>
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Tim Berners-Lee Remembers</pagetitle>
+<para/>
+
+<para  align="left">When asked what he was thinking when he first developed the Web, Tim Berners-Lee talks about a common information space. </para>
+<para/>
+
+<image alt="Tim Berners-Lee Remembers" width="336" height="252" class="leftalign">pic004.jpg</image><longdesc><br/>What did you have in mind when you first developed the Web? <br/>From: A Short Personal History of the Web<br/><br/>The dream behind the Web is of a common information space in which we communicate by sharing information.<br/><br/>Universality is essential<br/><br/>Once the state of our interactions was on line, we could then use computers to help us analyze it, make sense of what we are doing, where we individually fit in, and how we can better work together.<br/></longdesc>Take a minute to read what Tim Berners-Lee has written about developing the Web and why. 
+<para/>
+
+<para  align="left">Notice, it is all about communication.</para>
+<para  align="left"> </para>
+<para/>
+
+<para/>
+
+<para/>
+
+<para/>
+
+<para/>
+
+<para/>
+
+<para/>
+
+<para  align="left">http://www.w3.org/People/Berners-Lee/ShortHistory</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Where XHTML Came From</pagetitle>
+<para/>
+
+<heading>Tim Berners-Lee invention of the web changed the world. But, he didn't create everything on his own. </heading>
+<para  align="left">A lot of technologies already existed that was used in the original specification for the Web. For one, the Internet with its TCP/IP protocols already existed. Tim Berners-Lee used this as a way to connect everyone to the web pages stored on servers.</para>
+<para/>
+
+<heading><image alt="Where HTML came from" width="264" height="197" class="leftalign">pic005.jpg</image><longdesc><br/>SGML<br/>Standard Generalized Markup Language<br/>HTML - HyperText Markup Language<br/>XML - eXtended Markup Language<br/>XHTML - HTML using XML rules<br/></longdesc>SGML</heading>
+<para  align="left">And, in 1970, Charles Goldfarb had created a markup language for IBM which came to be called SGML (Standard Generalized Markup Language). This markup language would allow different authors to add special codes to their documents which would be used by a computer program to format the output of the document. For example: when the computer program read .ce it would center the next line.</para>
+<para/>
+
+<para  align="left">By 1990, SGML was a full-fledged markup. Tim Berners-Lee used SGML and created a subset of elements which he called HTML. </para>
+<para/>
+
+<heading>XML</heading>
+<para  align="left">After the Web really took off, in the late 1990's, it became apparent that HTML was too simplistic to handle business data, and Tim Berners-Lee along with the members of the W3C developed a new subset of SGML called XML (eXtended Markup Language). XML tags (or elements) are can be customized and XML has precise rules on how each element can be used. <b>XML is designed so computers can more easily communicate with other computers.</b></para>
+<para/>
+
+<heading>XHTML</heading>
+<para  align="left">So, what's XHTML? XML uses very precise rules to make it easier for computers to read the content or data of a page. These XML rules were combined with the existing HTML. Writing precise XHTML makes it possible to have smaller browser programs because the browsers no longer have to "guess" what the web developer meant and in what order. (Don't worry, there is an entire module coming up devoted to XHTML. It really all comes down to learning five rules like, "UPPER/lower case matter.")</para>
+<para/>
+
+<heading>Summary</heading>
+<para  align="left">SGML was the precursor. HTML tags were created as a subset of SGML in 1990. XML was developed 10 years later to improve computer to computer (i.e. business) communications. XML involves very strict rules or syntax. XHTML is a combination of HTML markup and the stricter rules of XML and was created to make it easier for browsers to understand the code. Using XHTML browsers do not have to cover all the different possibilities a programmer might introduce.</para>
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>How XHTML Works</pagetitle>
+<para/>
+
+<heading>The key to XHTML is a set of brackets:  &#60; and > and a slash  /</heading>
+<para  align="left">As the browser program reads through the text file, each time it comes to a &#60; it knows that this is the first character of a tag or layout command.</para>
+<image alt="HTML" width="288" height="216" class="leftalign">pic006.jpg</image><longdesc><br/>HyperText Markup Language - HTML uses special codes recognized and seen only by the browser tells browser how to display text and images. It is universal Ability to display different systems - Different browsers - different looks.<br/></longdesc>The browser reads the tag until it comes to the >. Once the tag is in memory, the browser looks it up in a table to see what to do. It changes the display of the page accordingly until it gets to a matching stop tag which contains a slash "/". Once the stop tag is read, the browser turns off that type of markup and continues on.
+<para/>
+
+<para  align="left"><b>Here's an example:   </b></para>
+<para  align="left">This shows how to make text &#60;strong>dark and bold&#60;/strong>.</para>
+<para/>
+
+
+<list type="3" level="1" start="1">
+	<item level="1">The browser reads through the text, displaying everything normally until it gets to the &#60;.</item>
+	<item level="1">It reads in the &#60;strong> and sets the output to bold. You can read this tag as "start strong"</item>
+	<item level="1">The browser now outputs the text "dark and bold" using boldface type until it comes to the next &#60;</item>
+	<item level="1">It reads in the &#60;/strong> which tells the browser to turn off the boldface. You can read this tag as "stop strong".</item>
+	<item level="1">Each tag is read and discarded by the browser. It is important to remember that the tags don't display. And, if you forget the stop tag, the browser will keep on outputting that markup until the end of the document. (You'll experience this in a few weeks when you have a hyperlink that goes to the end of your page! That means you forgot to stop the hyperlink with a stop tag.) </item>
+	<item level="1">If a tag is not recognized by the browser it will simply be ignored by the browser.</item>
+	<item level="1"><b>Everything</b> that isn't marked as a tag will be displayed on the screen.</item>
+	<item level="1">The browser output will look like this:<br/>   This is how to make text <b>dark and bold</b>.</item>
+</list>
+
+<para/>
+
+<para  align="left"><b>This type of mark-up has several advantages:</b></para>
+<para/>
+
+
+<list type="2" level="1" start="1">
+	<item level="1"><b>It is text based.</b> A few simple codes can be used to incorporate images, color, and different fonts. The formatting is done at view-time (on the client-side) and does not have to be transported over the network.</item>
+	<item level="1"><b>As a text file XHTML  is easy and fast to transport over TCP/IP networks</b> like the Internet, especially when compared to graphic images.</item>
+	<item level="1"><b>It's universal.  </b>Being text based, XHTML can be read by any browser on any computer system. Any system, be it a Macintosh or a PC or a Linux system will display the text according to the browser program it is using. Graphic and other text formats such as Microsoft Word or PDF are not that universal. </item>
+</list>
+
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>An Alternative to XHTML Documents</pagetitle>
+<para/>
+
+<heading>PDF - Portable Document Format files are becoming a popular alternative to web pages. </heading>
+<para  align="left">PDF's have the advantage of displaying page layouts the way the designer intended. They are excellent for displaying newsletters and other print media.</para>
+<image alt="PDF - An alternative to HTML" width="240" height="180" class="leftalign">pic007.jpg</image><longdesc><br/>PDF - Portable Document Fomat. Requires a special PDF reader. Proprietary format owned by Adobe. Allows exact layout to be displayed.</longdesc>
+<para  align="left">However, PDF files do need a special reader and PDF files use Adobe's proprietary specification so they are not as open and universal as HTML/XHTML. </para>
+<para/>
+
+<para  align="left">In addition, PDF files are usually much larger than XHTML. In the past they could not be "read" by screen readers, so anything in a PDF was unavailable to people with visual disabilities. Now, with a little extra work special tags can be included with PDF documents making their contents available to non-visual users. </para>
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Writing To Standards</pagetitle>
+<para/>
+
+<para  align="left">The world changed in 1913 when Henry Ford fine-tuned the assembly line process (which was originally devised by Eli Whitney in 1799). </para>
+<para/>
+
+<image alt="1913 photograph Ford company, USA - Source: Wikipedia" width="288" height="195" class="leftalign">pic008.jpg</image><longdesc><br/>1913 photograph Ford company, USA showing the assembly line of the Model A automobile - Source: Wikipedia<br/><br/></longdesc>Instead of lots of customized pieces being slowly and painstakingly pieced together, parts were <b>standardized</b> and assembled as the autos moved along a conveyor belt.  Ford was able to make twice as many cars as all his competitors combined and his cost savings allowed him to cut the price in half and then in half again.
+<para/>
+
+<para  align="left">Think where we would be if each railroad company in the United States had used a different size railroad track! Or, think of the problems that would result if every neighbourhood had different types of connections for their fire hydrants. What if each grocery store used their own set of weights and measures. And can you imagine how troublesome it was to travel in Europe when each country had its own currency, before the Euro was adopted.</para>
+<para/>
+
+<para  align="left"><b>Now, imagine if every browser used a different set of XHTML codes to display the pages</b>. This really happened during the 1990's when Netscape (which later became Mozilla) and Microsoft's Internet Explorer (IE) were competing for market share. Programmers had to write one set of code for people using the Netscape browser and another set of code for people viewing the page using IE. </para>
+<para/>
+
+<para  align="left">Tim Berners-Lee saved the day by forming the W3C (World Wide Web Consortium). The W3C is a group of companies (including Netscape and Microsoft) that sit down and agree on a standard way of doing things.</para>
+<para/>
+
+<para  align="left">There are several XHTML standards as well as the newer XHTML standard. You can find them out on the W3C site. Here is the <hyperlink><name>XHTML 1.1  standard</name><url>http://www.w3.org/TR/xhtml-basic/</url></hyperlink> (<hyperlink><name>http://www.w3.org/TR/xhtml-basic/</name><url>http://www.w3.org/TR/xhtml-basic/</url></hyperlink>) </para>
+<para  align="left"> </para>
+<heading>What happens if you don't follow these standards? </heading>
+<para  align="left">Someone often says, "I write XHTML code anyway I like and it shows up fine in my browser." </para>
+<para/>
+
+<para  align="left">That may be true, but what if your customer is using a different browser? Often, a web page that works in Internet Explorer will show up as a white screen of nothing in Netscape or Opera. Once the code is rewritten to the standard, everything displays fine. So, which way do you want it? Your way, or <b>so everyone can use the pages you create?</b> (The answer sounds something like this: ka ching. Your client could lose customers, i.e. money, if they can't view the web pages.)</para>
+<para/>
+
+<para  align="left">Also, by following standards you know your web pages will be viewable on devices and programs that haven't even been invented yet. This is especially true if you adapt the newer XHTML standards.</para>
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Which Editor to Use?</pagetitle>
+<para/>
+
+<heading>Why you don't want to use Microsoft Word</heading>
+<para  align="left"> If you are familiar with Microsoft Word or some other word processor you will probably want to use it. </para>
+<image alt="Text Editors" width="288" height="216" class="leftalign">pic009.jpg</image><longdesc><br/>Why not use Microsoft Word? - Embedded control codes. What about a GUI editor? DreamWeaver or FrontPage. Notepad vs Specialized Text Editors: Color coding - Quick coding features like preview</longdesc>The problem is a word processor like Word formats a document by inserting hundreds of hidden layout codes in the file. When you view the file in Word, everything looks wonderful, but if you display that file in a browser all you see is a bunch of gibberish with your text mixed in here and there. Going back to standards, Word is using a proprietary format for its text layout. This format will only work in Word or Word compatible programs such as Open Office. It won't work in a browser.
+<para/>
+
+<heading>What about DreamWeaver?</heading>
+<para  align="left">These are GUI (Graphic User Interface) editors. Keep in mind that this class is designed to teach you HTML/XHTML. Using a GUI editor will be like going to driving school and having the instructor do all the driving for you. </para>
+<para/>
+
+<para  align="left"><b>The best way to learn XHTML is to type the code yourself. </b></para>
+<para/>
+
+<para  align="left">Then, in the future you will be able to utilize all of the features that come with an editor like DreamWeaver because you will understand the code that it is creating.</para>
+<para/>
+
+<para  align="left">DreamWeaver allows you to look at both the GUI view as well as the code at the same time. You will want to spend most of your time in the code view where you have more control on things.</para>
+<para/>
+
+<heading>Text Editors</heading>
+<para  align="left">DreamWeaver is expensive. Many programmers prefer to use a regular text editor. One favorite is TextPad. It will run from a flash drive (so you can take it with you) and it is only about $20 for students. There are also many open-source text editors available for free including NotePad++ (http://notepad-plus.sourceforge.net/uk/download.php). </para>
+<para/>
+
+<para  align="left">Many of these have their own special features including color coding, and page preview. </para>
+<para  align="left">Try a Google search for:      "html editor" open source</para>
+<para/>
+
+<b><image alt="The browser is always looking for the less than sign" width="288" height="216" class="leftalign">pic010.jpg</image><longdesc><br/>The two brackets (less than and greater than) are the secret codes surrounding the markup text<br/>Two sided tags include bold stop bold<br/>One sided tags include horizontal rule (hr) and break br<br/>Browser reads the markup and then discards the  tag <br/></longdesc>What about NotePad?</b> Using NotePad is okay, but it doesn't have the color coding or other nice features. The color coding is invaluable helping you figure out errors in your code. For example, if you forget to closing comment tag, in TextPad all your code will be green. You'll know immediately that something is wrong. With NotePad you won't have a clue. Programming with NotePad is like programming with your eyes shut.
+<para/>
+
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Secret Codes</pagetitle>
+<para/>
+
+<heading>There are three types of tags or secret codes in XHTML.</heading>
+<para  align="left">They are double elements, the single elements, and the special characters.</para>
+<para/>
+
+<heading>Double Elements</heading>
+<para  align="left">First, the most common type: <b>double tag elements. </b>Each start tag has a matching stop tag. Here are some examples<b>:<br/></b></para>
+
+<list type="2" level="1" start="1">
+	<item level="1">The bold element: &#60;strong> and &#60;/strong></item>
+	<item level="1">The paragraph element: &#60;p> and &#60;/p> </item>
+	<item level="1">The comment element:</item>
+	<item level="1">&#60;!-- and --></item>
+</list>
+
+<para/>
+
+<para  align="left">Notice with the comment tag that there is a ! in the start and not in the stop element. Also both tags must have two dashes.</para>
+<para/>
+
+<para/>
+
+<heading>Single Elements</heading>
+<para  align="left">Next, a little less common, are <b>the single elements</b>. These only have one tag. They end with a space slash " /" to tell the browser to stop. Here are some examples:</para>
+
+<list type="2" level="1" start="1">
+	<item level="1">The horizontal rule element:  &#60;hr /></item>
+	<item level="1">The image element:  &#60;img /></item>
+	<item level="1">The line return or break element:  &#60;br /></item>
+</list>
+
+<para/>
+
+<para/>
+
+<heading>Special Characters</heading>
+<para  align="left">And finally, <b>the special characters</b>. These are used to display characters that aren't available on the regular keyboard. Here are some examples:</para>
+
+<list type="2" level="1" start="1">
+	<item level="1">a non-blank space: &#38;nbsp; which will act as a place holder</item>
+	<item level="1">a bullet: &#38;middot; or &#38;#149; </item>
+	<item level="1">a copyright symbol: &#38;copy; or &#38;#169; </item>
+	<item level="1">the less than sign:  &#38;lt; which is the less than symbol &#60; and is used to display XHTML tags (If you just use the &#60; the browser will be read it and discard it as a tag.)</item>
+</list>
+
+<para/>
+
+<para  align="left">Notice that the special characters each begin with an &#38; and end with a semi-colon ";"</para>
+<para/>
+
+<para  align="left">The browser pays attention to the &#38; just like it does with the &#60; .</para>
+<para/>
+
+<para  align="left">You may notice that some textbooks and older code out on the web do not include the / for the one-sided. That is the old HTML way of doing things. However, when you use XHTML you have to have a matching stop tag for every start tag. (This is one of those XML rules.)  To meet this criteria simply include a / at the end of the single tag. (You have to include the space so old browser that don't understand XHTML don't cough and spit on a "bad" element, such as &#60;br/> and then ignore it.)</para>
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>The Essential Tags</pagetitle>
+<para/>
+
+<heading>Here are the essential elements for every web page.</heading>
+<para/>
+
+<b><image alt="The essential tags" width="336" height="252" class="leftalign">pic011.jpg</image><longdesc><br/>html, head, title, stop title, stop head, body, stop body, and stop html</longdesc>&#60;html></b> The entire page is framed using &#60;html> and &#60;/html> . Everything before and after these tags is ignored by the browser. <br/>
+<para  align="left"><b>&#60;head></b> The head tag holds the title elements as well as the &#60;meta />, &#60;script>, and &#60;style>  elements that you will be learning about later in the course.</para>
+<para  align="left"> </para>
+<para  align="left"><b>&#60;title></b> For now, the only thing you will be putting in the &#60;head> section will be the &#60;title> &#60;/title>. Everything between these two tags will display in the title bar of the browser window. <b>Important!</b> Don't confuse this with titles on the page. The text inside these two tags only displays in the title bar and in the Start bar at the bottom of Windows.</para>
+<para/>
+
+<para  align="left"><b>&#60;/title></b> This marks the end of the title section.</para>
+<para/>
+
+<para  align="left"><b>&#60;/head></b> And this marks the end of the head section.</para>
+<para/>
+
+<para  align="left"><b>&#60;body></b> This starts the beginning of the body of the web page and will hold 99% of your code. Everything inside this element will display as the actual web page.</para>
+<para/>
+
+<para  align="left"><b>&#60;/body></b> This tells the browser that it is at the end of the body section. Remember, every start element must have a matching stop element. If you leave off the &#60;/body> tag the client's browser just may go drifting off to Planet Ten and never display the contents of your web page!</para>
+<para/>
+
+<para  align="left"><b>&#60;/html></b> And, last, but not least, there's the matching stop tag for the opening &#60;html>. Forget this stop tag and you may have client's sending you nasty email about blank web pages. If you are getting paid by the hour, your clients' will wonder what they paid you for.</para>
+<para/>
+
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Summary</pagetitle>
+<para/>
+
+<para  align="left"><b>What makes XHTML so very cool</b> in today's world?</para>
+<para/>
+
+<para  align="left"><b>What is the main purpose of XHTML?</b> (It starts with a "C" and no, Crab-apples is not correct.) </para>
+<para/>
+
+<para  align="left"><b>Where did XHTML come from?</b> Who wrote the specifications and what markup language did he use to create XHTML? </para>
+<para/>
+
+<para  align="left"><b>What's your editor of choice</b> and why don't you want to use Word to write web pages?</para>
+<para/>
+
+<para  align="left"><b>What are the essential elements for every web page.</b> Use your story. Make certain they are in the correct order.</para>
+<para/>
+
+<para  align="left"><b>What is the purpose of each of these XHTML sections?</b></para>
+<para/>
+
+<para  align="left"><b>Did you get your hello.html web page to work?</b> Are you comfortable with your development environment, moving back and forth between your text editor and your browser?</para>
+<para/>
+
+<para  align="center">*** *** ***</para>
+<para/>
+
+<para  align="left"><b>This completes this tutorial: Why is XHTML so cool?</b></para>
+<para  align="left">Written by Peter K. Johnson - August 2006<br/>Revised July 2010<br/></para>
+<para  align="left"><b>Read my blog at:  </b> <hyperlink><name>http://webexplorations.com/blog</name><url>http://webexplorations.com/blog</url></hyperlink></para>
+<para/>
+
+<para/>
+
+<htmlinclude>
+<center> <!--Creative Commons License--><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/"><img alt="Creative Commons License" border="0" src="http://creativecommons.org/images/public/somerights20.png"/></a><br/>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/">Creative Commons Attribution-NonCommercial-ShareAlike 2.5  License</a>.<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<Work rdf:about="">
+		<license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/" />
+	<dc:type rdf:resource="http://purl.org/dc/dcmitype/InteractiveResource" />
+	</Work>
+	<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/><requires rdf:resource="http://web.resource.org/cc/ShareAlike"/></License></rdf:RDF> -->
+</center>
+</htmlinclude>
+<para/>
+
+<para/>
+
+
+
+
+
+
+</newpage>
+
+
+</courseGenie>
+

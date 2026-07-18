@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Setup Your Tools</title>
+  
+<!-- indexTool.html - main activity page for Setup Your Tools module - Web4Biz course
+     Peter K. Johnson - peterk@webExplorations.com
+     Written:     05-17-11 Build template using jQuery
+     Revised: PKJ 08-18-14 Update portraits and LastPass information. Add other GTD links to Remember The Milk activity.
+                           Moved all projects and cover graphics into 13Project folder.
+                           Add "Brand Yourself" link - Why make a website?
+
+      MAINTENANCE CHECKLIST:
+      (1) Make sure checkmark.png and detailPage.png are in the root graphic directory
+      (2) Make sure jQuery is in the root folder.
+      (3) Update title
+      (4) Update total activity time for the module (around line #235)
+    
+     REVISED:  11-12-11 modified code originally from actForm.html
+               06-15-13 PKJ modified from JavaScript course
+               12-31-14 PKJ Added direct links for embedded videos
+
+Accessibility:
+(1) Add noscript element and hide if JavaScript is enabled.
+(2) Use CSS to make visibility: hidden; the .toDo elements in case JavaScript is disabled.
+(3) Use jQuery to change this CSS to visibility: visible;
+(4) Use jQuery to create a hyperlink that toggles between the detailed learning activities and the abbreviated toDo lists.
+    This will be added after the p#toggleToDo (at the top of the Learning Activities)
+
+Classes and IDs:
+Paragraph used to position hyperlink: #toggleTodo
+Hyperlink:                            #displayToggle
+Verbose Activity item:                .activity
+Short Todo item:                      .todo
+Name of icon/activity image:          #iconImg
+Name of icon/activity link:           #iconLink
+
+DEBUG CHECKLIST:
+(1) If #iconImg and #iconLink are not displaying, make certain you have the jQuery library in the root folder.
+-->
+
+
+<!-- ******************************************************
+* * * * * * * * * jQuery Stuff * * * * * * * * * * * *
+****************************************************** -->
+
+  <script type="text/javascript" src="../jquery-1.6.2.js">
+</script>
+  <script type="text/javascript">
+$("document").ready( function( )
+  {
+     // Change the CSS so .todo items display when toggled
+     $('.todo').css("visibility", "visible");
+     $('#iconImg').css("visibility", "visible");
+     $('#iconLink').css("visibility", "visible");
+     // Hide all the todo items
+     $('.todo').hide( );
+     $('#tipOfWeek').hide();
+
+     //When user clicks on todo link or the iconLink,
+     // toggle the screen between details/summary to-do list
+     $('#displayToggle').click(togglePage);
+     $('#iconLink').click(togglePage);
+     $('#iconImg').click(togglePage);
+     $('#tipImg').click( function()
+     {
+        $('#tipOfWeek').toggle();
+     }); // end of #tipImg.click( )
+  }); // end of .ready( )
+
+   // Toggle the screen between detailed and summary views
+   function togglePage( )
+   {
+      $('.activity').toggle();
+      $('.todo').toggle();
+
+      // Show the detailed Learning Activities
+      if($('.activity').is(':visible'))
+      {
+        $("#displayToggle").text('See Checklist View');
+        // Display the todoIcon
+        $("#iconImg").attr("src","../graphic/checkmark.png");
+        // Change the hyperlink
+        $("#iconLink").text("See Checklist View");
+        // Hide the objective section
+        $("#objective").show();
+        $("#wiifm").show( );
+        $("#nextModule").show( );
+        $(".assessment").show( );
+        $("#tip").show( );
+      }
+      else // show the summary to-do list
+      {
+        $("#displayToggle").text("See Detailed View");
+        // Display the Learning Activity Icon
+        $("#iconImg").attr("src", "../graphic/detailPage.png");
+        $("#iconLink").text("See Detailed View");
+        // Show the objectives
+        $("#objective").hide( );
+        $("#wiifm").hide( );
+        $("#nextModule").hide( );
+        $(".assessment").hide( );
+        $("#tip").hide( );
+        
+      }
+   }// end of togglePage( )
+
+  </script><!-- Make page IE backwards compatible using CSS3 and HTML5 -->
+
+  <script type="text/javascript" src="../modernizr.js">
+</script><!--[if (gte IE 6)&(lte IE 8)]>
+  <script type="text/javascript" src="../selectivizr-min.js"></script>
+  <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
+<![endif]-->
+  <!-- *************************************************   
+* * * * * * * * * CSS Stuff * * * * * * * * * * * *
+****************************************************** -->
+  <!-- Font Loading -->
+  <link href='http://fonts.googleapis.com/css?family=Permanent+Marker&v2' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+@import url(../activity.css);
+  </style>
+  <style type="text/css">
+ /* Initially hide the toDo list items in case JavaScript is disabled.
+      Use jQuery to show them if JavaScript is available. */
+   .todo,
+   #iconImg,
+   #iconLink {
+   visibility:      hidden;
+   }
+
+   .todo p {
+   /* Add checkbox as background image to control position */
+   background:      transparent url("../graphic/checkbox.png") no-repeat 0px 2px ;
+   padding:         5px 10px 7px 40px;  /* make room for checkbox */
+   margin:          0px 0px 0px 20px;
+   }
+
+   #tipImg {
+  /* Round all corners */
+  -webkit-border-radius:  130px;
+  -moz-border-radius:     130px;
+  border-radius:          130px;
+  border:                 1px green solid;
+  margin:                 10px 20px 5px 5px;
+  }
+  </style><!-- Fix IE Anamolies so IE recognizes HTML5 elements -->
+  <!--[if lt IE 9]>
+<script>
+// Set up new elements so old browsers will recognize for CSS
+var e = ("abbr,article,aside,audio,canvas,datalist,details,"
+   + "figure,footer,header,hgroup,mark,menu,meter,nav,output,"
+   + "progress,section,time,video").split(',');
+   for (var i = 0; i < e.length; i++)
+   {
+      document.createElement(e[i]);
+   }
+</script>
+<![endif]-->
+</head>
+
+<body>
+  <div id="frame">
+    <header>
+      <div class="identity">
+        <table summary="Page heading and module icon">
+          <tr>
+            <td rowspan="2"><img src="../graphic/wrench.png" width="100" alt="crescent wrench icon"></td>
+
+            <td>
+              <h1>Setup Your Tools</h1>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <h5>Install your web development tools.</h5>
+            </td>
+          </tr>
+        </table>
+      </div><!-- end of .identity -->
+      <!-- ****** NAVIGATION (To-Do List/Detailed List Graphics) ******* -->
+
+      <div class="navigation">
+        <table summary="navigation links to course map and todo list" border="1">
+          <tr>
+            <td><img id="iconImg" src="../graphic/checkmark.png" alt="to-do list icon" width="50"></td>
+          </tr>
+
+          <tr>
+            <!-- This link is handled null. It triggers a click event handled by jQuery -->
+
+            <td>
+              <a id="iconLink" href="#">See Checklist View</a>
+            </td>
+          </tr>
+        </table>
+      </div><!-- end of .navigation -->
+    </header>
+<!-- ************************************************
+* * * * O B J E C T I V E S    S E C T I O N  * * * *
+***************************************************** -->
+
+    <section id="objective">
+      <!-- Objectives -->
+
+      <h4>Learn how to:</h4>
+
+      <ol>
+        <li>Use a screen-capture video recorder - Screen-Cast-o-Matic</li>
+
+        <li>A text editor - NotePad++ or TextWrangler</li>
+
+        <li>A browser with standards - Google Chrome</li>
+
+        <li>Take screenshots of your computer</li>
+
+        <li>Write effective emails</li>
+      </ol>
+    </section>
+<!-- ************************************************
+WII-FM
+***************************************************** -->
+
+    <section id="wiifm">
+      <!-- WII-FM -->
+
+      <h4>WII-FM (What's In It - For Me)</h4>
+
+      <p><strong>Web development is about having the right tools to work with.</strong> This module will help you get your tools installed and set up so you can concentrate on creating cool web pages.</p>
+
+      <p><strong>Outside of class you will also find these tools useful when you need to:</strong></p>
+
+      <ul>
+        <li>Show the help desk a video showing what is actually happening on your computer.</li>
+
+        <li>Create a how-to video showing a friend how to do something on their computer.</li>
+
+        <li>Get a quick response when you send out an email request.</li>
+      </ul>
+    </section>
+<!-- ***************************************************
+* * * * L E A R N I N G    A C T I V I T I E S   * * * *
+******************************************************** -->
+
+    <section class="activityGroup">
+      <h4 id="toggleTodo">Complete these Learning Activities:</h4>
+
+      <p><strong>Total estimated time for this module:</strong> 4-5 hours.</p><!-- jQuery will insert a link here for toggling between detailed and summary to-do list
+       based on the id="toggleTodo" set in the object above this comment. -->
+      <noscript>
+      <p><strong>You have JavaScript turned off.</strong> Enable it to view a short list of all the To-Do items.</p></noscript>
+      <hr>
+<!-- ************************
+Intro Video
+***************************** -->
+      <!-- DETAIL -->
+
+      <div class="activity">
+        <p>
+        <iframe width="300" height="225" src="http://www.youtube.com/embed/WY4wfLOnF2Y" frameborder="0" allowfullscreen align="left"></iframe >
+        <br /><br /><br />
+        <strong>Watch this video to see <a href="http://youtu.be/WY4wfLOnF2Y" target="_blank">how this course is set up.</a></strong>
+        </p>
+        <br /><br /><br /><br /><br /><br /><br /><br />
+
+        <p><strong>Estimated Time:</strong> 10 minutes.</p>
+      </div><!-- end of .activity -->
+      <!-- SUMMARY -->
+
+      <div class="todo">
+        <p>
+        <a href="http://youtu.be/WY4wfLOnF2Y" target="_blank">Watch this introduction video to see how this course is set up.</a>
+        </p>
+      </div><!-- end of .todo -->
+      <hr>
+<!-- ************************
+Why this course is important
+***************************** -->
+      <!-- DETAIL -->
+
+      <div class="activity">
+      <p>
+        <iframe width="299" height="152" src="http://www.youtube.com/embed/TVqe8ieqz10?hd=1" frameborder="0" allowfullscreen="" align="left"></iframe>
+
+        <br />
+        <br />
+        <strong>Why this course is important:</strong> <a href="http://youtu.be/TVqe8ieqz10" target="_blank">The future is now.</a><br>
+        <br>
+        Ready when you are...<br>
+        <br>
+        <br>
+        <br>
+        </p>
+        <p>
+        <strong>Check out this slideshow from BrandYourself.com: <a href="http://www.slideshare.net/petekistler/brandyourselfcom?from_search=32" target="_blank">Brand Yourself!</a>.</strong> The site is free or you can get professional support. Can you find out how much that is?
+        </p>
+        <p>
+        By the end of this course you will be able to build your own website and establish your own SEO on Google without relying on someone else promoting you. <strong>You will be in control of your own image out on the Web.</strong>
+        </p>
+
+        <p><strong>Estimated Time:</strong> 2 minutes.</p>
+      </div><!-- end of .activity -->
+      <!-- SUMMARY -->
+
+      <div class="todo">
+        <p><a href="http://www.youtube.com/embed/TVqe8ieqz10" target="_blank">Watch this video to see why knowing web development is so important.</a></p>
+      </div><!-- end of .todo -->
+      <hr>
+<!-- ************************
+Course Expectations  * * * * 
+***************************** -->
+      <!-- DETAIL -->
+
+      <div class="activity">
+        <h3>Know the expectations of this course</h3>
+
+        <p><strong>You are responsible for your own actions.</strong> Not the instructor, or administration, or your other classmates or your friends. It all comes down to what you decide to do or not do and what results you want.</p>
+
+        <p><strong>6 Expectations of all students taking this course:</strong></p>
+
+        <p><strong>1. You must have access.</strong> It is expected that you have a working computer at home and are connected to the Internet. Do not try to take this course without these two important tools. All of the material is located online on D2L and not having access to the Web is like driving a car without wheels.</p>
+
+        <p><strong>2. Do the work.</strong> It is expected that you have done <strong>all</strong> of the Learning Activities for the week including the self-quizzes. Work ahead and use your classroom time for review and questions on what you have learned.</p>
+
+        <p><strong>3. Meet deadlines.</strong><br>
+        <strong>For Projects:</strong> Build on the bonus points by turning in projects early. There is also a 48-hour window (with a 20% penalty) after the due date. After that no projects are accepted.<br>
+        <strong>For Quizzes:</strong> You have one week to take each graded quiz. Miss that huge window of opportunity and you have lost out on those points. There will be no makeup opportunities at the end of the semester.</p>
+
+        <p><strong>4. Understand that learning is moving out of your comfort zone.</strong> Learning is about change and change means being willing to move out of your comfort level into new areas you haven't explored before.</p>
+
+        <p><strong>5. Communicate as a professional.</strong> Always write using proper grammar and spelling. In the professional world you are judged by your emails.</p>
+
+        <p><strong>6. Stay connected.</strong><br>
+        Have all your my.southcentral.edu emails forwarded to your personal email address and check your email at least once each day.<br></p>
+      </div><!-- end of .activity -->
+      <!-- SUMMARY -->
+
+      <div class="todo">
+        <p>Know the expectations for this course.</p>
+      </div><!-- end of .todo -->
+      <hr>
+<!-- ************************
+Portrait - Add your photo to D2L  * * * * 
+***************************** -->
+      <!-- DETAIL -->
+
+      <div class="activity">
+        <p><a href="graphic/d2lPortrait.png" target="_blank"><img src="graphic/d2lPortrait.png" alt="D2L Profile" width="200" hspace="20" vspace="20" border="2" align="left"></a> <strong>Create a professional, online representation of yourself. Add a resume-type portrait of yourself to D2L.</strong> On your D2L homepage look for the profile link in the left sidebar.</p>
+
+        <p>No &quot;party&quot; pictures. Use a photo that you would use on a resume. (Click on the image for a larger view)</p>
+
+        <p><a href="graphic/allanFosterPortrait.jpg" target="_blank"><img src="graphic/allanFosterPortrait.jpg" alt="portrait of Allan Foster" style="margin: 0 15px; width: 150px; float: left;"></a> You will be using this as part of your project work when you do screenshots.</p>
+
+        <p><strong>Smart Thinking:</strong> Use a shot that shows your face and your smile. Make a great &quot;first&quot; impression every day.</p>
+
+        <p><strong>Take a great self-portrait and use it as your "signature" on all your online sites. Make this your web identity.</strong></p>
+
+        <p>Here are <a href="http://photo.tutsplus.com/articles/inspiration/100-seriously-cool-self-portraits-and-tips-to-shoot-your-own/" target="_blank">100 seriously cool self-portraits and tips to shoot your own.</a>.</p>
+        <p>
+        Here are some other <a href="http://usesthis.com/" target="_blank">example portraits</a>. <br />
+        (If the link is broken here is a <a href="examplePortrait.pdf" target="_blank">screen shot.</a>).
+        </p>
+        
+        <p>
+           Look at the portrait's used by the members of the <a href="http://yec.co/members/" target="_blank">Young Entrepreneur's Council (YEC)</a>. This is a "by-invitation-only " group. Like each of these people you want to put your best face out there.
+        </p> 
+
+        <p><strong>Estimated Time:</strong> 15 minutes</p>
+      </div><!-- end of .activity -->
+      <!-- SUMMARY -->
+
+      <div class="todo">
+        <p>Add a resume-type portrait of yourself to D2L.</p>
+      </div><!-- end of .todo -->
+      <hr>
+<!-- ************************
+How to take screenshots
+***************************** -->
+      <!-- DETAIL -->
+
+      <div class="activity">
+        <p><strong>A picture is worth a thousand words. Know how to take a screen shot on your computer.</strong></p>
+
+        <ul>
+          <li><strong>Macintosh:</strong> Command-Shift-4, then select an area: Take a screenshot of an area and save it as a file on the desktop</li>
+
+          <li><strong>iPad</strong> - Press the Power (or sleep/wake) button at the top edge of the iPad app and the round Home button at the same time for just a quick second. When you do you’ll see the screen flash white for a moment and you’ll hear the camera shutter sound.<br>
+          Once you’ve done that, you can go to the Photos app and see your screenshot in the Camera Roll album.</li>
+
+          <li><img src="graphic/snippingTool.jpg" alt="graphic image of windows snipping tool" style="margin: 0 15px; width: 150px; float: right;"><strong>Android Tablets</strong> - Press the Volume Down and Power buttons at the same time. You should hear a camera shutter noise-type sound effect and in your notification bar, you should see “Saving screenshot…” The image will be in the “Gallery” on your device.</li>
+
+          <li><strong>Windows 7</strong> - Use the Windows Snipping Tool - Start &gt; All Programs &gt; Accessories &gt; Snipping Tool.</li>
+
+          <li><strong>Windows 8</strong> - Use the Snipping Tool - From the Windows 8 Start Screen, just start typing the word "snip" and press enter.</li>
+
+          <li><strong>Other?</strong> - Do a Google search for: [name of your operating system] screenshot</li>
+        </ul>
+
+        <p><strong>Estimated Time:</strong> 15 minutes</p>
+      </div><!-- end of .activity -->
+      <!-- SUMMARY -->
+
+      <div class="todo">
+        <p>Know how to take a screen shot on your computer.</p>
+      </div><!-- end of .todo -->
+      <hr>
+
+<!-- ************************
+Keep Track of UserID/Passwords
+***************************** -->
+      <!-- DETAIL -->
+
+      <div class="activity">
+        <p><strong>Set up a file on your computer or a page in a notebook to keep track of your userID/passwords.</strong> At the very least you'll want to include:</p>
+
+        <ul>
+          <li>The URL (web address) of the site - it will start with: http://</li>
+
+          <li>Your username</li>
+
+          <li>Your password</li>
+        </ul>
+
+        <p><strong>Here is a form you can use:</strong> <a href="siteOrganizer.html" target="_blank">Site Organizer</a> (Right-mouse click, Choose the option: "save link as")</p>
+
+        <p>
+ <a href="https://lastpass.com/" target="_blank"><img src="graphic/lastpassLogo.png" alt="LastPass Logo" style="margin: 0 15px; width: 150px; float: left;" /></a>
+        <a href="https://lastpass.com/" target="_blank">LastPass</a> is an excellent cloud service that will help you keep track of your passwords. It is $1/month if you want to use the program on all your devices.       
+        </p>
+
+        <p><strong>Estimated Time:</strong> 30 min.</p>
+      </div><!-- end of .activity -->
+      <!-- SUMMARY -->
+
+      <div class="todo">
+        <p>Set up a file on your computer or a page in a notebook to keep track of your userID/passwords.</p>
+      </div><!-- end of .todo -->
+      <hr>
+<!-- *************************************
+Install Google Chrome
+****************************************** -->
+      <!-- DETAIL -->
+
+      <div class="activity">
+        <p><strong><img src="graphic/chromeLogo.gif" alt="logo for Google Chrome" align="left" width="100">Install Google Chrome as your default browser. <a href="https://www.google.com/chrome/" target="_blank">https://www.google.com/chrome</a></strong>
+        </p>
+        <p>
+        <iframe width="299" height="152" src="http://www.youtube.com/embed/nCgQDjiotG0?hd=1" align="right" frameborder="0" allowfullscreen=""></iframe>
+        </p>
+        <p>
+        Watch this video tongue-in-cheek <a href="http://youtu.be/nCgQDjiotG0" target="_blank">video showing how fast Google Chrome is</a>.
+        </p>
+        <p>
+        In reality, the reason you want to use Google Chrome is because of all the excellent developer tools that are built-into the browser.
+        </p>
+        <p>
+        FireFox is another excellent browser.
+        </p>
+        <p><strong>Estimated Time:</strong> 20 minutes.</p>
+      </div><!-- end of .activity -->
+      <!-- SUMMARY -->
+
+      <div class="todo">
+        <p>Install Google Chrome as your default browser.</p>
+      </div><!-- end of .todo -->
+      <hr>
+<!-- *************************************
+Install a Text Editor 
+****************************************** -->
+      <!-- DETAIL -->
+
+      <div class="activity">
+        <p><a href="graphic/notePadTabSetting.png" target="_blank"><img src="graphic/notePadTabSetting.png" alt="NotePad++ TAB settings" width="150" border="2" align="right"></a><img src="graphic/notePadLogo.png" alt="NotePad++ Logo" width="75" align="left"> <strong>Install a text editor on your flash drive.</strong> Putting the editor on your flash drive will ensure that you'll always have the same settings no matter where you work. This is especially valuable for people attending the face-to-face classes.</p>
+
+        <p><strong>Windows Users: <a href="http://portableapps.com/apps/development/notepadpp_portable" target="_blank">NotePad++ from Portable Apps</a></strong> is a very good editor.<br>
+        Set up defaults <a href="graphic/notePadTabSetting.png" target="_blank">so all TABs convert to 3 spaces</a>.(Click on screen shot for larger view)</p>
+
+        <p><strong>Macintosh Users: Coda is a very good code editor</strong> (If you have the extra money - $99) <strong>or TextWrangler</strong> (Free!).</p>
+
+        <p>Here are <a href="http://mac.appstorm.net/roundups/office-roundups/top-10-mac-text-editors/" target="_blank">several alternatives that are available on the Mac.</a>
+        <br>
+        Set up the defaults so all TABS convert to 3 spaces.</p>
+
+        <p><strong>Estimated Time:</strong> 30 minutes.</p>
+      </div><!-- end of .activity -->
+      <!-- SUMMARY -->
+
+      <div class="todo">
+        <p>Install a text editor on your flash drive.</p>
+      </div><!-- end of .todo -->
+      <hr>
+<!-- *************************************
+Write an effective email
+****************************************** -->
+      <!-- DETAIL -->
+
+      <div class="activity">
+        <p>
+        <a href="http://peterkjohnson.com/scc/effectiveEmail.pdf" target="_blank"><img src="graphic/messageInBottle.jpg" alt="Message inside a glass bottle" style="margin: 0 15px; width: 150px; float: left;" /></a>
+        <strong><a href="http://peterkjohnson.com/scc/effectiveEmail.pdf" target="_blank">Learn how to write effective emails.</a> Ever send an email and have it be ignored?</strong> Follow these 5 simple tricks on writing emails that will get you a quick response.</p>
+
+        <p>All your email correspondence in this class are expected to be written in a professional manner outlined by this activity.</p>
+
+        <p>In this class it is okay to address the instructor by his or her first name. "Peter" is very appropriate. "Hey Pete!" is not.
+        </p>
+
+        <p><strong>Estimated Time:</strong> 30 minutes.</p>
+      </div><!-- end of .activity -->
+      <!-- SUMMARY -->
+
+      <div class="todo">
+        <p><a href="effectiveEmail.pdf" target="_blank">Learn how to write effective emails.</a></p>
+      </div><!-- end of .todo -->
+      <hr>
+<!-- *************************************
+Student Responsibility       * * * * 
+****************************************** -->
+      <!-- DETAIL -->
+
+      <div class="activity">
+        <p><strong>Read the article &quot;<a href="studentResponsibility.pdf" target="_blank">Learning - Your First Job</a>&quot;</strong></p>
+
+        <p>You will be writing an Execute Summary for points in the Assessment section below.</p>
+
+        <p><strong>What's an executive summary?</strong> In business an Executive Summary is made up of a few sentences that summarize the article or paper. Executives are busy people and will only read a summary to determine.</p>
+
+        <p>Jot down some notes as you read, catching the high points of the article so you can summarize it when you start on the Assessment Activities below.</p>
+
+        <p><strong>Estimated Time:</strong> 30-60 minutes.</p>
+      </div><!-- end of .activity -->
+      <!-- SUMMARY -->
+
+      <div class="todo">
+        <p>Read the article &quot;<a href="studentResponsibility.pdf" target="_blank">Learning - Your First Job</a>&quot;</p>
+      </div><!-- end of .todo -->
+      <hr>
+
+
+<!-- *************************************
+Remember the Milk - GTD & Trello
+****************************************** -->
+<!-- DETAIL -->
+<div class="activity">
+<p>
+<a href="http://www.rememberthemilk.com/" target="_blank"><img src="graphic/rtmLogo.png" alt="Remember The Milk logo" style="margin: 0 15px; width: 150px; float: left;" />
+<iframe src="http://www.screenr.com/embed/nO77" width="300" height="180" frameborder="0" align="right"></iframe>
+<strong><a href="http://www.rememberthemilk.com/" target="_blank">Install Remember the Milk</a></strong> or any other Getting Things Done (GTD) program to help you stay on top of quiz and project due dates. This is a free app that runs on all platforms as well as your mobile phone.
+</p>
+<p>
+Here is a <a href="http://dev.tutsplus.com/articles/activetuts-workshop-2-remember-the-milk-critique--active-11177" target="_blank">tutorial/review of Remember the Milk</a>.
+</p>
+<p>
+Here is a <a href="http://www.screenr.com/nO77" target="_blank">direct link to the video </a>showing how easy it is to use.
+</p>
+<p>
+Here is a comparison of <a href="http://www.priacta.com/Articles/Comparison_of_GTD_Software.php" target="_blank">167 other time management programs</a> you can try. Click on the price link at the top of the page to list the free ones first.
+</p>
+<hr width="33%" />
+<p>
+   <a href="href="https://trello.com/peterjohnson28/recommend"" target="_blank">
+   <img src="graphic/trelloLogo.svg" alt="Trello Logo" style="margin: 0 25px 0 0; width: 100px; float: left;" />
+</a>
+<a href="graphic/trelloExample.png" target="_blank">
+   <img src="graphic/trelloExample.png" alt="" style="margin: 0 25px 0 0; width: 150px; float: right;" />
+</a>
+
+<strong>Trello is another To-Do List Manager</strong> - <a href="https://trello.com/peterjohnson28/recommend" target="_blank">Trello</a>
+<p>
+<p>
+   It is much more visual and you can share your Trello boards with others. Click on the image on the right for a larger view.
+   <br /><br />
+</p>
+<hr width="33%" />
+<p>
+   <strong>The important thing is that you set up some type of system to help you keep track of all your due dates for your classes.
+   </strong>
+</p>
+<p>
+   <strong>Estimated Time: </strong>30-60 minutes.
+</p>
+</div> <!-- end of .activity -->
+
+<!-- SUMMARY -->
+<div class="todo">
+<p>
+<a href="http://www.rememberthemilk.com/" target="_blank">Install Remember the Milk</a></strong> or any other Getting Things Done (GTD) program.
+</p>
+</div> <!-- end of .todo -->
+<hr />
+
+
+<!-- *************************************
+Keep in touch     
+****************************************** -->
+      <!-- DETAIL -->
+
+      <div class="activity">
+        <p><strong>Keep in Touch! Stay Connected.</strong></p>
+
+        <p><strong>Forward Your Email.</strong> You can set your SCC email to forward to the email program you use the most often.</p>
+
+        <p>Log into your SCC email and read the help files to learn how to forward your email. It only takes a few clicks.</p>
+
+        <p><strong>Estimated Time:</strong> 15 minutes</p>
+      </div><!-- end of .activity -->
+      <!-- SUMMARY -->
+
+      <div class="todo">
+        <p>Forward your SCC email to your favorite email account.</p>
+      </div><!-- end of .todo -->
+      <hr>
+<!-- ************************************
+ Print the Syllabus      
+****************************************** -->
+      <!-- DETAIL -->
+
+      <div class="activity">
+        <p><strong>Print the syllabus for your records.</strong> (There's a &quot;Syllabus&quot; link at the top of the course page) Keep copies of the syllabi from all your classes. They can save you a lot of time and money if you ever transfer to another college.</p>
+
+        <p><strong>Estimated Time:</strong> 5 minutes</p>
+      </div><!-- end of .activity -->
+      <!-- SUMMARY -->
+
+      <div class="todo">
+        <p>Print the syllabus for your records.</p>
+      </div><!-- end of .todo -->
+      <hr>
+      
+<!-- *************************************
+Print out Course Map & Learning Activities   
+****************************************** -->
+      <!-- DETAIL -->
+
+      <div class="activity">
+        <p><a href="../index.html" target="_blank"><img src="graphic/courseMap.png" alt="screen shot of the course map" style="margin: 0 15px; width: 150px; float: left;"></a> <strong>Print out the Course Map and these Learning Activities.</strong> (Click on the image to jump to the Course Map.) Each week there will be a new Learning Activity list that you can print out.</p>
+
+        <p>You may feel anxious and worried about missing something in the course. Use the Learning Activity pages as a weekly checklist to make sure you've done everything.</p>
+
+        <p>Reward yourself with a 5-15 minute activity that you enjoy after you have finished an activity. (Use a timer so you don't waste precious learning time!)</p>
+
+        <p><strong>Estimated Time:</strong> 5 minutes</p>
+      </div><!-- end of .activity -->
+      <!-- SUMMARY -->
+
+      <div class="todo">
+        <p>
+        Print out the Course Map and these Learning Activities.
+        </p>
+      </div><!-- end of .todo -->
+      <hr>
+      
+<!-- *************************************
+Cheat Sheets  
+****************************************** -->
+      <!-- DETAIL -->
+
+      <div class="activity">
+        <p><span class="optional">OPTIONAL:</span> <strong>Print out these cheat sheets as a reference</strong> that you will use anytime you are writing HTML and CSS.</p>
+   <ul>
+   <li><i><a href="http://www.addedbytes.com/download/html-cheat-sheet-v1/png/" target="_blank">HTML5 Element Summary</a></i> - A 1-page summary list of the most popular elements.</li>
+ 
+  <li><i><a href="http://www.smashingmagazine.com/2009/07/06/html-5-cheat-sheet-pdf/" target="_blank">HTML5 Element - Complete List</a></i> - A 4-page summary of all the HTML5 elements from Smashing Magazine.</li>
+
+   <li><i><a href="http://coding.smashingmagazine.com/2009/07/13/css-3-cheat-sheet-pdf/" target="_blank">CSS3 Summary Sheet</a></i> - A 5-page chart from Smashing Magazine.</li>
+   </ul>
+      </div><!-- end of .activity -->
+      <!-- SUMMARY -->
+
+      <div class="todo">
+        <p><span class="optional">OPTIONAL:</span> Print out these cheat sheets as a reference that you will use anytime you are writing HTML and CSS.</p>
+      </div><!-- end of .todo -->
+      <hr>
+
+<!-- ************************************
+ Web Site Example    
+****************************************** -->
+      <!-- DETAIL -->
+
+      <div class="activity">
+        <p>
+           <a href="graphic/annaHaaseHomePage.png" target="_blank">
+           <img src="graphic/annaHaaseHomePage.png" alt="Anna Haaase Home Page for Blue Dirt Farm" style="margin: 0 25px 0 0; width: 100px; float: left;" />
+</a>
+<strong>Here is an example of a site one student built</strong> as she went through this course. <a href="http://annah.t.southcentral.edu/index.html" target="_blank">Anna Haase's Blue Dirt Farm</a>.
+<br /><br />
+        </p>
+
+      </div><!-- end of .activity -->
+
+    </section>
+    
+<!-- ************************************************
+* * * * A S S E S S M E N T    S E C T I O N  * * * *
+***************************************************** -->
+
+    <section class="assessment">
+      <h4>Your Graded Assignments For This Module</h4><!-- Project -->
+  <p>
+  <img src="../graphic/stopSign.png" alt="stop sign" style="margin: 0 10px 0 0; width: 60px; float: left;" /><strong>Stop! </strong><br />
+  Don't frustrate yourself. Do the Learning Activities BEFORE starting these graded activities. <br />
+  No sense jumping into the deep end of the pool if you haven't learned how to swim...
+  </p>
+<hr />
+      <p class="optional">Send a professional email to the instructor with the following information:</p>
+
+      <p>(1) The subject line of your email must be: Web4Biz - <em>your name</em> Contact Information</p>
+
+      <p>(2) Attach a screen shot of your D2L Profile Page showing the portrait you've address. This must be either a .png, .gif, or .jpg. (No Word documents.)
+      </p>
+
+      <p>(3) Your preferred email address other than the @my.southcentral.edu address. Include your gmail address if it is different than your preferred email. This information will help me get to know you and be able to get in touch with you via phone or email after the course. (Often I hear about web jobs and like to pass the information on to the people that have completed my courses.)</p>
+
+      <p>(4) A phone number where your instructor can reach you or leave a message.</p>
+
+      <p>(5) Any special concerns you may have about this course.</p>
+
+      <p>(6) If you already have a webpage (FaceBook, LinkedIn, or your own website) please send me the link. (Copy and paste the web address URL from your browser, don't trust your typing.)</p>
+      
+      <p>(7) Include a screenshot as an email attachment showing the screen in your South Central email where you are forwarding your college emails to your the email address you use most often. Name this file: emailForward.png (This will show your instructor that you are staying in touch as well as that you know how to take a screen shot and use email attachments.</p>
+
+      <p><strong>Please write using complete sentences.</strong> Use proper grammar, punctuation, and capitalization. People judge emails by spelling and grammar. Employers have asked me to stress to my students how vital this is in today's business world.</p>
+
+      <p><strong>You will receive up to 10 points for completing this activity.</strong></p>
+
+      <p><strong>Note:</strong> Even if you have me for several of your classes I would like an email from each course. I keep them in separate course email folders to help me with grading. Feel free to copy and paste.</p>
+      <hr>
+      <!-- CAT: Responsibility -->
+
+      <p class="optional">Complete the CAT:Responsibility (Use the D2L menu item: Quizzes)</p>
+
+      <p>This is based on the article you read, &quot;Learning - Your First Job&quot;, as part of the Learning Activities.</p>
+
+      <p><strong>Here is the question:</strong> Being able to write a short, concise executive summary is an important skill in business. As part of the learning activities you read the article &quot;Learning, Your First Job&quot; Write an executive summary highlighting the main points of this article as bullet items as well as a compelling reason why I should go and read the full article.</p>
+
+      <p></p>
+
+      <center>
+        <strong>******* FAQ - Frequently Asked Questions ********</strong>
+      </center>
+      <p>
+
+      <p><strong>What is a CAT?</strong> A CAT is a Classroom Assessment Technique and they are design to show your instructor how much you have learned from a particular learning activity. For this course you will always find them in the <strong>Quiz section</strong> of D2L.</p>
+
+      <p><strong>How come I don't get my score as soon as I submit the CAT?</strong> Each CAT has to be graded manually by your instructor. D2L just isn't smart enough to grade your writing. (Maybe when the next version is released....)</p>
+
+      <p><strong>I'm a slow typist. What happens if I run out of time writing my answer???</strong> <a href="http://paperRater.com" target="_blank"><img src="graphic/paperRaterLogo.png" alt="paperRater.com logo" style="margin: 0 15px; width: 150px; float: right;"></a> Feel free to type your answer out in a text editor before you open up the CAT on D2L. Then copy and paste it into the answer field of the CAT question. This will help you check for spelling and grammar errors as well as edit your writing.<br>
+      (<a href="http://www.paperrater.com/" target="_blank">Use PaperRater.com</a> to check your spelling and grammar.)</p>
+
+      <p><strong>What's an executive summary?</strong> It is a short summary intended to give the reader a quick summary and make the person want to click the link, taking them deeper into the web site, to read the full article. <a href="http://explorecreaterepeat.com/" target="_blank">Explore, Create, Repeat</a> is a website that uses executive summaries to get users to jump to the whole article. Notice how succinctly they are written. </p>
+
+      <p>Include the highlights of the article <strong>using a few sentences</strong> as well as a compelling reason why the person should go read the complete article. Executives are busy people and often want to read a summary before spending time reading through a long, detailed piece.</p>
+
+      <p><strong>Please note:</strong> This is not a personal, reflective paper on what you thought about the article. It is a short summary intended to give the reader a quick summary and make the person want to click the link, taking them deeper into the web site, to read the article.</p>
+
+      <p><strong>How will my CAT be scored?</strong><br>
+      <strong>You will earn points based on the following scale:</strong></p>
+
+      <p>4-5 points - Succinct and to the point yet summarizing the article yet still catching my attention making me want to read the full article.</p>
+
+      <p>3 points - Okay. Nothing spectacular or some misspelled words.<br></p>
+
+      <p>1-2 points - Yawn. Someone else must have read the article for you or you tried to imitate a comedian by using horrible spelling and grammar. (Did you use PaperRater.com?)</p>
+
+      <p>0 points - You seem to have read a different article or didn't do this assessment activity.</p>
+    </section>
+<!-- ************************************************
+Tip of the Week
+***************************************************** -->
+
+    <section>
+      <img src="../graphic/lightBulb.png" alt="hand holding lightbulb all lit up" align="left" width="90" id="tipImg">
+
+      <h4>Your Tip-Of-The-Week</h4>
+
+      <p>(Click on the lightbulb to reveal the tip.)<br>
+      <br></p>
+
+      <div id="tipOfWeek">
+        <h3>SmarterMeasure takes a picture of your &quot;student&quot; self</h3>
+
+        <p><strong>Use this to get a &quot;before&quot; and &quot;after&quot; picture of yourself at the beginning of your degree and then again at the end of your degree.</strong></p>
+
+        <p><a href="graphic/smarterMeasureSummaryPage.png" target="_blank"><img src="graphic/smarterMeasureSummaryPage.png" alt="Smarter Measure Result Page" width="200" hspace="20" vspace="20" border="2" align="left"></a><strong>Take the <a href="http://southcentral.readi.info/" target="_blank">SmarterMeasure Assessment</a>.</strong> http://southcentral.readi.info</p>
+
+        <p><strong>The username:</strong> southcentral<br>
+        <strong>The password:</strong> student</p>
+
+        <p><strong>An assessment gives you a snapshot of who you are right now.</strong> There are no right/wrong answers.</p>
+
+        <p>Think of it as a picture of your skills as they are today including a view of:<br>
+        - Your personal Attributes<br>
+        - A profile of your Learning Styles<br>
+        - Your reading speed and comprehension<br>
+        - Your computer skills and knowledge<br>
+        - Your typing speed and accuracy</p>
+
+        <p>You don't have to do the assessment all in one setting. SmarterMeasure will send you an email with your own login and pin number allowing you to return later to finish the survey.</p>
+
+        <p><strong>Estimated Time:</strong> 30 minutes to 1 hour. (This does not have to be completed in one sitting.)</p>
+      </div><!-- end of #tipOfWeek -->
+    </section>
+<!-- ************************************************
+What's Next?
+***************************************************** -->
+
+    <section id="nextModule">
+      <h4>What's Next?</h4>
+
+      <p><img src="../graphic/folder.png" alt="graphic of a file folder" style="margin: 0 15px; width: 80px; float: left;">Learn how to manage all the files and folders on your computer.<br>
+      <br>
+      Learn the hotkeys that professionals use to make their work go faster.<br>
+      <br>
+      <strong>Move on to Module: File Management.</strong></p>
+    </section>
+
+    <footer>
+      <p>Strong start... Successful finish.</p>
+    </footer>
+  </div><!-- end of #frame -->
+</body>
+</html>

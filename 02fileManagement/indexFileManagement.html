@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+<!-- indexFileManagement.html - main activity page for FILE MANAGEMENT module - Web4Biz course
+     Peter K. Johnson - peterk@webExplorations.com
+     Written:  5-17-11 Build template using jQuery
+
+      MAINTENANCE CHECKLIST:
+      (1) Make sure checkmark.png and detailPage.png are in the root graphic directory
+      (2) Make sure jQuery is in the root folder.
+      (3) Update title
+      (4) Update total activity time for the module (around line #235)
+    
+     REVISED:  11-12-11 modified code originally from actForm.html
+               06-16-13 PKJ modified from 01Tool/index.html
+
+Accessibility:
+(1) Add noscript element and hide if JavaScript is enabled.
+(2) Use CSS to make visibility: hidden; the .toDo elements in case JavaScript is disabled.
+(3) Use jQuery to change this CSS to visibility: visible;
+(4) Use jQuery to create a hyperlink that toggles between the detailed learning activities and the abbreviated toDo lists.
+    This will be added after the p#toggleToDo (at the top of the Learning Activities)
+
+Classes and IDs:
+Paragraph used to position hyperlink: #toggleTodo
+Hyperlink:                            #displayToggle
+Verbose Activity item:                .activity
+Short Todo item:                      .todo
+Name of icon/activity image:          #iconImg
+Name of icon/activity link:           #iconLink
+
+DEBUG CHECKLIST:
+(1) If #iconImg and #iconLink are not displaying, make certain you have the jQuery library in the root folder.
+-->
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <title>File Management</title><!--
+******************************************************
+* * * * * * * * * jQuery Stuff * * * * * * * * * * * *
+****************************************************** -->
+
+  <script type="text/javascript" src="../jquery-1.6.2.js">
+</script>
+  <script type="text/javascript">
+$("document").ready( function( )
+  {
+     // Change the CSS so .todo items display when toggled
+     $('.todo').css("visibility", "visible");
+     $('#iconImg').css("visibility", "visible");
+     $('#iconLink').css("visibility", "visible");
+     // Hide all the todo items
+     $('.todo').hide( );
+     $('#tipOfWeek').hide();
+
+     //When user clicks on todo link or the iconLink,
+     // toggle the screen between details/summary to-do list
+     $('#displayToggle').click(togglePage);
+     $('#iconLink').click(togglePage);
+     $('#iconImg').click(togglePage);
+     $('#tipImg').click( function()
+     {
+        $('#tipOfWeek').toggle();
+     }); // end of #tipImg.click( )
+  }); // end of .ready( )
+
+   // Toggle the screen between detailed and summary views
+   function togglePage( )
+   {
+      $('.activity').toggle();
+      $('.todo').toggle();
+
+      // Show the detailed Learning Activities
+      if($('.activity').is(':visible'))
+      {
+        $("#displayToggle").text('See Checklist View');
+        // Display the todoIcon
+        $("#iconImg").attr("src","../graphic/checkmark.png");
+        // Change the hyperlink
+        $("#iconLink").text("See Checklist View");
+        // Hide the objective section
+        $("#objective").show();
+        $("#wiifm").show( );
+        $("#nextModule").show( );
+        $(".assessment").show( );
+        $("#tip").show( );
+      }
+      else // show the summary to-do list
+      {
+        $("#displayToggle").text("See Detailed View");
+        // Display the Learning Activity Icon
+        $("#iconImg").attr("src", "../graphic/detailPage.png");
+        $("#iconLink").text("See Detailed View");
+        // Show the objectives
+        $("#objective").hide( );
+        $("#wiifm").hide( );
+        $("#nextModule").hide( );
+        $(".assessment").hide( );
+        $("#tip").hide( );
+      }
+   }// end of togglePage( )
+
+  </script><!-- Make page IE backwards compatible using CSS3 and HTML5 -->
+
+  <script type="text/javascript" src="../modernizr.js">
+</script><!--[if (gte IE 6)&(lte IE 8)]>
+  <script type="text/javascript" src="../selectivizr-min.js"></script>
+  <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
+<![endif]-->
+  <!-- *************************************************   
+* * * * * * * * * CSS Stuff * * * * * * * * * * * *
+****************************************************** -->
+  <!-- Font Loading -->
+  <link href='http://fonts.googleapis.com/css?family=Permanent+Marker&v2' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+@import url(../activity.css);
+  </style>
+  <style type="text/css">
+ /* Initially hide the toDo list items in case JavaScript is disabled.
+      Use jQuery to show them if JavaScript is available. */
+   .todo,
+   #iconImg,
+   #iconLink {
+   visibility:      hidden;
+   }
+
+   .todo p {
+   /* Add checkbox as background image to control position */
+   background:      transparent url("../graphic/checkbox.png") no-repeat 0px 2px ;
+   padding:         5px 10px 7px 40px;  /* make room for checkbox */
+   margin:          0px 0px 0px 20px;
+   }
+
+   #tipImg {
+  /* Round all corners */
+  -webkit-border-radius:  130px;
+  -moz-border-radius:     130px;
+  border-radius:          130px;
+  border:                 1px green solid;
+  margin:                 10px 20px 5px 5px;
+  }
+  </style><!-- Fix IE Anamolies so IE recognizes HTML5 elements -->
+  <!--[if lt IE 9]>
+<script>
+// Set up new elements so old browsers will recognize for CSS
+var e = ("abbr,article,aside,audio,canvas,datalist,details,"
+   + "figure,footer,header,hgroup,mark,menu,meter,nav,output,"
+   + "progress,section,time,video").split(',');
+   for (var i = 0; i < e.length; i++)
+   {
+      document.createElement(e[i]);
+   }
+</script>
+<![endif]-->
+</head>
+
+<body>
+  <div id="frame">
+    <header>
+      <div class="identity">
+        <table summary="Page heading and module icon">
+          <tr>
+            <td rowspan="2"><img src="../graphic/folder.png" width="100" alt="file folder icon"></td>
+
+            <td>
+              <h1>File Management</h1>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <h5>Keeping track of things on your computer</h5>
+            </td>
+          </tr>
+        </table>
+      </div><!-- end of .identity -->
+      <!-- ****** NAVIGATION (To-Do List/Detailed List Graphics) ******* -->
+
+      <div class="navigation">
+        <table summary="navigation links to course map and todo list" border="1">
+          <tr>
+            <td><img id="iconImg" src="../graphic/checkmark.png" alt="to-do list icon" width="50"></td>
+          </tr>
+
+          <tr>
+            <!-- This link is handled null. It triggers a click event handled by jQuery -->
+
+            <td>
+              <a id="iconLink" href="#">See Checklist View</a>
+            </td>
+          </tr>
+        </table>
+      </div><!-- end of .navigation -->
+    </header>
+<!-- ************************************************
+* * * * O B J E C T I V E S    S E C T I O N  * * * *
+***************************************************** -->
+
+    <section id="objective">
+      <!-- Objectives -->
+
+      <h4>Learn how to:</h4>
+
+      <ol>
+        <li>Setup files and folders</li>
+
+        <li>Name files to make your web life easier</li>
+        
+        <li>Use file extensions</li>
+        
+        <li>Organize files using move and copy</li>
+
+        <li>Use the hotkeys used by professionals</li>
+
+        <li>Zip files together (and unzip them later)</li>
+      </ol>
+    </section>
+<!-- ************************************************
+WII-FM
+***************************************************** -->
+
+    <section id="wiifm">
+      <!-- WII-FM -->
+
+      <h4>WII-FM (What's In It - For Me)</h4>
+
+      <p><strong>File management may sound intimidating</strong> but you'll find out that it is really very simple and will help you get control of your computer. No longer will you wonder, "Where did that file go?"
+      </p>
+
+    </section>
+<!-- ***************************************************
+* * * * L E A R N I N G    A C T I V I T I E S   * * * *
+******************************************************** -->
+
+    <section class="activityGroup">
+      <h4 id="toggleTodo">Complete these Learning Activities:</h4>
+
+      <p><strong>Total estimated time for this module:</strong> 2 hours.</p>
+      <!-- jQuery will insert a link here for toggling between detailed and summary to-do list
+       based on the id="toggleTodo" set in the object above this comment. -->
+      <noscript>
+      <p><strong>You have JavaScript turned off.</strong> Enable it to view a short list of all the To-Do items.</p></noscript>
+      <hr>
+      
+<!-- ************************
+Tutorial: 5 Flash Drive Tricks
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+  <p>
+    <a href="fiveFlashDriveTrick.pdf" target="_blank">
+    <img src="graphic/cover.png" alt="cover of 5 Flash Drive Tricks Tutorial" style="margin: 0 25px 0 0; width: 150px; float: left;" />
+    </a>
+    <strong>Work through this tutorial: <a href="fiveFlashDriveTrick.pdf" target="_blank">5 Flash Drive Tricks</a> </strong>to learn how to use Finder (on a Mac) and File Explorer (on Windows 7 and Windows 8).
+  </p>
+  <p>
+  You will learn how to:
+  </p>
+  <ul>
+  <li>How to remove a flash drive without losing data</li>
+  <li>How to make new folders</li>
+  <li>How to make shortcut or alias icons.</li>
+  <li>Different ways to view your files and folders</li>
+  <li>How to reveal hidden file extensions</li>
+  </ul>
+  
+  <p><strong>Estimated Time:</strong> 30 minutes.</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+  Work through this tutorial: <a href="fiveFlashDriveTrick.pdf" target="_blank">5 Flash Drive Tricks</a>.
+  </p>
+</div><!-- end of .todo -->
+<hr>
+
+<!-- ************************
+Set up folders on your flash drive
+***************************** -->
+<!-- DETAIL -->
+<div class="activity">
+  <p>  <a href="graphic/web4BizFolder.png" target="_blank">
+  <img src="graphic/web4BizFolder.png" alt="file folders used in this course" width="100px" align="right" style="border: 1px purple solid;" />
+  </a>
+  <strong>Set up folders on your flash drive to help keep all the files for this course organized.</strong> Use this graphic as a guide for your folder names. (Click on the image for a larger view.)
+  <br />
+  <br />
+  Use these folders each week to hold the code examples for that topic.
+  <br /><br />
+  <strong>Notice the 06public_html folder.</strong> That will be where you will store your finished web site files before you publish it out on the Web.
+  </p>
+  
+  <p><strong>Estimated Time:</strong> 10 minutes.</p>
+</div><!-- end of .activity -->
+
+<!-- SUMMARY -->
+<div class="todo">
+  <p>Set up folders on your flash drive to keep track of the files in this course.</p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+File Management with Dogs and Cats
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+  <p> 
+<a href="fileManagement/index.html" target="_blank"><img src="graphic/stickHunter.jpg" alt="small dog carrying a big stick" style="margin: 0 15px; width: 150px; float: left;" />
+</a> <strong>Work through this Tutorial: <a href="fileManagement/index.html" target="_blank">File Management with Dogs and Cats</a></strong> showing how to organize files and how the path statement works with web pages. No knowledge of HTML necessary!
+</p>
+<p>
+There are several short videos embedded inside this tutorial.
+</p>
+<p>
+Here is the <a href="catDog.zip" target="_blank" download>catDog.zip</a> file that you can download to your flash drive.
+</p>
+
+<p>
+<strong>This is a hands-on tutorial.</strong> You should save all your files inside the 02FileManagement folder that you set up in the previous activity. (You will need to show these files and folders as part of the Assessment at the end of this module.)
+</p>
+<p>
+<strong>Here is a summary of the steps you will follow:</strong>
+<ol>
+<li>Create the set of folders for this class on your flash drive (01tool, 02fileManagement, 03webComm, 04html, etc.) as shown in the previous learning activity.<br /><br /></li>
+<li>Download the <a href="catDog.zip" target="_blank" download>catDog.zip</a> file to the 02fileManagement folder.<br /><br /></li>
+<li>Unzip the zip file into its own folder (see the tutorial to learn how to unzip)<br /><br /></li>
+<li>In the 02fileManagement folder create the rootDirectory folder with all its subfolders. See the tutorial for the names of the folders.<br /><br /></li>
+<li>Copy the indexSTART.html file from the unzipped catDog folder into the rootDirectory folder.<br /><br /></li>
+<li>Open the indexSTART.html file in a browser.  Open your favorite browser and use CTRL O (Open)<br /><br /></li>
+<li>Copy the images from the catDog folder into the appropriate folder in rootDirectory. Each time you copy an image refresh the browser (CTRL r) to see if the image appears.<br /><br /></li>
+<li>Notice that the path images are different than the rest of the images. They should all go in the rootDirectory, not inside any other subfolders.<br /><br /></li>
+<li>When you are all finished you should be able see all the images on the web page.<br /><br /></li>
+</ol>
+  <p>
+  <strong>Estimated Time:</strong> 30 minutes.
+  </p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+  Work through this Tutorial: <a href="fileManagement/index.html" target="_blank">File Management with Dogs and Cats</a>.
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+
+
+<!-- ************************
+Take the Quiz
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+  <p>
+  <strong>Take the Self-Quiz: File Management</strong>. You can find the quiz in D2L by selecting Assessements/Quizzes.
+  </p>
+ 
+   <p>
+  <strong>The self-quizzes are learning activities. </strong>They are there to help you learn the material. Normally there is a database of about 100 questions. Each time you take the self-quiz you will get 10 questions at random from this database. If you take the self-quiz 10 times then you should pretty much see all of the questions.
+  </p>
+ 
+  <ul>
+  <li>You can take this quiz as many times as you like.</li>
+  <li>Each time you take a self-graded quiz you will get 10 questions as well as get immediate results when you are finished.</li>
+  <li>The same question bank is used for the graded quiz.</li>
+  <li>Questions are presented in random order. Answers are shown in random order.</li>
+  <li>Self-quizzes are available for a whole week and close at 11:55pm on Sunday.</li>
+  <li>The graded quiz will open the following Monday. (This helps you assess your actual knowledge as opposed to your short-term memory.)</li>
+  <li><strong>Be smart and take the self-quiz once each day to learn the material.</strong></li>
+  </ul>
+  
+  <p><strong>Estimated Time:</strong> 10 minutes (probably a lot less) each time you take a self-quiz.</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+    Take the Self-Quiz: fileManagement. 
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+Naming Conventions
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+  <p> 
+<strong>Naming Conventions</strong> - You will find that naming files and folders in a consistent manner will greatly reduce mistakes.
+</p>
+<p>
+<strong>Here are the naming conventions that you should follow in this course:</strong>
+  <p>
+<ol>
+<li><strong>Always start with a lower case letter.</strong> (UPPER/lower case matter out on the web server).</li>
+<li><strong>No spaces and no underlines "_". </strong> (The Web hates spaces and changes them to %20 - Underlines look like spaces when name is included as part of a link)</li>
+<li><strong>useCamelCaseForReadability.</strong> Capitalize the first letter of each word. (Readability is important. This trick replaces the spaces you can't use.)</li>
+<li><strong>Don't use plurals.</strong> (This will keep you from saying to yourself, "Was it graphics or graphic?" and then having to spend the time to look it up.)</li>
+<li><strong>File extensions should be lower case.</strong> (Many graphic programs automatically make file extensions all caps. Keep your names consistent. Remember that UPPER/lower case always matter.)</li>
+</ol>
+
+<p>
+Consistently following these rules will greatly reduce frustrations as you build your web pages.
+</p>
+<p>
+Even after you have finished this course you will find it useful to name all your files this way on your computer. This is especially true if you plan to be a programmer.
+</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+  Follow the naming conventions for all your folders and filenames you create in this course.
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+
+<!-- ************************
+Screencast-O-Matic
+***************************** -->
+      <!-- DETAIL -->
+
+      <div class="activity">
+        <p><a href="http://www.screencast-o-matic.com/" target="_blank"><img src="graphic/screencast-o-maticLogo.png" alt="Screencast-o-matic logo" style="margin: 0 15px; width: 150px; float: left;">
+        <br /><br />
+        
+        <iframe width="300" height="225" src="http://www.youtube.com/embed/jW45DE8Ugpg" frameborder="0" allowfullscreen align="left"></iframe>
+        <strong>Sign up for Screencast-O-Matic.</strong></a> Watch the introduction video on their homepage to see how to use this tool.</p>
+
+        <p>Create a test video to make sure you know how to use the recorder. Here is a video showing you <a href="http://youtu.be/jW45DE8Ugpg" target="_blank">how to use Screencast-O-Matic.</a>
+        </p>
+
+        <p><strong>Don't have a microphone?</strong> You can purchase a lapel microphone <a href="http://www.amazon.com/gp/product/B005DJNRQM/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B005DJNRQM&linkCode=as2&tag=webexploratio-20" target="_blank">from Amazon.com for less then $4.00</a></p>
+        <br/>
+        
+        <p>
+        <strong>Having trouble with Java?</strong> Try using FireFox. It seems that Google Chrome and Oracle's Java are not talking to each other these days. It must have been something Java said or else Google Chrome is just being hyper-sensitive. Either way, FireFox is currently playing well with Java.
+        </p>
+
+        <p><strong>Estimated Time:</strong> 30 min.</p>
+      </div><!-- end of .activity -->
+      <!-- SUMMARY -->
+
+      <div class="todo">
+        <p><a href="http://www.screencast-o-matic.com/" target="_blank">Sign up for Screencast-O-Matic.</a> Watch the introduction video on their homepage to see how to use this tool.</p>
+      </div><!-- end of .todo -->
+      <hr>
+
+
+</section>
+    
+<!-- ************************************************
+* * * * A S S E S S M E N T    S E C T I O N  * * * *
+***************************************************** -->
+<section class="assessment">
+  <h4>Your Graded Assignments For This Module:</h4>
+  <p>
+  <img src="../graphic/stopSign.png" alt="stop sign" style="margin: 0 10px 0 0; width: 60px; float: left;" /><strong>Stop! </strong><br />
+  Don't frustrate yourself. Do the Learning Activities BEFORE starting these graded activities. <br />
+  No sense jumping into the deep end of the pool if you haven't learned how to swim...
+  </p>
+  <hr />
+
+ <p>
+<strong>Project: File Management</strong> - Show the work you did with the file management labs
+ </p>
+
+<p>
+<strong>Here are the specs:</strong><br />
+<a href="http://www.screencast-o-matic.com/" target="_blank"><img src="graphic/screencast-o-maticLogo.png" alt="Screencast-o-matic logo" style="margin: 0 15px; width: 150px; float: left;"></a>   Using Screencast-O-Matic create a 1-minute video showing the work you did for the file management lab using the following script:
+ 
+ <ol>
+ <li>Make sure you have D2L open and your portrait visible along the top edge of the video.</li>
+ <li>Introduce yourself and describe in a single sentence what the video is for.</li>
+<img src="graphic/rootDirectory.jpg" alt="directory structure showing folders rootDirectory, pet, and the subfolders cat and dog" style="margin: 0 15px; width: 200px; float: right;" /> 
+ <li>Using File Explorer (or Finder on the Mac) show the file structure you have created for this class (folders named 01tool, 02fileManagement, etc.).</li>
+<li>Go into 02fileManagement and show the file structure starting with rootDirectory and working down to the subfolders pet and then cat and dog.</li>
+ <li>Display the web page to show that you have all the photos in the correct folders.</li>
+ </ol>
+ 
+ <p>
+ Zip up the rootDirectory folder and submit it to the dropbox. It should be named <strong>rootDirectory.zip</strong>. (You have to submit a file in order to use the D2L dropbox.)
+ </p>
+ <p>
+ Copy the link to the video from ScreenCast-o-matic and put it in the notes section of the dropbox.
+ </p>
+ <p>
+ This will be worth 10 points. You will need to have both the zip file as well as a valid link to the video in order to receive full credit. No late submissions will be accepted.
+ </p>
+</section>
+    
+<!-- ************************************************
+Tip of the Week
+***************************************************** -->
+    <section>
+      <img src="../graphic/lightBulb.png" alt="hand holding lightbulb all lit up" align="left" width="90" id="tipImg">
+
+      <h4>Your Tip-Of-The-Week</h4>
+
+      <p>(Click on the lightbulb to reveal the tip.)<br>
+      <br></p>
+
+      <div id="tipOfWeek">
+          <p>
+    <strong>Here are some <a href="http://www.techradar.com/news/software/operating-systems/50-windows-8-tips-tricks-and-secrets-1028220" target="_blank">tips to make your Windows 8 Experience</a> a little nicer.</strong>
+    </p>
+    <ul>
+    <li>Open from the lock screen</li>
+    <li>Handle basic navigation</li>
+    <li>Group Your Apps</li>
+    <li>Use the Quick Access menu</li>
+    <li>Find your applications</li>
+    <li>Make access easier</li>
+    <li>Shut down</li>
+    </ul>
+    
+
+      </div><!-- end of #tipOfWeek -->
+    </section>
+    
+<!-- ************************************************
+What's Next?
+***************************************************** -->
+<section id="nextModule">
+  <h4>What's Next?</h4>
+  <img src="../graphic/user.png" alt="people" style="margin: -20px 15px 0px 5px; width: 90px; float: left;">
+  <p>How does the Web work?<strong> Move on to Module: Web Communications to find out.</strong>
+  </p>
+</section>
+
+    <footer>
+      <p>Strong start... Successful finish.</p>
+    </footer>
+  </div><!-- end of #frame -->
+</body>
+</html>

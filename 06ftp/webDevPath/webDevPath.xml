@@ -1,0 +1,501 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="gen/cg_content.xsl"?>
+
+<courseGenie>
+
+<metadata>
+	<lom>
+		<general>
+			<title>
+				<string>Using the Path to locate files</string>
+				<language>en</language>
+			</title>
+			<keyword>
+				<string>path</string>
+				<language>en</language>
+			</keyword>
+			<keyword>
+				<string>file management</string>
+				<language>en</language>
+			</keyword>
+			<keyword>
+				<string>DOS</string>
+				<language>en</language>
+			</keyword>
+			<description>
+				<string>How to use a file path to locate specific files</string>
+				<language>en</language>
+			</description>
+		</general>
+		<rights>
+			<description>
+				<string>Covered by Creative Commons licensing</string>
+				<language>en</language>
+			</description>
+		</rights>
+	</lom>
+	<misc>
+		<item>
+			<key>Objectives</key>
+			<value>Learn the basic syntax used to specify file locations</value>
+		</item>
+		<item>
+			<key>Author</key>
+			<value>Peter K. Johnson</value>
+		</item>
+		<item>
+			<key>Organisation</key>
+			<value>South Central College - North Mankato, MN USA</value>
+		</item>
+		<item>
+			<key>Date</key>
+			<value>February 2009</value>
+		</item>
+		<item>
+			<key>creator</key>
+			<value>Wimba Create</value>
+		</item>
+	</misc>
+</metadata>
+<settings>
+	<pageroot>page</pageroot>
+	<sectionmode>both</sectionmode>
+	<exportmode>normal</exportmode>
+	<assessmentmode>none</assessmentmode>
+	<generateindex>True</generateindex>
+	<showtoc>False</showtoc>
+	<tocwidth>200</tocwidth>
+	<shownavigation>True</shownavigation>
+	<footer><a href="http://webexplorations.com" target="_new">Web Explorations</a></footer>
+	<singlepage>False</singlepage>
+	<hyperlinksmain>True</hyperlinksmain>
+	<popupsmain>True</popupsmain>
+	<idstring>CG2010101684947</idstring>
+	<scorm-questionmode>selftest</scorm-questionmode>
+	<scorm-masteryscore>0</scorm-masteryscore>
+	<cgbuild>2.5.0 Build 20090318</cgbuild>
+	<schemefolder>c:/program files/wimbacreate/resources/en.lproj/schemes/Desert</schemefolder>
+</settings>
+
+<newpage>
+<pagetitle>Using the PATH</pagetitle>
+<section/>
+<para  align="left"><image alt="a hierarchal file structure showing a series of folders inside of folders" width="327" height="311" class="leftalign">pic001.jpg</image>Most file systems including Windows, DOS, OS X, and Linux use a <b>hierarchal file system</b> or a series of folders within folders within folders. Any of these folders can contain files.</para>
+<para/>
+
+<para  align="left">This tutorial will show you how to annotate your programs so you can specify where a file is relative to the file or program that is running. This information is essential for web pages (displaying graphic files stored in a graphic folder), as well as applications (looking to open databases and text files). </para>
+<para/>
+
+<para  align="left"><b>If you are working with files of any kind you'll need to understand how to write a path statement.</b></para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Using Windows Explorer</pagetitle>
+<para  align="left"><image alt="Right-mouse click on the Start button and then choose Explore from the list of options" width="244" height="176" class="leftalign">pic002.jpg</image>Probably the most popular file viewer is Windows Explorer*.</para>
+<para  align="left">A quick way to access this utility is to right-mouse click on the Start button and then chose "Explore" from the list of options.</para>
+<para/>
+
+<para  align="left">Windows Explorer shows a list of folders as well as the files located inside each folder.</para>
+<para/>
+
+<para  align="left"><image alt="folders icon" width="85" height="48" class="leftalign">pic003.jpg</image>If you click on the "Folders" icon along the top of the Explorer window, two panes will display, one showing the file hierarchy and the other showing the contents of any folder that you select.</para>
+<para/>
+
+<para  align="left"><b>Here is a screen shot showing the two panes open and the folder computerCareersOLD2007  selected:</b></para>
+<para  align="left"><image alt="Windows Explorer using the Folders option to display both the folder pane on the left and the file listing pane on the right." width="576" height="571" class="normal">pic004.jpg</image></para>
+<para/>
+
+<para/>
+
+<para  align="left">Notice on the left how the hierarchal structure is shown as a series of dotted lines showing which set of folders is in which level. Another way to think of this would be to envision an office filing cabinet that allowed folders to fit neatly inside of others folders inside of other folders, etc.</para>
+<para/>
+
+<para  align="left">As you work with Windows Explorer it will display the current absolute, or hard-coded) path statement.</para>
+<para/>
+
+<para  align="left"><image alt="Using the address field in Windows Explorer to see the absolute value of the path (as well as the relative once the drive letter and extra folders are stripped off)." width="531" height="284" class="normal">pic005.jpg</image></para>
+<para/>
+
+<para  align="left">*Don't confuse Windows Explorer with Internet Explorer  (IE) which is the web browser from Microsoft.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Different Views</pagetitle>
+<para  align="left">Windows Explorer will show you the contents of a folder several different ways. Each has its pros and cons.</para>
+<para/>
+
+<para  align="left"><b>You can change the view by clicking on the view icon in the top toolbar:</b></para>
+<para/>
+
+<para  align="left"><b>The Thumbnails view i</b>s great when you need a quick preview of different graphic files. It is very clumsy for general file handling work however.</para>
+<para/>
+
+<para  align="left"><image alt="Thumbnail view of Windows Explorer" width="445" height="555" class="normal">pic006.jpg</image></para>
+<para/>
+
+<para/>
+
+<para  align="left"><b>The Tiles View </b> is nice for a quick overview and is a little more compact than the thumbnails view.</para>
+<para/>
+
+<para  align="left"><image alt="Tiles view of Windows Explorer" width="576" height="459" class="normal">pic007.jpg</image></para>
+<para/>
+
+<para  align="left"><b>The List View</b> is nice and compact and will show all the available files and folders quickly and clearly. </para>
+<para  align="left"><image alt="List view of Windows Explorer" width="288" height="473" class="normal">pic008.jpg</image></para>
+<para/>
+
+<para  align="left"><b>The Details View</b> has more information than the List view and is very good when you are checking date stamps and other details about the file.</para>
+<para  align="left"><image alt="Details view of Windows Explorer" width="541" height="496" class="normal">pic009.jpg</image></para>
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Absolute vs. Relative</pagetitle>
+<para  align="left"><b>One of the most common errors with file handling is to hard-code in a file location. </b>Often a new programmer or web person will designate that a file can be found on their flash drive using a statement similar to this:</para>
+<para/>
+
+<para  align="left"><b>P:/webSite/computerCareersOLD2007/graphic/gradient/grey2blue.jpg<br/></b></para>
+<para  align="left">On that specific computer this statement will work, but what if the person puts the flash drive on another computer and it becomes drive <b>E: or H:</b>? The image or file will not be found.</para>
+<para/>
+
+<para  align="left">Instead you always want to use a <b>relative address</b>. In this case the location of the file you are wanting is "relative" to the file that is doing the work.</para>
+<para/>
+
+<para  align="left">For example, let's say a web page wants to use this particular gradient. Instead of hard-coding in the entire example you would give "directions" based on the location of the file. </para>
+<para/>
+
+<para  align="left">If the file that wanted to use the gradient was in the gradient folder you could simply say:</para>
+<para/>
+
+<para  align="left"><b>&#60;img src="grey2blue.jpg" alt="grey to blue gradient" /></b></para>
+<para/>
+
+<para  align="left">If the file that wanted to use the gradient was in the computerCareersOLD2007 folder you would have to describe the path to the gradient, relative to where the web page was:</para>
+<para/>
+
+<para  align="left"><b>&#60;img src="graphic/gradient/grey2blue.jpg" alt="grey to blue gradient" /></b></para>
+<para/>
+
+<para  align="left">Each slash tells the program to look inside a sub folder.</para>
+<para/>
+
+<para  align="left">Using relative path statements is much like giving someone directions. You give directions based on where the person is starting from.<b> From where you are now</b>, go straight to the third intersection and turn right...</para>
+<para/>
+
+<para  align="left">The file is saying the same thing. From where I am located, I need to look inside a subfolder named graphic and then inside another subfolder named gradient to find the file named grey2blue.jpg</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Some Notations - Slash  "/"</pagetitle>
+<para  align="left"><b>Forward Slash "/" or Back Slash "\"?</b></para>
+<para  align="left">Folklore has it that Bill Gates introduced the backslash "\" when he wrote the first version of DOS so he would not be sued by the UNIX folks.  This has been the bane of programmers and users ever since.</para>
+<para/>
+
+<para  align="left">Unix and Linux uses the forward slash "/" and 80% of web servers in the world are using Apache which runs on Linux. It's been a long battle, but you can safely use the forward slash whenever you are working with web based materials such as web pages or web programming. Only when you are working in the DOS command window do you need to worry about using the backslash "\".</para>
+<para/>
+
+<para  align="left">And if you happen to throw a backslash in there once in awhile, most browsers are very forgiving and will automatically correct things for you.</para>
+<para/>
+
+<para  align="left"><b>The slashes tells the system to go into a subdirectory located inside the current directory.</b></para>
+<para  align="left">For example, if a web page or file is located in webExplorations (marked here with a green dot) you could access a file in the graphic folder like this:</para>
+<para  align="left"><b>graphic/myFile.jpg</b></para>
+<para/>
+
+<para  align="left">If you wanted to access a file in the amazon folder from WebExplorations you would use an additional slash to go one level deeper:</para>
+<para  align="left"><b>graphic/amazon/testing.txt</b></para>
+<para/>
+
+<para/>
+
+<para  align="left"><b><image alt="webExplorations with a graphic subfolder which contains a subfolder named amazon." width="323" height="203" class="normal">pic010.jpg</image></b></para>
+<para/>
+
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Starting the path with a /</pagetitle>
+<para  align="left">Notice how both of those path statements start with the the word graphic. If you put a slash "/" at the beginning you are telling the system to start from the root directory. In this example that would take you to the base of the current drive and each of the subfolders would have to be included (marked with small green arrows)</para>
+<para/>
+
+<para  align="left"><image alt="Root of a file structure for the P: drive" width="385" height="536" class="normal">pic011.jpg</image></para>
+<para/>
+
+<para  align="left"><b>Here's what the path would look like if you start it with a slash:</b></para>
+<para/>
+
+<para  align="left"><b>/webSite/computerCareersOLD2007/graphic/myFile.jpg</b></para>
+<para/>
+
+<para/>
+
+<para  align="left"><b>Unless you specifically need to start from the root of the drive, don't start out the path statement with a slash "/"</b></para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Notations - The Double Dot  ..</pagetitle>
+<para  align="left">You've seen how to traverse down into sub folders. But, how do you tell the system you want to go back up the tree?</para>
+<para/>
+
+<para  align="left">You do that by using the double dot operator ".."</para>
+<para/>
+
+<para  align="left">For example, let's say you have a web page inside of the <b>web1 </b>folder and you want to display a picture that is in the <b>graphic</b> subfolder of computerCareersOLD2007.( I've marked the web1 folder with a green dot. The graphic folder is right under the top computerCareersOLD2007 folder. </para>
+<para/>
+
+<para  align="left"><image alt="File hierarchy showing a sub folder inside of a subfolder. Using the .. to work up the tree." width="328" height="311" class="normal">pic012.jpg</image></para>
+<para/>
+
+<para  align="left"><b>You could use the statement:</b></para>
+<para/>
+
+<para  align="left"><b>../graphic/myFile.jpg</b></para>
+<para/>
+
+<para  align="left">This will tell the system to go up one level (or out to the next vertical line in the Explorer display and then into the graphic folder where myFile.jpg is located.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>What is the single dot?</pagetitle>
+<para  align="left">You may sometimes see a single dot "."  This means the current folder and is often redundant. It is commonly used on the command line in Linux to tell the operating system to run a program in the current folder. In Windows this is done automatically so the single dot isn't as common.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Try your skills</pagetitle>
+<para  align="left"><b>So, now you should know how to:</b></para>
+<para  align="left">(1) Use relative addressing</para>
+<para  align="left">(2) Work your way deeper into the folder structure</para>
+<para  align="left">(3) Work your way back up the folder structure.</para>
+<para/>
+
+<para  align="left"><b>Let's try your skills.</b></para>
+<para  align="left">Using the graphic below, write down the path statement you would use. Then, check your answers on the next page.</para>
+<para  align="left"><image alt="File hierarchy showing the structure of the webExplorations folder and all its sub and sub-sub folders" width="323" height="548" class="normal">pic013.jpg</image></para>
+<para/>
+
+<para  align="left">(1) What path statement would access the file  myPhoto.gif in the graphic folder if a file is in the folder named webExplorations (marked with a green dot)? (There's two graphic folders!  Make sure you are referring to the first subfolder.)</para>
+<para/>
+
+<para  align="left">(2) What path statement would access the file charlie.jpg in the graphic folder found in the folder named web?</para>
+<para/>
+
+<para  align="left">(3) Using Windows Explorer how would you determine what files are contained in the folder named tftWebCSS?</para>
+<para/>
+
+<para  align="left">(4) From the webExplorations folder what path would you use to access the gradient named blueRedGradient.jpg in the gradient folder?</para>
+<para/>
+
+<para  align="left">(5) From the webExplorations folder what path would you use to access the file named logo.gif located in the same folder?</para>
+<para/>
+
+<para  align="left">(6) What path statement would you use to access the file myLinkPage.html?</para>
+<para/>
+
+<para  align="left">(7) From the webMarketing folder how would you access a graphic named ted.gif in the graphic folder of the web folder?</para>
+<para/>
+
+<para  align="left">(8) From the gradient folder how would you access a graphic named logo.gif located in the graphic subfolder of webExplorations?</para>
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Here are the answers</pagetitle>
+<para  align="left"><b>Here are the correct responses.</b></para>
+<para/>
+
+<para  align="left">If you got any wrong make sure you understand why so you don't make the same mistake in real life.</para>
+<para/>
+
+<para  align="left"><image alt="File hierarchy showing the structure of the webExplorations folder and all its sub and sub-sub folders" width="323" height="548" class="normal">pic014.jpg</image></para>
+<para/>
+
+<paneltext>
+<para  align="left">(1) What path statement would access the file myPhoto.gif in the graphic folder from the folder named webExplorations? (There's two graphic folders!  Make sure you are referring to the first subfolder.)</para>
+</paneltext>
+<para/>
+
+<para/>
+
+<para  align="left">graphic/myPhoto.gif</para>
+<para/>
+
+<para  align="left"><b>Explanation:</b></para>
+<para  align="left">Starting from the current location,</para>
+<para  align="left">go into the subfolder named graphic</para>
+<para/>
+
+<para/>
+
+<paneltext>
+<para  align="left">(2) What path statement would access the file charlie.jpg in the graphic folder found in the folder named web?</para>
+</paneltext>
+<para/>
+
+<para/>
+
+<para  align="left">web/graphic/charlie.jpg</para>
+<para/>
+
+<para  align="left"><b>Explanation:<br/></b>Starting from the current location</para>
+<para  align="left">go into the subfolder named web</para>
+<para  align="left">then go into the subfolder named graphic</para>
+<para/>
+
+<para/>
+
+<paneltext>
+<para  align="left">(3) Using Windows Explorer how would you determine what files are contained in the folder named tftWebCSS?</para>
+</paneltext>
+<para/>
+
+<para/>
+
+<para  align="left">Click on the Folders button to open up both panes. Then click on the tftWebCSS folder to select it and display the files in the right pane.</para>
+<para/>
+
+<para/>
+
+<paneltext>
+<para  align="left">(4) From the webExplorations folder what path would you use to access the gradient named blueRedGradient.jpg in the gradient folder?</para>
+</paneltext>
+<para/>
+
+<para/>
+
+<para  align="left">/web/graphic/gradient/blueRedGradient.jpg</para>
+<para/>
+
+<para  align="left"><b>Explanation:</b></para>
+<para  align="left">Starting from the current location,</para>
+<para  align="left">go into the subfolder named web</para>
+<para  align="left">from there go into the subfolder named graphic</para>
+<para  align="left">from there go into the subfolder name gradient</para>
+<para/>
+
+<para/>
+
+<paneltext>
+<para  align="left">(5) From the webExplorations folder what path would you use to access the file named logo.gif located in the same folder?</para>
+</paneltext>
+<para/>
+
+<para/>
+
+<para  align="left">logo.gif</para>
+<para/>
+
+<para  align="left"><b>Explanation: <br/></b>If the file is in the same folder as where you are, all you have to do is specify the name. The system will look in the current folder automatically.</para>
+<para/>
+
+<para  align="left">As an alternative you could use the single dot:</para>
+<para  align="left">./logo.gif  </para>
+<para/>
+
+<para  align="left">or, look in the current folder "." for the file named logo.gif</para>
+<para/>
+
+<para/>
+
+<paneltext>
+<para  align="left">(6) What path statement would you use to access the file myLinkPage.html?</para>
+</paneltext>
+<para/>
+
+<para/>
+
+<para  align="left">Who knows. We have to have a starting reference point. Are we located in the webExplorations folder or some other subfolder???</para>
+<para/>
+
+<para/>
+
+<paneltext>
+<para  align="left">(7) From the webMarketing folder how would you access a graphic named ted.gif in the graphic folder of the web folder?</para>
+</paneltext>
+<para/>
+
+<para/>
+
+<para  align="left">../graphic/ted.gif</para>
+<para/>
+
+<para  align="left"><b>Explanation: <br/></b>Starting from the current location,</para>
+<para  align="left">../ go up to the parent folder, webExplorations</para>
+<para  align="left">/graphic  and then back down into the subfolder of webExplorations named graphic.</para>
+<para/>
+
+<para/>
+
+<paneltext>
+<para  align="left">(8) From the gradient folder how would you access a graphic named logo.gif located in the graphic subfolder of webExplorations?</para>
+</paneltext>
+<para/>
+
+<para/>
+
+<para  align="left">../../../graphic/logo.gif</para>
+<para/>
+
+<para  align="left"><b>Explanation:</b></para>
+<para  align="left">Starting from the current location,</para>
+<para  align="left">../ go up to the parent folder, graphic, that the gradient folder is in, </para>
+<para  align="left">../ then go up another parent to the web folder,</para>
+<para  align="left">../ takes you up a third level putting you inside the webExplorations folder and all its subfolders (including "web").</para>
+<para  align="left">Next go back down into the graphic subfolder of the webExplorations folder</para>
+<para/>
+
+<para  align="center">*** *** ***</para>
+<para/>
+
+<para  align="left"><b>This completes this tutorial: Using Paths to locate files</b></para>
+<para  align="left">Written by Peter K. Johnson - February 2009<br/>Revised February 2010</para>
+<para  align="left"><b>Read my blog at:  </b> <hyperlink><name>http://webexplorations.com/blog</name><url>http://webexplorations.com/blog</url></hyperlink></para>
+<para/>
+
+<para/>
+
+<htmlinclude>
+<center> <!--Creative Commons License--><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/"><img alt="Creative Commons License" border="0" src="http://creativecommons.org/images/public/somerights20.png"/></a><br/>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/">Creative Commons Attribution-NonCommercial-ShareAlike 2.5  License</a>.<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<Work rdf:about="">
+		<license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/" />
+	<dc:type rdf:resource="http://purl.org/dc/dcmitype/InteractiveResource" />
+	</Work>
+	<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/><requires rdf:resource="http://web.resource.org/cc/ShareAlike"/></License></rdf:RDF> -->
+</center>
+</htmlinclude>
+<para/>
+
+<para/>
+
+
+
+
+
+
+</newpage>
+
+
+</courseGenie>
+

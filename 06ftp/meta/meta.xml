@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="gen/cg_content.xsl"?>
+
+<courseGenie>
+
+<metadata>
+	<lom>
+		<general>
+			<title>
+				<string>Web Development - Meta Tags</string>
+				<language>en</language>
+			</title>
+			<keyword>
+				<string>Web XHTML meta tags</string>
+				<language>en</language>
+			</keyword>
+			<description>
+				<string>Using meta tags to describe a web page</string>
+				<language>en</language>
+			</description>
+		</general>
+		<lifeCycle>
+			<version>
+				<string>May 2009</string>
+				<language>en</language>
+			</version>
+		</lifeCycle>
+		<rights>
+			<description>
+				<string>Creative Commons</string>
+				<language>en</language>
+			</description>
+		</rights>
+	</lom>
+	<misc>
+		<item>
+			<key>Objectives</key>
+			<value>How to use meta tags to describe the contents of a web page for other applications</value>
+		</item>
+		<item>
+			<key>Author</key>
+			<value>Peter K. Johnson</value>
+		</item>
+		<item>
+			<key>Organisation</key>
+			<value>South Central College</value>
+		</item>
+		<item>
+			<key>Date</key>
+			<value>May 2009</value>
+		</item>
+		<item>
+			<key>creator</key>
+			<value>Wimba Create</value>
+		</item>
+	</misc>
+</metadata>
+<settings>
+	<pageroot>page</pageroot>
+	<sectionmode>both</sectionmode>
+	<exportmode>normal</exportmode>
+	<assessmentmode>none</assessmentmode>
+	<generateindex>True</generateindex>
+	<showtoc>False</showtoc>
+	<tocwidth>200</tocwidth>
+	<shownavigation>True</shownavigation>
+	<footer>WebExplorations.com</footer>
+	<singlepage>False</singlepage>
+	<hyperlinksmain>True</hyperlinksmain>
+	<popupsmain>True</popupsmain>
+	<idstring>CG2010101515587</idstring>
+	<scorm-questionmode>selftest</scorm-questionmode>
+	<scorm-masteryscore>0</scorm-masteryscore>
+	<cgbuild>2.5.0 Build 20090318</cgbuild>
+	<schemefolder>c:/program files/wimbacreate/resources/en.lproj/schemes/Standard</schemefolder>
+</settings>
+
+<newpage>
+<pagetitle>Meta Tags</pagetitle>
+<section/>
+<para  align="left"><b><image alt="XHTML brackets" width="100" height="100" class="leftalign">pic001.gif</image>Meta means about.</b></para>
+<para/>
+
+<para  align="left"><b>Meta thinking </b>is thinking about thinking.</para>
+<para/>
+
+<para  align="left"><b>Meta data </b>is data about data.</para>
+<para/>
+
+<para  align="left"><b>Meta tags contain information about the tags or information about the web page. </b></para>
+<para/>
+
+<para  align="left"><b>When search engines catalog a web page they look for the &#60;meta name="description" /> meta tag.</b></para>
+<para/>
+
+<para  align="left">The text in this tag is used as descriptive text when the link to the page is displayed in search results. No description meta tag?  Google, and other search engines, try to decide what text from your page to display...</para>
+<para/>
+
+<para  align="left">Meta tags are also useful to list the copyright owner of a page, tell the search engines to ignore the page, as well as redirect the user to another page.</para>
+<para/>
+
+<para  align="left">In this tutorial you will learn how to write meta tags that will determine how a page is handled by search engines </para>
+</newpage>
+
+<newpage>
+<pagetitle>Four things to know about meta tags.</pagetitle>
+<para  align="left"><b>(1) Meta tags are special elements that are written in the &#60;head>  section of each web page.</b> They contain information describing the page. With the prefix "meta" you can think of them as "tags about tags". None of these tags change how the page actually looks.</para>
+<para/>
+
+<para  align="left"><b>(2) Notice that each meta tag follows the same pattern.</b> They start with &#60;meta name=" " />  and then use different attributes based on what they are describing.</para>
+<para/>
+
+<para  align="left"><b>(3) These are single element tags</b>, so to be XHTML valid you must include a space, slash before the closing bracket:  &#60;meta name="  " content=" "  /></para>
+<para/>
+
+<para  align="left"><b>(4) Use meta tags on every single page.</b> Every page is handled as its own entity by the search engines. Be smart and include meta tags in a template and then customize them based on the page content when necessary. This will give all your pages consistent information and save you a lot of typing.</para>
+</newpage>
+
+<newpage>
+<pagetitle>&#60;meta name="description" /></pagetitle>
+<para  align="left"><b>This is probably the most important meta tag. As search engines catalog the page, they use the information as the description that displays with the search results.</b></para>
+<para/>
+
+<para  align="left">This is the first impression that the user will have with the page.</para>
+<para/>
+
+<para  align="left">For example, here is the description meta tag used on the Computer Careers website:</para>
+<para/>
+
+<para  align="left"><meta name='description' content='Computer Careers: Start a long-term career at South Central College in Computer Careers. Two year degrees available in Programming and Network Support. Certificates available in Web Programming and Technical Support. On-line classes available.' /></para>
+<para/>
+
+<para  align="left"><b>Without the description meta tag you are leaving the first introduction up to the search engines and what they decide to use to describe the page.</b></para>
+<para/>
+
+<para  align="left"><b>And here is how it appears on the Google search results:</b></para>
+<para  align="left"><b><image alt="Search results from Google showing the contents of the description meta tag." width="576" height="477" class="normal">pic002.jpg</image></b></para>
+</newpage>
+
+<newpage>
+<pagetitle>&#60;meta name="refresh" /></pagetitle>
+<para  align="left"><b>Use the name="refresh" meta tag when you want to jump the user to another page. </b></para>
+<para/>
+
+<para  align="left">For example, imagine having to re-arrange your site, or convert it from regular XHTML to PHP files. If the page has been established, a lot of people out on the Web may already be linking to it. These links are invaluable for the SEO of the site so you don't want them broken.</para>
+<para/>
+
+<para  align="left">The solution is to re-edit the original page so it has a "Redirecting you to the new location" message and set a refresh meta tag.</para>
+<para/>
+
+<para  align="left"><b>Here is some example code:</b></para>
+<para/>
+
+<pre class="literal"><![CDATA[ 
+<meta http-equiv="refresh" content="5; url=newurl.php">
+ ]]></pre>
+<para/>
+
+<para/>
+
+<para  align="left">The number is the number of seconds in the content=" " attribute is how long the user will have to wait before the page is redirected. Setting it to 0 results in an instant redirect.</para>
+<para/>
+
+<para  align="left">Note how the content=" " attribute includes two bits of information, the amount of time and the url of the new page. Both of these have to be included inside the same set of quotation marks "  ".</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>&#60;meta name="robots" /></pagetitle>
+<para  align="left"><b>The robot meta tag allows you to control if the page will be catalogued by the search engines. </b></para>
+<para/>
+
+<para  align="left">The best solution is to use a file named <b>robots.txt</b> in the root directory of the site. This meta tag allows another layer of control in the event you are not able to upload a separate file.</para>
+<para/>
+
+<para  align="left"><b>The list of possible instructions include:</b></para>
+<para/>
+
+<para  align="left"><b>noindex</b> - the page will not be indexed by the search engine. Note that there are no spaces between these two words.</para>
+<para/>
+
+<para  align="left"><b>index</b> - the page WILL be indexed.  (This is the default instruction for any page so it is optional.)</para>
+<para/>
+
+<para  align="left"><b>nofollow</b> - the search engine robot will not follow any links contained on the page</para>
+<para/>
+
+<para  align="left"><b>follow</b> - indexes on the page will be followed. (This is the default instruction for any page so it is optional.)</para>
+<para/>
+
+<para  align="left"><b>Here is an example that will keep the page off the search engine listings:</b></para>
+<para/>
+
+<pre class="literal"><![CDATA[ 
+<meta name="robots" content="noindex, nofollow" />
+ ]]></pre>
+<para/>
+
+<para/>
+
+<para  align="left"><b>If this meta tag is missing then the robot terms will be assumed to be "index, follow" (e.g. "all").</b> If the keyword all is found in the robots terms list it overrides all other values.</para>
+<para/>
+
+<para  align="left"><b>Where would this be useful?</b></para>
+<para/>
+
+<para  align="left"><b>One example is the Web Development course Student Showcase. </b>(<hyperlink><name>http://southcentral.edu/cc/course/showcase</name><url>http://southcentral.edu/cc/course/showcase</url></hyperlink>)  If these web sites did not include the noindex, nofollow attributes the search engines would be including them. </para>
+<para/>
+
+<para  align="left">Meanwhile, the clients may be having their actual live sites updated. If both sites are listed several customers will be seeing the old information contained in the student showcase. </para>
+<para/>
+
+<para  align="left">This happened with a Used Car Lot that was in the showcase several years ago. The client kept getting calls about a Mustang that had been sold a year earlier. They customers were clicking on a link to the showcase page, seeing the Mustang highlighted on the front page, and calling the used car dealer for more information.</para>
+<para/>
+
+<para  align="left"><b>When developing a site for a client it is always smart to use the noindex, nofollow attributes until the site goes "live". </b></para>
+<para/>
+
+<para  align="left"><b>Just don't forget about this meta tag! Once the site is live and the client wants to establish a strong SEO you will have to set this meta tag to index, follow or it will never show up on the search engines!</b></para>
+</newpage>
+
+<newpage>
+<pagetitle>&#60;meta name="author" /> and &#60;meta name="copyright" /></pagetitle>
+<para  align="left"><b>Two tags that are sometimes found on websites include "author" and "copyright". </b></para>
+<para/>
+
+<para  align="left">These are not used by search engines but are a nice place to insert this information on the page.</para>
+<para/>
+
+<para  align="left">Examples:</para>
+<para/>
+
+<para/>
+
+<pre class="literal"><![CDATA[ 
+<meta name="author" content="Written by Peter K. Johnson" />
+ ]]></pre>
+<para/>
+
+<para/>
+
+<para/>
+
+<pre class="literal"><![CDATA[ 
+<meta name="copyright" content="(c) copyright 2012, Peter K. Johnson" />
+ ]]></pre>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>&#60;meta name="keywords" /></pagetitle>
+<para  align="left"><b>In the early days of the Web, before Google, search engines used the keyword meta tag to determine which categories the page should be listed under. </b></para>
+<para/>
+
+<para  align="left">Web programmers quickly found ways to manipulate the system by including competitors names, and repetitions of the same keywords. This tag is no longer considered useful and most search engines ignore this tag, using more sophisticated algorithms to determine the keywords of a page.</para>
+<para/>
+
+<para  align="left">Here is an example from the Computer Careers site showing the keyword meta tag in use:</para>
+<para/>
+
+<para/>
+
+<pre class="literal"><![CDATA[ 
+<meta name='keywords' content='computer careers, college, two year degree, web programming, system i, system z, as/400, i-series, RGB, networking, web development, linux, certificates, degrees, XHTML, CSS, SEO, XML, Java, VB.NET, Excel, Access, computer programming, security, mainframe, COBOL, HTML' />
+ ]]></pre>
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Other meta tags you may find</pagetitle>
+<para  align="left"><b>Editors, such as DreamWeaver, often put in tags that describe the page or list the name of the editor used to create the XHTML code.</b></para>
+<para/>
+
+<para  align="left">Here's an example that was added by DreamWeaver describing the contents of the page as text and the character set to use.  If you do a web search for ISO-8859-1 you'll discover that this is a standard character encoding of the Latin alphabet.</para>
+<para/>
+
+<para/>
+
+<pre class="literal"><![CDATA[ 
+<b><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /></b>
+ ]]></pre>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Summary</pagetitle>
+<para  align="left"><b>This short tutorial has given you a quick overview of meta tags. You should be able to answer the following questions:</b></para>
+<para/>
+
+
+<list type="3" level="1" start="1">
+	<item level="1"><b>What is the meaning of the word meta? </b>Can you give an example where this prefix is used with other words?</item>
+	<item level="1"><b>How can you control the paragraph that prints in the search engine listings?</b></item>
+	<item level="1"><b>How can you keep search engines such as Google from indexing or searching a page?</b></item>
+	<item level="1"><b>Are meta tag keywords important in today's Web world? </b>Why or why not?</item>
+	<item level="1"><b>List at least two other things that meta tags can describe about a web page.</b></item>
+</list>
+
+<para/>
+
+<para/>
+
+<para  align="center"><b>*** *** ***</b></para>
+<para  align="center"><b>This completes the tutorial: Web Development - Meta tags</b></para>
+<para  align="center">May 2009</para>
+<para  align="center">Revised October 2010</para>
+<para/>
+
+<para  align="center"><b>*** *** ***</b></para>
+<para/>
+
+<para  align="left">Written by Peter K. Johnson, Instructor</para>
+<para  align="left">South Central College</para>
+<para  align="left">North Mankato, MN 56003</para>
+<para  align="left">Peter.Johnson@southcentral.edu</para>
+<para/>
+
+<para  align="left"><b>Read my blog at:  </b> <hyperlink><name>http://webexplorations.com/blog</name><url>http://webexplorations.com/blog</url></hyperlink></para>
+<para/>
+
+<para/>
+
+<htmlinclude>
+<center> <!--Creative Commons License--><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/"><img alt="Creative Commons License" border="0" src="http://creativecommons.org/images/public/somerights20.png"/></a><br/>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/">Creative Commons Attribution-NonCommercial-ShareAlike 2.5  License</a>.<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<Work rdf:about="">
+		<license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/" />
+	<dc:type rdf:resource="http://purl.org/dc/dcmitype/InteractiveResource" />
+	</Work>
+	<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/><requires rdf:resource="http://web.resource.org/cc/ShareAlike"/></License></rdf:RDF> -->
+</center>
+</htmlinclude>
+<para/>
+
+<para/>
+
+<para/>
+
+
+
+
+
+
+</newpage>
+
+
+</courseGenie>
+

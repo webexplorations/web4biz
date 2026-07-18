@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- contact.html - Demo showing how to use CSS for a nice looking form
+        Peter K. Johnson - peterk@WebExplorations.com
+        Based on http://www.sitepoint.com/style-web-forms-css/
+        Written: 11-25-14
+        Revised: 
+   -->
+   
+   <title>Contact Form</title>
+   <style>
+   form    {
+   background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
+   background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+   margin:               auto;
+   position:             relative;
+   width:                550px;
+   height:               450px;
+   font-family:          Optima, Tahoma, Geneva, sans-serif;
+   font-size:            14px;
+   font-style:           italic;
+   line-height:          24px;
+   font-weight:          bold;
+   color:                #09C;
+   text-decoration:      none;
+   -webkit-border-radius: 10px;
+   -moz-border-radius:   10px;
+   border-radius:        10px;
+   padding:              10px;
+   border:               inset 1px solid #333;
+   -webkit-box-shadow:   0px 0px 8px rgba(0, 0, 0, 0.3);
+   -moz-box-shadow:      0px 0px 8px rgba(0, 0, 0, 0.3);
+   box-shadow:           0px 0px 8px rgba(0, 0, 0, 0.3);
+   }
+   
+   input    {
+   width:                375px;
+   display:              block;
+   border:               1px solid #999;
+   height:               25px;
+   -webkit-box-shadow:   0px 0px 8px rgba(0, 0, 0, 0.3);
+   -moz-box-shadow:      0px 0px 8px rgba(0, 0, 0, 0.3);
+   box-shadow:           0px 0px 8px rgba(0, 0, 0, 0.3);
+   }
+   
+   textarea#feedback {
+   width:                375px;
+   height:               150px;
+   margin:               5px 5px 5px 5px;
+   }
+   
+   textarea.message {
+   /* display:              block; */
+   }
+
+   input.button {
+   width:                100px;
+   position:             absolute;
+   right:                20px;
+   bottom:               20px;
+   background:           #09C;
+   color:                #fff;
+   font-family:          Optima, Tahoma, Geneva, sans-serif;
+   height:               30px;
+   -webkit-border-radius: 15px;
+   -moz-border-radius:   15px;
+   border-radius:        15px;
+   border:               1px solid #999;
+   }
+   
+   input.button:hover {
+   background:           #fff;
+   color:                #09C;
+   margin-bottom:        10px;
+   }  
+   
+   textarea:focus, input:focus {
+   border:               1px solid #09C;
+   }    
+   </style>
+</head>
+<body>
+   <form>
+   <div>
+   <h1>Contact Form :</h1>
+   <label>
+   <span>Your name</span><input id="name" type="text" name="name" placeholder="your name" />
+   </label>
+   
+   <label>
+   <span>Email Address</span><input id="email" type="text" name="email" placeholder="your email" />
+   </label>
+   
+   <label>
+   <span>Subject</span><input id="subject" type="text" name="subject" placeholder="subject" />
+   </label>
+   
+   <label>
+   <div>Message</div>
+   <textarea id="feedback" name="feedback"></textarea>
+   <input type="button" class="button" value="Submit Form" />
+   </label>
+   
+   </div>
+   </form>
+
+</body>
+</html>

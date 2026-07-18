@@ -1,0 +1,38 @@
+NewQuestion,MC,,,
+Title,,,,
+QuestionText,"Spelling matters. It was _______ turn to create a web page for the client.",,,
+Points,1,,,
+Difficulty,1,,,
+Option,0.00,"they're",,"This is short for: they are"
+Option,0.00,"there",,"There is a place. Go over there."
+Option,100.00,"their",,"Their shows possession. It belongs to them. The turn belongs to them."
+Option,0.00,"thar",,"This is not a word in the English language."
+NewQuestion,MC,,,
+Title,,,,
+QuestionText,"Spelling matters. _____ likely to encourage customers to buy because of the consistent color scheme they used on the web site.",,,
+Points,1,,,
+Difficulty,1,,,
+Option,100.00,"They're",,"This is short for: they are"
+Option,0.00,"There",,"There is a place. Go over there."
+Option,0.00,"Their",,"Their shows possession. It belongs to them. It is theirs."
+Option,0.00,"Thar",,"This is not a word in the English language."
+NewQuestion,MC,,,
+Title,,,,
+QuestionText,"Spelling matters. It just goes to show, _______ is a reason why spelling is so important on the Web. People judge the quality of a page (and the information it contains) using spelling and grammar as an important criteria.",,,
+Points,1,,,
+Difficulty,1,,,
+Option,0.00,"They're",,"This is short for: they are"
+Option,0.00,"There",,
+Option,100.00,"@@There is a place. Go over there.  Over there is the reason. (Also, the other two options don't fit the meaning of this sentence.)",,
+Option,0.00,"Their",,"Their shows possession. It belongs to them. It is theirs."
+Option,0.00,"Thar",,"This is not a word in the English language."
+NewQuestion,MC,,,
+Title,,,,
+QuestionText,"Spelling matters. It just goes to show, _______ a reason why spelling is so important on the Web. People judge the quality of a page (and the information it contains) using spelling and grammar as an important criteria.",,,
+Points,1,,,
+Difficulty,1,,,
+Option,0.00,"They're",,"This is short for: they are"
+Option,0.00,"There",,"The verb 'is' is missing. There IS the reason. You want the contraction: there's "
+Option,0.00,"Their",,"Their shows possession. It belongs to them. It is theirs."
+Option,0.00,"Thar",,"This is not a word in the English language."
+Option,100.00,"There's is short for: There is.",,"Correct!"

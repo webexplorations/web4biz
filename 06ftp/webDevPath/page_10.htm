@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en" dir="ltr">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<meta name="description" content="How to use a file path to locate specific files">
+<meta name="keywords" content="path, file management, DOS">
+<meta name="copyright" content="Covered by Creative Commons licensing">
+<meta name="Objectives" content="Learn the basic syntax used to specify file locations">
+<meta name="Author" content="Peter K. Johnson">
+<meta name="Organisation" content="South Central College - North Mankato, MN USA">
+<meta name="Date" content="February 2009">
+<meta name="creator" content="Wimba Create">
+
+<title>Here are the answers</title>
+<link rel="stylesheet" type="text/css" href="cg.css">
+<!--[if lte IE 7]>
+<style>
+ /* Hides from IE5-mac \*/
+ * html div {height: 1%;}
+ /* End hide from IE5-mac */ 
+</style>
+<![endif]-->
+<script src="cgmain.js" type="text/javascript" language="JavaScript"></script><script src="cglocale.js" type="text/javascript" language="JavaScript"></script>
+
+
+
+</head>
+
+
+
+<body dir="ltr">
+
+<noscript>Your browser does not support Javascript. You should still be able to navigate through these materials but selftest questions will not work.</noscript>
+
+<a href="#Main" id="skipanchor"><img src="buttons/btn_skip.gif" alt="Skip to main content" width="1" height="1" border="0"></a><div id="header">
+
+<a name="_top"></a>
+<a href="index.htm" onMouseOut="imgSwap('index_top','buttons/btn_contents_topup.gif')" onBlur="imgSwap('index_top','buttons/btn_contents_topup.gif')" onMouseOver="imgSwap('index_top','buttons/btn_contents_topdown.gif')" onFocus="imgSwap('index_top','buttons/btn_contents_topdown.gif')"><img class="floattopright" name="index_top" border="0" src="buttons/btn_contents_topup.gif" width="30" height="24" alt="Contents page"></a>
+<a href="page_09.htm" onMouseOut="imgSwap('prev_top','buttons/btn_prev_topup.gif')" onBlur="imgSwap('prev_top','buttons/btn_prev_topup.gif')" onMouseOver="imgSwap('prev_top','buttons/btn_prev_topdown.gif')" onFocus="imgSwap('prev_top','buttons/btn_prev_topdown.gif')"><img class="floattopright" name="prev_top" border="0" src="buttons/btn_prev_topup.gif" width="30" height="24" alt="Previous page"></a>
+
+<h1>Using the Path to locate files</h1>
+
+</div>
+
+
+
+<div id="main-content-notoc">
+
+<a name="Main"></a>
+
+<h2>Here are the answers</h2>
+
+<p><b>Here are the correct responses.</b></p>
+<p>If you got any wrong make sure you understand why so you don't make the same mistake in real life.</p>
+<p><img src="images/pic014.jpg" width="323" height="548" alt="File hierarchy showing the structure of the webExplorations folder and all its sub and sub-sub folders" border="0" class="normal"></p>
+<div class="paneltext"><p>(1) What path statement would access the file myPhoto.gif in the graphic folder from the folder named webExplorations? (There's two graphic folders!  Make sure you are referring to the first subfolder.)</p></div>
+<p>graphic/myPhoto.gif</p>
+<p><b>Explanation:</b></p>
+<p>Starting from the current location,</p>
+<p>go into the subfolder named graphic</p>
+<div class="paneltext"><p>(2) What path statement would access the file charlie.jpg in the graphic folder found in the folder named web?</p></div>
+<p>web/graphic/charlie.jpg</p>
+<p>
+<b>Explanation:<br></b>Starting from the current location</p>
+<p>go into the subfolder named web</p>
+<p>then go into the subfolder named graphic</p>
+<div class="paneltext"><p>(3) Using Windows Explorer how would you determine what files are contained in the folder named tftWebCSS?</p></div>
+<p>Click on the Folders button to open up both panes. Then click on the tftWebCSS folder to select it and display the files in the right pane.</p>
+<div class="paneltext"><p>(4) From the webExplorations folder what path would you use to access the gradient named blueRedGradient.jpg in the gradient folder?</p></div>
+<p>/web/graphic/gradient/blueRedGradient.jpg</p>
+<p><b>Explanation:</b></p>
+<p>Starting from the current location,</p>
+<p>go into the subfolder named web</p>
+<p>from there go into the subfolder named graphic</p>
+<p>from there go into the subfolder name gradient</p>
+<div class="paneltext"><p>(5) From the webExplorations folder what path would you use to access the file named logo.gif located in the same folder?</p></div>
+<p>logo.gif</p>
+<p>
+<b>Explanation: <br></b>If the file is in the same folder as where you are, all you have to do is specify the name. The system will look in the current folder automatically.</p>
+<p>As an alternative you could use the single dot:</p>
+<p>./logo.gif  </p>
+<p>or, look in the current folder &quot;.&quot; for the file named logo.gif</p>
+<div class="paneltext"><p>(6) What path statement would you use to access the file myLinkPage.html?</p></div>
+<p>Who knows. We have to have a starting reference point. Are we located in the webExplorations folder or some other subfolder???</p>
+<div class="paneltext"><p>(7) From the webMarketing folder how would you access a graphic named ted.gif in the graphic folder of the web folder?</p></div>
+<p>../graphic/ted.gif</p>
+<p>
+<b>Explanation: <br></b>Starting from the current location,</p>
+<p>../ go up to the parent folder, webExplorations</p>
+<p>/graphic  and then back down into the subfolder of webExplorations named graphic.</p>
+<div class="paneltext"><p>(8) From the gradient folder how would you access a graphic named logo.gif located in the graphic subfolder of webExplorations?</p></div>
+<p>../../../graphic/logo.gif</p>
+<p><b>Explanation:</b></p>
+<p>Starting from the current location,</p>
+<p>../ go up to the parent folder, graphic, that the gradient folder is in, </p>
+<p>../ then go up another parent to the web folder,</p>
+<p>../ takes you up a third level putting you inside the webExplorations folder and all its subfolders (including &quot;web&quot;).</p>
+<p>Next go back down into the graphic subfolder of the webExplorations folder</p>
+<p align="center">*** *** ***</p>
+<p><b>This completes this tutorial: Using Paths to locate files</b></p>
+<p>Written by Peter K. Johnson - February 2009<br>Revised February 2010</p>
+<p>
+<b>Read my blog at:  </b><a href="http://webexplorations.com/blog" title="">http://webexplorations.com/blog</a>
+</p>
+<center>
+<!--Creative Commons License--><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/"><img alt="Creative Commons License" border="0" src="http://creativecommons.org/images/public/somerights20.png"></a><br>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/">Creative Commons Attribution-NonCommercial-ShareAlike 2.5  License</a>.<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<Work rdf:about="">
+		<license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/" />
+	<dc:type rdf:resource="http://purl.org/dc/dcmitype/InteractiveResource" />
+	</Work>
+	<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/><requires rdf:resource="http://web.resource.org/cc/ShareAlike"/></License></rdf:RDF> -->
+</center>
+
+</div>
+
+
+
+<div id="footer-notoc">
+
+<a href="index.htm" onMouseOut="imgSwap('index_bot','buttons/btn_contents_botup.gif')" onBlur="imgSwap('index_bot','buttons/btn_contents_botup.gif')" onMouseOver="imgSwap('index_bot','buttons/btn_contents_botdown.gif')" onFocus="imgSwap('index_bot','buttons/btn_contents_botdown.gif')"><img class="floatright" name="index_bot" border="0" src="buttons/btn_contents_botup.gif" width="30" height="24" alt="Contents page"></a>
+<a href="page_09.htm" onMouseOut="imgSwap('prev_bot','buttons/btn_prev_botup.gif')" onBlur="imgSwap('prev_bot','buttons/btn_prev_botup.gif')" onMouseOver="imgSwap('prev_bot','buttons/btn_prev_botdown.gif')" onFocus="imgSwap('prev_bot','buttons/btn_prev_botdown.gif')"><img class="floatright" name="prev_bot" border="0" src="buttons/btn_prev_botup.gif" width="30" height="24" alt="Previous page"></a>
+
+<p><a href="http://webexplorations.com" target="_new">Web Explorations</a></p>
+
+</div>
+
+
+
+</body>
+
+</html>

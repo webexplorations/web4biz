@@ -1,0 +1,591 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../../08Table/webDevTable/gen/cg_content.xsl"?>
+
+<courseGenie>
+
+<metadata>
+	<lom>
+		<general>
+			<title>
+				<string>Web Development - Tables</string>
+				<language>en</language>
+			</title>
+			<keyword>
+				<string>Web Development</string>
+				<language>en</language>
+			</keyword>
+			<keyword>
+				<string>tables</string>
+				<language>en</language>
+			</keyword>
+			<keyword>
+				<string>XHTML</string>
+				<language>en</language>
+			</keyword>
+			<keyword>
+				<string>CSS</string>
+				<language>en</language>
+			</keyword>
+			<keyword>
+				<string>Web Explorations</string>
+				<language>en</language>
+			</keyword>
+			<description>
+				<string>Using tables on a Web page</string>
+				<language>en</language>
+			</description>
+		</general>
+		<lifeCycle>
+			<version>
+				<string>July 2010</string>
+				<language>en</language>
+			</version>
+		</lifeCycle>
+		<rights>
+			<description>
+				<string>Creative Commons</string>
+				<language>en</language>
+			</description>
+		</rights>
+	</lom>
+	<misc>
+		<item>
+			<key>Objectives</key>
+			<value>To use the XHTML table elements correctly on a web page.</value>
+		</item>
+		<item>
+			<key>Author</key>
+			<value>Peter K. Johnson</value>
+		</item>
+		<item>
+			<key>Organisation</key>
+			<value>South Central College</value>
+		</item>
+		<item>
+			<key>Date</key>
+			<value>March 2009</value>
+		</item>
+		<item>
+			<key>creator</key>
+			<value>Wimba Create</value>
+		</item>
+	</misc>
+</metadata>
+<settings>
+	<pageroot>page</pageroot>
+	<sectionmode>both</sectionmode>
+	<exportmode>normal</exportmode>
+	<assessmentmode>none</assessmentmode>
+	<generateindex>True</generateindex>
+	<showtoc>False</showtoc>
+	<tocwidth>200</tocwidth>
+	<shownavigation>True</shownavigation>
+	<footer>Web Explorations</footer>
+	<singlepage>False</singlepage>
+	<hyperlinksmain>True</hyperlinksmain>
+	<popupsmain>True</popupsmain>
+	<idstring>CG2010728205348</idstring>
+	<scorm-questionmode>selftest</scorm-questionmode>
+	<scorm-masteryscore>0</scorm-masteryscore>
+	<cgbuild>2.5.0 Build 20090318</cgbuild>
+	<schemefolder>c:/program files/wimbacreate/resources/en.lproj/schemes/Desert</schemefolder>
+</settings>
+
+<newpage>
+<pagetitle>	Tables</pagetitle>
+<section/>
+<para  align="left"><b><image alt="Tables - The basic tags, CSS and Tables" width="576" height="432" class="normal">pic001.jpg</image></b></para>
+<para/>
+
+<para  align="left"><b>Tables are used for tabular data.</b>  If your client has information that would display well as rows and columns, then you should be thinking: Tables.</para>
+<para/>
+
+<para  align="left">This tutorial will show you how to set up a basic table on a page as well as how to make it look interesting and unique using CSS styling.</para>
+<para/>
+
+<para  align="left"><b>Here is a little history.</b> Before CSS was introduced tables were used to layout a page, allowing the web designer to position blocks of graphics and text in different areas on the page.</para>
+<para/>
+
+<para  align="left">This technique is not longer viable due to the popularity and power of CSS, especially external style sheets which can utilize a single file to style multiple pages.  Using the now out-of-date table layout techniques every page had to be modified if the layout changed. An tedious task even on web sites with a few pages.</para>
+<para/>
+
+<para  align="left">Tables are an important tool for organizing and displaying data. Use them when they are appropriate and style them using CSS and you will have a valuable communication tool in your web design toolbox.</para>
+<para/>
+
+<para/>
+
+<para  align="left"><b><image alt="Learning Objectives" width="576" height="432" class="normal">pic002.jpg</image></b></para>
+<para  align="left"><b>This tutorial will have you creating a web page using the basic table tags and some basic attributes.</b></para>
+<para/>
+
+<para  align="left"><b>In addition, you will be learning how to use CSS to make your tables look open and inviting to the user.</b></para>
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>The Basic Table Elements</pagetitle>
+<para  align="left"><b><image alt="The Basic Table Elements" width="576" height="432" class="normal">pic003.jpg</image></b></para>
+<para/>
+
+<para  align="left"><b>There are four basic table elements.</b></para>
+<para  align="left"><b>&#60;table></b> is the main table element, holding all the others.</para>
+<para  align="left"><b>&#60;tr></b> sets up a row inside the table. Each &#60;tr> element will contain a series of column or header tags.</para>
+<para  align="left"><b>&#60;th></b> sets up a series of header columns. The text in these columns is automatically made bold and is centered by the browser. You can also change the appearance of these columns using CSS.</para>
+<para  align="left"><b>&#60;td></b> sets up a series of columns to hold text and/or data. </para>
+<para/>
+
+<para  align="left"><b>IMPORTANT! Don't forget the stop tags.  </b>It is recommended that each time you type in a new tag, immediately add in its matching stop tag. Missing stop tags are the most common problem for people adding tables to a web page.</para>
+<b><image alt="Putting the Basic Elements to Work" width="576" height="432" class="normal">pic004.jpg</image><longdesc>The Essential Table Elements.<br/><br/>Look at the end of the tutorial for a complete code listing.</longdesc></b>
+<para/>
+
+<para  align="left"><b>Open up a basic  XHTML file and let's create a table.</b></para>
+<para/>
+
+<para  align="left"><b>(1) First add the &#60;table> start and stop tags.</b>  By default browsers display tables without borders so use the border=" " attribute to add a 1 pixel border.<br/><b>&#60;table border="1"></b></para>
+<para/>
+
+<para  align="left"><b>(2) Add a row element using the &#60;tr> element. </b>Type in the &#60;/tr> right away. You may also want to add a comment on the line above the start tag designating what the row does. Tables have a lot of tags and consistent commenting, especially separating the rows, will greatly help you maintain the page in the future.</para>
+<para/>
+
+<para  align="left"><b>(3) Add two or three column headings using the &#60;th> element inside the &#60;tr> tags.  </b>Use smart data designating each column so they are easy to identify.</para>
+<para/>
+
+<para  align="left"><b>(4) Create another row and fill it with column data using the &#60;td> element. Here's a short cut: </b> Highlight the first row and copy and paste it. Then all you have to do is change the th to td and modify the contents appropriately. Once you have one row built, filled with &#60;td> columns it's a simple matter to copy it and paste it below, simply changing the data.</para>
+<para/>
+
+<para  align="left"><b>Use smart data.</b> In this example you can quickly see the location of each column and row by the information contained in each cell. Later on, when you have everything working correctly you can easily replace this smart data with the actual client data.</para>
+<para/>
+
+<para  align="left">(Remember you are building a basic table template file that will be edited to create other web pages. The smart data will be acting as a place holder for whatever data is put in each table.)</para>
+<para/>
+
+<para  align="left"><b>Once you finish inputting the table it should look something like this:</b></para>
+<para/>
+
+<para  align="center"><image alt="Output of basic table elements" width="325" height="217" class="normal">pic005.jpg</image></para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Table Attributes</pagetitle>
+<para  align="left"><b><image alt="" width="576" height="432" class="normal">pic006.jpg</image></b></para>
+<para/>
+
+<para  align="left"><b>There are several attributes you can use to customize each table.</b> Almost all of these except cellspacing, rowspan, colspan, and summary can be controlled using CSS. Whenever possible use the CSS versions of these attributes.</para>
+<para/>
+
+<para  align="left">It is useful to see how each attribute works however so you will be adding them to your generic table one at a time just to see what the results look like.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>border = " "</pagetitle>
+<para  align="left"><b><image alt="" width="576" height="432" class="normal">pic007.jpg</image></b></para>
+<para/>
+
+<para  align="left"><b>You've already discovered the border=" " attribute. </b> It is normally given in pixels.</para>
+<para/>
+
+<para  align="left"><b>Here is a 2 pixel border:</b></para>
+<para  align="left"><image alt="Table with a two pixel border" width="325" height="217" class="normal">pic008.jpg</image></para>
+<para/>
+
+<para  align="left"><b>Here is a 10 pixel border:</b></para>
+<para  align="left"><b><image alt="Table with a border of 10 pixels" width="339" height="252" class="normal">pic009.jpg</image></b></para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>summary=" "</pagetitle>
+<para  align="left"><image alt="" width="576" height="432" class="normal">pic010.jpg</image></para>
+<para/>
+
+<para  align="left"><b>The summary=" " attribute is very important for the accessibility of every table. </b>Non-visual browsers (and search engines) use this attribute to determine the purpose of the data in the table. It is very much like the alt=" " attribute for the &#60;img  /> element except that the text in the summary=" " tag is not visible to the normal user unless they are using a special browser such as JAWS or text-to-speech software.</para>
+<para/>
+
+<para  align="left"><b>Include this attribute as part of every table element you write.</b></para>
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>cellspacing = " "</pagetitle>
+<para  align="left"><image alt="" width="576" height="432" class="normal">pic011.jpg</image></para>
+<para/>
+
+<para  align="left"><b>Cellspacing is the space between the border lines:</b></para>
+<para/>
+
+<para  align="center"><image alt="The cellspacing is the space between each cell." width="407" height="292" class="normal">pic012.jpg</image></para>
+<para/>
+
+<para  align="left">Try various widths anywhere from 1pixel to 50 pixels. </para>
+<para/>
+
+<para  align="left">Notice that even though the border="0" the cellspacing is still maintained.</para>
+<para  align="left"><b>Here is a table with no borders with a 2 pixel cellspacing:</b></para>
+<para  align="center"><image alt="table with no border and a 2 pixel cellspacing attribute" width="316" height="259" class="normal">pic013.jpg</image></para>
+<para/>
+
+<para  align="left"><b>And here is the same table with a 20 pixel cellspacing:</b></para>
+<para  align="center"><image alt="Table with no border and 20 pixel cellspacing" width="371" height="277" class="normal">pic014.jpg</image></para>
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>The Alignment Attributes</pagetitle>
+<para/>
+
+<para  align="left"><image alt="alignment attributes" width="576" height="432" class="normal">pic015.jpg</image></para>
+<para  align="left"><b>The align attributes allow you to position items inside a column data cell.</b></para>
+<para  align="left">If you use the valign=" " attribute you have three choices for the value:</para>
+
+<list type="2" level="1" start="1">
+	<item level="1">top</item>
+	<item level="1">middle</item>
+	<item level="1">bottom</item>
+</list>
+
+<para/>
+
+<para  align="left">If you use the align= " " attribute you can use these values:</para>
+
+<list type="2" level="1" start="1">
+	<item level="1">left</item>
+	<item level="1">center</item>
+	<item level="1">right</item>
+</list>
+
+<para/>
+
+<para  align="left">In order for the alignment to show the cells have to be deep enough. This can be done with more text or longer lines. Images also make cells larger.</para>
+<para/>
+
+<para  align="left">A common use for the alignment attributes is to display photos with captions.</para>
+<para/>
+
+<image alt="table that doesn't use align or valign attributes." width="576" height="389" class="normal">pic016.jpg</image><longdesc>Photos center and text aligns to the left</longdesc>
+<para/>
+
+<para  align="left">Here is the same table using valign to move the images to the bottom and align to center the captions.</para>
+<para  align="left"><image alt="aligning images and text in a table using valign and align" width="576" height="381" class="normal">pic017.jpg</image></para>
+<para/>
+
+<para  align="left"><b>Note:</b> The Rainbow Hand has a white area above and below the actual image. This is what keeps it from appearing down near the bottom border. The light gray background helps reveal these types of "gotchas" as you design a web page.</para>
+<para/>
+
+<para  align="left"><b>Here is the code that accomplishes this:</b></para>
+<para  align="left"><b><image alt="code showing how to use the valign and align attributes" width="576" height="395" class="normal">pic018.jpg</image></b></para>
+<para/>
+
+<para/>
+
+<para  align="left">Notice how the attributes are put in the &#60;tr> elements. This makes them apply to each &#60;td> element inside that &#60;tr>.</para>
+<para/>
+
+<para  align="left">Here are copies of the images that you can download to your computer:  (right-mouse click on an image, choose "save image as" to your computer. Put in a folder named graphic located in the same folder as your web page.)</para>
+<para  align="left"><image alt="GIMP logo" width="64" height="64" class="normal">pic019.gif</image><image alt="Hand against a rainbow colored background" width="283" height="283" class="normal">pic020.jpg</image><image alt="graphic showing past, present, and future" width="284" height="99" class="normal">pic021.gif</image></para>
+<para/>
+
+<para  align="left">Please keep in mind that this type of styling in a table can be done more effectively using CSS, especially when you have similar tables in use on several different pages.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>colspan - spanning columns</pagetitle>
+<para/>
+
+<para  align="left"><image alt="" width="576" height="432" class="normal">pic022.jpg</image></para>
+<para/>
+
+<para  align="left"><image alt="" width="333" height="105" class="normal">pic023.gif</image></para>
+<para  align="left">Often a table row needs to span across several columns. You can use the colspan=" " attribute to do this. The photo gallery is an excellent example.</para>
+<para  align="left">Instead of having a separate column heading for each column you can span across all three columns with a single heading.</para>
+<para/>
+
+<para  align="left">Replace the three &#60;th> heading elements with this line:</para>
+<para  align="left">&#60;th colspan="3">Photo Gallery&#60;/th></para>
+<para/>
+
+<para  align="left">Here's what the results will look like:</para>
+<image alt="colspan attribute example" width="576" height="396" class="normal">pic024.jpg</image><longdesc><br/>See the complete source code at the end of this tutorial in the file named photoGallery.html</longdesc>
+<para/>
+
+<para  align="left">If you end up with some extra columns and have some empty spots in your table like this:</para>
+<para  align="left"><image alt="Error showing what happens when extra columns are included along with the colspan attribute. A blank spot shows up under the extra columns." width="576" height="317" class="normal">pic025.jpg</image></para>
+<para/>
+
+<para/>
+
+<para  align="left"> you'll have to go in and remove some of your code.  The colspan=" " attribute creates as many columns as you say and if you don't delete existing columns (other &#60;td> or &#60;th> elements) you'll end up with extra columns.</para>
+<para  align="left">The same technique can be used to span several rows using the rowspan=" " attribute.  </para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>rowspan -  Combining several rows</pagetitle>
+<para/>
+
+<para  align="left"><b><image alt="" width="576" height="432" class="normal">pic026.jpg</image></b></para>
+<para/>
+
+<para  align="left"><b>Here is an example where a new column was added with the headers and set to span all three rows:</b></para>
+<para  align="left"><image alt="Example showing rowspan attribute" width="575" height="331" class="normal">pic027.jpg</image></para>
+<para  align="left">Here is the code that was used to accomplish this:</para>
+<image alt="code used for rowspan attribute as well as fine-tuning the valign and align attribute." width="576" height="541" class="normal">pic028.jpg</image><longdesc><br/>Complete source code can be found at the end of this tutorial as photoGallery.html</longdesc>
+<para/>
+
+<para  align="left">Notice that valign=" " and align=" " was added to each &#60;tr> element to fine-tune the positioning of the images and text. In addition the width=" " attribute was used for the new row spanning column which is covered on the next page.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>If Cell Width Doesn't Change</pagetitle>
+<para  align="left"><image alt="If cell width doesn't change" width="576" height="432" class="normal">pic029.jpg</image></para>
+<para  align="left"><b>Often a table column won't "collapse" or go smaller even though the browser window size is reduced.</b> Here's some trouble-shooting tips to help you fix this problem.</para>
+<para/>
+
+<para  align="left"><b>(1) Keep in mind that the widest cell determines how big all the cells are in that column. </b>For example, you may have a large image hidden "below the fold" that you don't see. It will determine how wide all the cells are in that column.</para>
+<para/>
+
+<para  align="left"><b>(2) Extra lines &#60;br /></b> are often introduced when you copy text into a table cell. Position the cursor just to the right of the last character is a cell and use the delete key to remove all the extra spaces or XHTML characters.</para>
+<para/>
+
+<para  align="left"><b>(3) Paragraphs can add a lot of depth to text.</b> Go in and remove all the &#60;p> elements from inside your cells to help them collapse.</para>
+<para/>
+
+<para  align="left"><b>(4) If you are using DreamWeaver these changes will not go into effect immediately when in design mode. </b>Often you have to resize the view window in order to get a table to collapse to its true size. When in doubt, preview in a browser. Don't trust DreamWeaver's rending of a page.</para>
+<para/>
+
+<para/>
+
+<para/>
+
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>CSS and Tables Styling</pagetitle>
+<para  align="left"><image alt="" width="576" height="432" class="normal">pic030.jpg</image></para>
+<para/>
+
+<para  align="left">Now that you have a good handle on how tables look and respond as well as some of the attributes that can be used to customize them, let's make our tables look good with some CSS.</para>
+<para/>
+
+<para  align="left">We will start with a calendar which is a perfect table application.</para>
+<para/>
+
+<para  align="left"><b>Here's the basic code you can start with:</b></para>
+<para  align="left"><image alt="Code for the basic calendar" width="331" height="581" class="normal">pic031.jpg</image></para>
+<para/>
+
+<para  align="left"><b>Notice how the &#60;caption> element was introduced right after the table tag instead of creating an extra &#60;tr>.</b></para>
+<para/>
+
+<para  align="left">Also notice how we only used two weeks of data. It is a lot easier working with small samplings of code and data. Later, once we have everything working the way we want it will be a simple matter to copy a &#60;tr> and paste it into our code editing the numbers in each &#60;td> column.</para>
+<para/>
+
+<para  align="left">This is a good programming practice that is useful for all types of programming tasks. <b>Do a proof-of-concept first and then copy and paste the completed code to flesh out the project.</b></para>
+<para/>
+
+<para  align="left"><b>Here's the output:</b></para>
+<para  align="left"><image alt="output showing basic calendar table" width="388" height="197" class="normal">pic032.jpg</image></para>
+<para/>
+
+<para  align="left">This is not very impressive...</para>
+<para  align="left">Let's add a border using some CSS. In the &#60;head> section of the page add the following CSS rules:</para>
+<para/>
+
+<para  align="left"><image alt="CSS code for calendar table" width="576" height="415" class="normal">pic033.jpg</image></para>
+<para/>
+
+<para  align="left"><b>This code will give these results:</b></para>
+<para  align="left"><image alt="Output showing CSS formating of the caption and tr elements as well as border-spacing" width="371" height="195" class="normal">pic034.jpg</image></para>
+<para/>
+
+<para  align="left">Notice how easy it was to format the &#60;caption> element all by itself, compared to setting up a special &#60;div> element to make a row unique.</para>
+<para  align="left">Here's the CSS rule:</para>
+<para  align="left"><b>   caption {</b></para>
+<para  align="left"><b>   font-size:       200%;</b></para>
+<para  align="left"><b>   font-style:      italic;</b></para>
+<para  align="left"><b>   }</b></para>
+<para/>
+
+<para  align="left">Also notice the border-spacing: attribute in the table rule.</para>
+<para/>
+
+<para  align="left"> It allows setting up various size borders for the left and right as well as the top and bottom.</para>
+<para/>
+
+<para  align="left">Here's the CSS rule inside the table designator:</para>
+<para  align="left">   table {</para>
+<para  align="left">   border:        1px solid #000090; /* dark blue border */</para>
+<para  align="left">   <b>border-spacing:2px 4px;</b>   /* narrow left-right border */</para>
+<para  align="left">   font-family:"Lucida Grande", Futura, Arial, sans-serif;</para>
+<para  align="left">   } </para>
+<para  align="left">The borders were also made a different color for the &#60;th> elements so you could quickly see how easy it is to control the different parts of a table.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>CSS and &#60;tr>, &#60;th>, and &#60;td></pagetitle>
+<para  align="left"><image alt="CSS and th, tr and td" width="576" height="432" class="normal">pic035.jpg</image></para>
+<para  align="left"><b>Let's extend your CSS skills to make the rest of the table look better.</b></para>
+<para  align="left">Here's the CSS code you can add inside the &#60;style> element on your page:</para>
+<image alt="CSS code for the td element." width="493" height="125" class="normal">pic036.jpg</image><longdesc>The full source code is available at the end of this tutorial in the file named calendar.html</longdesc>
+<para/>
+
+<para  align="left">(1) A thin, dark-blue border, matching the border around the table itself is added.</para>
+<para/>
+
+<para  align="left">(2) The height and width of each &#60;td> cell is increased to be 5 1/2 times the established font size. </para>
+<para/>
+
+<para  align="left">(3) Padding of 5px surrounds the text.</para>
+<para/>
+
+<para  align="left">(4) The text is aligned to the top of each cell. Notice how the text automatically aligned horizontally to the left. This is the default if you don't specify a horizontal alignment.</para>
+<para/>
+
+<para  align="left"><b>Here are the results:</b></para>
+<para  align="left"><image alt="Results for CSS code for the td element." width="575" height="251" class="normal">pic037.jpg</image></para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Using &#60;div></pagetitle>
+<para  align="left"><image alt="" width="576" height="432" class="normal">pic038.jpg</image></para>
+<para/>
+
+<para  align="left">The notes "Tony's Birthday" needs to be controlled. You can do that with a div tag. </para>
+<para/>
+
+<para  align="left">In the code itself add a div tag around the text of any note. Make it a class so we can use this CSS rule for multiple div tags on the page. (An id # can only be used once on a page. A class . can be used multiple times.)</para>
+<para  align="left"><image alt="Add a div tag with the class name note around each note on the calendar" width="272" height="243" class="normal">pic039.jpg</image></para>
+<para  align="left">If you use consistent indenting it will be an easy matter to copy this div tag into another cell anytime in the future.</para>
+<para/>
+
+<para  align="left">Here's the CSS rule that will format the notes in a nicer fashion.</para>
+<para  align="left">Type this in the &#60;style> element in the &#60;head> section.</para>
+<para/>
+
+<image alt="CSS rule for the note class" width="492" height="107" class="normal">pic040.jpg</image><longdesc><br/>The full text is available in the file calendar.html at the end of this tutorial</longdesc>
+<para  align="left">Note the dot right before the word "note". This tells the browser to use this rule on every class named "note".   </para>
+<para/>
+
+<para  align="left"><b>Just remember:</b> a dot "." signifies a class (which can repeat on the page)  A hashmark "#" signifies an id. Each id must have a unique name on a page.</para>
+<para/>
+
+<para  align="left">We reduced the font size, aligned the text to the right and added some padding on the left for longer notes.</para>
+<para/>
+
+<para  align="left">Here are the results:</para>
+<para  align="left"><image alt="Results of putting the text note in a div tag and using CSS to format it." width="576" height="245" class="normal">pic041.jpg</image></para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Creating Striped Rows</pagetitle>
+<para/>
+
+<para  align="left"><image alt="" width="576" height="432" class="normal">pic042.jpg</image></para>
+<para  align="left">Use can use class names to add "stripes" to a table, making it easier to read. In the code add a class="even" to one of the &#60;tr> elements.</para>
+<para/>
+
+<para  align="left"><image alt="Adding a class named even to the second week of the calendar" width="264" height="233" class="normal">pic043.jpg</image></para>
+<para/>
+
+<para  align="left">Next, in the CSS of your header, add a rule for tr.even</para>
+<para  align="left"><image alt="CSS code showing how to format the background color for both even and odd rows" width="484" height="177" class="normal">pic044.jpg</image></para>
+<para  align="left"><b>Important: </b>There is no space between the tr.even. This rule reads:  The tr element that is a member of the "even" class or group.</para>
+<para/>
+
+<para  align="left"><b>Here are the results</b>. I've added two more rows to show the full effect of the striping:</para>
+<para  align="left"><image alt="calendar showing effects of 'stripes' using different css for even rows" width="576" height="397" class="normal">pic045.jpg</image></para>
+<para  align="left"><b>Quite a difference a little CSS has made, especially when compared to our original view:</b></para>
+<para  align="left"><image alt="output showing basic calendar table" width="388" height="197" class="normal">pic046.jpg</image></para>
+<para/>
+
+</newpage>
+
+<newpage>
+<pagetitle>Summary</pagetitle>
+<para/>
+
+<b><image alt="Summary" width="576" height="432" class="normal">pic047.jpg</image><longdesc><br/>The Essential Table Elements<br/>Table Attributes<br/>Using CSS with Tables</longdesc></b>
+<para/>
+
+<para  align="left"><b>What have you learned?</b></para>
+
+<list type="3" level="1" start="1">
+	<item level="1"><b>Can you list the four elements used to create a basic table?</b></item>
+	<item level="1"><b>Can you list at least three XHTML attributes that can be used to customize a table?</b></item>
+	<item level="1"><b>What are some styling properties that can be used to change the appearance of a table using CSS?</b></item>
+</list>
+
+<para/>
+
+<para/>
+
+<para  align="left"><b>Here are the completed source code files:</b></para>
+<para  align="left">(right-mouse click, choose "save link as" to save the files to your computer)</para>
+<para  align="left"><hyperlink><name>tableTemplate.html</name><file>media/tableTemplate.html</file></hyperlink></para>
+<para  align="left"><hyperlink><name>photoGallery.html</name><file>media/photoGallery.html</file></hyperlink></para>
+<para  align="left"><hyperlink><name>calendar.html</name><file>media/calendar.html</file></hyperlink></para>
+<para  align="center"><b>*** *** ***</b></para>
+<para  align="center"><b>This completes the tutorial: Web Development - Tables</b></para>
+<para  align="center">March 2009 <br/>Revised July 2010</para>
+<para  align="left">Written by Peter K. Johnson, Instructor</para>
+<para  align="left">South Central College</para>
+<para  align="left">North Mankato, MN 56003</para>
+<para  align="left">peterk@WebExplorations.com</para>
+<para/>
+
+<para  align="left"><b>Read my blog at:  </b> <hyperlink><name>http://webexplorations.com/blog</name><url>http://webexplorations.com/blog</url></hyperlink></para>
+<para/>
+
+<para/>
+
+<htmlinclude>
+<center> <!--Creative Commons License--><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/"><img alt="Creative Commons License" border="0" src="http://creativecommons.org/images/public/somerights20.png"/></a><br/>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/">Creative Commons Attribution-NonCommercial-ShareAlike 2.5  License</a>.<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<Work rdf:about="">
+		<license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/" />
+	<dc:type rdf:resource="http://purl.org/dc/dcmitype/InteractiveResource" />
+	</Work>
+	<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/><requires rdf:resource="http://web.resource.org/cc/ShareAlike"/></License></rdf:RDF> -->
+</center>
+</htmlinclude>
+<para/>
+
+<para/>
+
+<para/>
+
+
+
+
+
+
+</newpage>
+
+
+</courseGenie>
+

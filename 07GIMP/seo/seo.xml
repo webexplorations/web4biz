@@ -1,0 +1,475 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../../05SEOGimp/seo/gen/cg_content.xsl"?>
+
+<courseGenie>
+
+<metadata>
+	<lom>
+		<general>
+			<title>
+				<string>Web Development - SEO</string>
+				<language>en</language>
+			</title>
+			<keyword>
+				<string>Web XHTML SEO</string>
+				<language>en</language>
+			</keyword>
+			<description>
+				<string>Search Engine Optimization</string>
+				<language>en</language>
+			</description>
+		</general>
+		<lifeCycle>
+			<version>
+				<string>May 2009</string>
+				<language>en</language>
+			</version>
+		</lifeCycle>
+		<rights>
+			<description>
+				<string>Creative Commons</string>
+				<language>en</language>
+			</description>
+		</rights>
+	</lom>
+	<misc>
+		<item>
+			<key>Objectives</key>
+			<value>How to increase SEO for your clients</value>
+		</item>
+		<item>
+			<key>Author</key>
+			<value>Peter K. Johnson</value>
+		</item>
+		<item>
+			<key>Organisation</key>
+			<value>South Central College</value>
+		</item>
+		<item>
+			<key>Date</key>
+			<value>May 2009</value>
+		</item>
+		<item>
+			<key>creator</key>
+			<value>Created by Wimba Create, licenced to South Central College</value>
+		</item>
+	</misc>
+</metadata>
+<settings>
+	<pageroot>page</pageroot>
+	<sectionmode>both</sectionmode>
+	<exportmode>normal</exportmode>
+	<assessmentmode>none</assessmentmode>
+	<generateindex>True</generateindex>
+	<showtoc>False</showtoc>
+	<tocwidth>200</tocwidth>
+	<shownavigation>True</shownavigation>
+	<footer>Web Explorations</footer>
+	<singlepage>False</singlepage>
+	<hyperlinksmain>False</hyperlinksmain>
+	<popupsmain>True</popupsmain>
+	<idstring>CG2009522173021</idstring>
+	<scorm-questionmode>selftest</scorm-questionmode>
+	<scorm-masteryscore>0</scorm-masteryscore>
+	<cgbuild>2.4.1  Build 200800626</cgbuild>
+	<trialstatus>reg</trialstatus>
+	<schemefolder>c:/program files/coursegenie/resources/en.lproj/schemes/WebCT UTF-8</schemefolder>
+</settings>
+
+<newpage>
+<pagetitle> SEO - Search Engine Optimization</pagetitle>
+<section/>
+<para  align="left">One of the ways a company can differentiate from the competition in today's world is to be first on the Google search page for their product/service category.</para>
+<para/>
+
+<para  align="left">This tutorial will list several important tips that and your client can do to increase the SEO of their web pages.</para>
+</newpage>
+
+<newpage>
+<pagetitle>How Search Engines Work </pagetitle>
+<heading>Spiders, Crawlers, and Robots</heading>
+<para/>
+
+<para  align="left"><b>The most popular search engines such as Google and Yahoo use a program called a spider, web crawler, or robot.</b> These names all mean the same thing. This type of program reads a web page and then follows all the links included on that page.</para>
+<para/>
+
+<para  align="left"><b>The spider extracts information from the site, using the HTML tags in the page to determine what is important. </b>This information is stored in an index. When a person does a search the results that are displayed are pulled from this index based on mathematical formulas that determine what information is pertinent to the search string that was typed in.</para>
+<para/>
+
+<heading>Ranking Search Results</heading>
+<para  align="left"><b>How the results of a search are ranked are the key to SEO. Google changed the search engine rankings by using a "voting" formula.</b> A web page receives a higher Google rank based on how many other web pages linked to that page and how important those web pages were. Having a link to your page on ibm.com gives you a higher Google rank than one from computers4Sale.com.</para>
+<para/>
+
+<para  align="left"><b>Since Google's inception they have been continuously improving their search formulas (algorithms).</b> Many of the concepts used by Google are now being adapted by other search engines as well. This tutorial highlights some of the things that you can do to get your clients' sites the highest rank possible for specific searches based on ethical and acceptable practices.</para>
+</newpage>
+
+<newpage>
+<pagetitle>What your client can do</pagetitle>
+<section/>
+<para  align="left"><b>Here's some of the things your client can do to increase the SEO of their site:</b></para>
+<para/>
+
+
+<list type="2" level="1" start="0">
+	<item level="1">Write specific copy</item>
+	<item level="1">Include important, pertinent links</item>
+	<item level="1">Think long term when registering domains</item>
+	<item level="1">Limit Flash navigation</item>
+</list>
+
+</newpage>
+
+<newpage>
+<pagetitle>Write Specific Copy</pagetitle>
+<heading>Titles are everything.</heading>
+<para/>
+
+<para  align="left"><b>Write short snappy, attention getting titles that include keywords</b> that relate to the content of the page. Write your titles first and then the copy. A good title makes a promise a promise and then delivers. The title makes the promise. The content that follows delivers.</para>
+<para  align="left">Stay focused</para>
+<para/>
+
+<para  align="left"><b>Know your target audience and write to meet their needs.</b> Keep in mind that the only reason people will keep reading your page is if they are getting something of value. Use bulleted lists to help people scan and still catch the highlights of the page.</para>
+<para/>
+
+<para  align="left"><b>Keep it short and sweet. Less is more. </b></para>
+</newpage>
+
+<newpage>
+<pagetitle>Include Pertinent Links</pagetitle>
+<para  align="left"><b>Include links that relate to what your customer will want.</b></para>
+<para/>
+
+<para  align="left"><b>More information? More details? Other alternatives? Think about the links that add value to the pages you look at out on the Web.</b></para>
+<para/>
+
+<para  align="left"><b>Don't use the non-descript "click here".</b> Instead write copy that describes the link and make that copy the link. Which link would you use?</para>
+<para/>
+
+<para  align="left">Click <hyperlink><name>Here</name><url>http://performancing.com/promotion/3-ways-to-immediately-increase-search-engine-traffic</url></hyperlink> vs. <hyperlink><name>How to write effective links</name><url>http://performancing.com/promotion/3-ways-to-immediately-increase-search-engine-traffic</url></hyperlink></para>
+<para/>
+
+<para  align="left"><b>Link to the other pages in your site</b></para>
+<para/>
+
+<para  align="left"><b>Include lots of links to other pages on your site, not just in the menus.</b> This will give you a better link ratio. For example, if your home page talks about the history of your Gizmo(r) product, link to the product page showing the current model. This will make your link profile more trustworthy and ensure that the spider indexes all of the pages in your site.</para>
+<para/>
+
+<para  align="left"><b>Don't link to insignificant pages</b></para>
+<para  align="left">Links to your privacy policy and shipping rates on every page will lower your link value. Each time a spider comes to a repeating link it thinks that link is more important. You can exclude these pages from redundant searching by using a robot.txt file. (See below.)</para>
+</newpage>
+
+<newpage>
+<pagetitle>Update your content regularly</pagetitle>
+<para  align="left"><b>Keep those pages up-to-date.</b> This is one of the criteria that search spiders use to determine ranking: when was the page last updated. In this fast changing world a page that was last updated six months ago is as valuable as a six month old newspaper.</para>
+<para/>
+
+<para  align="left"><b>Blogging is a great way to keep the site dynamic.</b> A blog is an ongoing journal which encourages new content to be put out on the site. Many sites have a blogging space in the middle with sidebars with the regular, more stable information.</para>
+</newpage>
+
+<newpage>
+<pagetitle>Think long term when registering domains</pagetitle>
+<para  align="left"><b>Register your site for 5-10 years or longer</b></para>
+<para/>
+
+<para  align="left">Although not mentioned often this could become more important in the future. In 2005 Google applied for a patent that uses the expiration date of the domain name as one of their ranking criteria. The next time you purchase or renew your domain name, extend the date for 5-10 years. This gives your site much more legitimacy than if the domain is only around for another year or two.</para>
+<para/>
+
+<para  align="left">As domain names become more and more scarce (and more and more valuable) this makes even more sense.</para>
+<para/>
+
+<para  align="left"><b>What happens if your domain registration doesn't get renewed?</b></para>
+<para/>
+
+<para  align="left">The industry is filled with stories of companies not getting their domain re-registered for some reason or other. People around the world watch the expiration lists hoping to pick up a valuable domain name that can later be resold, sometimes for tens of thousands of dollars.</para>
+<para/>
+
+<para  align="left">When your business loses its domain name you can no longer get email and your customers will see someone else's web page (or no web page) until you get it back.</para>
+</newpage>
+
+<newpage>
+<pagetitle>Limit Flash navigation</pagetitle>
+<para  align="left"><b>Flash may look good but...</b></para>
+<para/>
+
+<para  align="left">I know, you've seen these really nice web sites that use Flash introductions. But, there's a price to pay here. If you are really serious about SEO, don't make Flash the focus of your site. Search engines will not index the content inside a Flash object. Sure, the designer can put in a few search strings, but you can't be certain that is being done and the search engines are not written to analyze Flash objects, they are written to analyze pure text.</para>
+<para/>
+
+<para  align="left">Flash is best used for "movie" demonstrations. All the information that is given by the Flash object should also be represented in text form somewhere else on the page.</para>
+<para/>
+
+<para  align="left">You may have the best looking pages in the world, but if you aren't showing up on the search engines then you won't have a lot of people coming to your site.</para>
+</newpage>
+
+<newpage>
+<pagetitle>What you can do as a web programmer</pagetitle>
+<section/>
+<para  align="left">Here's what you can do as a web programmer to increase the SEO of your clients' pages:</para>
+<para/>
+
+
+<list type="2" level="1" start="4">
+	<item level="1">Increase the content ratio of the page</item>
+	<item level="1">Use a unique title and description</item>
+	<item level="1">Write clean code</item>
+	<item level="1">Make URLs spider friendly</item>
+</list>
+
+</newpage>
+
+<newpage>
+<pagetitle>Increase the content ratio</pagetitle>
+<heading>Keyword Ratio On a Page</heading>
+<para/>
+
+<para  align="left">Before Google turned the Web world upside down everyone mixed the styling of the page in with the content. If a designer wanted a dark blue headline using Arial font these were embedded as attributes inside the &#60;h1> element.</para>
+<para/>
+
+<para  align="left">Then web developers discovered that Google, and other search engines, calculated page importance by calculating how many keywords were in title, headings, and body of the page compared to the total character count.</para>
+<para/>
+
+<para  align="left">All the sudden all those font= " " and color= " " attributes were watering down the importance of the page.</para>
+<para/>
+
+<heading>Use CSS to Separate Content from Style</heading>
+<para/>
+
+<para  align="left">CSS - Cascading Style Sheets came to the rescue by allowing web designers to put the style information for a page in the &#60;head> element of the page. This kept it separate from the content of the page which is located inside the &#60;body> element.</para>
+<para/>
+
+<para  align="left">By using CSS you are able to tell the browser specifically how things should be displayed. At the same time you will not water down the content of the page.</para>
+<para/>
+
+<para  align="left">CSS also allows you to store your CSS code in another document completely. This gives an additional value by allowing you to share the same CSS code with all the pages in the site. Need to change a style, just edit one file and every page in the site updates in appearance automatically.</para>
+<para/>
+
+<heading>Going Naked</heading>
+<para/>
+
+<para  align="left"><b>Displaying a page without CSS code is called "going naked" and a good developer will create web pages this way.</b></para>
+<para/>
+
+<para  align="left"><b>First a designer starts with the content.</b> The important point of the page is marked using the &#60;h1> element. Headings that are secondary in importance are marked using the &#60;h2> element. Each block of text is marked using either a &#60;div> element or a &#60;span> element. The &#60;div> is used to mark blocks of code and the &#60;span> element is used to mark a section of code inside another line or block of code, like special line in a paragraph.</para>
+<para/>
+
+<para  align="left">This creates a plain-text document that uses elements to simply designate an outline showing what text is very important (the headers) and what is supportive text (the paragraphs and the alt=" " attribute for each image.).</para>
+<para/>
+
+<para  align="left">This makes the page very accessible to non-visual browsers such as search spiders and people with visual disabilities.</para>
+<para/>
+
+<para  align="left"><b>Next, the CSS code is added</b> in the &#60;head> section of the page or in an external file.</para>
+<para/>
+
+<para  align="left">This does not affect the search spiders but does make the page more interesting and easier to read (we hope) for the user.</para>
+</newpage>
+
+<newpage>
+<pagetitle>Use a unique title and description</pagetitle>
+<heading>Use a pertinent title and a succinct description.</heading>
+<para/>
+
+<para  align="left"><b>Probably one of the most important parts of every page is the &#60;title> element and the description meta tag.</b></para>
+<para/>
+
+<para  align="left">The search spiders use these two page elements to determine the keywords for the page. The words used in the title should also be in the description as well as throughout the content of the page.</para>
+<para/>
+
+<para  align="left"><b>Here's an example: Imagine creating a page that talks about the 60th anniversary of a company.</b> The page has historical photos and shows the user how much the company has changed, especially highlighting its newest product, the Gizmo.</para>
+<para/>
+
+<para  align="left">But, if the title is "A Big Day" and the description is "A great time was had by all at our celebration" the search engines won't rank the site near as high as if you would have used "<b>60th Anniversary Celebration</b> Highlights Growth of <b>the</b> <b>Gizmo</b>" and the description read "The <b>60th Anniversary Celebration</b> highlights the historical growth of our new product line from simple wire based <b>communications</b> to the newest addition, <b>The Gizmo</b>"</para>
+<para/>
+
+<para  align="left"><b>I've highlighted the keywords so you can imagine what is in the contents of this page.</b></para>
+</newpage>
+
+<newpage>
+<pagetitle>Write clean code</pagetitle>
+<heading>Valid web pages rank higher</heading>
+<para/>
+
+<para  align="left">By writing to XHTML standards you are making the search engine's job much easier. Using the rules of XML documents it knows that every start tag has a stop tag and every attribute is surrounded by quotes. It only has to look for lower case tag names.</para>
+<para/>
+
+<para  align="left">By making certain every page passes TidyUI or the W3C Validation you are increasing the SEO for that page. <b>That means zero errors and warnings.</b></para>
+<para/>
+
+<heading>Limit the Use of Tables</heading>
+<para  align="left">Tables are very tag heavy. Keep tables to a minimum by using CSS to position your blocks of code on the page. For the best SEO you want the fewest number of tags and the greatest amount of content.</para>
+<para/>
+
+<para  align="left">You can further remove code bloat by moving all JavaScript to an external file. This is very similar to putting CSS in external files.</para>
+<para/>
+
+<heading>Use Text Links</heading>
+<para  align="left">Text links are always easier for a search engine to index. Graphic links, JavaScript links, and Flash all inhibit search engine spider programs. Instead, use CSS to make your text links "pretty" and interesting to the user.</para>
+<para/>
+
+<heading>Always provide a site map</heading>
+<para  align="left">A site map describes how the site is laid out. You can submit your sitemap to Google which will give the search engine more information about your site. In essence you will be assisting Google's spider programs by helping update the Google index.</para>
+<para/>
+
+<para  align="left">There are many sitemap generators including <hyperlink><name>sitemapgen</name><url>http://sourceforge.net/project/showfiles.php?group_id=137793&#38;package_id=153422</url></hyperlink> out on SourceForge.</para>
+</newpage>
+
+<newpage>
+<pagetitle>Make URLs spider friendly</pagetitle>
+<heading>Keep the URL of a page simple.</heading>
+<para/>
+
+<para  align="left">Don't use "&#38;id=" as a parameter in your URLs. Google will ignore these address links and not include them in their index.</para>
+<para/>
+
+<para  align="left"><b>For example: This page won't be included in the Google index</b></para>
+<para/>
+
+<para  align="left"><hyperlink><name>http://www.google.com/support/answer.html?answer=35769</name><url>http://www.google.com/support/answer.html?answer=35769</url></hyperlink></para>
+<para/>
+
+<para  align="left"><b>But this one will be:</b></para>
+<para/>
+
+<para  align="left"><hyperlink><name>http://www.google.com/support/answer.html</name><url>http://www.google.com/support/answer.html</url></hyperlink></para>
+</newpage>
+
+<newpage>
+<pagetitle>Use Robot.txt</pagetitle>
+<heading>Tell the Search Spiders or Robots Where to go</heading>
+<para/>
+
+<para  align="left">This file tells crawlers which directories can or cannot be crawled. Make sure it's current for your site so that you don't accidentally block the search engine programs.</para>
+<para/>
+
+<para  align="left">One use of the Robot.txt file is to keep certain files from being indexed. This is a great trick while you are developing a site and have the pages on a temporary server. <b>Don't forget to change the Robot.txt file when the site or page goes live!</b></para>
+<para/>
+
+<para  align="left"><b>Here's an example of this file:</b></para>
+<para/>
+
+<htmlinclude>
+<pre>
+# /robots.txt file for http://webcrawler.com/
+# mail webmaster@webcrawler.com for constructive criticism
+User-agent: webcrawler
+Disallow:
+User-agent: lycra
+Disallow: /
+User-agent: *
+Disallow: /tmp
+Disallow: /logs
+</pre>
+</htmlinclude>
+<para/>
+
+<para/>
+
+<para  align="left">The lines beginning with <b># are comments.</b></para>
+<para/>
+
+<para  align="left">The<b> *</b> in the third User-agent<b> is a wild-card which means every robot visiting.</b></para>
+<para/>
+
+<heading>You can also include information in the meta tag for individual pages:</heading>
+<para/>
+
+<para  align="left">This meta tag in the &#60;head> element will keep the page from being indexed. The nofollow keyword also tells the search spider not to follow any links on the page:</para>
+<para/>
+
+<para/>
+
+<htmlinclude>
+<pre>
+<meta name="robots" content="nofollow, noindex" />
+</pre>
+
+</htmlinclude>
+<para/>
+
+<para  align="left"><b>Make certain this is removed when the page goes live or the SEO for the page will forever remain ZERO!</b></para>
+<para/>
+
+<para  align="left">Google has <hyperlink><name>a free tool that will analyze your Robot.txt file</name><url>http://www.google.com/support/webmasters/bin/answer.py?answer=35237</url></hyperlink>.</para>
+</newpage>
+
+<newpage>
+<pagetitle>Use Google's SiteMap tools.</pagetitle>
+<para  align="left"><b>Google has put together an extensive set of free tools to help you determine:</b></para>
+<para/>
+
+
+<list type="2" level="1" start="8">
+	<item level="1">The information Google has about the site</item>
+	<item level="1">Who is linking to your pages</item>
+	<item level="1">The current cache of your site</item>
+	<item level="1">Other pages that are similar to yours in the Google index</item>
+</list>
+
+<para/>
+
+<para  align="left"><image alt="Screen shot showing some of Google's sitemap tools" width="567" height="353" class="normal">pic001.jpg</image></para>
+<para/>
+
+<para  align="left"><b>Here is the link to </b><hyperlink><name>Google WebMaster Tools</name><url>https://www.google.com/accounts/ServiceLogin?service=sitemaps&#38;nui=1&#38;continue=https://www.google.com/webmasters/sitemaps/siteoverview%3Fhl%3Den&#38;hl=en</url></hyperlink>.  You have to register with Google, but the tools are free.</para>
+<para/>
+
+<para  align="left">This is a great way to get a before and after picture of a site to show your client how the changes you've made to the site have increased their ranking. </para>
+</newpage>
+
+<newpage>
+<pagetitle>Resource Links</pagetitle>
+<para  align="left">(These may become out of date, this is the nature of the Web. If so, do a search for keywords like: SEO techniques)</para>
+<para/>
+
+<para  align="left"><hyperlink><name>CopyBlogger</name><url>http://www.copyblogger.com/why-you-should-always-write-your-headline-first/</url></hyperlink> - Why you want to write your headline first.</para>
+<para/>
+
+<para  align="left"><hyperlink><name>The SEO Book</name><url>http://www.seobook.com/</url></hyperlink> - A new entry every day. Many, many great ideas for improving SEO</para>
+<para/>
+
+<para  align="left"><hyperlink><name>Google's WebMaster Guidelines</name><url>http://www.google.com/support/webmasters/bin/answer.py?answer=35769</url></hyperlink> - An excellent checklist to increase the SEO for a site.</para>
+<para/>
+
+<para  align="left"><hyperlink><name>Web Robots FAQ</name><url>http://www.robotstxt.org/faq.html</url></hyperlink> - Using Robot.txt and other useful ideas</para>
+<para/>
+
+<para/>
+
+<para  align="center"><b>*** *** ***</b></para>
+<para  align="center"><b>This completes the tutorial: Web Development - SEO</b></para>
+<para  align="center">May 2009</para>
+<para  align="left">Written by Peter K. Johnson, Instructor</para>
+<para  align="left">South Central College</para>
+<para  align="left">North Mankato, MN 56003</para>
+<para  align="left">Peter.Johnson@southcentral.edu</para>
+<para/>
+
+<para  align="left"><b>Read my blog at:  </b> <hyperlink><name>http://webexplorations.com/blog</name><url>http://webexplorations.com/blog</url></hyperlink></para>
+<para/>
+
+<para/>
+
+<htmlinclude>
+<center> <!--Creative Commons License--><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/"><img alt="Creative Commons License" border="0" src="http://creativecommons.org/images/public/somerights20.png"/></a><br/>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/">Creative Commons Attribution-NonCommercial-ShareAlike 2.5  License</a>.<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<Work rdf:about="">
+		<license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/" />
+	<dc:type rdf:resource="http://purl.org/dc/dcmitype/InteractiveResource" />
+	</Work>
+	<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/><requires rdf:resource="http://web.resource.org/cc/ShareAlike"/></License></rdf:RDF> -->
+</center>
+</htmlinclude>
+<para/>
+
+<para/>
+
+<para/>
+
+
+
+
+
+
+</newpage>
+
+
+</courseGenie>
+

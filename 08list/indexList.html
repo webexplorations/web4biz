@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+<!-- indexList.html - main activity page for Module: Lists - Web4Biz course
+     Peter K. Johnson - peterk@webExplorations.com
+     Written:  5-17-11 Build template using jQuery
+     Revised: 10-19-13 Update all learning activities
+
+      MAINTENANCE CHECKLIST:
+      (1) Make sure checkmark.png and detailPage.png are in the root graphic directory
+      (2) Make sure jQuery is in the root folder.
+      (3) Update title
+      (4) Update total activity time for the module (around line #235)
+    
+     REVISED:  11-12-11 modified code originally from actForm.html
+               07-05-13 PKJ modified from 02FileManagement/index.html
+               08-18-14 PKJ checked all links. Fixed project link to 13project folder.
+
+Accessibility:
+(1) Add noscript element and hide if JavaScript is enabled.
+(2) Use CSS to make visibility: hidden; the .toDo elements in case JavaScript is disabled.
+(3) Use jQuery to change this CSS to visibility: visible;
+(4) Use jQuery to create a hyperlink that toggles between the detailed learning activities and the abbreviated toDo lists.
+    This will be added after the p#toggleToDo (at the top of the Learning Activities)
+
+Classes and IDs:
+Paragraph used to position hyperlink: #toggleTodo
+Hyperlink:                            #displayToggle
+Verbose Activity item:                .activity
+Short Todo item:                      .todo
+Name of icon/activity image:          #iconImg
+Name of icon/activity link:           #iconLink
+
+DEBUG CHECKLIST:
+(1) If #iconImg and #iconLink are not displaying, make certain you have the jQuery library in the root folder.
+-->
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <title>Lists</title><!--
+******************************************************
+* * * * * * * * * jQuery Stuff * * * * * * * * * * * *
+****************************************************** -->
+
+  <script type="text/javascript" src="../jquery-1.6.2.js">
+</script>
+  <script type="text/javascript">
+$("document").ready( function( )
+  {
+     // Change the CSS so .todo items display when toggled
+     $('.todo').css("visibility", "visible");
+     $('#iconImg').css("visibility", "visible");
+     $('#iconLink').css("visibility", "visible");
+     // Hide all the todo items
+     $('.todo').hide( );
+     $('#tipOfWeek').hide();
+
+     //When user clicks on todo link or the iconLink,
+     // toggle the screen between details/summary to-do list
+     $('#displayToggle').click(togglePage);
+     $('#iconLink').click(togglePage);
+     $('#iconImg').click(togglePage);
+     $('#tipImg').click( function()
+     {
+        $('#tipOfWeek').toggle();
+     }); // end of #tipImg.click( )
+  }); // end of .ready( )
+
+   // Toggle the screen between detailed and summary views
+   function togglePage( )
+   {
+      $('.activity').toggle();
+      $('.todo').toggle();
+
+      // Show the detailed Learning Activities
+      if($('.activity').is(':visible'))
+      {
+        $("#displayToggle").text('See Checklist View');
+        // Display the todoIcon
+        $("#iconImg").attr("src","../graphic/checkmark.png");
+        // Change the hyperlink
+        $("#iconLink").text("See Checklist View");
+        // Hide the objective section
+        $("#objective").show();
+        $("#wiifm").show( );
+        $("#nextModule").show( );
+        $(".assessment").show( );
+        $("#tip").show( );
+      }
+      else // show the summary to-do list
+      {
+        $("#displayToggle").text("See Detailed View");
+        // Display the Learning Activity Icon
+        $("#iconImg").attr("src", "../graphic/detailPage.png");
+        $("#iconLink").text("See Detailed View");
+        // Show the objectives
+        $("#objective").hide( );
+        $("#wiifm").hide( );
+        $("#nextModule").hide( );
+        $(".assessment").hide( );
+        $("#tip").hide( );
+      }
+   }// end of togglePage( )
+
+  </script><!-- Make page IE backwards compatible using CSS3 and HTML5 -->
+
+  <script type="text/javascript" src="../modernizr.js">
+</script><!--[if (gte IE 6)&(lte IE 8)]>
+  <script type="text/javascript" src="../selectivizr-min.js"></script>
+  <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
+<![endif]-->
+  <!-- *************************************************   
+* * * * * * * * * CSS Stuff * * * * * * * * * * * *
+****************************************************** -->
+  <!-- Font Loading -->
+  <link href='http://fonts.googleapis.com/css?family=Permanent+Marker&v2' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+@import url(../activity.css);
+  </style>
+  <style type="text/css">
+ /* Initially hide the toDo list items in case JavaScript is disabled.
+      Use jQuery to show them if JavaScript is available. */
+   .todo,
+   #iconImg,
+   #iconLink {
+   visibility:      hidden;
+   }
+
+   .todo p {
+   /* Add checkbox as background image to control position */
+   background:      transparent url("../graphic/checkbox.png") no-repeat 0px 2px ;
+   padding:         5px 10px 7px 40px;  /* make room for checkbox */
+   margin:          0px 0px 0px 20px;
+   }
+
+   #tipImg {
+  /* Round all corners */
+  -webkit-border-radius:  130px;
+  -moz-border-radius:     130px;
+  border-radius:          130px;
+  border:                 1px green solid;
+  margin:                 10px 20px 5px 5px;
+  }
+  </style><!-- Fix IE Anamolies so IE recognizes HTML5 elements -->
+  <!--[if lt IE 9]>
+<script>
+// Set up new elements so old browsers will recognize for CSS
+var e = ("abbr,article,aside,audio,canvas,datalist,details,"
+   + "figure,footer,header,hgroup,mark,menu,meter,nav,output,"
+   + "progress,section,time,video").split(',');
+   for (var i = 0; i < e.length; i++)
+   {
+      document.createElement(e[i]);
+   }
+</script>
+<![endif]-->
+</head>
+
+<body>
+  <div id="frame">
+    <header>
+      <div class="identity">
+        <table summary="Page heading and module icon">
+          <tr>
+            <td rowspan="2"><img src="../graphic/li.png" width="100" alt="li element"></td>
+
+            <td>
+              <h1>Lists</h1>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <h5>Making a list, checking it twice...</h5>
+            </td>
+          </tr>
+        </table>
+      </div><!-- end of .identity -->
+      <!-- ****** NAVIGATION (To-Do List/Detailed List Graphics) ******* -->
+
+      <div class="navigation">
+        <table summary="navigation links to course map and todo list" border="1">
+          <tr>
+            <td><img id="iconImg" src="../graphic/checkmark.png" alt="to-do list icon" width="50"></td>
+          </tr>
+
+          <tr>
+            <!-- This link is handled null. It triggers a click event handled by jQuery -->
+
+            <td>
+              <a id="iconLink" href="#">See Checklist View</a>
+            </td>
+          </tr>
+        </table>
+      </div><!-- end of .navigation -->
+    </header>
+    
+<!-- ************************************************
+* * * * O B J E C T I V E S    S E C T I O N  * * * *
+***************************************************** -->
+<section id="objective">
+  <p>
+  <strong>In this module you will learn how to:</strong>
+  </p>
+  
+  <ul>
+    <li>Make bulleted lists (like this one)</li>
+    <li>Make ordered lists (1, 2, 3 etc)</li>
+    <li>Incorporate special characters:&nbsp; &lt; &amp; &euro; &trade; &copy; &bull;</li>
+    <li>Add horizontal rules to create visual separation on a page.</li>
+  </ul>
+  <br />
+</section>
+    
+<!-- ************************************************
+WII-FM
+***************************************************** -->
+<section id="wiifm">
+  <!-- WII-FM -->
+  <h4>WII-FM (What's In It - For Me)</h4>
+  
+  <p>
+     <iframe width="300" height="169" src="https://www.youtube.com/embed/o4MwTvtyrUQ?rel=0&amp;showinfo=0"  style="float:right; margin:0px 30px 0px 0px;" >
+     </iframe>
+  Most people aren't aware of the details of web development. They just want to use the Web for information and finding things.
+  </p>
+  <p>
+  <strong>People don't read web pages, they scan them. And people love scanning
+  lists.</strong>
+  </p>
+  <p>
+  All of these things help make your pages more readable which means more
+  communication between your client and their customers. 
+  </p>
+  <p>
+  By making your pages quick and easy to read, people will more interested in your information. That usually translates into more sales which sounds like: <strong style="color:#009900;">ka-ching!</strong>
+  <br />
+  </p>
+</section>
+
+<!-- ***************************************************
+* * * * L E A R N I N G    A C T I V I T I E S   * * * *
+******************************************************** -->
+<section class="activityGroup">
+  <h4 id="toggleTodo">Complete these Learning Activities:</h4>
+
+  <p><strong>Total estimated time for this module:</strong> ??? hours.</p>
+  <!-- jQuery will insert a link here for toggling between detailed and summary to-do list
+   based on the id="toggleTodo" set in the object above this comment. -->
+  <noscript>
+  <p><strong>You have JavaScript turned off.</strong> Enable it to view a short list of all the To-Do items.</p></noscript>
+  <hr>
+
+
+<!-- ************************
+Take the Quiz
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+  <p>
+  <strong>Take the Self-Quiz: List</strong>. You can take the self-quizzes as many times as you like. 
+  </p>
+  <p>
+  <strong>Be smart and take the self-quiz once each day to learn the material.</strong> 
+  </p>
+   
+  <p><strong>Estimated Time:</strong> 10 minutes (probably a lot less) each time you take a self-quiz.</p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+    Take the Self-Quiz: List. 
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+
+<!-- ************************
+Read the Book
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+<p>
+  <img src="../graphic/textBookCover.jpg" alt=
+  "Web Design textbook cover" width="75" align="left" /> 
+  <strong>Read pages 32-43 and 208-211 in the Web Design textbook</strong>.
+</p>
+
+<p>
+<strong>Estimated Time:</strong> 1 hour
+</p>
+
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+<div class="todo">
+  <p>
+  Read pages 32-43 and 208-211 in the Web Design textbook.
+  </p>
+</div><!-- end of .todo -->
+<hr>
+
+<!-- ************************
+Tutorial: Lists
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+  <p>
+  <strong>Work through <a href="list/index.htm" target="_blank">Tutorial:List</a></strong>. This tutorial covers displaying lists of objects, using a horizontal rule to visually organize text on a web page and several tips and tricks from the industry.
+  </p>
+  <p>
+  <strong>Tip:</strong> As you work through this tutorial save your files in the
+  folder: 08list
+  </p>
+  <p>
+  <strong>Estimated Time:</strong> 1 hour
+  </p>
+</div>
+
+<div class="todo">
+  <p>
+  Work through <a href="list/index.htm" target="_blank">Tutorial:List</a>.
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+Lab: Lists
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+  <p>
+  <strong>
+  Learn by doing: Complete <a href="labList.html" target="_blank">Practice Lab:List</a>.</strong>
+  <br />
+  Click on the image to see a larger view.
+  </p>
+  <p>
+  <a href="graphic/financialOutput.png" target="_blank">
+  <img src="graphic/financialOutput.png" alt="Practice Lab Example"
+  width="200" hspace="15" vspace="15" border="1" align="right" /></a>
+  <strong>Notes:</strong>
+  </p>
+  <ul>
+  <li>This is <strong>NOT</strong> the project. Practice labs are designed to help you discover what you don't know so you can learn it.</li>
+  <li>Pay particular attention to the list inside of the list.</li>
+  <li>If you have any questions or become frustrated doing this lab, please get in touch with your instructor so she or he can help you work through it.</li>
+  <li>If you are working as part of a study group this is a great Learning Activity to work through together. What you figure out here will help you individually when it comes time to do the graded project work.</li>
+  <li><strong>Professional Tip: Use View/Source to look behind the curtain.</strong> How did they get that small image of the page to be a link so that it goes to a full-size image?
+  <br />
+  Use View/Source to find the answer. Do a search (CTRL f) in the HTML code
+  for: financialPage.gif</li>
+  </ul>
+  <p>
+  <strong>Estimated Time:</strong> 1 hour
+  </p>
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+  Complete <a href="labList.html" target="_blank">Practice Lab:List</a>..
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+Paragraphs and Lists are blocks
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+<p>
+<a href="graphic/blockElementDemo.png"><img src=
+"graphic/blockElementDemo.png" alt="demo showing how paragraphs and list elements are blocks" width=
+"150" align="right" /></a>
+<strong>What about lists inside of paragraphs?</strong> Learn by noodling around....  Use this sample code
+<a href="blockElementDemo.html" target="_blank">blockElementDemo.html</a> (Right-mouse click, Select "save target as" from list of options). 
+</p>
+<p>
+Extend the paragraph by moving the &lt;/p> element after the list and check the HTML Validator. What happens?
+</p>
+<p>
+<strong>Estimated Time: </strong> 30 minutes
+</p>
+
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+What about lists inside of paragraphs?</strong> Learn by noodling around using this sample code
+<a href="blockElementDemo.html" target="_blank">blockElementDemo.html</a>.
+</p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+The Machine is Using Us
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+<p>
+<iframe width="300" height="225" src="http://www.youtube.com/embed/NLlGopyXT_g" style="float:left; margin:0px 30px 0px 0px;"></iframe> 
+
+     <strong>Watch this video <a href="http://www.youtube.com/watch?v=NLlGopyXT_g" target="_blank">The Machine is Us/ing Us</a></strong>. This video explores the changes in the way we find, store, create, critique, and share information. 
+</p>
+<p>
+      How will the ideas presented in this video affect the skills YOU will need in order to harness,
+      evaluate, and create information effectively?
+</p>
+<br /><br />
+<p>
+<strong>Estimated Time:</strong> 5 minutes
+</p>
+<br />
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+  Watch this video <a href="http://www.youtube.com/watch?v=NLlGopyXT_g" target="_blank">The Machine is Us/ing Us</a>.
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+CodePen
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+<p>
+<iframe width="300" height="169" src="https://www.youtube.com/embed/Bs4HVBLi6jQ?rel=0&amp;showinfo=0"  style="float:left; margin:0px 30px 0px 0px;" ></iframe>
+
+     <strong>Watch this video <a href="https://css-tricks.com/video-screencasts/112-using-codepen/" target="_blank">to learn how to use CodePen</a></strong>. This is a great way to experiment with CSS to see what effect you will get. 
+</p>
+<p>
+      Once you have what you want you can copy and paste it into your CSS file.
+      </p>
+<br /><br />
+<p>
+<strong>Estimated Time:</strong> 20 minutes
+</p>
+
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+  Watch this video <a href="https://css-tricks.com/video-screencasts/112-using-codepen/" target="_blank">to learn how to use CodePen</a>.
+  </p>
+</div><!-- end of .todo -->
+<hr />
+
+<!-- ************************
+Using Gradients (and CodePen)
+***************************** -->
+<!-- DETAIL -->
+
+<div class="activity">
+<p>
+     <strong>This article will show you  <a href="https://css-tricks.com/css3-gradients/" target="_blank">how to create gradients</a></strong>. The colors in the example are a bit bold, but you can use the same techniques for soft pastel backgrounds that support your text and graphics and make your menus look more interesting.
+     </p>
+<p>
+      Subtle is better than SUBtle.
+      </p>
+<p>
+   ColorZilla is a great Google Chrome/FireFox extension. You can use it to find out the Hex code of a color. This video shows you <a href="http://www.lynda.com/Joomla-tutorials/Using-ColorZilla/106699/120368-4.html" target="_blank">all the colorful details of ColorZilla</a>.
+</p>
+<p>
+   <iframe width="300" height="169" src="https://www.youtube.com/embed/2NlCuCzjKt8?rel=0&amp;showinfo=0"  style="float:left; margin:0px 30px 0px 0px;" ></iframe>
+   You can also use ColorZilla to create gradients. Watch this video to learn how to use this the <a href="https://youtu.be/2NlCuCzjKt8" target="_blank">ColorZilla gradient tool</a>.
+</p>
+<br /><br /><br />
+<p>
+   You would copy and paste the gradient code into your CSS. For example to set up the background gradient of your page:<br />
+</p>
+<pre>
+body {
+   background: background: -moz-linear-gradient(top,  rgba(72,132,206,0.51) 0%, rgba(222,223,226,0) 100%); /* FF3.6+ */
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(72,132,206,0.51)), color-stop(100%,rgba(222,223,226,0))); 
+   /* Chrome,Safari4+ */
+   background: -webkit-linear-gradient(top,  rgba(72,132,206,0.51) 0%,rgba(222,223,226,0) 100%); /* Chrome10+,Safari5.1+ */
+   background: -o-linear-gradient(top,  rgba(72,132,206,0.51) 0%,rgba(222,223,226,0) 100%); 
+   /* Opera 11.10+ */
+   background: -ms-linear-gradient(top,  rgba(72,132,206,0.51) 0%,rgba(222,223,226,0) 100%); 
+   /* IE10+ */
+   background: linear-gradient(to bottom,  rgba(72,132,206,0.51) 0%,rgba(222,223,226,0) 100%); 
+   /* W3C */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#824884ce', endColorstr='#00dedfe2',GradientType=0 ); /* IE6-9 */
+}
+</pre>  
+<p>
+<strong>Estimated Time:</strong> 20 minutes
+</p>
+
+</div><!-- end of .activity -->
+<!-- SUMMARY -->
+
+<div class="todo">
+  <p>
+  This article will show you  <a href="https://css-tricks.com/video-screencasts/112-using-codepen/" target="_blank">how to create gradients</a>
+    </p>
+</div><!-- end of .todo -->
+<hr />
+
+</section>
+    
+<!-- ************************************************
+* * * * A S S E S S M E N T    S E C T I O N  * * * *
+***************************************************** -->
+<section class="assessment">
+  <h4>Your Graded Assignments For This Module</h4>
+  <p>
+  <img src="../graphic/stopSign.png" alt="stop sign" style="margin: 0 10px 0 0; width: 60px; float: left;" /><strong>Stop! </strong><br />
+  Don't frustrate yourself. Do the Learning Activities BEFORE starting these graded activities. 
+  </p>
+  <hr />
+
+  <!-- ************************
+  Graded Quiz: webComm
+  ***************************** -->
+    <p>
+    <strong>Take the Graded Quiz: List</strong>
+    </p>
+
+    <ol>
+    <li>There will be 10 true/false and multiple choice questions.</li>
+    <li>10 questions - 10 minutes - 10 points</li>
+    <li>Feel free to use your book or look stuff up on the Web or try things out on your computer.</li>
+    <li>You will have one chance to take the quiz.</li>
+    <li>The questions will be from the same database that the self-quiz uses.</li>
+    <li>The quiz will be scored automatically and your points shown in your D2L grade book.</li>
+    </ol>
+    
+    <p>
+    <strong>Estimated Time:</strong> 10 minutes 
+    </p> 
+    <p>
+    Look on the Course Map for the due date for this graded activity.
+    </p>
+  <hr />
+   <!-- ************************
+  Project: 
+  ***************************** -->
+     <p>
+     <img src="../13project/graphic/coverPrjListMenu.png" alt="cover for Project: List Menu Specs" style="margin: 0 15px; width: 80px; float: left;" />
+    Work on the <a href="../13project/prjListMenuChecklist.html" target="_blank">Project: ListMenu</a>
+    </p>
+    <p>
+    This project covers Lists, Hyperlinks, and Menus. 
+    </p>
+    <p>
+    Get started now, doing as much as you can and then finish up the project as you finish the next module on Hyperlinks and Menus.
+    <br />
+    </p>
+ 
+</section>
+    
+<!-- ************************************************
+Tip of the Week
+***************************************************** -->
+    <section>
+      <img src="../graphic/lightBulb.png" alt="hand holding lightbulb all lit up" align="left" width="90" id="tipImg">
+
+      <h4>Your Tip-Of-The-Week</h4>
+
+      <p>(Click on the lightbulb to reveal the tip.)<br>
+      <br></p>
+
+      <div id="tipOfWeek">
+      <img src="graphic/tidyLogo.gif" alt="HTML Tidy logo" style="margin: 0 15px;  float: left;" />
+        <h3>Tidy - Make Your Code Look Good!</h3>
+
+<p>
+  <a href="graphic/tidySetting.png" target="_blank"><img src="graphic/tidySetting.png" alt="screen shot showing suggested settings for Tidy HTML" width="400" align="left" /></a>
+  
+  <strong>Now that your code is getting more complex you may want to it all look nice and tidy. <a href=
+  "http://infohound.net/tidy/" target=
+  "_blank">Use this website to tidy up your code</a></strong> with correct indents, etc. It will also check for some common coding errors.<br />
+  <br />
+  They haven't added HTML 5 yet so just use Transitional for the "Doctype" selection.
+</p>
+<p>
+  <strong>Click on the image above to see the settings that your instructor suggests.</strong>
+</p>
+
+      <hr />
+
+      </div><!-- end of #tipOfWeek -->
+    </section>
+    
+<!-- ************************************************
+What's Next?
+***************************************************** -->
+<section id="nextModule">
+  <h4>What's Next?</h4>
+  <img src="../graphic/a.png" alt="people" style="margin: -20px 15px 0px 5px; width: 90px; float: left;">
+  <p>
+  Hyperlinks make the Web go round.  Learn the many different ways you can create use this valuable element.
+  </p>
+</section>
+
+    <footer>
+      <p>Strong start... Successful finish.</p>
+    </footer>
+  </div><!-- end of #frame -->
+</body>
+</html>

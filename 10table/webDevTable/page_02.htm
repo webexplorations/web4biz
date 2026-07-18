@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en" dir="ltr">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<meta name="description" content="Using tables on a Web page">
+<meta name="keywords" content="Web Development, tables, XHTML, CSS, Web Explorations">
+<meta name="version" content="July 2010">
+<meta name="copyright" content="Creative Commons">
+<meta name="Objectives" content="To use the XHTML table elements correctly on a web page.">
+<meta name="Author" content="Peter K. Johnson">
+<meta name="Organisation" content="South Central College">
+<meta name="Date" content="March 2009">
+<meta name="creator" content="Wimba Create">
+
+<title>The Basic Table Elements</title>
+<link rel="stylesheet" type="text/css" href="cg.css">
+<!--[if lte IE 7]>
+<style>
+ /* Hides from IE5-mac \*/
+ * html div {height: 1%;}
+ /* End hide from IE5-mac */ 
+</style>
+<![endif]-->
+<script src="cgmain.js" type="text/javascript" language="JavaScript"></script><script src="cglocale.js" type="text/javascript" language="JavaScript"></script>
+
+
+
+</head>
+
+
+
+<body dir="ltr">
+
+<noscript>Your browser does not support Javascript. You should still be able to navigate through these materials but selftest questions will not work.</noscript>
+
+<a href="#Main" id="skipanchor"><img src="buttons/btn_skip.gif" alt="Skip to main content" width="1" height="1" border="0"></a><div id="header">
+
+<a name="_top"></a>
+<a href="page_03.htm" onMouseOut="imgSwap('next_top','buttons/btn_next_topup.gif')" onBlur="imgSwap('next_top','buttons/btn_next_topup.gif')" onMouseOver="imgSwap('next_top','buttons/btn_next_topdown.gif')" onFocus="imgSwap('next_top','buttons/btn_next_topdown.gif')"><img class="floattopright" name="next_top" border="0" src="buttons/btn_next_topup.gif" width="30" height="24" alt="Next page"></a>
+<a href="index.htm" onMouseOut="imgSwap('index_top','buttons/btn_contents_topup.gif')" onBlur="imgSwap('index_top','buttons/btn_contents_topup.gif')" onMouseOver="imgSwap('index_top','buttons/btn_contents_topdown.gif')" onFocus="imgSwap('index_top','buttons/btn_contents_topdown.gif')"><img class="floattopright" name="index_top" border="0" src="buttons/btn_contents_topup.gif" width="30" height="24" alt="Contents page"></a>
+<a href="page_01.htm" onMouseOut="imgSwap('prev_top','buttons/btn_prev_topup.gif')" onBlur="imgSwap('prev_top','buttons/btn_prev_topup.gif')" onMouseOver="imgSwap('prev_top','buttons/btn_prev_topdown.gif')" onFocus="imgSwap('prev_top','buttons/btn_prev_topdown.gif')"><img class="floattopright" name="prev_top" border="0" src="buttons/btn_prev_topup.gif" width="30" height="24" alt="Previous page"></a>
+
+<h1>Web Development - Tables</h1>
+
+</div>
+
+
+
+<div id="main-content-notoc">
+
+<a name="Main"></a>
+
+<h2>The Basic Table Elements</h2>
+
+<p><b><img src="images/pic003.jpg" width="576" height="432" alt="The Basic Table Elements" border="0" class="normal"></b></p>
+<p><b>There are four basic table elements.</b></p>
+<p>
+<b>&lt;table&gt;</b> is the main table element, holding all the others.</p>
+<p>
+<b>&lt;tr&gt;</b> sets up a row inside the table. Each &lt;tr&gt; element will contain a series of column or header tags.</p>
+<p>
+<b>&lt;th&gt;</b> sets up a series of header columns. The text in these columns is automatically made bold and is centered by the browser. You can also change the appearance of these columns using CSS.</p>
+<p>
+<b>&lt;td&gt;</b> sets up a series of columns to hold text and/or data. </p>
+<p>
+<b>IMPORTANT! Don't forget the stop tags.  </b>It is recommended that each time you type in a new tag, immediately add in its matching stop tag. Missing stop tags are the most common problem for people adding tables to a web page.</p>
+<b><img src="images/pic004.jpg" width="576" height="432" alt="Putting the Basic Elements to Work" border="0" class="normal"><a name="Desc1" href="page_desc1.htm">[D]</a></b><p><b>Open up a basic HTML file and let's create a table.</b></p>
+<p>
+<b>(1) First add the &lt;table&gt; start and stop tags.</b>  By default browsers display tables without borders so use the border=&quot; &quot; attribute to add a 1 pixel border.<br><b>&lt;table border=&quot;1&quot;&gt;</b>
+</p>
+<p>
+<b>(2) Add a row element using the &lt;tr&gt; element. </b>Type in the &lt;/tr&gt; right away. You may also want to add a comment on the line above the start tag designating what the row does. Tables have a lot of tags and consistent commenting, especially separating the rows, will greatly help you maintain the page in the future.</p>
+<p>
+<b>(3) Add two or three column headings using the &lt;th&gt; element inside the &lt;tr&gt; tags.  </b>Use smart data designating each column so they are easy to identify.</p>
+<p>
+<b>(4) Create another row and fill it with column data using the &lt;td&gt; element. Here's a short cut: </b> Highlight the first row and copy and paste it. Then all you have to do is change the th to td and modify the contents appropriately. Once you have one row built, filled with &lt;td&gt; columns it's a simple matter to copy it and paste it below, simply changing the data.</p>
+<p>
+<b>Use smart data.</b> In this example you can quickly see the location of each column and row by the information contained in each cell. Later on, when you have everything working correctly you can easily replace this smart data with the actual client data.</p>
+<p>(Remember you are building a basic table template file that will be edited to create other web pages. The smart data will be acting as a place holder for whatever data is put in each table.)</p>
+<p><b>Once you finish inputting the table it should look something like this:</b></p>
+<p align="center"><img src="images/pic005.jpg" width="325" height="217" alt="Output of basic table elements" border="0" class="normal"></p>
+
+</div>
+
+
+
+<div id="footer-notoc">
+
+<a href="page_03.htm" onMouseOut="imgSwap('next_bot','buttons/btn_next_botup.gif')" onBlur="imgSwap('next_bot','buttons/btn_next_botup.gif')" onMouseOver="imgSwap('next_bot','buttons/btn_next_botdown.gif')" onFocus="imgSwap('next_bot','buttons/btn_next_botdown.gif')"><img class="floatright" name="next_bot" border="0" src="buttons/btn_next_botup.gif" width="30" height="24" alt="Next page"></a>
+<a href="index.htm" onMouseOut="imgSwap('index_bot','buttons/btn_contents_botup.gif')" onBlur="imgSwap('index_bot','buttons/btn_contents_botup.gif')" onMouseOver="imgSwap('index_bot','buttons/btn_contents_botdown.gif')" onFocus="imgSwap('index_bot','buttons/btn_contents_botdown.gif')"><img class="floatright" name="index_bot" border="0" src="buttons/btn_contents_botup.gif" width="30" height="24" alt="Contents page"></a>
+<a href="page_01.htm" onMouseOut="imgSwap('prev_bot','buttons/btn_prev_botup.gif')" onBlur="imgSwap('prev_bot','buttons/btn_prev_botup.gif')" onMouseOver="imgSwap('prev_bot','buttons/btn_prev_botdown.gif')" onFocus="imgSwap('prev_bot','buttons/btn_prev_botdown.gif')"><img class="floatright" name="prev_bot" border="0" src="buttons/btn_prev_botup.gif" width="30" height="24" alt="Previous page"></a>
+
+<p>Web Explorations</p>
+
+</div>
+
+
+
+</body>
+
+</html>

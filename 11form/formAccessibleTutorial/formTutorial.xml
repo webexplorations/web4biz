@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../formTutorial/gen/cg_content.xsl"?>
+
+<courseGenie>
+
+<metadata>
+	<moduletitle>Accessible Forms</moduletitle>
+	<description>A short tutorial showing how to add accessibility to your forms</description>
+	<keyword>web</keyword>
+	<keyword>programming</keyword>
+	<keyword>form</keyword>
+	<keyword>accessibility</keyword>
+	<keyword>fieldset</keyword>
+	<keyword>label</keyword>
+	<objectives>Show users how to use a Drupal Website</objectives>
+	<author>Peter K. Johnson</author>
+	<organisation>http://webexplorations.com</organisation>
+	<version>No Version metadata</version>
+	<date>November 2006</date>
+	<copyright>No Copyright metadata</copyright>
+	<creator>Created by Course Genie, licensed to South Central College.</creator>
+</metadata>
+
+<settings>
+	<pageroot></pageroot>
+	<sectionmode>both</sectionmode>
+	<exportmode>normal</exportmode>
+	<assessmentmode>none</assessmentmode>
+	<generateindex>True</generateindex>
+	<showtoc>True</showtoc>
+	<tocwidth></tocwidth>
+	<shownavigation>True</shownavigation>
+	<footer>Using CCI Space</footer>
+	<outputfolder>formTutorial</outputfolder>
+	<singlepage>False</singlepage>
+	<hyperlinksmain>True</hyperlinksmain>
+	<popupsmain>True</popupsmain>
+	<idstring>CG20061129144917</idstring>
+	<scorm-questionmode>selftest</scorm-questionmode>
+	<scorm-masteryscore>0</scorm-masteryscore>
+	<trialstatus>reg</trialstatus>
+	<schemefolder>C:/Program Files/courseGenie/config/scheme1</schemefolder>
+</settings>
+
+<newpage>
+<para/>
+
+<pagetitle><b>Creating Accessible Forms</b></pagetitle>
+<para/>
+
+<section/>
+<para/>
+
+<para/>
+
+<para  align="left">Several elements are available that will make your forms more accessible to all users.</para>
+<para/>
+
+<para  align="left"><b>Labeling form objects</b> help screen readers determine what is what on your form.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<para/>
+
+<pagetitle><b>What does &#60;label> do?</b></pagetitle>
+<para/>
+
+<para/>
+
+<heading><b>Helping Screen Readers Determine Which text goes with which label</b></heading>
+<para  align="left">The label is a signpost. It tells the browser, "This text box is called <i>firstName</i>.'' </para>
+<para  align="left">Here's what the code looks like:</para>
+<paneltext>
+<para  align="left">&#60;label for="firstName">First Name&#60;/label>&#60;br /><br/>&#60;input type="text" name="firstName" id="firstName" size="20"/></para>
+</paneltext>
+<para  align="left">This creates an unambiguous (non-confusing) link between the text that displays on screen "First Name"  and the input textbox which has the attribute id="firstName".</para>
+<heading><b>Other Benefits</b></heading>
+<para  align="left">An added benefit to using a label is a large area is established on screen. This is especially useful when using radio buttons and check boxes. The user can click anywhere on the label to select the  item.</para>
+<para/>
+
+<heading><b>id=" " means there will be only one per page</b></heading>
+<para  align="left">The key to all of this is the id=" " attribute. Each id=" " attribute must be unique for that page. This allows the label to know exactly which item it is attached to.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<para/>
+
+<pagetitle><b>Grouping Elements with the &#60;fieldset> &#38; &#60;legend></b></pagetitle>
+<para/>
+
+<para/>
+
+<heading><b>Use the &#60;legend> to chunk your form into groups</b></heading>
+<para  align="left">If you are presented with a list of 50 seemingly unrelated checkboxes on a survey it can be very daunting and will frighten most users away.</para>
+<para  align="left">You can use the &#60;fieldset> element to chunk the form into groups.</para>
+<para  align="left">For example, you could break the 50 questions into 5 clearly groups that relate to each other. This will greatly increase the usability of the page for all users.</para>
+<heading><b>Use the &#60;legend> element to identify each fieldset.</b></heading>
+<para  align="left">Here is an example of the &#60;fieldset> and &#60;legend> elements.</para>
+<para/>
+
+<para/>
+
+<para/>
+
+<para/>
+
+<para/>
+
+<para/>
+
+<para/>
+
+<para/>
+
+<para/>
+
+<para/>
+
+<para/>
+
+<para  align="left">Here is the code:</para>
+<paneltext>
+<para  align="left"><b>&#60;fieldset><br/>&#60;legend>My Radio Buttons&#60;/legend></b><br/>&#60;input type="radio" id="rad0" name="rad" /><br/>&#60;label for="rad0">Option 0&#60;/label><br/>&#60;input type="radio" id="rad1" name="rad" /><br/>&#60;label for="rad1">Option 1&#60;/label><br/>&#60;input type="radio" id="rad2" name="rad" /><br/>&#60;label for="rad2">Option 2&#60;/label><br/>. . .<br/><b>&#60;/fieldset></b></para>
+</paneltext>
+<para/>
+
+<para  align="left">CSS can be used to change the outline or character formatting. You can either use the in-line style or use an id or class designation in the &#60;head> section of the page.</para>
+<para/>
+
+<paneltext>
+<para  align="left">&#60;fieldset style="width: 300px;</para>
+<para  align="left">                       display:inline;</para>
+<para  align="left">                       border:2px solid #000099;</para>
+<para  align="left">                       padding:6px;</para>
+<para  align="left">                       vertical-align:top"></para>
+<para  align="left">&#60;legend>My Radio Buttons&#60;/legend></para>
+<para  align="left">&#60;input type="radio" id="rad0" name="rad" /></para>
+<para  align="left">&#60;label for="rad0">Option 0&#60;/label></para>
+<para  align="left">&#38;nbsp;&#38;nbsp;&#38;nbsp;</para>
+<para  align="left">&#60;input type="radio" id="rad1" name="rad" /></para>
+<para  align="left">&#60;label for="rad1">Option 1&#60;/label></para>
+<para  align="left">&#60;input type="radio" id="rad2" name="rad" /></para>
+<para  align="left">&#60;label for="rad2">Option 2&#60;/label></para>
+<para  align="left">&#60;/fieldset></para>
+</paneltext>
+<para/>
+
+<para  align="left"><image alt="" width=" 297" height=" 85" class="normal">pic002.gif</image></para>
+<para  align="left">Notice the how the ~&#38;nbsp; non-breaking spaces were used to separate the items making it clear which circle goes with which label onscreen.</para>
+<para/>
+
+</newpage>
+
+<newpage>
+<para/>
+
+<pagetitle><b>Summary</b></pagetitle>
+<para/>
+
+<para/>
+
+<para/>
+
+<para  align="left">CCI Space was designed to help you communicate. The more everyone uses it the more useful it will become.</para>
+<para/>
+
+<subheading><b>Need help or have a suggestion? </b></subheading>
+<para  align="left">Just send me a quick note using the Contact page.</para>
+<para/>
+
+<para/>
+
+<para  align="left">Peter Johnson</para>
+<para  align="left">August 2006</para>
+<para  align="left">Revised November 2006</para>
+<para/>
+
+<para  align="left"><b>This completes this tutorial: ASP.NET Forms </b></para>
+<para  align="left">Written by Peter K. Johnson - October 2006</para>
+<para  align="left"><b>Read my blog at:  </b> <hyperlink><name>http://webexplorations.com/blog</name><url>http://webexplorations.com/blog</url></hyperlink></para>
+<para/>
+
+<htmlinclude>
+<center> <!--Creative Commons License--><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/"><img alt="Creative Commons License" border="0" src="http://creativecommons.org/images/public/somerights20.png"/></a><br/>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/">Creative Commons Attribution-NonCommercial-ShareAlike 2.5  License</a>.<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<Work rdf:about="">
+		<license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/" />
+	<dc:type rdf:resource="http://purl.org/dc/dcmitype/InteractiveResource" />
+	</Work>
+	<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/><requires rdf:resource="http://web.resource.org/cc/ShareAlike"/></License></rdf:RDF> -->
+</center>
+</htmlinclude>
+<para/>
+
+<para/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</newpage>
+
+
+</courseGenie>
+
